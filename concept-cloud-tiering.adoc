@@ -20,7 +20,7 @@ Cloud Tiering 服務運用 _Estr__ 的功能 FabricPool 。NetApp Data Fabric �
 
 原支援AFF 採用FAS All SSD集合體的支援功能、從ONTAP Select VMware 9.8開始ONTAP 、除了高效能SSD之外、您也可以從由HDD組成的集合體來分層資料。請參閱 https://docs.netapp.com/us-en/ontap/fabricpool/requirements-concept.html["使用過程中的考量與要求FabricPool"^] 以取得詳細資料。
 
-雲端分層授權也可與FabricPool 採用「鏡射」組態（MetroCluster 不包括「非」組態）的叢集共享。此功能必須使用System Manager或CLI完成、FabricPool ONTAP 但是 https://docs.netapp.com/us-en/cloud-manager-tiering/task-licensing-cloud-tiering.html#apply-cloud-tiering-licenses-to-clusters-in-special-configurations["這類叢集的授權是使用雲端分層來完成。"]
+雲端分層授權也可與MetroCluster 採用「鏡射」和FabricPool 「鏡射鏡射」組態的叢集共享。必須使用System Manager或CLI來設定此功能、FabricPool ONTAP 但是 https://docs.netapp.com/us-en/cloud-manager-tiering/task-licensing-cloud-tiering.html#apply-cloud-tiering-licenses-to-clusters-in-special-configurations["這些叢集類型的授權使用Cloud Tiering完成。"]
 
 
 
@@ -30,6 +30,8 @@ Cloud Tiering 服務運用 _Estr__ 的功能 FabricPool 。NetApp Data Fabric �
 
 * 自動化可讓您更輕鬆地設定及管理從內部 ONTAP 物件叢集到雲端的資料分層
 * 您可以選擇預設的雲端供應商儲存類別/存取層、或是使用生命週期管理、將舊的階層式資料移至更具成本效益的層級
+* 您可以建立連線至其他物件存放區、以便用於叢集中的其他集合體
+* 您可以使用UI將物件存放區拖曳至集合體、以便分層和FabricPool 進行鏡射
 * 單一窗口可讓您不再需要在 FabricPool 多個叢集之間獨立管理各種功能
 * 報告會顯示每個叢集上的作用中和非作用中資料量
 * 分層健全狀況狀態可協助您識別並修正發生的問題
@@ -54,7 +56,7 @@ TIP: 從 Cloud Tiering 讀取系統。 Cloud Volumes ONTAP https://docs.netapp.c
 * NetApp StorageGRID
 
 
-雲端分層授權也可與叢集共享、這些叢集會將資料分層儲存至IBM Cloud Object Storage。此功能必須使用System Manager或CLI完成、FabricPool ONTAP 但是 https://docs.netapp.com/us-en/cloud-manager-tiering/task-licensing-cloud-tiering.html#apply-cloud-tiering-licenses-to-clusters-in-special-configurations["此類組態的授權是使用雲端分層來完成。"]
+雲端分層授權也可與叢集共享、這些叢集會將資料分層儲存至IBM Cloud Object Storage。必須使用System Manager或CLI來設定此功能、FabricPool ONTAP 但是 https://docs.netapp.com/us-en/cloud-manager-tiering/task-licensing-cloud-tiering.html#apply-cloud-tiering-licenses-to-clusters-in-special-configurations["此類組態的授權是使用雲端分層完成。"]
 
 
 NOTE: 您可以將資料從NAS磁碟區分層到公有雲或私有雲、例如StorageGRID ：在分層SAN傳輸協定存取的資料時、NetApp建議使用私有雲端、因為連線考量。
@@ -63,7 +65,7 @@ NOTE: 您可以將資料從NAS磁碟區分層到公有雲或私有雲、例如St
 
 === 物件儲存層
 
-每 ONTAP 個物件叢集都會將非作用中的資料分層至單一物件存放區。設定資料分層時、您可以選擇新增儲存區 / 容器、或選擇現有的儲存區 / 容器、以及儲存類別或存取層。
+叢集可將非作用中的資料分層至單一物件存放區或多個物件存放區。ONTAP設定資料分層時、您可以選擇新增儲存區 / 容器、或選擇現有的儲存區 / 容器、以及儲存類別或存取層。
 
 * link:reference-aws-support.html["瞭解支援的AWS S3儲存類別"]
 * link:reference-azure-support.html["深入瞭解支援的 Azure Blob 存取層"]

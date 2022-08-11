@@ -1,0 +1,156 @@
+---
+sidebar: sidebar 
+permalink: task-managing-object-storage.html 
+keywords: object storage, mirror object storage, create object storage, remove object storage, swap object storage, display object storage 
+summary: 將內部ONTAP 的物件叢集設定為將資料分層至特定物件儲存之後、您就可以執行其他物件儲存工作。您可以新增物件儲存設備、將階層式資料鏡射至次要物件儲存設備、交換主要和鏡射物件儲存設備、從集合體移除鏡射物件儲存區等。 
+---
+= 管理用於資料分層的物件儲存設備
+:hardbreaks:
+:allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+
+
+[role="lead"]
+將內部ONTAP 的物件叢集設定為將資料分層至特定物件儲存之後、您就可以執行其他物件儲存工作。您可以新增物件儲存設備、將階層式資料鏡射至次要物件儲存設備、交換主要和鏡射物件儲存設備、從集合體移除鏡射物件儲存區等。
+
+
+
+== 檢視為叢集設定的物件存放區
+
+您可能想要查看已針對叢集設定的所有物件存放區、以及它們所附加的集合體。雲端分層可為每個叢集提供此資訊。
+
+.步驟
+. 在*叢集儀表板*中、按一下叢集的功能表圖示、然後選取*物件儲存資訊*。
+. 檢閱物件存放區的詳細資料。
++
+此範例顯示Amazon S3和Azure Blob物件存放區、兩者都附加至叢集上的不同集合體。
+
++
+image:screenshot_tiering_object_store_view.png["顯示物件儲存資訊的快照、詳細說明已使用容量總計、附加至物件存放區的集合體、物件存放區名稱及詳細資訊。"]
+
+
+
+
+
+== 新增物件存放區
+
+您可以新增可用於叢集中集合體的新物件存放區。建立之後、您可以將其附加至集合體。
+
+.步驟
+. 在*叢集儀表板*中、按一下叢集的功能表圖示、然後選取*物件儲存資訊*。
+. 在「物件存放區資訊」頁面中、按一下「*建立新物件存放區*」。
++
+image:screenshot_tiering_object_store_create_button.png["顯示「建立新物件存放區」按鈕的快照、可用來建立新的物件存放區。"]
+
++
+物件存放區精靈隨即啟動。以下範例說明如何在Amazon S3中建立物件存放區。
+
+. *定義物件儲存名稱*：輸入此物件儲存設備的名稱。它必須與此叢集上的Aggregate所使用的任何其他物件儲存設備都是獨一無二的。
+. *選取供應商*：選取供應商、例如* Amazon Web Services*、然後按一下*繼續*。
+. 完成「*建立物件儲存*」頁面上的步驟：
++
+.. * S3 Bucket *：新增S3儲存區或選取以前置字元_Fabric集區_開頭的現有S3儲存區。然後輸入AWS帳戶ID以存取儲存庫、選取儲存庫區域、然後按一下*繼續*。
++
+因為連接器的 IAM 原則可讓執行個體在以該確切字首命名的儲存區上執行 S3 動作、所以需要使用 _Fabric 資源池 _ 字首。例如、您可以命名S3儲存區_Fabric集區-AFF1_、其中AFF1是叢集的名稱。
+
+.. *儲存設備類別生命週期*：雲端分層管理階層式資料的生命週期轉換。資料是從_Standard_類別開始、但您可以建立規則、在特定天數後將資料移至其他類別。
++
+選取您要將階層式資料移轉至的S3儲存類別、以及資料移動前的天數、然後按一下*繼續*。例如、以下螢幕快照顯示、階層式資料會在物件儲存的45天後、從_Standard_類別移至_Standard-IA_類別。
+
++
+如果您選擇*保留此儲存類別中的資料*、則資料會保留在_Standard_儲存類別中、而且不會套用任何規則。 link:reference-aws-support.html["請參閱支援的儲存類別"^]。
+
++
+image:screenshot_tiering_lifecycle_selection_aws.png["螢幕擷取畫面顯示如何選擇在特定天數後移動資料的另一個儲存類別。"]
+
++
+請注意、生命週期規則會套用至所選儲存區中的所有物件。
+
+.. *認證*：輸入具有所需S3權限之IAM使用者的存取金鑰ID和秘密金鑰、然後按一下*繼續*。
++
+IAM 使用者必須與您在「 * S3 Bucket * 」頁面上選取或建立的儲存區位於相同的 AWS 帳戶中。請參閱有關啟動分層的一節中所需權限。
+
+.. *叢集網路*：選取ONTAP 要用於連接物件儲存設備的IPspace、然後按一下*繼續*。
++
+選擇正確的 IPspace 、可確保 Cloud Tiering 能夠設定從 ONTAP 效益到雲端供應商物件儲存的連線。
+
+
+
+
+
+物件存放區隨即建立。
+
+現在、您可以將物件存放區附加至叢集中的集合體。
+
+
+
+== 將第二個物件存放區附加至集合體以進行鏡射
+
+您可以將第二個物件存放區附加至集合體、以建立FabricPool 一個可複寫物件存放區的鏡射鏡射。您必須有一個物件存放區已附加至Aggregate。
+
+.步驟
+. 在*叢集儀表板*中、按一下所選叢集的*進階設定*。
++
+image:screenshot_tiering_advanced_setup_button.png["顯示叢集「進階設定」按鈕的快照。"]
+
+. 從「進階設定」頁面、將您要使用的物件存放區拖曳到鏡射物件存放區的位置。
++
+image:screenshot_tiering_mirror_config.png["顯示如何將第二個物件存放區拖曳至集合體以建立分層鏡像的快照。"]
+
+. 在「附加物件存放區」對話方塊中、按一下「*附加*」、第二個物件存放區就會附加到集合體。
++
+image:screenshot_tiering_mirror_config_complete.png["顯示附加至Aggregate之第二個物件存放區的快照。"]
+
+
+
+
+
+== 切換主要和鏡射物件存放區
+
+您可以交換主要物件存放區和鏡射物件存放區以取得Aggregate。物件存放區鏡像會成為主要鏡射、而原始主要鏡射會變成鏡射。
+
+.步驟
+. 在*叢集儀表板*中、按一下所選叢集的*進階設定*。
++
+image:screenshot_tiering_advanced_setup_button.png["顯示叢集「進階設定」按鈕的快照。"]
+
+. 在「進階設定」頁面中、按一下Aggregate的功能表圖示、然後選取「* Swap Destinations*」。
++
+image:screenshot_tiering_mirror_swap.png["顯示Aggregate「Swap目的地」選項的快照。"]
+
+. 核准對話方塊中的動作、並交換主要物件和鏡射物件存放區。
+
+
+
+
+== 從Aggregate移除鏡射物件存放區
+
+如果不再需要複寫到其他物件存放區、您可以移除FabricPool 此鏡射。
+
+.步驟
+. 在*叢集儀表板*中、按一下所選叢集的*進階設定*。
++
+image:screenshot_tiering_advanced_setup_button.png["顯示叢集「進階設定」按鈕的快照。"]
+
+. 在「進階設定」頁面中、按一下Aggregate的功能表圖示、然後選取「*取消鏡射物件存放區*」。
++
+image:screenshot_tiering_mirror_delete.png["顯示Aggregate之「Unmirror Object Store」（取消鏡射物件存放區）選項的快照。"]
+
+
+
+鏡射物件存放區會從Aggregate中移除、而階層式資料將不再複寫。
+
+
+
+== 將階層式資料移轉至不同的雲端供應商
+
+雲端分層可讓您輕鬆將階層式資料移轉至不同的雲端供應商。例如、如果您想要從Amazon S3移至Azure Blob、請依照下列順序執行上述步驟：
+
+. 新增Azure Blob物件存放區。
+. 將此新物件存放區作為鏡射附加至現有的Aggregate。
+. 交換主要和鏡射物件存放區。
+. 取消鏡射Amazon S3物件存放區。
+

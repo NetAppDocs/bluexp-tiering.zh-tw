@@ -18,6 +18,22 @@ summary: 瞭解雲端分層的新功能。
 
 
 
+== 2022年8月3日
+
+
+
+=== 能夠為叢集中的其他Aggregate設定其他物件存放區
+
+Cloud Tiering UI已新增一組物件儲存組態頁面。您可以新增物件存放區、將多個物件存放區連線至Aggregate以進行FabricPool 物件鏡射、交換主要物件存放區和鏡射物件存放區、刪除物件存放區連線至集合體等。 https://docs.netapp.com/us-en/cloud-manager-tiering/task-managing-object-storage.html["深入瞭解新的物件儲存功能。"]
+
+
+
+=== 支援MetroCluster 以雲端分層的授權進行支援、以利執行各種組態
+
+雲端分層授權現在可與MetroCluster 採用各種組態的叢集共享。您不再需要在FabricPool 這些情況下使用過時的不再使用的功能介紹授權。如此一來、您就能更輕鬆地在更多叢集上使用「浮動」雲端分層授權。 https://docs.netapp.com/us-en/cloud-manager-tiering/task-licensing-cloud-tiering.html#apply-cloud-tiering-licenses-to-clusters-in-special-configurations["瞭解如何授權及設定這些類型的叢集。"]
+
+
+
 == 2022年5月3日
 
 

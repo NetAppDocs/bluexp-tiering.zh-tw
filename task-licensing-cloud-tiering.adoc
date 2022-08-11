@@ -107,7 +107,7 @@ NetApp自帶授權、提供2、12、24或36個月的期限。BYOL * Cloud Tierin
 
 全新的*雲端分層*授權於2021年8月推出、適用於使用雲端分層服務的Cloud Manager所支援的分層組態。Cloud Manager目前支援分層至下列雲端儲存設備：Amazon S3、Azure Blob儲存設備、Google Cloud Storage、S3相容物件儲存設備、IBM Cloud Object Storage及StorageGRID
 
-您過去將內部部署的內部資料分層保存到雲端時、可能FabricPool 使用的*《*環*》授權ONTAP 僅適用於ONTAP 無法存取網際網路（又稱為「暗點」）的站台、MetroCluster 或使用FabricPool 「鏡射鏡射」的非執行系統。如果您使用這些組態、您將FabricPool 會使用System Manager或ONTAP CLI、在每個叢集上安裝一個版本資訊技術授權。
+您過去將內部部署的各項資料分層保存至雲端時、可能FabricPool 使用的*《*環*》授權ONTAP 僅適用於ONTAP 無法存取網際網路的站台（又稱為「暗站」）中的非執行部署。如果您使用這種組態、則會FabricPool 使用System Manager或ONTAP the介紹的CLI、在每個叢集上安裝一份「版本資訊」授權。
 
 
 TIP: 請注意、分層至StorageGRID 不需要FabricPool 使用功能不全的或雲端分層授權。
@@ -223,10 +223,8 @@ Cloud Manager會更新授權、讓您的雲端分層服務持續運作。
 下列組態的叢集可使用雲端分層授權、但套用授權的方式必須不同於一般的單節點和HA組態的等叢集：ONTAP ONTAP
 
 * 分層鏡射組態中的叢集（連接至兩個物件存放區的叢集）
-+
-目前不支援使用「鏡射」的組態MetroCluster FabricPool
-
-* 將資料分層至IBM Cloud Object Storage的叢集
+* 使用鏡射進行的組態MetroCluster FabricPool
+* 分層至IBM Cloud Object Storage的叢集
 
 
 
@@ -248,7 +246,7 @@ Cloud Manager會更新授權、讓您的雲端分層服務持續運作。
 
 NOTE: 系統管理員或ONTAP CLI中顯示的「子」授權容量和到期日並非真實資訊、因此若資訊不相同、請勿擔心。這些價值是由Cloud Tiering軟體內部管理。實際資訊會在Digital Wallet中追蹤。
 
-對於上述兩種組態、您需要使用System Manager或ONTAP CLI（而非使用Cloud Tiering介面）來設定分層。因此在這些情況下、您必須從雲端分層介面手動將「子」授權推送至這些叢集。
+對於上述三種組態、您需要使用System Manager或ONTAP CLI（而非使用Cloud Tiering介面）來設定分層。因此在這些情況下、您必須從雲端分層介面手動將「子」授權推送至這些叢集。
 
 請注意、由於資料已分層至兩個不同的物件儲存位置、以供分層鏡射組態使用、因此您必須購買具有足夠容量的授權、才能將資料分層至兩個位置。
 
@@ -270,9 +268,12 @@ image:screenshot_tiering_deploy_license.png["快照顯示如何將分層授權�
 
 . 返回System Manager或ONTAP the不確定的CLI、然後設定分層組態。
 +
-https://docs.netapp.com/us-en/ontap/fabricpool/manage-mirrors-task.html["鏡射組態資訊FabricPool"^]
+https://docs.netapp.com/us-en/ontap/fabricpool/manage-mirrors-task.html["鏡射組態資訊FabricPool"]
 
 +
-https://docs.netapp.com/us-en/ontap/fabricpool/setup-ibm-object-storage-cloud-tier-task.html["分層至IBM Cloud Object Storage資訊"^]
+https://docs.netapp.com/us-en/ontap/fabricpool/setup-object-stores-mcc-task.html["組態資訊FabricPool MetroCluster"]
+
++
+https://docs.netapp.com/us-en/ontap/fabricpool/setup-ibm-object-storage-cloud-tier-task.html["分層至IBM Cloud Object Storage資訊"]
 
 

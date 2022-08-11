@@ -42,7 +42,6 @@
   <block id="448864d4614b43c3d9541b8308faf6df" category="paragraph">設定資料分層時、 Cloud Tiering 會提示您使用 IPspace 。您應該選擇每個 LIF 所關聯的 IPspace 。這可能是您建立的「預設」 IPspace 或自訂 IPspace 。深入瞭解<block ref="b7275acfa36ebba0d4abaa0eae46bec7" category="inline-link-rx"></block> 和<block ref="bcaf833b6d9ebe7610dbaf3380869814" category="inline-link-rx"></block>。</block>
   <block id="ac711435545c1b14c721179de8ab94a0" category="list-text">支援的磁碟區和集合體</block>
   <block id="cbd3171b775ecc9b275479726c41ccec" category="inline-link-macro">功能或功能不受 FabricPool 支援</block>
-  <block id="a5675d220565876c10dcac8811bbff56" category="list-text">Cloud Tiering 可以分層的磁碟區總數可能低於 ONTAP 您的整套系統上的磁碟區數量。這是因為磁碟區無法從某些集合體分層。請參閱 ONTAP 的《》文件 <block ref="fc9ba990e061633acc8569fe7c5e5159" category="inline-link-macro-rx"></block>。</block>
   <block id="0f77736039f178c51403a15cb68853ee" category="admonition">Cloud Tiering支援FlexGroup 從ONTAP 推出支援支援從S25 9.5開始的各種功能。安裝程式的運作方式與任何其他 Volume 相同。</block>
   <block id="8141ab52bd695a7c4b2c43e785d8bf58" category="section-title">探索ONTAP 一個叢集</block>
   <block id="3d9108b42583e778e301c7eb55fcb6df" category="paragraph">您必須先在ONTAP Cloud Manager中建立內部的功能性環境、才能開始分層處理冷資料。</block>
@@ -51,10 +50,6 @@
   <block id="5ad4258277127a9462d68a41564a449f" category="paragraph">需要連接器才能將資料分層至雲端。將資料分層至 AWS S3 時、您可以使用 AWS VPC 或內部部署中的 Connector 。您需要建立新的連接器、或確定目前選取的連接器位於 AWS 或內部部署。</block>
   <block id="e6e80588e9fe7cf89218fea44300f7ca" category="inline-link">深入瞭解連接器</block>
   <block id="da1264a616f156bd6836a85f7dfdea5a" category="list-text"><block ref="da1264a616f156bd6836a85f7dfdea5a" category="inline-link-rx"></block></block>
-  <block id="3982c5bc27c7b1cc13f2ac6e75957dfb" category="inline-link">在 AWS 中建立連接器</block>
-  <block id="44dda9fbdb9d6851ed05303bdd1606d1" category="list-text"><block ref="44dda9fbdb9d6851ed05303bdd1606d1" category="inline-link-rx"></block></block>
-  <block id="1640669103d5a54d367a1c810f072680" category="inline-link">在Linux主機上安裝Connector</block>
-  <block id="793632d28394f0290d54514bb367a864" category="list-text"><block ref="793632d28394f0290d54514bb367a864" category="inline-link-rx"></block></block>
   <block id="c870531773e82c374eb4125c8029e25e" category="inline-link">在連接器之間切換</block>
   <block id="74d39f4b6fe0e32c5cfa2ed86891bf44" category="list-text"><block ref="74d39f4b6fe0e32c5cfa2ed86891bf44" category="inline-link-rx"></block></block>
   <block id="a8e8e48001e032c3b5939047d15db5a2" category="section-title">為連接器準備網路</block>
@@ -88,9 +83,6 @@
   <block id="6700c45eabe136b9fc9be1be1c2604d7" category="list-text">按一下「*啟用*」以取得分層服務。</block>
   <block id="b2a8895a08251e3a0ba8598464e85f4a" category="inline-image-macro">螢幕擷取畫面顯示當您選取內部ONTAP 環境時、畫面右側會出現「Enable（啟用）」選項。</block>
   <block id="b7507ffc73507c1071aa3369e64f9b02" category="paragraph"><block ref="b7507ffc73507c1071aa3369e64f9b02" category="inline-image-macro-rx" type="image"></block></block>
-  <block id="1b3d00c5780e40bc4b9235ad65218f8c" category="list-text">*選擇您的供應商*：此頁面僅會在使用內部連接器時顯示。選取* Amazon Web Services*、然後按一下*繼續*。</block>
-  <block id="85c32c4423681018da39834df6bd312c" category="list-text">完成「 * 分層設定 * 」頁面上的步驟：</block>
-  <block id="9e9e182cfbb6b30ed8d084607038ca96" category="list-text">* S3 Bucket * ：新增 S3 儲存區或選取以前置字元 _Fabric 集區 _ 開頭的現有 S3 儲存區、然後按一下 * 繼續 * 。</block>
   <block id="9dcb4338cde0614db53499ea9fe7fe74" category="paragraph">使用內部連接器時、您必須輸入AWS帳戶ID、以便存取現有的S3儲存區或將要建立的新S3儲存區。</block>
   <block id="c58cf9282f95328fc92b4502fbef9f23" category="paragraph">因為連接器的 IAM 原則可讓執行個體在以該確切字首命名的儲存區上執行 S3 動作、所以需要使用 _Fabric 資源池 _ 字首。例如、您可以命名S3儲存區_Fabric集區-AFF1_、其中AFF1是叢集的名稱。</block>
   <block id="94ddf2109d46fadc98a735de8a9e7503" category="list-text">*儲存設備類別生命週期*：雲端分層管理階層式資料的生命週期轉換。資料是從_Standard_類別開始、但您可以建立規則、在特定天數後將資料移至其他類別。</block>
@@ -110,8 +102,6 @@
   <block id="7ede142e047a9c43e3ec4a50352f53b4" category="list-text">若要選取多個磁碟區、請勾選每個磁碟區的方塊（<block ref="f3b0afa317fb06ade03449dd632d08e0" category="inline-image-macro-rx" type="image"></block>），然後單擊* Configure Volume*（配置卷*）。</block>
   <block id="27d7b10352920ea311d933853a157434" category="inline-image-macro">編輯鉛筆圖示</block>
   <block id="df5e176205e9c59d302111a246c6358e" category="list-text">若要選取單一Volume、請按一下該列（或 <block ref="8e860c5cca0144ac9d126d75205476b6" category="inline-image-macro-rx" type="image"></block> 圖示）。</block>
-  <block id="26e598082ef5ae939577390ec60f20a6" category="inline-image-macro">螢幕快照顯示如何選取單一Volume、多個Volume或所有Volume、以及「修改選取的Volume」按鈕。</block>
-  <block id="2bf2b57abde3d1401bdd8ec46760c6b5" category="paragraph"><block ref="2bf2b57abde3d1401bdd8ec46760c6b5" category="inline-image-macro-rx" type="image"></block></block>
   <block id="8042a9373e3ae1f8fbfa77b3faf46f7d" category="list-text">在_分層原則_對話方塊中、選取分層原則、選擇性地調整所選磁碟區的冷卻天數、然後按一下*套用*。</block>
   <block id="886c4f74c72959b1193d0560ea0547a5" category="inline-link-macro">深入瞭解磁碟區分層原則和冷卻天數</block>
   <block id="bd33231aa5ba4d070553ba971785dc9b" category="paragraph"><block ref="d62e2fac8d05b890425d2aab05fd2f42" category="inline-link-macro-rx"></block>。</block>
@@ -121,7 +111,6 @@
   <block id="4a0adc2a429f35657495deb50af2728b" category="inline-link-macro">請務必訂閱雲端分層服務</block>
   <block id="278af5d7ebbaaac1f172ee35005f740a" category="paragraph"><block ref="19558d8e8da048bcf45840d818f0801a" category="inline-link-macro-rx"></block>。</block>
   <block id="2cafddf420b95c64349d73efe588833a" category="inline-link-macro">從叢集管理資料分層</block>
-  <block id="d64042df3c6830d1548a705ba727dbf2" category="paragraph">您也可以新增其他叢集、或檢閱叢集上作用中和非作用中資料的相關資訊。如需詳細資訊、請參閱 <block ref="3f52d219352af91f980a6960bfe72528" category="inline-link-macro-rx"></block>。</block>
   <block id="7f07b498da08e19eda2c8c1c5ee2c27e" category="summary">將非作用中資料分層存放至Azure Blob儲存設備、以釋放內部ONTAP 環境中的閒置空間。</block>
   <block id="f7b28901adf8c67d01732b27eac78bee" category="doc">將內部部署 ONTAP 的資料叢集分層至 Azure Blob 儲存設備</block>
   <block id="d2f518b275848356f172ff6ae0c10fa8" category="list-text">內部ONTAP 使用的支援區叢集、執行ONTAP 的是2個9.4或更新版本、並有HTTPS連線至Azure Blob儲存設備。<block ref="afd80128eeaacb8238d3ffdcf8ecd8a8" category="inline-link-rx"></block>。</block>
@@ -138,8 +127,6 @@
   <block id="1530d1823861aa989d35b92ad0b2fd9e" category="list-text">連接器必須有傳入連線、連接器可位於Azure vnet或內部部署環境中。</block>
   <block id="3cb09efd98df836314cbd254dcf63296" category="admonition">Cloud Tiering 支援 FlexGroup 從 ONTAP 功能完善的 9.5 開始的各種功能。安裝程式的運作方式與任何其他 Volume 相同。</block>
   <block id="b7f76e21e320bc5e90f575d84c38f775" category="paragraph">需要連接器才能將資料分層至雲端。將資料分層至Azure Blob儲存設備時、您可以使用Azure vnet或內部部署中的Connector。您需要建立新的連接器、或確定目前選取的連接器位於Azure或內部部署。</block>
-  <block id="7f9fe9913d1b2a08f5ff2caaa85912bf" category="inline-link">在 Azure 中建立 Connector</block>
-  <block id="2f2a18805beae6bfc55c48482a096240" category="list-text"><block ref="2f2a18805beae6bfc55c48482a096240" category="inline-link-rx"></block></block>
   <block id="b1e389999fc3500ff74c433071c6f3d0" category="section-title">確認您擁有必要的Connector權限</block>
   <block id="9cf7397373647ce59fc85a522be218b9" category="paragraph">如果您是使用Cloud Manager 3.9.7版或更新版本建立Connector、那麼您就已經設定好了。</block>
   <block id="8de47ea2ac854f7a21fa39e52589d5c4" category="paragraph">如果您使用舊版Cloud Manager建立Connector、則需要編輯權限清單、以新增2項必要權限：</block>
@@ -154,7 +141,6 @@
   <block id="30c0faff624015e8c8016427ebe986eb" category="admonition">如果您計畫將Cloud Tiering設定為使用較低成本的存取層、以便階層式資料在特定天數後轉換至該層、則在Azure帳戶中設定容器時、不得選擇任何生命週期規則。雲端分層可管理生命週期的轉換。</block>
   <block id="0cff75f8a1ea859d852b43f30a5a65c5" category="section-title">將第一個叢集的非作用中資料分層至 Azure Blob 儲存設備</block>
   <block id="eeee7c2206f30d34992557feb0d7900f" category="paragraph">準備好 Azure 環境之後、請從第一個叢集開始分層處理非作用中資料。</block>
-  <block id="3bbb95cc4b2cfe39978b5c8acb0ac40a" category="list-text">*選擇您的供應商*：此頁面僅會在使用內部連接器時顯示。選擇* Microsoft Azure *、然後按一下*繼續*。</block>
   <block id="3ee477979f5c167102e6a5ac24838ded" category="list-text">*資源群組*：選取管理現有容器的資源群組、或您要在其中建立階層式資料的新容器、然後按一下*繼續*。</block>
   <block id="942f0e4fa69f4641e5d7a36f624bfc71" category="list-text">* Azure Container *：將新的Blob容器新增至儲存帳戶、或選取現有的容器、然後按一下*繼續*。</block>
   <block id="2c144a187f06a9de2cdb7fb8f11f0560" category="paragraph">使用內部部署連接器時、您必須輸入Azure訂閱、以存取即將建立的現有容器或新容器。</block>
@@ -168,7 +154,6 @@
   <block id="d2f15cc1f6b52e91b3fa0f67c5683cc7" category="paragraph">請注意、生命週期規則會套用至所選儲存帳戶中的所有blob容器。</block>
   <block id="b9c2da820a39ae715e453dbc44b9065a" category="paragraph"><block ref="b3f320eea54b95003707e5e870c0dfaf" category="inline-xref-macro-rx"></block> 生命週期管理功能。</block>
   <block id="16c1b13c5edce68f96a3166081c6dd73" category="inline-image-macro">螢幕擷取畫面顯示如何選取單一Volume、多個Volume或所有Volume、以及「修改選取的Volume」按鈕。</block>
-  <block id="688e3c5961e9901ca28a8ecf8d6ca689" category="paragraph"><block ref="688e3c5961e9901ca28a8ecf8d6ca689" category="inline-image-macro-rx" type="image"></block></block>
   <block id="ade7907875a5b3e50997036947f13251" category="paragraph">您已成功設定資料分層、從叢集上的磁碟區到 Azure Blob 物件儲存設備。</block>
   <block id="f658b533f81ca87a3c235485a5ca7b33" category="summary">Cloud Tiering會自動將非作用中資料從內部部署ONTAP 的物件叢集分層、以將資料中心延伸至雲端。</block>
   <block id="18b67cdd6c50872fa0de2de9dfd11343" category="doc">雲端分層文件</block>
@@ -219,7 +204,6 @@
   <block id="55cf1a0f0fce69fd543500e5761dd26d" category="list-text">NetApp StorageGRID</block>
   <block id="996d831ac7a2265a8b052be35e48ec58" category="admonition">您可以將資料從NAS磁碟區分層到公有雲或私有雲、例如StorageGRID ：在分層SAN傳輸協定存取的資料時、NetApp建議使用私有雲端、因為連線考量。</block>
   <block id="a20f952fc829b6aeea951e2b9f940dd3" category="section-title">物件儲存層</block>
-  <block id="23e4052d27769d9271277ca8cf4cdee2" category="paragraph">每 ONTAP 個物件叢集都會將非作用中的資料分層至單一物件存放區。設定資料分層時、您可以選擇新增儲存區 / 容器、或選擇現有的儲存區 / 容器、以及儲存類別或存取層。</block>
   <block id="0cd5fa9246e02bf858daa12d6569045f" category="inline-link-macro">瞭解支援的AWS S3儲存類別</block>
   <block id="1a175ba78452c76b9657c5f9529ee161" category="list-text"><block ref="1a175ba78452c76b9657c5f9529ee161" category="inline-link-macro-rx"></block></block>
   <block id="b7474761ac8e83016097e0d900166218" category="inline-link-macro">深入瞭解支援的 Azure Blob 存取層</block>
@@ -323,7 +307,6 @@
   <block id="97abcd5318878d2da3df279eeb5b7683" category="inline-link-macro">支援的Google Cloud儲存類別</block>
   <block id="a315b97ead114b01711324b00318fede" category="paragraph">雲端分層支援資料分層至_Standard_、_Nearlin__、_Coldlin__和_Archive_儲存類別。請參閱 <block ref="7bf35a231ca3eab0ba1eb206f6515726" category="inline-link-macro-rx"></block> 以取得更多詳細資料。</block>
   <block id="cbf85819c0ec3bd08aea6103a838e42f" category="section-title">雲端分層會將一個物件存放區用於整個叢集、還是每個 Aggregate 使用一個物件存放區？</block>
-  <block id="cb8d52e5219592f36bdfb68231d97d04" category="paragraph">一個物件存放區用於整個叢集。</block>
   <block id="fe4a785cf549e843e958f443c4baf0fe" category="section-title">連接器</block>
   <block id="417cf0f3678f81efde443c4a85c2acb8" category="section-title">連接器需要安裝在何處？</block>
   <block id="ca4f429ffa25591e74f6645a3406d7cd" category="list-text">將資料分層至S3時、連接器可位於AWS VPC或內部部署環境中。</block>
@@ -438,8 +421,6 @@
   <block id="31f8a34f475863b5b8f57242c2224a56" category="list-text">連接器位於Google Cloud Platform VPC中、因此需要傳入連線。</block>
   <block id="c3fb869301bdf0050425864a1c816fd8" category="admonition">雲端分層可支援 FlexGroup 支援不同步磁碟區。安裝程式的運作方式與任何其他 Volume 相同。</block>
   <block id="6f8de70a130cd2e986950accf1528a82" category="paragraph">需要連接器才能將資料分層至雲端。將資料分層至 Google Cloud Storage 時、 Google Cloud Platform VPC 必須提供 Connector 。您需要建立新的連接器、或確定目前選取的連接器位於 GCP 中。</block>
-  <block id="1b9afce7f2077ff3630469557123d5c5" category="inline-link">在 GCP 中建立連接器</block>
-  <block id="1b3c5be5b518e14d52c79b7360302255" category="list-text"><block ref="1b3c5be5b518e14d52c79b7360302255" category="inline-link-rx"></block></block>
   <block id="7b16b8b258668ab05a1e5d83e084b477" category="paragraph">確認連接器具備所需的網路連線。</block>
   <block id="499449d439c0676b8921b5ff6e0ca806" category="list-text">確認安裝連接器的 VPC 啟用下列連線：</block>
   <block id="d83f012d1d2a88fdb1e7cb28d94b081d" category="list-text">透過連接埠 443 連線至 Google Cloud Storage 的 HTTPS 連線</block>
@@ -472,7 +453,6 @@
   <block id="635253659dacfccaf41ba250260189aa" category="paragraph">您已成功設定從叢集上的磁碟區到 Google Cloud 物件儲存區的資料分層。</block>
   <block id="373efc67a3356a3a76e08792361de915" category="summary">雲端分層提供從每個內部部署叢集進行資料分層的彙總檢視。本總覽提供清楚的環境概況、並可讓您採取適當行動。</block>
   <block id="8fa2690e71ce0c54acb839630146cadd" category="doc">從叢集取得資料分層的總覽</block>
-  <block id="2331168d29778bde7c7f0bf7442108fc" category="paragraph">雲端分層提供下列環境詳細資料：</block>
   <block id="09410de8c94e9f68daa9372cf505d92c" category="inline-image-macro">「內部部署總覽」頁面的快照。</block>
   <block id="1acad320817dead1b4a28a1e3c74348e" category="paragraph"><block ref="1acad320817dead1b4a28a1e3c74348e" category="inline-image-macro-rx" type="image"></block></block>
   <block id="9e5814d733d11a3760eeb41c5a83a80f" category="list-text">作用中叢集</block>
@@ -485,7 +465,6 @@
   <block id="4be1b347cffb3177e749a7dea6f54978" category="list-text">每個分層原則套用至磁碟區的次數。</block>
   <block id="ccc1516741f5a9218383ec432abb8237" category="list-text">市場訂閱</block>
   <block id="28c123c8cd56ba4e4b9a732aa779fbc1" category="list-text">與每種 Marketplace 訂購類型相關聯的叢集數目、以及您的訂購狀態指示。</block>
-  <block id="330853c3f191d5e65ab83eb891c636d8" category="list-text">按一下 * 分層 &gt; 內部部署總覽 * 。</block>
   <block id="95d21219a470b4020cc43fd28635e166" category="summary">雲端分層可支援多種Google Cloud儲存類別和大部分地區。</block>
   <block id="f1a3ad895aa06bd9c76af0c86381f4cf" category="doc">支援的 Google Cloud 儲存類別和地區</block>
   <block id="8f2228fce8c23a4fe2e7622bc8a9d4ea" category="section-title">支援的GCP儲存類別</block>
@@ -559,12 +538,10 @@
   <block id="1b8a3756b590cb811f9726f247097028" category="list-text">具備所需 S3 權限的 AWS 存取金鑰。</block>
   <block id="85cd1fc1600a51fdeb99ebc5121fa64e" category="inline-image-macro">螢幕擷取畫面顯示選取內部 ONTAP 環境後、畫面右側會出現「設定分層」選項。</block>
   <block id="23d57e0aa543c12cc6f2de0e1d5a38fb" category="paragraph"><block ref="23d57e0aa543c12cc6f2de0e1d5a38fb" category="inline-image-macro-rx" type="image"></block></block>
-  <block id="b9a857184ba34b2173935c63cafd8508" category="list-text">*選擇您的供應商*：選擇* StorageGRID 《*》*、然後按一下*「繼續*」。</block>
   <block id="4014800981ed7ad3b1ab16a5a86574ce" category="list-text">* Bucket *：新增儲存區或選取以前置字元_Fabric集區_開頭的現有儲存區、然後按一下*繼續*。</block>
   <block id="65baf260014f5ed41f70e43c8bae3790" category="list-text">* 叢集網路 * ：選取 ONTAP 要用於連接物件儲存設備的 IPspace 、然後按一下 * 繼續 * 。</block>
   <block id="6770c476e7cf4e5329f4a574f524ae3a" category="paragraph">選擇正確的IPspace可確保Cloud Tiering能夠設定從ONTAP 物件儲存到物件StorageGRID 儲存的連線。</block>
   <block id="d211aa9c9b0d32735c22312d6ced0bfb" category="paragraph">您已成功設定資料分層、從叢集上的磁碟區到 StorageGRID 物件。</block>
-  <block id="9369def726a0664911c0982b698c37d5" category="paragraph">您可以新增其他叢集、或檢閱叢集上作用中和非作用中資料的相關資訊。如需詳細資訊、請參閱 <block ref="3f52d219352af91f980a6960bfe72528" category="inline-link-macro-rx"></block>。</block>
   <block id="53fb2e16821826b6c5ca2caabc6fc3fd" category="summary">在您從第一個叢集設定分層時、就會開始免費試用30天的雲端分層。在免費試用結束後、您必須透過雲端供應商的市場訂閱隨用隨付的Cloud Manager、NetApp的BYOL授權、或兩者的組合、來支付Cloud Tiering的費用。</block>
   <block id="4b75686c0a14158ec6b99e93fbf1828b" category="doc">設定雲端分層授權</block>
   <block id="80186f1230af2267e2c2e4d2ab8c030e" category="paragraph">在閱讀更多內容之前、請先提供幾個附註：</block>
@@ -683,11 +660,9 @@
   <block id="93772529b8117fc8010ab6872129a19c" category="section-title">從其他磁碟區分層資料</block>
   <block id="d911ca369d48811297e1670d6c7a6096" category="paragraph">隨時設定其他磁碟區的資料分層、例如建立新磁碟區之後。</block>
   <block id="ae1e3d568dc256d91e65f1141d98faa1" category="admonition">您不需要設定物件儲存設備、因為它已在最初設定叢集分層時進行設定。將非作用中資料從任何其他磁碟區分層至同一個物件存放區。ONTAP</block>
-  <block id="6662e49ec46d62cc90731614c388b4f7" category="list-text">在 * 叢集儀表板 * 中、按一下叢集的 * 層級磁碟區 * 。</block>
   <block id="edc1bce516f0e4e5cb6bf57de68ce286" category="inline-image-macro">顯示如何為叢集選取「階層磁碟區」按鈕的快照。</block>
   <block id="7d5d486077d112d9f802c64eea1ab893" category="paragraph"><block ref="7d5d486077d112d9f802c64eea1ab893" category="inline-image-macro-rx" type="image"></block></block>
   <block id="bf1af3fe2b2716f907d63473ff063165" category="inline-image-macro">螢幕擷取畫面顯示如何選取單一Volume、多個Volume或所有Volume、以及「修改選取的Volume」按鈕。</block>
-  <block id="d39508321e35588547a28b7d354c7374" category="paragraph"><block ref="d39508321e35588547a28b7d354c7374" category="inline-image-macro-rx" type="image"></block></block>
   <block id="b43a266db2aca1fd9d7c018f414038a1" category="paragraph">選定的磁碟區開始將資料階層化至雲端。</block>
   <block id="6e4c88586fed564c2a533a5be0ddcf91" category="section-title">變更磁碟區的分層原則</block>
   <block id="5a40c33f4c0bb7db2e33038404ef04b9" category="paragraph">變更磁碟區的分層原則、可改變 ONTAP 將資料冷階移至物件儲存的方式。變更從您變更原則的那一刻開始。它只會變更磁碟區的後續分層行為、不會將資料追溯到雲端層。</block>
@@ -721,18 +696,10 @@
   <block id="d61d482d15787696f979cad384202560" category="list-text">非作用中資料報告</block>
   <block id="8ef0dc4e23e271ee189dabf44ca0d2b7" category="list-text">非作用中資料報告（ IDR) 使用 31 天的冷卻期來判斷哪些資料被視為非作用中。分層的冷資料量取決於在磁碟區上設定的分層原則。此量可能與使用 31 天冷卻期的印尼盾偵測到的冷資料量不同。</block>
   <block id="afc2a246280d9465bcf55cf67326ed45" category="admonition">最好保持啟用印尼盾、因為它有助於識別您的非使用中資料和節約機會。如果在 Aggregate 上啟用資料分層、則必須保持啟用印尼盾。</block>
-  <block id="88eb6d68f4f619a5a606b78c866fe1ef" category="list-text">在「 * 雲端分層 * 」頁面中、按一下叢集的功能表圖示、然後選取 * 管理 Aggregate * 。</block>
-  <block id="d51a711146648699bd03a0f92c357ff5" category="inline-image-macro">叢集儀表板的快照、會顯示叢集和已展開的動作功能表。</block>
-  <block id="10c6081fa0c96e35db80dd022583a3d9" category="paragraph"><block ref="10c6081fa0c96e35db80dd022583a3d9" category="inline-image-macro-rx" type="image"></block></block>
-  <block id="75578183b0452e918329f74a698c0298" category="inline-image-macro">編輯圖示的快照、顯示在表格中每一列的結尾、用於管理集合體</block>
-  <block id="a3b48b4161c1ea416815567155adb8a7" category="list-text">在 * 管理 Aggregate * 頁面上、按一下 <block ref="d7e2a7fde50ad4fe515918c829763eb5" category="inline-image-macro-rx" type="image"></block> 表格中的 Aggregate 圖示。</block>
-  <block id="388792e71baf49fd5c469109a8d6156d" category="list-text">修改完整度臨界值、並選擇啟用或停用非使用中資料報告。</block>
   <block id="c247e23e986e098bf4dc6ffade00cd6c" category="inline-image-macro">螢幕快照顯示滑桿、可用來修改分層完整臨界值、以及啟用或停用非使用中資料報告的按鈕。</block>
-  <block id="70901739ac4938294053ca2a8c7cb0c1" category="paragraph"><block ref="70901739ac4938294053ca2a8c7cb0c1" category="inline-image-macro-rx" type="image"></block></block>
   <block id="400fae8e788b3721b9ac25fe01f04f50" category="list-text">按一下「 * 套用 * 」。</block>
   <block id="25a328b1273c1ed4cb496b3da5c30171" category="section-title">檢閱叢集的分層資訊</block>
   <block id="32f514343a82d38f7b84b4ef33185e35" category="paragraph">您可能想要查看雲端層中有多少資料、以及磁碟上有多少資料。或者、您可能想要查看叢集磁碟上的熱和冷資料量。雲端分層可為每個叢集提供此資訊。</block>
-  <block id="e3c2b5a0fe72c4b086407f7fb9b4aafb" category="list-text">在*叢集儀表板*中、按一下叢集的功能表圖示、然後選取*叢集資訊*。</block>
   <block id="f493df8ab5710f59a3ed9742a507da2b" category="list-text">檢閱叢集的詳細資料。</block>
   <block id="4d947fe0b5c4693f487f4fd1a4295c99" category="paragraph">範例如下：</block>
   <block id="5fb2a07fa295e13c5ae33b74f1915075" category="inline-image-macro">顯示叢集報告的快照、其中詳細說明已使用容量總計、叢集已使用容量、叢集資訊及物件儲存資訊。</block>
@@ -754,7 +721,6 @@
   <block id="66009842ccd3b5b27255c54219dcb209" category="section-title">從雲端分層探索其他叢集</block>
   <block id="61bf1156d2dd091eed9cbb25cf33c134" category="paragraph">您可以ONTAP 從分層叢集儀表板將未發現的內部叢集新增至Cloud Manager、以便為叢集啟用分層。</block>
   <block id="247d31f04619e7f1f03d685e8e2b2816" category="paragraph">請注意、按鈕也會顯示在「分層_高級版概述_」頁面上、供您探索其他叢集。</block>
-  <block id="cd5423e4d843806b46eaebaa1eb84bea" category="list-text">在雲端分層中、按一下*叢集儀表板*索引標籤。</block>
   <block id="b57da0b2e8132c4d5a84d9f088fe75f2" category="list-text">若要查看任何未探索到的叢集、請按一下*顯示未探索到的叢集*。</block>
   <block id="68344976fe86b89a3fba62990a12e25a" category="inline-image-macro">顯示分層儀表板上「顯示未探索到的叢集」按鈕的快照。</block>
   <block id="ba7ed4fd521be5b57e051242d4d614a3" category="paragraph"><block ref="ba7ed4fd521be5b57e051242d4d614a3" category="inline-image-macro-rx" type="image"></block></block>
@@ -833,15 +799,12 @@
   <block id="8d43d9cd74de6ffefa944510fdac9def" category="list-text">在右側面板中、按一下「*啟用*」以使用分層服務。</block>
   <block id="6676b3f6fd0aacd6a191518bb81aa206" category="inline-image-macro">螢幕快照顯示選取內部ONTAP 環境後、畫面右側會出現分層選項。</block>
   <block id="00daa784b7dee12cb2819fac0ab07fda" category="paragraph"><block ref="00daa784b7dee12cb2819fac0ab07fda" category="inline-image-macro-rx" type="image"></block></block>
-  <block id="6ed04e42abfdd42fe74d77c1903950a3" category="list-text">*選擇您的供應商*：選擇* S3相容*、然後按一下*繼續*。</block>
   <block id="c681fc1169309fdbbc2003946bcf5c4c" category="list-text">*伺服器*：輸入S3相容物件儲存伺服器的FQDN、ONTAP 用來與伺服器進行HTTPS通訊的連接埠、以及具有所需S3權限之帳戶的存取金鑰和秘密金鑰。</block>
   <block id="48e6951ad2fcc747e4ade8bdfb57e3ca" category="list-text">* Bucket *：新增儲存庫或選取現有的儲存庫、然後按一下*繼續*。</block>
   <block id="b20f6cb756fa58f51a1027399dad0258" category="paragraph">選擇正確的IPspace、可確保Cloud Tiering能夠設定從ONTAP 功能區到S3相容物件儲存的連線。</block>
   <block id="f972833c06016ff05585be675c6f77e0" category="list-text">在「_Success」頁面上、按一下「*繼續*」立即設定磁碟區。</block>
   <block id="467dc67da765672ea12bbd2efe6c892d" category="list-text">在「_層級磁碟區_」頁面上、選取您要設定分層的磁碟區、然後按一下*繼續*：</block>
-  <block id="7c9c9a6c5d6fa88b9008c395567a9b71" category="paragraph"><block ref="7c9c9a6c5d6fa88b9008c395567a9b71" category="inline-image-macro-rx" type="image"></block></block>
   <block id="ef451a94db19d37a27a0b08cd56be525" category="paragraph">您已成功設定資料分層、從叢集上的磁碟區到S3相容的物件儲存區。</block>
-  <block id="7ff191df90fac0fa94ab5c2b5101a5e9" category="sidebar">所有Cloud Manager文件</block>
   <block id="7422586a973725fb5c732043909f2d2d" category="sidebar">雲端分層文件</block>
   <block id="7d0ee6fed10d3d4e5c9ee496729ab519" category="sidebar">版本資訊</block>
   <block id="be11c74c1dd7f307bb80183a90dc2067" category="sidebar">開始使用</block>
@@ -879,9 +842,6 @@
   <block id="4c7d5d7dfde4a7bd82b54348182043d3" category="sidebar">其他資源</block>
   <block id="cc81b1698333ba727fd5bde305c3cf08" category="sidebar">Cloud Central使用案例</block>
   <block id="fd01295dbf857b2bc6bcef4166b23207" category="paragraph">原支援AFF 採用FAS All SSD集合體的支援功能、從ONTAP Select VMware 9.8開始ONTAP 、除了高效能SSD之外、您也可以從由HDD組成的集合體來分層資料。請參閱<block ref="6b92341e29e5578d52c0690ebbf4bdb7" category="inline-link-rx"></block> 以取得詳細資料。</block>
-  <block id="2435df85f1fbddfaa74ed9d9b389396e" category="inline-link">這類叢集的授權是使用雲端分層來完成。</block>
-  <block id="602d3c419c8a2f0671f1f332facbd3f6" category="paragraph">雲端分層授權也可與FabricPool 採用「鏡射」組態（MetroCluster 不包括「非」組態）的叢集共享。此功能必須使用System Manager或CLI完成、FabricPool ONTAP 但是<block ref="f01d00e65c71afcc96316056bf32ae1d" category="inline-link-rx"></block></block>
-  <block id="17284df03fb9788b01cced519aa7b242" category="inline-link">此類組態的授權是使用雲端分層來完成。</block>
   <block id="dfbee056730af589714f6061683bf3c8" category="paragraph">雲端分層支援下列物件儲存供應商：</block>
   <block id="d3e8cd2e370974f27de1b310b4aa8cb3" category="section-title">2022年5月3日</block>
   <block id="a74300b6b08791dda4f54d473a58e17a" category="section-title">雲端分層授權支援、可用於其他叢集組態</block>
@@ -890,7 +850,6 @@
   <block id="75ad6cd4979a906c67e27abc9ee1c14e" category="inline-link">請參閱支援的S3儲存類別。</block>
   <block id="d3028cb26dae3dbde1ec068c17d15383" category="paragraph">設定雲端分層時、現在您可以設定生命週期規則、讓非使用中的資料在特定天數後從_Standard_儲存類別轉換為_Glacier即時擷取。這將有助於降低AWS基礎架構成本。<block ref="99f36cc81f33df65a0349e719000fada" category="inline-link-rx"></block></block>
   <block id="c37d8d783a15bb3dc29d360fd96058fa" category="paragraph">全新的*雲端分層*授權於2021年8月推出、適用於使用雲端分層服務的Cloud Manager所支援的分層組態。Cloud Manager目前支援分層至下列雲端儲存設備：Amazon S3、Azure Blob儲存設備、Google Cloud Storage、S3相容物件儲存設備、IBM Cloud Object Storage及StorageGRID</block>
-  <block id="6ddd4d2b3e22e1f0dbfa3f2cfb99611d" category="paragraph">您過去將內部部署的內部資料分層保存到雲端時、可能FabricPool 使用的*《*環*》授權ONTAP 僅適用於ONTAP 無法存取網際網路（又稱為「暗點」）的站台、MetroCluster 或使用FabricPool 「鏡射鏡射」的非執行系統。如果您使用這些組態、您將FabricPool 會使用System Manager或ONTAP CLI、在每個叢集上安裝一個版本資訊技術授權。</block>
   <block id="d99641589694e93765fada1790db2a0e" category="section-title">將雲端分層授權套用至特殊組態的叢集</block>
   <block id="ec4ebd20c319e970c3f59b1f47802c0b" category="list-text">分層鏡射組態中的叢集（連接至兩個物件存放區的叢集）</block>
   <block id="c8fe0ffee9071759c56b9a7d98bae676" category="section-title">現有叢集的程序FabricPool 、若叢集具有不含更新授權</block>
@@ -898,7 +857,6 @@
   <block id="f9e397eb4495d4b3c8a7097b4ea8b610" category="paragraph">當您 <block ref="20b85fbda0982633cbcc10be992f4ea5" category="inline-link-macro-rx"></block>、Cloud Tiering可辨識FabricPool 出此功能的不一致性、並將授權新增至Digital Wallet。這些叢集將繼續如常分層資料。當「不適用」授權到期時、您必須購買雲端分層授權。FabricPool</block>
   <block id="eb5050df74a7237bec4864cad6113b55" category="section-title">新建立叢集的程序</block>
   <block id="9cf61e4fc9ad253b398c1c3be905176d" category="paragraph">當您在雲端分層中發現典型叢集時、就會使用雲端分層介面來設定分層。在這些情況下、會發生下列動作：</block>
-  <block id="5c47f5b94c062cb59e1084e7104a35ad" category="paragraph">對於上述兩種組態、您需要使用System Manager或ONTAP CLI（而非使用Cloud Tiering介面）來設定分層。因此在這些情況下、您必須從雲端分層介面手動將「子」授權推送至這些叢集。</block>
   <block id="f457a5079118a07f91a021318abf923e" category="list-text">使用System Manager或CLI安裝及設定ONTAP 您的靜態叢集ONTAP 。</block>
   <block id="a91bdb81c68f1a37a469fa1d5933a14b" category="paragraph">此時請勿設定分層。</block>
   <block id="a49fb32c3dc821374473edfc6c43950a" category="inline-link-macro">購買雲端分層授權</block>
@@ -914,10 +872,7 @@
   <block id="9b0c8b391da3036b3219d496d996a102" category="paragraph">子授權會部署至ONTAP 整個叢集。</block>
   <block id="8b0a08ec64fa62214a614acb1efe653a" category="list-text">返回System Manager或ONTAP the不確定的CLI、然後設定分層組態。</block>
   <block id="4bd3288276aa6f67f33d76d6902047a2" category="inline-link">鏡射組態資訊FabricPool</block>
-  <block id="72c2d35b547a9f20d83b2001c0deb1de" category="paragraph"><block ref="72c2d35b547a9f20d83b2001c0deb1de" category="inline-link-rx"></block></block>
   <block id="653000cdcda1dc1026b9ce4d1c8f33bd" category="inline-link">分層至IBM Cloud Object Storage資訊</block>
-  <block id="5bc01400af176dafcc4180cd4038b69d" category="paragraph"><block ref="5bc01400af176dafcc4180cd4038b69d" category="inline-link-rx"></block></block>
-  <block id="4380a240602c0c6f68e3e1f76af87ade" category="paragraph">雲端分層授權也可與叢集共享、這些叢集會將資料分層儲存至IBM Cloud Object Storage。此功能必須使用System Manager或CLI完成、FabricPool ONTAP 但是<block ref="ed2970faba694b446adb4cf5afc34bcc" category="inline-link-rx"></block></block>
   <block id="1457e49f8dccec856889afc7198d7b7f" category="section-title">雲端分層服務</block>
   <block id="38f452586e2a055585812c12639a1c00" category="paragraph">下列常見問題集與雲端分層的運作方式有關。</block>
   <block id="56f1d5aa6fc7801567f63a1a34bbe555" category="section-title">使用雲端分層服務有哪些好處？</block>
@@ -958,7 +913,6 @@
   <block id="a901d6a825e66cb01eb47cc7f8078f70" category="section-title">我是否能同時擁有相同ONTAP 的__LW_Y1_cluster的BYOL和PAYGO授權？</block>
   <block id="51f82ca656528cf0a0e25d3afcf4094b" category="paragraph">是的。Cloud Tiering可讓您使用BYOL授權、PAYGO訂閱、或兩者的組合。</block>
   <block id="df633ebdc2836fc65b2b5c8df3071fad" category="section-title">如果我達到BYOL容量上限、會發生什麼事？</block>
-  <block id="2a4ef466f4a2aaf004e4bd8d6ee2190f" category="paragraph">如果您達到BYOL容量限制、新的冷資料分層作業就會停止、而先前所有階層式資料仍可存取。如果您訂閱了「_Cloud Manager -部署與管理雲端資料服務」的PAYGO市場訂閱、新的Cold資料將繼續分層以物件式儲存、而且每次使用都會產生費用。</block>
   <block id="01fc89841bd324e9a84c964564f22b64" category="section-title">雲端分層授權是否包含雲端供應商的出口費用？</block>
   <block id="9dad9dd39241a9273189835c0c05bca9" category="paragraph">不、這不是。</block>
   <block id="4db80c7f4174dd6b7d23b536c737df16" category="section-title">內部部署系統的重組是否會受到雲端供應商的外出成本影響？</block>
@@ -978,7 +932,6 @@
   <block id="360f208f0200dcfe1f02d2beac7d1a99" category="section-title">雲端分層支援哪些ONTAP 版本？</block>
   <block id="d221b871da22439c86adc694691b8ac6" category="paragraph">Cloud Tiering支援ONTAP 不支援版本9.2及更新版本。</block>
   <block id="83c5a7ec07bde90cd5d13c81363f989e" category="paragraph">單節點和高可用度AFF 的堆疊支援雲端分層功能、包括：FAS ONTAP Select</block>
-  <block id="93a294a492966845cedd2b8851ba5e94" category="paragraph">也支援使用「鏡射鏡射」組態的叢集FabricPool 、但分層組態必須使用System Manager或ONTAP CLI來完成。</block>
   <block id="a876ec112f46ac7e9d03cc5e9d61ab8f" category="section-title">我可以僅使用FAS HDD來分層來自於各種不知道的系統的資料嗎？</block>
   <block id="6af3c671d9ae3cfdf4e5db8e741c4949" category="paragraph">是的、從ONTAP 功能區9.8開始、您可以從HDD集合體上裝載的磁碟區分層資料。</block>
   <block id="5f2bd910e80c6ecc503341b164c23796" category="section-title">我可以將AFF 資料從連接到叢集的不整合式資料分層FAS 、使其具有HDD的不整節點嗎？</block>
@@ -1003,9 +956,7 @@
   <block id="84a20b13e3ea8fe117cd487b10cafd14" category="inline-link-macro">請參閱此處的詳細資料</block>
   <block id="de6d6c00be7f38cc0fb58e604e31efe9" category="paragraph">是的、叢集使用ONTAP 的是支援透過分層UI設定S3相容的物件儲存設備、這些叢集使用的是更新版本的版本。 <block ref="dfc215f15d0188a75116c167a2fbbc9d" category="inline-link-macro-rx"></block>。</block>
   <block id="94fe0352e28f43c2dee13351ec781840" category="section-title">是否可以將多個儲存區附加至同一個Aggregate？</block>
-  <block id="59c02e24aae2d5e6f5ca4aecfe567460" category="paragraph">為了鏡射、每個集合最多可附加兩個儲存區、其中冷資料會同步分層至兩個儲存區。這些庫位可以來自不同的供應商和不同的位置。不過、目前不支援透過Cloud Tiering UI進行組態、您可以透過System Manager或CLI進行設定。</block>
   <block id="dd7b95cf528df2e6a1ada6c6e3b3c8a8" category="section-title">是否可以將不同的儲存區附加至同一個叢集中的不同集合體？</block>
-  <block id="b7e0155773c98acbf757ee23f8cc4b8c" category="paragraph">是的。一般最佳實務做法是將單一儲存區附加至多個集合體。不過、使用公有雲時、物件儲存服務的IOPS限制最大、因此必須考量多個儲存區。不過、目前不支援透過Cloud Tiering UI進行組態、您可以透過System Manager或CLI進行設定。</block>
   <block id="795944e4714141aa7f5bc7bca15b9cc7" category="section-title">當您將磁碟區從一個叢集移轉到另一個叢集時、階層式資料會有什麼影響？</block>
   <block id="ac2697251023e10e659e1d144374c46f" category="paragraph">將磁碟區從一個叢集移轉至另一個叢集時、所有的冷資料都會從雲端層讀取。目的地叢集上的寫入位置取決於是否已啟用分層、以及來源與目的地磁碟區上使用的分層原則類型。</block>
   <block id="75e192e543376cd0700d28d7707c1400" category="section-title">當您將磁碟區從同一個叢集中的某個節點移至另一個節點時、階層式資料會發生什麼事？</block>
@@ -1014,8 +965,6 @@
   <block id="594e5f8f87d3f9aee64730282f1d9d11" category="inline-link-macro">瞭解如何將資料移回效能層</block>
   <block id="5b9fbe75fbcd16763752424288950fad" category="section-title">以新的AFF/FAS控制器取代現有的AFF/FAS控制器時、階層式資料是否會在內部部署上重新移轉？</block>
   <block id="954ab271743046342c8c477272ccf1e2" category="paragraph">不可以在「標頭交換」程序中、唯一需要變更的是集合體的擁有權。在這種情況下、它將會變更為新的控制器、而不會有任何資料移動。</block>
-  <block id="9ae27577765a14f9c236003effe69e5e" category="section-title">在災難恢復情況下、我可以使用階層式資料來恢復磁碟區或系統嗎？</block>
-  <block id="7d552a8536eeb68fc71cd57c3774fd42" category="paragraph">不可以由於磁碟區的中繼資料一律儲存在本機效能層上、因此如果發生災難且本機層遺失、中繼資料也會遺失、而且無法參照階層式資料。</block>
   <block id="be06043e635d6e3bb909d73510b44e3d" category="section-title">我可以使用雲端供應商的主控台或物件儲存資源探查器來查看階層至儲存庫的資料嗎？我是否可以直接使用儲存在物件儲存區中的資料、而無需ONTAP 使用任何功能？</block>
   <block id="d430f061b4da1d93d76a477eed713ad9" category="paragraph">不可以建構並分層至雲端的物件不包含單一檔案、但最多可包含1、024個4 KB區塊、可與多個檔案區塊相同。磁碟區的中繼資料永遠保留在本機層上。</block>
   <block id="0c5d4e7461b4c75d3988c9aa8d81ab4f" category="paragraph">下列問題與Cloud Manager Connector有關。</block>
@@ -1084,14 +1033,12 @@
   <block id="049da913e478d360bf3fba0732f3ffe7" category="inline-link-macro">對於S3相容的物件儲存設備、需要S3權限</block>
   <block id="de865f0ebc8f66fc8e1331d7e2a7f1d4" category="list-text"><block ref="2efc8cc4b2027ed3eb0bfad94737c839" category="inline-link-macro-rx"></block>。</block>
   <block id="5904ecfefb0147d2c35e92234f70dbd9" category="paragraph">下列組態的叢集可使用雲端分層授權、但套用授權的方式必須不同於一般的單節點和HA組態的等叢集：ONTAP ONTAP</block>
-  <block id="4bf0695d13fdb9614e4d0abba617654f" category="paragraph">目前不支援使用「鏡射」的組態MetroCluster FabricPool</block>
   <block id="6ace93b12d62dd3912b132e79298337d" category="section-title">雲端分層如何影響磁碟區容量？</block>
   <block id="9edbed19ba22406e2515654036d6d7af" category="paragraph">雲端分層不會影響磁碟區的容量、而是會影響到集合體的效能層使用量。</block>
   <block id="bd661fa541ade4c845ce21fee80a6364" category="section-title">雲端分層是否支援使用生命週期管理原則？</block>
   <block id="ab432a40ce280c4620566a0570350625" category="paragraph">是的。您可以啟用生命週期管理、以便在特定天數後、將資料從預設儲存類別/存取層移轉至更具成本效益的層級。生命週期規則會套用至Amazon S3和Google Cloud儲存設備所選儲存區中的所有物件、以及Azure Blob所選儲存帳戶中的所有容器。</block>
   <block id="864bccaf8b856c65bcec49d71eaad8e6" category="section-title">如何將階層式資料重新放回內部部署的效能層級？</block>
   <block id="f8677b4c8b811cc562ebfa540cd716ff" category="paragraph">回寫通常是針對讀取執行、視分層原則類型而定。在使用完SUR9.8之前ONTAP 、您可以使用_volume mov移動_作業來寫回整個Volume。從ONTAP SFlash 9.8開始、分層使用者介面有選項可以*恢復所有資料*或*恢復作用中的檔案系統*。 <block ref="5fc989c9b1011f539a0df96bd559f635" category="inline-link-macro-rx"></block>。</block>
-  <block id="b56c6599c26215b1aa75689a41e8233c" category="list-text">將資料分層至IBM Cloud Object Storage的叢集</block>
   <block id="2885d7c48d39d4d14b99f3f10676ffa9" category="list-text">「父」雲端分層授權會追蹤所有叢集用於分層的容量、以確保授權有足夠的容量。總授權容量和到期日會顯示在Digital Wallet中。</block>
   <block id="7598b57246c073bebfc5a46a79eecdd5" category="list-text">每個叢集都會自動安裝「子」分層授權、以便與「父」授權通訊。</block>
   <block id="fbad6353250385bdb538aa04a8ef4983" category="admonition">系統管理員或ONTAP CLI中顯示的「子」授權容量和到期日並非真實資訊、因此若資訊不相同、請勿擔心。這些價值是由Cloud Tiering軟體內部管理。實際資訊會在Digital Wallet中追蹤。</block>
@@ -1099,4 +1046,121 @@
   <block id="d356e706a5a76e1d07d019ae07df9f40" category="list-text">透過使用者指定的連接埠、這個支援叢集會啟動HTTPS連線至物件閘道節點（連接埠可在分層設定期間設定）ONTAP StorageGRID 。</block>
   <block id="8763f6e8f73d9edf1525960ebd813b27" category="list-text">用來進行HTTPS通訊的FQDN、以及連接埠。StorageGRID</block>
   <block id="c880a19df6feb2c1dcf1bda2267bb2be" category="list-text">*伺服器*：輸入StorageGRID 「支援不支援功能的閘道節點」的FQDN、ONTAP 該連接埠應用於與StorageGRID 效益管理系統進行HTTPS通訊、以及具備所需S3權限之帳戶的存取金鑰和秘密金鑰。</block>
+  <block id="c126b8b7f9eb3ba066e4b73558f5ff83" category="summary">將內部ONTAP 的物件叢集設定為將資料分層至特定物件儲存之後、您就可以執行其他物件儲存工作。您可以新增物件儲存設備、將階層式資料鏡射至次要物件儲存設備、交換主要和鏡射物件儲存設備、從集合體移除鏡射物件儲存區等。</block>
+  <block id="f726aa46a58bd5c9a7004e61db828305" category="doc">管理用於資料分層的物件儲存設備</block>
+  <block id="a9e06a6a9bb74f973d60c123bdaee97e" category="section-title">檢視為叢集設定的物件存放區</block>
+  <block id="673a98b059fd9fc3e7f4f5593eead74f" category="paragraph">您可能想要查看已針對叢集設定的所有物件存放區、以及它們所附加的集合體。雲端分層可為每個叢集提供此資訊。</block>
+  <block id="244f511b6aa78e3769d757df179046e9" category="list-text">在*叢集儀表板*中、按一下叢集的功能表圖示、然後選取*物件儲存資訊*。</block>
+  <block id="bd15f32248e0ea21c4361f1a3e4f0f52" category="list-text">檢閱物件存放區的詳細資料。</block>
+  <block id="4f4c4da15333fa3fcf08d1af94c834e9" category="paragraph">此範例顯示Amazon S3和Azure Blob物件存放區、兩者都附加至叢集上的不同集合體。</block>
+  <block id="6e806ac83f13dbac246cf70ff9474376" category="inline-image-macro">顯示物件儲存資訊的快照、詳細說明已使用容量總計、附加至物件存放區的集合體、物件存放區名稱及詳細資訊。</block>
+  <block id="2a00e7903ba9f7c4958c8248340f9b73" category="paragraph"><block ref="2a00e7903ba9f7c4958c8248340f9b73" category="inline-image-macro-rx" type="image"></block></block>
+  <block id="1987dd613844abc1f590faf8ca699102" category="section-title">新增物件存放區</block>
+  <block id="7b49a15243f905b809a4afea3f9beeff" category="paragraph">您可以新增可用於叢集中集合體的新物件存放區。建立之後、您可以將其附加至集合體。</block>
+  <block id="096604dcd0f209481876226afcbcaae3" category="list-text">在「物件存放區資訊」頁面中、按一下「*建立新物件存放區*」。</block>
+  <block id="b4f670ee84bea299cb4fed28e6339bd2" category="inline-image-macro">顯示「建立新物件存放區」按鈕的快照、可用來建立新的物件存放區。</block>
+  <block id="4c263a830f324d942701e404e89c6071" category="paragraph"><block ref="4c263a830f324d942701e404e89c6071" category="inline-image-macro-rx" type="image"></block></block>
+  <block id="3251de10ad9418aa49673ced2563988f" category="paragraph">物件存放區精靈隨即啟動。以下範例說明如何在Amazon S3中建立物件存放區。</block>
+  <block id="9d19eb194515260df12224a2bdb6ab14" category="list-text">*定義物件儲存名稱*：輸入此物件儲存設備的名稱。它必須與此叢集上的Aggregate所使用的任何其他物件儲存設備都是獨一無二的。</block>
+  <block id="fbb32ff32109e2234cd31317b6362028" category="list-text">*選取供應商*：選取供應商、例如* Amazon Web Services*、然後按一下*繼續*。</block>
+  <block id="202d9b2605b3838edf59cddce8bd8c02" category="list-text">完成「*建立物件儲存*」頁面上的步驟：</block>
+  <block id="7a731f1d20e54dbe6097354556e9104a" category="list-text">* S3 Bucket *：新增S3儲存區或選取以前置字元_Fabric集區_開頭的現有S3儲存區。然後輸入AWS帳戶ID以存取儲存庫、選取儲存庫區域、然後按一下*繼續*。</block>
+  <block id="6fe51ec0f0914db15490855b9e64c1d5" category="paragraph">IAM 使用者必須與您在「 * S3 Bucket * 」頁面上選取或建立的儲存區位於相同的 AWS 帳戶中。請參閱有關啟動分層的一節中所需權限。</block>
+  <block id="e79b2c28f4130226c9f1d6cb9f0ffd0c" category="paragraph">物件存放區隨即建立。</block>
+  <block id="e8ae815adf3f63d474c9e166a024d614" category="paragraph">現在、您可以將物件存放區附加至叢集中的集合體。</block>
+  <block id="070570d4e2b0f26858aa948de0ba63dd" category="section-title">將第二個物件存放區附加至集合體以進行鏡射</block>
+  <block id="d475f8c2ad721c50e2f3c32777bab8ec" category="paragraph">您可以將第二個物件存放區附加至集合體、以建立FabricPool 一個可複寫物件存放區的鏡射鏡射。您必須有一個物件存放區已附加至Aggregate。</block>
+  <block id="9db0a2a7df2f469f7377ef9995abad54" category="list-text">在*叢集儀表板*中、按一下所選叢集的*進階設定*。</block>
+  <block id="7f68d3e217be20821af2e99c59a95cae" category="inline-image-macro">顯示叢集「進階設定」按鈕的快照。</block>
+  <block id="e098fabd5ac5fda426e3f4e5268635d7" category="paragraph"><block ref="e098fabd5ac5fda426e3f4e5268635d7" category="inline-image-macro-rx" type="image"></block></block>
+  <block id="23382689bb5023b2975968f57d098105" category="list-text">從「進階設定」頁面、將您要使用的物件存放區拖曳到鏡射物件存放區的位置。</block>
+  <block id="cfdb62329a930b2b3b98eb375e5d6d67" category="inline-image-macro">顯示如何將第二個物件存放區拖曳至集合體以建立分層鏡像的快照。</block>
+  <block id="f8c6499529de613e9e81f51b940a3b19" category="paragraph"><block ref="f8c6499529de613e9e81f51b940a3b19" category="inline-image-macro-rx" type="image"></block></block>
+  <block id="1b038258ee1bc3da9cd34060708650eb" category="list-text">在「附加物件存放區」對話方塊中、按一下「*附加*」、第二個物件存放區就會附加到集合體。</block>
+  <block id="fd991d544bdb1542a34130a558412056" category="inline-image-macro">顯示附加至Aggregate之第二個物件存放區的快照。</block>
+  <block id="2aea151d90073296398b532c9c993bd2" category="paragraph"><block ref="2aea151d90073296398b532c9c993bd2" category="inline-image-macro-rx" type="image"></block></block>
+  <block id="fd0703c96fc59c2fc9e81a8bb3b80f95" category="section-title">切換主要和鏡射物件存放區</block>
+  <block id="184c9c9e72046fd5626f2bafc662975d" category="paragraph">您可以交換主要物件存放區和鏡射物件存放區以取得Aggregate。物件存放區鏡像會成為主要鏡射、而原始主要鏡射會變成鏡射。</block>
+  <block id="ebfa7c7e62c629e534a590d9c5bd48ac" category="list-text">在「進階設定」頁面中、按一下Aggregate的功能表圖示、然後選取「* Swap Destinations*」。</block>
+  <block id="d457321a8411fb5d95c9c393eefbf2d4" category="inline-image-macro">顯示Aggregate「Swap目的地」選項的快照。</block>
+  <block id="10c5a319854025c7e7ac42dff3b41fe6" category="paragraph"><block ref="10c5a319854025c7e7ac42dff3b41fe6" category="inline-image-macro-rx" type="image"></block></block>
+  <block id="361fe7b307c10539051d5b3dd457ac55" category="list-text">核准對話方塊中的動作、並交換主要物件和鏡射物件存放區。</block>
+  <block id="03853b071c5a398f92f626b681bde928" category="section-title">從Aggregate移除鏡射物件存放區</block>
+  <block id="b80dfa8635588311c7e70ae0593a8de5" category="paragraph">如果不再需要複寫到其他物件存放區、您可以移除FabricPool 此鏡射。</block>
+  <block id="85c797dc141e0eb32826e3caf502008c" category="list-text">在「進階設定」頁面中、按一下Aggregate的功能表圖示、然後選取「*取消鏡射物件存放區*」。</block>
+  <block id="cbf2fbc65a5867c683bd7467af7632ee" category="inline-image-macro">顯示Aggregate之「Unmirror Object Store」（取消鏡射物件存放區）選項的快照。</block>
+  <block id="f5865f631fc268c7116eb4f0ac0c2a87" category="paragraph"><block ref="f5865f631fc268c7116eb4f0ac0c2a87" category="inline-image-macro-rx" type="image"></block></block>
+  <block id="90a0f73c4b59ec2f9c0c4f90da8df3cc" category="paragraph">鏡射物件存放區會從Aggregate中移除、而階層式資料將不再複寫。</block>
+  <block id="ed333643764ced11c2973d96867bdab3" category="section-title">將階層式資料移轉至不同的雲端供應商</block>
+  <block id="b4ef03603e71d894da4ad391707eb4b0" category="paragraph">雲端分層可讓您輕鬆將階層式資料移轉至不同的雲端供應商。例如、如果您想要從Amazon S3移至Azure Blob、請依照下列順序執行上述步驟：</block>
+  <block id="83c2ec990b66e0390f2c3cda3f22d8a8" category="list-text">新增Azure Blob物件存放區。</block>
+  <block id="271790724aaa38f93a773b0039eb982e" category="list-text">將此新物件存放區作為鏡射附加至現有的Aggregate。</block>
+  <block id="482e7ac23805e20ce06fe8da5f067a40" category="list-text">交換主要和鏡射物件存放區。</block>
+  <block id="35f98bf089ff4cd3deaed43fb8a4c900" category="list-text">取消鏡射Amazon S3物件存放區。</block>
+  <block id="096dcd3788cecb603666aeab1323e016" category="list-text">必要的應用程式存取參數</block>
+  <block id="5a5be55d6d19108a5a53e94d4b8bca13" category="inline-link">如需詳細資訊、請參閱「安全登入」命令</block>
+  <block id="fcccb04322797151b1c63a24fdbe8596" category="list-text">叢集管理使用者必須擁有「主控台」應用程式存取權。您可以使用ONTAP 指令「安全登入show」來驗證這一點。「admin」使用者的「_Application_」欄應顯示「Console」。如有必要、請使用「安全登入create」命令來新增主控台應用程式存取。<block ref="c49e76a401ad77700c5ead0ea46ac66a" category="inline-link-rx"></block>。</block>
+  <block id="73d1fc3974be551e4fd6613740db6cba" category="list-text">Cloud Tiering 可以分層的磁碟區總數可能低於 ONTAP 您的整套系統上的磁碟區數量。這是因為磁碟區無法從某些集合體分層。請參閱 ONTAP 的《》文件<block ref="bc16a784cd65f4901578ebb3b70f2118" category="inline-link-rx"></block>。</block>
+  <block id="fcb56b02923ad8fee5725ea3ab197730" category="inline-link">在AWS中部署Connector</block>
+  <block id="80e22bce9427f83a8589594ea0adf6f3" category="list-text"><block ref="80e22bce9427f83a8589594ea0adf6f3" category="inline-link-rx"></block></block>
+  <block id="8bde27dc2a4816433b259374095d8da3" category="inline-link">在Linux主機上部署Connector</block>
+  <block id="72e0bcbd663626f0d086598014dfbeb0" category="list-text"><block ref="72e0bcbd663626f0d086598014dfbeb0" category="inline-link-rx"></block></block>
+  <block id="303b6b375dcceef17b9d24c15d95c29b" category="list-text">*選擇供應商*：選取* Amazon Web Services*、然後按一下*繼續*。</block>
+  <block id="c22f32bc9795fa45c61320309de1c56e" category="list-text">* S3 Bucket *：新增S3儲存區或選取以前置字元_Fabric集區_開頭的現有S3儲存區、選取儲存區區域、然後按一下*繼續*。</block>
+  <block id="7de06bb2b943b6fd5754912e3f1d4ceb" category="paragraph"><block ref="7de06bb2b943b6fd5754912e3f1d4ceb" category="inline-image-macro-rx" type="image"></block></block>
+  <block id="b1617e3bbddaa657a4ec6bf1adaa009f" category="inline-link-macro">深入瞭解如何管理分層設定</block>
+  <block id="2acc64ddb56d741fd3a55722992443a4" category="paragraph">您可以檢閱叢集上作用中和非作用中資料的相關資訊。 <block ref="f94cc3968691fc7fbe7d897f27b0d426" category="inline-link-macro-rx"></block>。</block>
+  <block id="ce705516a4901250bfdcebd148523fa5" category="inline-link-macro">深入瞭解物件存放區的管理</block>
+  <block id="ba336912268dde60b644691ec914e25f" category="paragraph">您也可以在可能想要將叢集上的特定Aggregate資料分層至不同物件存放區的情況下、建立其他物件儲存區。或者、如果您計畫在FabricPool 階層式資料複寫到不同的物件存放區時、使用「物件鏡射」。 <block ref="f977424bbc57cc401e0fdede18cc12da" category="inline-link-macro-rx"></block>。</block>
+  <block id="fe96c2addc6f8a74215b0cdcda591072" category="paragraph">您過去將內部部署的各項資料分層保存至雲端時、可能FabricPool 使用的*《*環*》授權ONTAP 僅適用於ONTAP 無法存取網際網路的站台（又稱為「暗站」）中的非執行部署。如果您使用這種組態、則會FabricPool 使用System Manager或ONTAP the介紹的CLI、在每個叢集上安裝一份「版本資訊」授權。</block>
+  <block id="9854ebf50e340e2f7d7ba806fe3befcb" category="list-text">使用鏡射進行的組態MetroCluster FabricPool</block>
+  <block id="04b39654e6e5a443553195d1e2779190" category="list-text">分層至IBM Cloud Object Storage的叢集</block>
+  <block id="de3d9617f4da6d02e4c5e76bf641d602" category="paragraph">對於上述三種組態、您需要使用System Manager或ONTAP CLI（而非使用Cloud Tiering介面）來設定分層。因此在這些情況下、您必須從雲端分層介面手動將「子」授權推送至這些叢集。</block>
+  <block id="b197b4bf8520425c8c0b02a971bb8d16" category="paragraph"><block ref="b197b4bf8520425c8c0b02a971bb8d16" category="inline-link-rx"></block></block>
+  <block id="d01fd2b5b65b8c38cd7db8dbebfd0ac6" category="inline-link">組態資訊FabricPool MetroCluster</block>
+  <block id="6dfc91892c8d766a3db42ec08d3c133e" category="paragraph"><block ref="6dfc91892c8d766a3db42ec08d3c133e" category="inline-link-rx"></block></block>
+  <block id="7c14243eb88d8593d5e3377a174647d2" category="paragraph"><block ref="7c14243eb88d8593d5e3377a174647d2" category="inline-link-rx"></block></block>
+  <block id="da67ca84863fc0110febe22c08877274" category="inline-link">在GCP中部署Connector</block>
+  <block id="3b8a5aa33e51c71b8f37ac5972ac20d7" category="list-text"><block ref="3b8a5aa33e51c71b8f37ac5972ac20d7" category="inline-link-rx"></block></block>
+  <block id="a42fb1ba03bcfed59842ef0ade58297a" category="list-text">*選擇供應商*：選擇* Google Cloud *、然後按一下*繼續*。</block>
+  <block id="207355fa06161fe61fe18f75db4c59d5" category="paragraph"><block ref="207355fa06161fe61fe18f75db4c59d5" category="inline-image-macro-rx" type="image"></block></block>
+  <block id="af35d8c52cd337b400dfea1bfe174a1d" category="list-text">*選擇供應商*：選擇* StorageGRID 《*》*、然後按一下*「Continue *（繼續*）」。</block>
+  <block id="2b335d7f7d2ebd4c9695003c5bda0b3e" category="inline-link">這些叢集類型的授權使用Cloud Tiering完成。</block>
+  <block id="b882d4bfcd6ca2f1492dc4bdfb2410da" category="paragraph">雲端分層授權也可與MetroCluster 採用「鏡射」和FabricPool 「鏡射鏡射」組態的叢集共享。必須使用System Manager或CLI來設定此功能、FabricPool ONTAP 但是<block ref="f2e8861a11602aa8783d4a7027bf2dab" category="inline-link-rx"></block></block>
+  <block id="22a86e7ec906abc9fb7a4f1fedc859c1" category="list-text">您可以建立連線至其他物件存放區、以便用於叢集中的其他集合體</block>
+  <block id="b92da8bcd266d3bfde2105ffc6280970" category="list-text">您可以使用UI將物件存放區拖曳至集合體、以便分層和FabricPool 進行鏡射</block>
+  <block id="8d2a23c3bb3453bcfb2eb9da839497da" category="inline-link">此類組態的授權是使用雲端分層完成。</block>
+  <block id="e00f45236ca3126b5f0413b24c74bafe" category="paragraph">雲端分層授權也可與叢集共享、這些叢集會將資料分層儲存至IBM Cloud Object Storage。必須使用System Manager或CLI來設定此功能、FabricPool ONTAP 但是<block ref="59b899f44b0eb5c2c23c146be071655a" category="inline-link-rx"></block></block>
+  <block id="98652169e15d6be3f041f6831e813ed4" category="paragraph">叢集可將非作用中的資料分層至單一物件存放區或多個物件存放區。ONTAP設定資料分層時、您可以選擇新增儲存區 / 容器、或選擇現有的儲存區 / 容器、以及儲存類別或存取層。</block>
+  <block id="4d529b2a518859d54f6f21833197c05d" category="paragraph">只要按一下*分層&gt;內部部署總覽*即可。雲端分層提供下列環境詳細資料。</block>
+  <block id="9ff3a02daa8f937f9e2ca9eeb3bd0560" category="list-text">*選擇供應商*：選擇* S3相容*、然後按一下*繼續*。</block>
+  <block id="53b6ec02126a4029ea743a4f2910bafa" category="list-text">在*叢集儀表板*中、按一下*叢集的基本分層設定*。</block>
+  <block id="a737e977d6d99228eb4f4979ab856291" category="paragraph"><block ref="a737e977d6d99228eb4f4979ab856291" category="inline-image-macro-rx" type="image"></block></block>
+  <block id="f6cfe20592aaee333eb4effea00a83b6" category="list-text">在*叢集儀表板*中、按一下叢集的*層級磁碟區*。</block>
+  <block id="9bfca8fb5771e5278530e3aec5c99564" category="list-text">在「進階設定」頁面中、按一下Aggregate的功能表圖示、然後選取*修改Aggregate *。</block>
+  <block id="d6a719a9a003494c0346adab9809d5f2" category="inline-image-macro">顯示Aggregate修改Aggregate選項的快照。</block>
+  <block id="a0cb518c6e52bb73ee65ce79d6912e32" category="paragraph"><block ref="a0cb518c6e52bb73ee65ce79d6912e32" category="inline-image-macro-rx" type="image"></block></block>
+  <block id="37d627356844b359763aa1dbb8695283" category="list-text">在顯示的對話方塊中、修改完整度臨界值、並選擇啟用或停用非使用中資料報告。</block>
+  <block id="b2531ab74e4b89a1d4fe9224355475de" category="paragraph"><block ref="b2531ab74e4b89a1d4fe9224355475de" category="inline-image-macro-rx" type="image"></block></block>
+  <block id="af1942cfab65b0eda25631cd4c8329bf" category="list-text">在*叢集儀表板*中、按一下叢集的功能表圖示、然後選取*叢集資訊*。</block>
+  <block id="9f4ac40c5be04fc728d437f7b6d0e536" category="list-text">在雲端分層中、按一下*叢集儀表板*索引標籤。</block>
+  <block id="bda2a863882afc8f61b71a756b1ea690" category="inline-link">在Azure中部署Connector</block>
+  <block id="1dacca07d9ba20ab896874ca3c68ea8d" category="list-text"><block ref="1dacca07d9ba20ab896874ca3c68ea8d" category="inline-link-rx"></block></block>
+  <block id="462a06b2a85bbbf735ba8fa3fc4dd871" category="list-text">*選擇供應商*：選擇* Microsoft Azure *、然後按一下*繼續*。</block>
+  <block id="98ee30ccabc19b3e5b735d4b22bfe4e3" category="paragraph">如果您達到BYOL容量限制、新的冷資料分層作業就會停止、而先前所有階層式資料仍可存取。如果您訂閱了「_Cloud Manager -部署與管理雲端資料服務」的PAYGO市場訂閱、新的Cold資料將繼續分層至物件式儲存設備、而且您將依每次使用付費。</block>
+  <block id="c71af3dcb18fb2edc19f9067190e9c6d" category="paragraph">也支援使用「鏡射鏡射」組態和「鏡射」組態的叢集FabricPool 、但分層組態必須使用System Manager或the irised CLI來完成。MetroCluster ONTAP</block>
+  <block id="eefeb369d27589982e7273d6835938c8" category="paragraph">在典型組態中、整個叢集有一個物件存放區。自2022年8月起、您可以使用*進階設定*頁面來新增叢集的其他物件存放區、然後將不同的物件存放區附加到不同的集合體。</block>
+  <block id="ba34121e3527a1918b936c79899e68fa" category="paragraph">為了鏡射、每個集合最多可附加兩個儲存區、其中冷資料會同步分層至兩個儲存區。這些庫位可以來自不同的供應商和不同的位置。自2022年8月起、您可以使用*進階設定*頁面、將兩個物件存放區附加至單一Aggregate。</block>
+  <block id="6c66decef59a00987dd2d537b80e9092" category="paragraph">是的。一般最佳實務做法是將單一儲存區附加至多個集合體。不過、使用公有雲時、物件儲存服務的IOPS限制最大、因此必須考量多個儲存區。</block>
+  <block id="1f6fd3301ab6ce127efad422dec03d61" category="section-title">2022年8月3日</block>
+  <block id="059c9f6829260507f53186d7191b058c" category="section-title">能夠為叢集中的其他Aggregate設定其他物件存放區</block>
+  <block id="aa18b7b04ae6143c1d2f56b72718403e" category="inline-link">深入瞭解新的物件儲存功能。</block>
+  <block id="e13d7be0c5a4bf2f3e8d1dd04f69dd41" category="paragraph">Cloud Tiering UI已新增一組物件儲存組態頁面。您可以新增物件存放區、將多個物件存放區連線至Aggregate以進行FabricPool 物件鏡射、交換主要物件存放區和鏡射物件存放區、刪除物件存放區連線至集合體等。<block ref="4f404ee3f4c3295f701ed8b17cef66df" category="inline-link-rx"></block></block>
+  <block id="5c10257d843c1a8aa9e46f55d2064835" category="section-title">支援MetroCluster 以雲端分層的授權進行支援、以利執行各種組態</block>
+  <block id="141c7c6c3afeeb8d968939161f64f8d2" category="paragraph">雲端分層授權現在可與MetroCluster 採用各種組態的叢集共享。您不再需要在FabricPool 這些情況下使用過時的不再使用的功能介紹授權。如此一來、您就能更輕鬆地在更多叢集上使用「浮動」雲端分層授權。<block ref="4e8c6c7f1b8cf8bbca1bc62528b46ae2" category="inline-link-rx"></block></block>
+  <block id="4f05e87f380a81f7a23601ecba757570" category="sidebar">管理物件儲存</block>
+  <block id="44e298753e2ff93996d0e8ffa928a922" category="sidebar">新增叢集的物件存放區</block>
+  <block id="f479e40bc5b0a3dc9ce1b1c43ebdec89" category="sidebar">將第二個物件存放區新增至集合體以進行鏡射</block>
+  <block id="07ed437d90cdfd3243fc6c8fa8ddacff" category="sidebar">切換主要和鏡射物件存放區</block>
+  <block id="500c3424a2151541a2d7783c7e308bb5" category="sidebar">移除鏡射物件存放區</block>
 </blocks>

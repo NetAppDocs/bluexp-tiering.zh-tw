@@ -62,6 +62,7 @@ NOTE: Connector 與 StorageGRID 物件之間的通訊僅供物件儲存設定之
 
 --
 支援 ONTAP 的支援版本:: 更新版本 ONTAP
+必要的應用程式存取參數:: 叢集管理使用者必須擁有「主控台」應用程式存取權。您可以使用ONTAP 指令「安全登入show」來驗證這一點。「admin」使用者的「_Application_」欄應顯示「Console」。如有必要、請使用「安全登入create」命令來新增主控台應用程式存取。 https://docs.netapp.com/us-en/ontap-cli-9111/security-login-create.html["如需詳細資訊、請參閱「安全登入」命令"]。
 授權:: 您的Cloud Manager帳戶不需要Cloud Tiering授權、FabricPool 也不需要ONTAP 在將資料分層StorageGRID 至無法使用的情況下、在這個叢集上使用非功能性授權。
 叢集網路連線需求::
 +
@@ -81,7 +82,7 @@ NOTE: Connector 與 StorageGRID 物件之間的通訊僅供物件儲存設定之
 
 
 --
-支援的磁碟區和集合體:: Cloud Tiering 可以分層的磁碟區總數可能低於 ONTAP 您的整套系統上的磁碟區數量。這是因為磁碟區無法從某些集合體分層。請參閱 ONTAP 的《》文件 link:https://docs.netapp.com/us-en/ontap/fabricpool/requirements-concept.html#functionality-or-features-not-supported-by-fabricpool["功能或功能不受 FabricPool 支援"^]。
+支援的磁碟區和集合體:: Cloud Tiering 可以分層的磁碟區總數可能低於 ONTAP 您的整套系統上的磁碟區數量。這是因為磁碟區無法從某些集合體分層。請參閱 ONTAP 的《》文件 https://docs.netapp.com/us-en/ontap/fabricpool/requirements-concept.html#functionality-or-features-not-supported-by-fabricpool["功能或功能不受 FabricPool 支援"^]。
 
 
 
@@ -127,7 +128,7 @@ S3 認證:: 當您設定 StorageGRID 層疊至物件時、您需要使用 S3 存
 需要連接器才能將資料分層至雲端。將資料分層至 StorageGRID 無法使用時、內部環境中必須有連接器可供使用。您可能需要安裝新的 Connector 、或確定目前選取的 Connector 位於內部部署。
 
 * https://docs.netapp.com/us-en/cloud-manager-setup-admin/concept-connectors.html["深入瞭解連接器"^]
-* https://docs.netapp.com/us-en/cloud-manager-setup-admin/task-installing-linux.html["在Linux主機上安裝Connector"^]
+* https://docs.netapp.com/us-en/cloud-manager-setup-admin/task-installing-linux.html["在Linux主機上部署Connector"^]
 * https://docs.netapp.com/us-en/cloud-manager-setup-admin/task-managing-connectors.html["在連接器之間切換"^]
 
 
@@ -165,8 +166,9 @@ S3 認證:: 當您設定 StorageGRID 層疊至物件時、您需要使用 S3 存
 +
 image:screenshot_setup_tiering_onprem.png["螢幕擷取畫面顯示選取內部 ONTAP 環境後、畫面右側會出現「設定分層」選項。"]
 
-. *選擇您的供應商*：選擇* StorageGRID 《*》*、然後按一下*「繼續*」。
-. 完成「 * 分層設定 * 」頁面上的步驟：
+. *定義物件儲存名稱*：輸入此物件儲存設備的名稱。它必須與此叢集上的Aggregate所使用的任何其他物件儲存設備都是獨一無二的。
+. *選擇供應商*：選擇* StorageGRID 《*》*、然後按一下*「Continue *（繼續*）」。
+. 完成「*建立物件儲存*」頁面上的步驟：
 +
 .. *伺服器*：輸入StorageGRID 「支援不支援功能的閘道節點」的FQDN、ONTAP 該連接埠應用於與StorageGRID 效益管理系統進行HTTPS通訊、以及具備所需S3權限之帳戶的存取金鑰和秘密金鑰。
 .. * Bucket *：新增儲存區或選取以前置字元_Fabric集區_開頭的現有儲存區、然後按一下*繼續*。
@@ -185,7 +187,7 @@ image:screenshot_setup_tiering_onprem.png["螢幕擷取畫面顯示選取內部 
 ** 若要選取多個磁碟區、請勾選每個磁碟區的方塊（image:button_backup_1_volume.png[""]），然後單擊* Configure Volume*（配置卷*）。
 ** 若要選取單一Volume、請按一下該列（或 image:screenshot_edit_icon.gif["編輯鉛筆圖示"] 圖示）。
 +
-image:screenshot_tiering_modify_volumes.gif["螢幕擷取畫面顯示如何選取單一Volume、多個Volume或所有Volume、以及「修改選取的Volume」按鈕。"]
+image:screenshot_tiering_tier_volumes.png["螢幕擷取畫面顯示如何選取單一Volume、多個Volume或所有Volume、以及「修改選取的Volume」按鈕。"]
 
 
 
@@ -200,4 +202,6 @@ image:screenshot_tiering_policy_settings.png["顯示可設定分層原則設定�
 
 您已成功設定資料分層、從叢集上的磁碟區到 StorageGRID 物件。
 
-您可以新增其他叢集、或檢閱叢集上作用中和非作用中資料的相關資訊。如需詳細資訊、請參閱 link:task-managing-tiering.html["從叢集管理資料分層"]。
+您可以檢閱叢集上作用中和非作用中資料的相關資訊。 link:task-managing-tiering.html["深入瞭解如何管理分層設定"]。
+
+您也可以在可能想要將叢集上的特定Aggregate資料分層至不同物件存放區的情況下、建立其他物件儲存區。或者、如果您計畫在FabricPool 階層式資料複寫到不同的物件存放區時、使用「物件鏡射」。 link:task-managing-object-storage.html["深入瞭解物件存放區的管理"]。

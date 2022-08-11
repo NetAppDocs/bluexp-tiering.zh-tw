@@ -27,7 +27,7 @@ TIP: 您不需要設定物件儲存設備、因為它已在最初設定叢集分
 
 .步驟
 . 在 Cloud Manager 頂端、按一下 * 分層 * 。
-. 在 * 叢集儀表板 * 中、按一下叢集的 * 層級磁碟區 * 。
+. 在*叢集儀表板*中、按一下*叢集的基本分層設定*。
 +
 image:screenshot_tiering_tier_volumes_button.png["顯示如何為叢集選取「階層磁碟區」按鈕的快照。"]
 
@@ -37,7 +37,7 @@ image:screenshot_tiering_tier_volumes_button.png["顯示如何為叢集選取「
 ** 若要選取多個磁碟區、請勾選每個磁碟區的方塊（image:button_backup_1_volume.png[""]），然後單擊* Configure Volume*（配置卷*）。
 ** 若要選取單一Volume、請按一下該列（或 image:screenshot_edit_icon.gif["編輯鉛筆圖示"] 圖示）。
 +
-image:screenshot_tiering_modify_volumes.gif["螢幕擷取畫面顯示如何選取單一Volume、多個Volume或所有Volume、以及「修改選取的Volume」按鈕。"]
+image:screenshot_tiering_tier_volumes.png["螢幕擷取畫面顯示如何選取單一Volume、多個Volume或所有Volume、以及「修改選取的Volume」按鈕。"]
 
 
 
@@ -60,7 +60,7 @@ image:screenshot_tiering_policy_settings.png["顯示可設定分層原則設定�
 
 .步驟
 . 在 Cloud Manager 頂端、按一下 * 分層 * 。
-. 在 * 叢集儀表板 * 中、按一下叢集的 * 層級磁碟區 * 。
+. 在*叢集儀表板*中、按一下叢集的*層級磁碟區*。
 . 按一下某個磁碟區的列、選取分層原則、或是調整冷卻天數、然後按一下「*套用*」。
 +
 link:concept-cloud-tiering.html#volume-tiering-policies["深入瞭解磁碟區分層原則和冷卻天數"]。
@@ -100,7 +100,7 @@ NOTE: 您的雲端供應商可能會根據從雲端傳輸的資料量向您收�
 確保效能層有足夠的空間容納從雲端移出的所有資料。
 
 . 在 Cloud Manager 頂端、按一下 * 分層 * 。
-. 在 * 叢集儀表板 * 中、按一下叢集的 * 層級磁碟區 * 。
+. 在*叢集儀表板*中、按一下叢集的*層級磁碟區*。
 . 按一下 image:screenshot_edit_icon.gif["表格中每一列結尾的編輯圖示快照、用於分層磁碟區"] 圖示、選擇您要使用的擷取選項、然後按一下*套用*。
 +
 image:screenshot_tiering_policy_settings_with_retrieve.png["顯示可設定分層原則設定的快照。"]
@@ -131,15 +131,17 @@ TIP: 最好保持啟用印尼盾、因為它有助於識別您的非使用中資
 
 
 .步驟
-. 在 Cloud Manager 頂端、按一下 * 分層 * 。
-. 在「 * 雲端分層 * 」頁面中、按一下叢集的功能表圖示、然後選取 * 管理 Aggregate * 。
+. 在*叢集儀表板*中、按一下所選叢集的*進階設定*。
 +
-image:screenshot_tiering_manage_aggr_button.png["叢集儀表板的快照、會顯示叢集和已展開的動作功能表。"]
+image:screenshot_tiering_advanced_setup_button.png["顯示叢集「進階設定」按鈕的快照。"]
 
-. 在 * 管理 Aggregate * 頁面上、按一下 image:screenshot_edit_icon.gif["編輯圖示的快照、顯示在表格中每一列的結尾、用於管理集合體"] 表格中的 Aggregate 圖示。
-. 修改完整度臨界值、並選擇啟用或停用非使用中資料報告。
+. 在「進階設定」頁面中、按一下Aggregate的功能表圖示、然後選取*修改Aggregate *。
 +
-image:https://docs.netapp.com/us-en/cloud-tiering/media/screenshot_edit_aggregate.gif["螢幕快照顯示滑桿、可用來修改分層完整臨界值、以及啟用或停用非使用中資料報告的按鈕。"]
+image:screenshot_tiering_modify_aggr.png["顯示Aggregate修改Aggregate選項的快照。"]
+
+. 在顯示的對話方塊中、修改完整度臨界值、並選擇啟用或停用非使用中資料報告。
++
+image:screenshot_tiering_modify_aggregate.png["螢幕快照顯示滑桿、可用來修改分層完整臨界值、以及啟用或停用非使用中資料報告的按鈕。"]
 
 . 按一下「 * 套用 * 」。
 
