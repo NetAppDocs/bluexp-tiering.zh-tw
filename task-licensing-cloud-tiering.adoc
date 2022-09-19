@@ -1,8 +1,8 @@
 ---
 sidebar: sidebar 
 permalink: task-licensing-cloud-tiering.html 
-keywords: subscribe, trial, marketplace, subscription, paygo, pay as you go, byol, bring your own license, tiering, cloud tiering 
-summary: 在您從第一個叢集設定分層時、就會開始免費試用30天的雲端分層。在免費試用結束後、您必須透過雲端供應商的市場訂閱隨用隨付的Cloud Manager、NetApp的BYOL授權、或兩者的組合、來支付Cloud Tiering的費用。 
+keywords: subscribe, trial, marketplace, subscription, paygo, pay as you go, byol, bring your own license, annual, tiering, cloud tiering 
+summary: 在您從第一個叢集設定分層時、就會開始免費試用30天的雲端分層。免費試用結束後、您必須透過雲端供應商市場的隨用隨付或年度Cloud Manager訂閱、NetApp的BYOL授權、或兩者的組合、來支付Cloud Tiering的費用。 
 ---
 = 設定雲端分層授權
 :hardbreaks:
@@ -14,7 +14,7 @@ summary: 在您從第一個叢集設定分層時、就會開始免費試用30天
 
 
 [role="lead"]
-在您從第一個叢集設定分層時、就會開始免費試用30天的雲端分層。在免費試用結束後、您必須透過雲端供應商的市場訂閱隨用隨付的Cloud Manager、NetApp的BYOL授權、或兩者的組合、來支付Cloud Tiering的費用。
+在您從第一個叢集設定分層時、就會開始免費試用30天的雲端分層。免費試用結束後、您必須透過雲端供應商市場的隨用隨付或年度Cloud Manager訂閱、NetApp的BYOL授權、或兩者的組合、來支付Cloud Tiering的費用。
 
 在閱讀更多內容之前、請先提供幾個附註：
 
@@ -87,9 +87,21 @@ video::video_subscribing_gcp_tiering.mp4[width=848,height=480]
 
 
 
+== 使用年度合約
+
+購買年度合約、每年支付雲端分層費用。
+
+將非作用中資料分層至AWS時、您可以訂閱一年一度的合約、該合約可從取得 https://aws.amazon.com/marketplace/pp/B086PDWSS8["AWS Marketplace頁面"^]。提供1年、2年或3年期限。
+
+如果您要使用此選項、請從「市場」頁面設定您的訂閱、然後再進行設定 https://docs.netapp.com/us-en/cloud-manager-setup-admin/task-adding-aws-accounts.html#associate-an-aws-subscription["將訂閱與AWS認證資料建立關聯"^]。
+
+目前不支援將年度合約分層至Azure或GCP。
+
+
+
 == 使用Cloud Tiering BYOL授權
 
-NetApp自帶授權、提供2、12、24或36個月的期限。BYOL * Cloud Tiering *授權是一個_浮 點型授權、您可以在ONTAP Cloud Manager帳戶的多個內部部署的叢集之間使用。雲端分層授權中定義的總分層容量會在內部部署叢集*全部*之間共享、讓初始授權與續約變得更簡單。
+NetApp自帶授權、提供1年、2年或3年期限。BYOL * Cloud Tiering *授權是一個_浮 點型授權、您可以在ONTAP Cloud Manager帳戶的多個內部部署的叢集之間使用。雲端分層授權中定義的總分層容量會在內部部署叢集*全部*之間共享、讓初始授權與續約變得更簡單。
 
 如果您沒有雲端分層授權、請聯絡我們以購買：
 
@@ -105,9 +117,9 @@ NetApp自帶授權、提供2、12、24或36個月的期限。BYOL * Cloud Tierin
 
 === 新的雲端分層BYOL授權自2021年8月21日起生效
 
-全新的*雲端分層*授權於2021年8月推出、適用於使用雲端分層服務的Cloud Manager所支援的分層組態。Cloud Manager目前支援分層至下列雲端儲存設備：Amazon S3、Azure Blob儲存設備、Google Cloud Storage、S3相容物件儲存設備、IBM Cloud Object Storage及StorageGRID
+全新的*雲端分層*授權於2021年8月推出、適用於使用雲端分層服務的Cloud Manager所支援的分層組態。Cloud Manager目前支援分層至下列雲端儲存設備：Amazon S3、Azure Blob儲存設備、Google Cloud Storage、S3相容的物件儲存設備、StorageGRID 以及
 
-您過去將內部部署的各項資料分層保存至雲端時、可能FabricPool 使用的*《*環*》授權ONTAP 僅適用於ONTAP 無法存取網際網路的站台（又稱為「暗站」）中的非執行部署。如果您使用這種組態、則會FabricPool 使用System Manager或ONTAP the介紹的CLI、在每個叢集上安裝一份「版本資訊」授權。
+您過去將內部部署的各項資料分層保存至雲端時、可能FabricPool 使用的*《*》授權ONTAP 僅適用於ONTAP 無法存取網際網路（又稱為「暗點」）的站台、以及將組態分層至IBM Cloud Object Storage的站台。如果您使用這種組態、則會FabricPool 使用System Manager或ONTAP the介紹的CLI、在每個叢集上安裝一份「版本資訊」授權。
 
 
 TIP: 請注意、分層至StorageGRID 不需要FabricPool 使用功能不全的或雲端分層授權。
@@ -204,7 +216,7 @@ image:screenshot_services_license_expire1.png["顯示「Digital Wallet」頁面�
 
 . 如果Cloud Manager無法自動更新授權、則您必須手動上傳授權檔案。
 +
-.. 您可以 <<Obtain your Cloud Tiering license file,從NetApp支援網站取得授權檔案>>。
+.. 您可以  your Cloud Tiering license file,從NetApp支援網站取得授權檔案。
 .. 在「_資料服務授權_」索引標籤的「數位錢包」頁面上、按一下 image:screenshot_horizontal_more_button.gif["更多圖示"] 如需您要更新的服務序號、請按一下*更新授權*。
 +
 image:screenshot_services_license_update.png["選取特定服務的「更新授權」按鈕的快照。"]
@@ -220,11 +232,10 @@ Cloud Manager會更新授權、讓您的雲端分層服務持續運作。
 
 == 將雲端分層授權套用至特殊組態的叢集
 
-下列組態的叢集可使用雲端分層授權、但套用授權的方式必須不同於一般的單節點和HA組態的等叢集：ONTAP ONTAP
+下列組態的叢集可使用雲端分層授權、但套用授權的方式必須不同於單節點叢集、HA組態叢集、分層鏡射組態叢集、以及使用「鏡射鏡射」進行的不一致組態：ONTAP MetroCluster FabricPool
 
-* 分層鏡射組態中的叢集（連接至兩個物件存放區的叢集）
-* 使用鏡射進行的組態MetroCluster FabricPool
 * 分層至IBM Cloud Object Storage的叢集
+* 安裝在「暗點」中的叢集
 
 
 
@@ -246,7 +257,7 @@ Cloud Manager會更新授權、讓您的雲端分層服務持續運作。
 
 NOTE: 系統管理員或ONTAP CLI中顯示的「子」授權容量和到期日並非真實資訊、因此若資訊不相同、請勿擔心。這些價值是由Cloud Tiering軟體內部管理。實際資訊會在Digital Wallet中追蹤。
 
-對於上述三種組態、您需要使用System Manager或ONTAP CLI（而非使用Cloud Tiering介面）來設定分層。因此在這些情況下、您必須從雲端分層介面手動將「子」授權推送至這些叢集。
+對於上述兩種組態、您需要使用System Manager或ONTAP CLI（而非使用Cloud Tiering介面）來設定分層。因此在這些情況下、您必須從雲端分層介面手動將「子」授權推送至這些叢集。
 
 請注意、由於資料已分層至兩個不同的物件儲存位置、以供分層鏡射組態使用、因此您必須購買具有足夠容量的授權、才能將資料分層至兩個位置。
 

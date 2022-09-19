@@ -91,6 +91,8 @@ IAM 使用者必須與您在「 * S3 Bucket * 」頁面上選取或建立的儲�
 
 您可以將第二個物件存放區附加至集合體、以建立FabricPool 一個可複寫物件存放區的鏡射鏡射。您必須有一個物件存放區已附加至Aggregate。
 
+使用MetroCluster 功能不實的組態時、 https://docs.netapp.com/us-en/ontap/fabricpool/setup-object-stores-mcc-task.html["如需ONTAP 更多詳細資料和需求、請參閱本文檔"]。
+
 .步驟
 . 在*叢集儀表板*中、按一下所選叢集的*進階設定*。
 +
@@ -105,6 +107,8 @@ image:screenshot_tiering_mirror_config.png["顯示如何將第二個物件存放
 image:screenshot_tiering_mirror_config_complete.png["顯示附加至Aggregate之第二個物件存放區的快照。"]
 
 
+
+當兩個物件存放區正在同步時、鏡射狀態會顯示為「同步處理中」、同步處理完成時、鏡射狀態會變更為「同步處理」。
 
 
 
@@ -142,6 +146,9 @@ image:screenshot_tiering_mirror_delete.png["顯示Aggregate之「Unmirror Object
 
 
 鏡射物件存放區會從Aggregate中移除、而階層式資料將不再複寫。
+
+
+NOTE: 從MetroCluster 物件庫的組態中移除鏡射物件存放區時、系統會提示您是否也要移除主要物件存放區。您可以選擇將主要物件存放區附加至集合體、或是移除它。
 
 
 

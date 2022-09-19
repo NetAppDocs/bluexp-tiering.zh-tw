@@ -208,4 +208,4 @@ link:task-licensing-cloud-tiering.html["請務必訂閱雲端分層服務"]。
 
 您可以檢閱叢集上作用中和非作用中資料的相關資訊。 link:task-managing-tiering.html["深入瞭解如何管理分層設定"]。
 
-您也可以在可能想要將叢集上的特定Aggregate資料分層至不同物件存放區的情況下、建立其他物件儲存區。或者、如果您計畫在FabricPool 階層式資料複寫到不同的物件存放區時、使用「物件鏡射」。 link:task-managing-object-storage.html["深入瞭解物件存放區的管理"]。
+您也可以建立額外的物件儲存設備、以便在叢集上的特定集合體將資料分層至不同的物件存放區。或者、如果您打算使用FabricPool 「支援物件鏡射」、將階層式資料複寫到其他物件存放區。 link:task-managing-object-storage.html["深入瞭解物件存放區的管理"]。

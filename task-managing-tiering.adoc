@@ -70,7 +70,7 @@ image:screenshot_tiering_policy_settings.png["顯示可設定分層原則設定�
 
 
 
-*附註：*如果您看到「擷取分層資料」選項、請參閱 <<Migrating data from the cloud tier back to the performance tier,將資料從雲端層移轉回效能層>> 以取得詳細資料。
+*附註：*如果您看到「擷取分層資料」選項、請參閱  data from the cloud tier back to the performance tier,將資料從雲端層移轉回效能層 以取得詳細資料。
 
 分層原則隨即變更、資料也會開始根據新原則進行階層。
 

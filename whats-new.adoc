@@ -18,6 +18,24 @@ summary: 瞭解雲端分層的新功能。
 
 
 
+== 2022年9月19日
+
+
+
+=== 分層精靈可讓您使用AWS Private Link安全連線至S3儲存設備
+
+在先前的版本中、透過VPC端點提供這種將叢集連接至S3儲存區的安全方法、非常耗時。現在您可以依照必要步驟執行至 https://docs.netapp.com/us-en/cloud-manager-tiering/task-tiering-onprem-aws.html#configure-your-system-for-a-private-connection-using-a-vpc-endpoint-interface["使用VPC端點介面設定系統的私有連線"]然後您可以在「網路」頁面中的分層設定精靈期間選取Private Link。
+
+https://docs.netapp.com/us-en/cloud-manager-tiering/task-tiering-onprem-aws.html["檢閱將非使用中資料分層至Amazon S3的要求和步驟"]。
+
+
+
+=== 拖放以啟用雲端分層至Amazon S3
+
+如果Amazon S3分層目的地是在Canvas上的工作環境、您可以將內部ONTAP 的支援環境拖曳到目的地、以啟動分層設定精靈。
+
+
+
 == 2022年8月3日
 
 

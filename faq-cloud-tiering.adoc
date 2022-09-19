@@ -178,9 +178,7 @@ Cloud Tiering支援ONTAP 不支援版本9.2及更新版本。
 
 === 支援哪些類型的不完整系統？ONTAP
 
-單節點和高可用度AFF 的堆疊支援雲端分層功能、包括：FAS ONTAP Select
-
-也支援使用「鏡射鏡射」組態和「鏡射」組態的叢集FabricPool 、但分層組態必須使用System Manager或the irised CLI來完成。MetroCluster ONTAP
+單節點和高可用度AFF 的堆疊支援雲端分層功能、包括：FAS ONTAP Select也支援採用鏡射鏡射組態和不完整的叢集FabricPool 組態。MetroCluster
 
 
 
@@ -288,7 +286,7 @@ Amazon S3 Glacier Flexible和S3 Glacier Deep歸檔不受支援的主要原因、
 
 === 雲端分層會將一個物件存放區用於整個叢集、還是每個 Aggregate 使用一個物件存放區？
 
-在典型組態中、整個叢集有一個物件存放區。自2022年8月起、您可以使用*進階設定*頁面來新增叢集的其他物件存放區、然後將不同的物件存放區附加到不同的集合體。
+在典型組態中、整個叢集有一個物件存放區。自2022年8月起、您可以使用*進階設定*頁面新增叢集的其他物件存放區、然後將不同的物件存放區附加至不同的集合體、或將2個物件存放區附加至集合體以進行鏡射。
 
 
 
@@ -384,7 +382,11 @@ Connector是在雲端帳戶內或內部部署的運算執行個體上執行的�
 
 有四種分層原則：
 
-無：將所有資料歸類為「永遠熱」；防止將磁碟區中的任何資料移至物件儲存設備。●冷快照（僅Snapshot）：只有冷快照區塊會移至物件儲存設備。一般使用者資料和快照（自動）：冷快照區塊和冷使用者資料區塊都會移至物件儲存設備。所有使用者資料（全部）：將所有資料歸類為冷資料；立即將整個磁碟區移至物件儲存設備。
+* 無：將所有資料歸類為「永遠熱」；防止將磁碟區中的任何資料移至物件儲存設備。
+* Cold Snapshot（僅Snapshot）：只有Cold Snapshot區塊會移至物件儲存設備。
+* Cold使用者資料和快照（自動）：冷快照區塊和冷使用者資料區塊都會移至物件儲存設備。
+* 所有使用者資料（全部）：將所有資料歸類為冷資料；立即將整個磁碟區移至物件儲存設備。
+
 
 link:concept-cloud-tiering.html#volume-tiering-policies["深入瞭解分層原則"]。
 
@@ -509,7 +511,7 @@ AES-256-GCM加密在效能和雲端層均維持不變。TLS 1.2加密可在傳�
 
 === 需要哪些權限？
 
-* link:task-tiering-onprem-aws.html#preparing-amazon-s3["Amazon需要權限才能管理S3儲存區"]。
+* link:task-tiering-onprem-aws.html#set-up-s3-permissions["Amazon需要權限才能管理S3儲存區"]。
 * 對於Azure而言、您不需要額外的權限即可提供給Cloud Manager。
 * link:task-tiering-onprem-gcp.html#preparing-google-cloud-storage["對於Google Cloud、具有儲存存取金鑰的服務帳戶需要儲存管理權限"]。
 * link:task-tiering-onprem-storagegrid.html#preparing-storagegrid["若要執行此功能、需要S3權限StorageGRID"]。
