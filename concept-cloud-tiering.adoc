@@ -121,7 +121,7 @@ link:task-licensing-cloud-tiering.html#use-a-cloud-tiering-paygo-subscription["�
 
 === 年度合約
 
-將非使用中資料分層至AWS時、雲端分層提供年度合約。提供1年、2年或3年期限。
+將非使用中資料分層至Amazon S3時、雲端分層提供年度合約。提供1年、2年或3年期限。
 
 目前不支援將年度合約分層至Azure或GCP。
 

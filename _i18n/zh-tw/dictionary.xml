@@ -354,28 +354,6 @@
   <block id="24263383a842093a8c2b6b9b8a88989d" category="section-title">將非作用中資料從內部ONTAP 的支援叢集分成S3相容的物件儲存設備</block>
   <block id="59e10c49329cd1a0a55e4a0d27f6a584" category="inline-link">瞭解如何將資料分層至S3相容的物件儲存設備</block>
   <block id="df94b79ab63138be1c03382ae20c338d" category="paragraph">現在、您可以將非作用中資料分層至任何使用簡易儲存服務（S3）傳輸協定的物件儲存服務。<block ref="26932bf166134e05b1ade0d7ecb1b6d8" category="inline-link-rx"></block>。</block>
-  <block id="916678dfdf53de83f6afdf8fca563fb3" category="section-title">2021年7月7日</block>
-  <block id="154176674c0672732a91f2bd7ca5d8e0" category="section-title">將資料分層至Azure Blob儲存設備時、連接器可在內部環境中執行</block>
-  <block id="def40345e2d3c9101a49141b1956c58d" category="paragraph">您不再需要使用安裝在Azure vnet中的Connector。將資料分層存放至Azure Blob儲存設備時、連接器可在內部部署的主機上執行。</block>
-  <block id="945fb8f32f58d1cc36cb9f1e9e4c6fe5" category="section-title">2021年6月7日</block>
-  <block id="c4f829b7ae242ef2fe076d1c69689d01" category="section-title">某些雲端供應商儲存設備現在有新的分層課程可供使用</block>
-  <block id="277a1d3dc69ddcb600b5564bbfee2f99" category="paragraph">在早期版本中、您可以在使用Amazon S3或Google Cloud物件儲存設備30天後、將階層式資料從Standard儲存類別移轉至其他儲存類別。此版本新增了一些新功能：</block>
-  <block id="92a8cc3e0000b5a588f5e5a545d580b8" category="list-text">您可以選擇階層式資料移至更具成本效益層的天數。這稱為資料「生命週期管理」。</block>
-  <block id="e7e39728235a606f9321e32048703018" category="list-text">Azure Blob現在支援_cow_存取層。</block>
-  <block id="b2c1efe1106d7a3c0771b064bea9957c" category="list-text">Google Cloud Storage支援隨著時間推移、將階層式資料移至多個儲存層。例如、您可以在45天後將階層式資料從_Standard_類別移至_Nearlin__類別、然後在75天後移至_Coldlin__類別、然後在270天後移至_Archive_類別。</block>
-  <block id="84cada6f6939410de8fc42b2cea10895" category="section-title">現在、您可以主動將資料從雲端層移回效能層</block>
-  <block id="c2c0bee6af3a5a60056d41dcc371d786" category="paragraph">如果您想要停止在磁碟區上使用分層功能、或是決定將所有使用者資料保留在效能層上、但將Snapshot複本保留在雲端層上、則此功能非常實用。此功能可在使用ONTAP 更新版本的資訊時使用。</block>
-  <block id="296729a9ae6cd989b611bbaa8f279cba" category="inline-link-macro">將資料移回效能層</block>
-  <block id="ef010ff21ef40a36a12794034bd76e1b" category="paragraph">瞭解如何操作 <block ref="81dc96fdd3bce727e4737236967f1536" category="inline-link-macro-rx"></block>。</block>
-  <block id="824b76af9549cb14fd2443aa485afb15" category="section-title">2021年5月2日</block>
-  <block id="011ff5422aa046bd5cf08306e8b04fde" category="section-title">現在、您可以在套用分層原則時選取所有磁碟區</block>
-  <block id="bf6525c86100838072a02751028c3547" category="inline-link-macro">請參閱如何選取叢集中的所有磁碟區</block>
-  <block id="36ce0e84f37feb90fb719b27375ae5e7" category="paragraph">當您從ONTAP 某個功能區系統中選取要分層的磁碟區時、「層級磁碟區」頁面中會有一個核取方塊、可選取*全部*磁碟區、以便更輕鬆地將相同的原則套用至所有磁碟區。 <block ref="fe9c671df76431123a5e8d8776c7cef2" category="inline-link-macro-rx"></block>。</block>
-  <block id="f268cb0b89ceae31cbeb9f1cf4669fd0" category="section-title">「冷卻」天數現在可設定為183天</block>
-  <block id="2296f192167be3972e69fc3d386a3e66" category="paragraph">如果您需要變更「冷卻天數」、以決定磁碟區中的資料在移至物件儲存設備之前必須保持停用狀態的時間、現在您可以指定使用ONTAP 率為9.8或更新版本時、最多可保留183天（從63天起）。</block>
-  <block id="dbbd746e2d2c019dcb0c3c40b74f4f75" category="section-title">2021年3月8日</block>
-  <block id="5a294035d7c08dc10d36a9f693e9bdb7" category="section-title">生命週期規則現在可在分層至Google Cloud Storage時使用</block>
-  <block id="b4baef0a3a494382cb3865753733f031" category="paragraph">分層至Google Cloud Storage時、您可以套用生命週期規則、以便在30天後、將階層式資料從標準儲存類別轉換為成本較低的Nearline、Coldline或歸檔儲存設備。</block>
   <block id="636acfcaa9d346397b4061f29f7518bd" category="summary">將非作用中的資料分層儲存至Google Cloud Storage、以釋放內部ONTAP 資源的功能。</block>
   <block id="c1cea5d4273001cc861a8845f88e0a7b" category="list-text">內部ONTAP 使用的支援功能、執行ONTAP 不支援功能的叢集9.6或更新版本、並可透過HTTPS連線至Google Cloud Storage。<block ref="afd80128eeaacb8238d3ffdcf8ecd8a8" category="inline-link-rx"></block>。</block>
   <block id="2deaed2300671ee7d90104d75a9f9c41" category="list-text">具有預先定義儲存管理角色和儲存存取金鑰的服務帳戶。</block>
@@ -1033,7 +1011,6 @@
   <block id="e79b2c28f4130226c9f1d6cb9f0ffd0c" category="paragraph">物件存放區隨即建立。</block>
   <block id="e8ae815adf3f63d474c9e166a024d614" category="paragraph">現在、您可以將物件存放區附加至叢集中的集合體。</block>
   <block id="070570d4e2b0f26858aa948de0ba63dd" category="section-title">將第二個物件存放區附加至集合體以進行鏡射</block>
-  <block id="d475f8c2ad721c50e2f3c32777bab8ec" category="paragraph">您可以將第二個物件存放區附加至集合體、以建立FabricPool 一個可複寫物件存放區的鏡射鏡射。您必須有一個物件存放區已附加至Aggregate。</block>
   <block id="9db0a2a7df2f469f7377ef9995abad54" category="list-text">在*叢集儀表板*中、按一下所選叢集的*進階設定*。</block>
   <block id="7f68d3e217be20821af2e99c59a95cae" category="inline-image-macro">顯示叢集「進階設定」按鈕的快照。</block>
   <block id="e098fabd5ac5fda426e3f4e5268635d7" category="paragraph"><block ref="e098fabd5ac5fda426e3f4e5268635d7" category="inline-image-macro-rx" type="image"></block></block>
@@ -1250,15 +1227,12 @@
   <block id="93d0679385afbe8961d65715ec42ad95" category="paragraph"><block ref="eae517fc6cf18ab5b51a15743d8fba49" category="inline-link-rx"></block>。</block>
   <block id="6a22836d972c44908e791a2300d9312a" category="section-title">拖放以啟用雲端分層至Amazon S3</block>
   <block id="84b50dc471c57455cf0359ad021a8c58" category="paragraph">如果Amazon S3分層目的地是在Canvas上的工作環境、您可以將內部ONTAP 的支援環境拖曳到目的地、以啟動分層設定精靈。</block>
-  <block id="7c7cbcd98ab4ba89255f7b1be8725b81" category="inline-link">如需ONTAP 更多詳細資料和需求、請參閱本文檔</block>
-  <block id="3cb1cda385e4184fc09dbec5c2aec109" category="paragraph">使用MetroCluster 功能不實的組態時、<block ref="9abcb785e0ef8b918a18e0f5dbad9882" category="inline-link-rx"></block>。</block>
   <block id="9c71902c4f1a611c5b631cc69cbd2ada" category="paragraph">當兩個物件存放區正在同步時、鏡射狀態會顯示為「同步處理中」、同步處理完成時、鏡射狀態會變更為「同步處理」。</block>
   <block id="b57c0deab1a5287b0457bf7ca26a95f4" category="admonition">從MetroCluster 物件庫的組態中移除鏡射物件存放區時、系統會提示您是否也要移除主要物件存放區。您可以選擇將主要物件存放區附加至集合體、或是移除它。</block>
   <block id="6eecabc0d7fe334dd9e87b08c1b64c93" category="paragraph">雲端分層可設定為單節點叢集、HA組態叢集、分層鏡射組態叢集、MetroCluster 以及使用FabricPool 「鏡射」的鏡射組態。雲端分層授權可在所有叢集之間共享。</block>
   <block id="6341d59e78dc892e44e4255d34dff624" category="paragraph">透過隨用隨付訂閱、一年訂閱、自帶雲端分層授權或組合來支付雲端分層費用。如果您沒有授權、第一個叢集可以免費試用 30 天。</block>
   <block id="85e6332aa0d0ad8f46ae520da6d1c0c7" category="paragraph">如果您沒有Cloud Tiering授權、則在設定分層至第一個叢集時、即可免費試用30天的Cloud Tiering。30天免費試用結束後、您必須透過隨用隨付訂閱、年度訂閱、BYOL授權或組合來支付Cloud Tiering的費用。</block>
   <block id="421539f25601331f9f5f1e59cdb43e21" category="section-title">年度合約</block>
-  <block id="46e0b6a495f87cf4920ab347582f415e" category="paragraph">將非使用中資料分層至AWS時、雲端分層提供年度合約。提供1年、2年或3年期限。</block>
   <block id="1ca6869c60d4b26c9ebd2bc63dd19e71" category="paragraph">向NetApp購買* Cloud Tiering *授權、即可自帶授權。您可以購買1、2或3年期授權、並指定任何數量的分層容量。BYOL Cloud分層授權是一個_浮 點型授權、可用於多ONTAP 個內部部署的物件叢集。您在雲端分層授權中定義的總分層容量、可用於所有內部部署叢集。</block>
   <block id="82812db645b6ff5e9c2a24ddfb66c8d6" category="paragraph">除了上述的自我支援選項、您也可以在啟動支援之後、與NetApp支援專家合作解決任何問題。</block>
   <block id="e2a733504c4088b809813bbb35a3ddfd" category="inline-link-macro">瞭解如何註冊以取得支援</block>
@@ -1284,4 +1258,9 @@
   <block id="e01df0b4dfd95eba2c59333419e4fac6" category="list-text">使用產品內對談</block>
   <block id="639be990cfca56ab4b63685d8bacd437" category="list-text">請至提交非技術案例<block ref="2298f47e4dad19a3156da7ce6116d9b1" category="inline-link-rx"></block></block>
   <block id="7ff191df90fac0fa94ab5c2b5101a5e9" category="sidebar">所有Cloud Manager文件</block>
+  <block id="b5d536503b2db5208a418d0aad5a4c6b" category="paragraph">您可以將第二個物件存放區附加至集合體、以建立FabricPool 一個鏡射鏡射、將資料同步分層至兩個物件存放區。您必須有一個物件存放區已附加至Aggregate。</block>
+  <block id="0da0639ab808878f568f3c4f06c02689" category="inline-link">如需MetroCluster 更多關於功能需求的資訊、請參閱ONTAP 《產品介紹》文件</block>
+  <block id="6a6c83d33eeffc5742e2d15ff9f1e88d" category="paragraph">使用MetroCluster 靜態組態時、最佳做法是使用位於不同可用度區域的物件存放區、或是設定為在多個可用度區域中保留物件複本。<block ref="8cdfadb67efe7ac0be1266ed1d493d6d" category="inline-link-rx"></block>。</block>
+  <block id="4368a1773cee54401cffba9d96b3ee45" category="paragraph">請注意、當您在StorageGRID 使用物件存放區MetroCluster 時、ONTAP 如果使用的是一個物件存放區、則兩個支援區的系統都能對FabricPool 單StorageGRID 一的不支援系統執行功能。</block>
+  <block id="a9435afbc015cc1ee7d59ebcb4c910fd" category="paragraph">將非使用中資料分層至Amazon S3時、雲端分層提供年度合約。提供1年、2年或3年期限。</block>
 </blocks>

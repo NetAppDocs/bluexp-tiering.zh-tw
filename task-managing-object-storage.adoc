@@ -89,9 +89,11 @@ IAM 使用者必須與您在「 * S3 Bucket * 」頁面上選取或建立的儲�
 
 == 將第二個物件存放區附加至集合體以進行鏡射
 
-您可以將第二個物件存放區附加至集合體、以建立FabricPool 一個可複寫物件存放區的鏡射鏡射。您必須有一個物件存放區已附加至Aggregate。
+您可以將第二個物件存放區附加至集合體、以建立FabricPool 一個鏡射鏡射、將資料同步分層至兩個物件存放區。您必須有一個物件存放區已附加至Aggregate。
 
-使用MetroCluster 功能不實的組態時、 https://docs.netapp.com/us-en/ontap/fabricpool/setup-object-stores-mcc-task.html["如需ONTAP 更多詳細資料和需求、請參閱本文檔"]。
+使用MetroCluster 靜態組態時、最佳做法是使用位於不同可用度區域的物件存放區、或是設定為在多個可用度區域中保留物件複本。 https://docs.netapp.com/us-en/ontap/fabricpool/setup-object-stores-mcc-task.html["如需MetroCluster 更多關於功能需求的資訊、請參閱ONTAP 《產品介紹》文件"^]。
+
+請注意、當您在StorageGRID 使用物件存放區MetroCluster 時、ONTAP 如果使用的是一個物件存放區、則兩個支援區的系統都能對FabricPool 單StorageGRID 一的不支援系統執行功能。
 
 .步驟
 . 在*叢集儀表板*中、按一下所選叢集的*進階設定*。
