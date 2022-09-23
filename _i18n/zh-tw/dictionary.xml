@@ -304,8 +304,6 @@
   <block id="fc248f74f5e36542f7f5627b8610e9a3" category="paragraph"><block ref="fc248f74f5e36542f7f5627b8610e9a3" category="inline-link-rx"></block></block>
   <block id="c0227cef6f07a8cd2ac72f2945b031aa" category="section-title">開放原始碼</block>
   <block id="9b73989307c1975dfa4d5e1581e4afe8" category="paragraph">通知檔案提供有關 NetApp 軟體所使用之協力廠商版權與授權的資訊。</block>
-  <block id="4940124e8487cb4ea36f1511a195cf66" category="inline-link-macro">Cloud Manager 3.9 注意事項</block>
-  <block id="c069fcc68c5dfa73ccc99924c836cae9" category="list-text"><block ref="c069fcc68c5dfa73ccc99924c836cae9" category="inline-link-macro-rx"></block></block>
   <block id="a5e8ac089fe7eb702f683ce020dc2a2a" category="inline-link-macro">雲端分層注意事項</block>
   <block id="3754b5e44654d3dc7bfaa36f213a8795" category="list-text"><block ref="3754b5e44654d3dc7bfaa36f213a8795" category="inline-link-macro-rx"></block></block>
   <block id="b13cf55f0ce2b751f69001054e37fd7b" category="summary">雲端分層可支援數個 S3 儲存類別和大部分地區。</block>
@@ -1220,14 +1218,12 @@
   <block id="08070357c74547d6c374634190ef592e" category="list-text">所有使用者資料（全部）：將所有資料歸類為冷資料；立即將整個磁碟區移至物件儲存設備。</block>
   <block id="718ab8536a948516f06462c22a0f8852" category="list-text"><block ref="cb1be15d6f93cbd0769a2f1805d3c3a2" category="inline-link-macro-rx"></block>。</block>
   <block id="ab288ae4b4c50ebb9a997e0f0debbd15" category="section-title">2022年9月19日</block>
-  <block id="d6076da95b416ff0d08e3269c4addf0d" category="section-title">分層精靈可讓您使用AWS Private Link安全連線至S3儲存設備</block>
   <block id="905ecf204d0cf0b2ed497e63ae9324d0" category="inline-link">使用VPC端點介面設定系統的私有連線</block>
   <block id="33e030edd0380c3b2d743ec2f989598c" category="paragraph">在先前的版本中、透過VPC端點提供這種將叢集連接至S3儲存區的安全方法、非常耗時。現在您可以依照必要步驟執行至<block ref="fb4b1250ed3d38b3a9447c7c732436c8" category="inline-link-rx"></block>然後您可以在「網路」頁面中的分層設定精靈期間選取Private Link。</block>
   <block id="883959b6b7ad90936b33d524655bc282" category="inline-link">檢閱將非使用中資料分層至Amazon S3的要求和步驟</block>
   <block id="93d0679385afbe8961d65715ec42ad95" category="paragraph"><block ref="eae517fc6cf18ab5b51a15743d8fba49" category="inline-link-rx"></block>。</block>
   <block id="6a22836d972c44908e791a2300d9312a" category="section-title">拖放以啟用雲端分層至Amazon S3</block>
   <block id="84b50dc471c57455cf0359ad021a8c58" category="paragraph">如果Amazon S3分層目的地是在Canvas上的工作環境、您可以將內部ONTAP 的支援環境拖曳到目的地、以啟動分層設定精靈。</block>
-  <block id="9c71902c4f1a611c5b631cc69cbd2ada" category="paragraph">當兩個物件存放區正在同步時、鏡射狀態會顯示為「同步處理中」、同步處理完成時、鏡射狀態會變更為「同步處理」。</block>
   <block id="b57c0deab1a5287b0457bf7ca26a95f4" category="admonition">從MetroCluster 物件庫的組態中移除鏡射物件存放區時、系統會提示您是否也要移除主要物件存放區。您可以選擇將主要物件存放區附加至集合體、或是移除它。</block>
   <block id="6eecabc0d7fe334dd9e87b08c1b64c93" category="paragraph">雲端分層可設定為單節點叢集、HA組態叢集、分層鏡射組態叢集、MetroCluster 以及使用FabricPool 「鏡射」的鏡射組態。雲端分層授權可在所有叢集之間共享。</block>
   <block id="6341d59e78dc892e44e4255d34dff624" category="paragraph">透過隨用隨付訂閱、一年訂閱、自帶雲端分層授權或組合來支付雲端分層費用。如果您沒有授權、第一個叢集可以免費試用 30 天。</block>
@@ -1258,9 +1254,16 @@
   <block id="e01df0b4dfd95eba2c59333419e4fac6" category="list-text">使用產品內對談</block>
   <block id="639be990cfca56ab4b63685d8bacd437" category="list-text">請至提交非技術案例<block ref="2298f47e4dad19a3156da7ce6116d9b1" category="inline-link-rx"></block></block>
   <block id="7ff191df90fac0fa94ab5c2b5101a5e9" category="sidebar">所有Cloud Manager文件</block>
-  <block id="b5d536503b2db5208a418d0aad5a4c6b" category="paragraph">您可以將第二個物件存放區附加至集合體、以建立FabricPool 一個鏡射鏡射、將資料同步分層至兩個物件存放區。您必須有一個物件存放區已附加至Aggregate。</block>
   <block id="0da0639ab808878f568f3c4f06c02689" category="inline-link">如需MetroCluster 更多關於功能需求的資訊、請參閱ONTAP 《產品介紹》文件</block>
-  <block id="6a6c83d33eeffc5742e2d15ff9f1e88d" category="paragraph">使用MetroCluster 靜態組態時、最佳做法是使用位於不同可用度區域的物件存放區、或是設定為在多個可用度區域中保留物件複本。<block ref="8cdfadb67efe7ac0be1266ed1d493d6d" category="inline-link-rx"></block>。</block>
-  <block id="4368a1773cee54401cffba9d96b3ee45" category="paragraph">請注意、當您在StorageGRID 使用物件存放區MetroCluster 時、ONTAP 如果使用的是一個物件存放區、則兩個支援區的系統都能對FabricPool 單StorageGRID 一的不支援系統執行功能。</block>
   <block id="a9435afbc015cc1ee7d59ebcb4c910fd" category="paragraph">將非使用中資料分層至Amazon S3時、雲端分層提供年度合約。提供1年、2年或3年期限。</block>
+  <block id="c3d7ada1f42d9b916dd8624c5b5661c1" category="section-title">分層精靈可讓您在分層至S3儲存設備時、設定AWS Private Link</block>
+  <block id="bf482155aab691ba59a0313f5628cbba" category="section-title">在MetroCluster 刪除鏡射物件儲存區時、請選擇分層行為</block>
+  <block id="cd71992689f7bdbde4a7c9f0653f44f3" category="paragraph">從MetroCluster 物件庫中移除鏡射物件存放區時、系統會提示您是否也要移除主要物件存放區。您可以選擇將主要物件存放區附加至集合體、或是移除它。</block>
+  <block id="c80805cd1b291fd4590a3c0b82caa095" category="inline-link">深入瞭FabricPool 解鏡面</block>
+  <block id="4a6b2da2ae625dffc7d1a103b7579d57" category="paragraph">您可以將第二個物件存放區附加至集合體、以建立FabricPool 一個鏡射鏡射、將資料同步分層至兩個物件存放區。您必須有一個物件存放區已附加至Aggregate。<block ref="8af213a751b87119e23e85f52fbc72d6" category="inline-link-rx"></block>。</block>
+  <block id="2dc183e0073f3c1e0402cafe50273750" category="paragraph">使用MetroCluster 靜態組態時、最佳實務做法是在不同可用度區域的公有雲中使用物件存放區。<block ref="8cdfadb67efe7ac0be1266ed1d493d6d" category="inline-link-rx"></block>。</block>
+  <block id="6b483bd3d7c70c49e8ad823d9d4bbf64" category="paragraph">請注意、當使用StorageGRID 支援MetroCluster 物件儲存的功能時、ONTAP 兩個支援的系統都可以FabricPool 執行將物件儲存在單StorageGRID 一的不支援系統上的功能。每ONTAP 個資料系統都必須將資料分層至不同的儲存區。</block>
+  <block id="64430472f9b760efd0fff8a56c3dfe2d" category="paragraph">當兩個物件存放區正在同步時、鏡射狀態會顯示為「同步處理中」。同步完成時、狀態會變更為「Synchronized」（同步）。</block>
+  <block id="d14a27b37d19411318313c75f11baf13" category="inline-link">Cloud Manager注意事項</block>
+  <block id="8f4eecef1c8abf547a153a1486d48ab2" category="list-text"><block ref="8f4eecef1c8abf547a153a1486d48ab2" category="inline-link-rx"></block></block>
 </blocks>

@@ -22,7 +22,7 @@ summary: 瞭解雲端分層的新功能。
 
 
 
-=== 分層精靈可讓您使用AWS Private Link安全連線至S3儲存設備
+=== 分層精靈可讓您在分層至S3儲存設備時、設定AWS Private Link
 
 在先前的版本中、透過VPC端點提供這種將叢集連接至S3儲存區的安全方法、非常耗時。現在您可以依照必要步驟執行至 https://docs.netapp.com/us-en/cloud-manager-tiering/task-tiering-onprem-aws.html#configure-your-system-for-a-private-connection-using-a-vpc-endpoint-interface["使用VPC端點介面設定系統的私有連線"]然後您可以在「網路」頁面中的分層設定精靈期間選取Private Link。
 
@@ -33,6 +33,12 @@ https://docs.netapp.com/us-en/cloud-manager-tiering/task-tiering-onprem-aws.html
 === 拖放以啟用雲端分層至Amazon S3
 
 如果Amazon S3分層目的地是在Canvas上的工作環境、您可以將內部ONTAP 的支援環境拖曳到目的地、以啟動分層設定精靈。
+
+
+
+=== 在MetroCluster 刪除鏡射物件儲存區時、請選擇分層行為
+
+從MetroCluster 物件庫中移除鏡射物件存放區時、系統會提示您是否也要移除主要物件存放區。您可以選擇將主要物件存放區附加至集合體、或是移除它。
 
 
 

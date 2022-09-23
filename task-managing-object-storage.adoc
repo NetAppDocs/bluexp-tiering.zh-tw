@@ -89,11 +89,11 @@ IAM 使用者必須與您在「 * S3 Bucket * 」頁面上選取或建立的儲�
 
 == 將第二個物件存放區附加至集合體以進行鏡射
 
-您可以將第二個物件存放區附加至集合體、以建立FabricPool 一個鏡射鏡射、將資料同步分層至兩個物件存放區。您必須有一個物件存放區已附加至Aggregate。
+您可以將第二個物件存放區附加至集合體、以建立FabricPool 一個鏡射鏡射、將資料同步分層至兩個物件存放區。您必須有一個物件存放區已附加至Aggregate。 https://docs.netapp.com/us-en/ontap/fabricpool/create-mirror-task.html["深入瞭FabricPool 解鏡面"^]。
 
-使用MetroCluster 靜態組態時、最佳做法是使用位於不同可用度區域的物件存放區、或是設定為在多個可用度區域中保留物件複本。 https://docs.netapp.com/us-en/ontap/fabricpool/setup-object-stores-mcc-task.html["如需MetroCluster 更多關於功能需求的資訊、請參閱ONTAP 《產品介紹》文件"^]。
+使用MetroCluster 靜態組態時、最佳實務做法是在不同可用度區域的公有雲中使用物件存放區。 https://docs.netapp.com/us-en/ontap/fabricpool/setup-object-stores-mcc-task.html["如需MetroCluster 更多關於功能需求的資訊、請參閱ONTAP 《產品介紹》文件"^]。
 
-請注意、當您在StorageGRID 使用物件存放區MetroCluster 時、ONTAP 如果使用的是一個物件存放區、則兩個支援區的系統都能對FabricPool 單StorageGRID 一的不支援系統執行功能。
+請注意、當使用StorageGRID 支援MetroCluster 物件儲存的功能時、ONTAP 兩個支援的系統都可以FabricPool 執行將物件儲存在單StorageGRID 一的不支援系統上的功能。每ONTAP 個資料系統都必須將資料分層至不同的儲存區。
 
 .步驟
 . 在*叢集儀表板*中、按一下所選叢集的*進階設定*。
@@ -110,7 +110,7 @@ image:screenshot_tiering_mirror_config_complete.png["顯示附加至Aggregate之
 
 
 
-當兩個物件存放區正在同步時、鏡射狀態會顯示為「同步處理中」、同步處理完成時、鏡射狀態會變更為「同步處理」。
+當兩個物件存放區正在同步時、鏡射狀態會顯示為「同步處理中」。同步完成時、狀態會變更為「Synchronized」（同步）。
 
 
 
