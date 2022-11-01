@@ -31,13 +31,13 @@ summary: 將非作用中資料分層存放至Azure Blob儲存設備、以釋放�
 
 
 [role="quick-margin-para"]
-在Cloud Manager中、選取內部作業環境、按一下「*啟用*」以使用分層服務、然後依照提示將資料分層至Azure Blob儲存設備。
+在BlueXP中、選取內部工作環境、按一下「*啟用*」以使用分層服務、然後依照提示將資料分層至Azure Blob儲存設備。
 
 [role="quick-margin-para"]
 免費試用結束後、請透過隨用隨付訂閱、ONTAP VMware Cloud Tiering BYOL授權或兩者的組合來支付雲端分層費用：
 
 * 若要從Azure Marketplace訂閱、 https://azuremarketplace.microsoft.com/en-us/marketplace/apps/netapp.cloud-manager?tab=Overview["前往Cloud Manager Marketplace產品"^]，單擊*訂購*，然後按照提示進行操作。
-* 若要使用Cloud Tiering BYOL授權付款、請寄送電子郵件至ng-cloud-tiering@netapp.com？Subject=Licensing[如果您需要購買、請聯絡我們]、然後再寄送 link:task-licensing-cloud-tiering.html#add-cloud-tiering-byol-licenses-to-your-account["從Cloud Manager Digital Wallet將其新增至您的帳戶"]。
+* 若要使用Cloud Tiering BYOL授權付款、請寄送電子郵件至ng-cloud-tiering@netapp.com？Subject=Licensing[如果您需要購買、請聯絡我們]、然後再寄送 link:task-licensing-cloud-tiering.html#add-cloud-tiering-byol-licenses-to-your-account["從BlueXP Digital Wallet將其新增至您的帳戶"]。
 
 
 
@@ -90,7 +90,7 @@ NOTE: Connector 與 Blob 儲存設備之間的通訊僅供物件儲存設定使�
 
 
 --
-支援的磁碟區和集合體:: Cloud Tiering 可以分層的磁碟區總數可能低於 ONTAP 您的整套系統上的磁碟區數量。這是因為磁碟區無法從某些集合體分層。請參閱 ONTAP 的《》文件 https://docs.netapp.com/us-en/ontap/fabricpool/requirements-concept.html#functionality-or-features-not-supported-by-fabricpool["功能或功能不受 FabricPool 支援"^]。
+支援的磁碟區和集合體:: Cloud Tiering 可以分層的磁碟區總數可能低於 ONTAP 您的整套系統上的磁碟區數量。這是因為磁碟區無法從某些集合體分層。請參閱ONTAP 的《》文件 https://docs.netapp.com/us-en/ontap/fabricpool/requirements-concept.html#functionality-or-features-not-supported-by-fabricpool["功能或功能不受 FabricPool 支援"^]。
 
 
 
@@ -100,7 +100,7 @@ NOTE: Cloud Tiering 支援 FlexGroup 從 ONTAP 功能完善的 9.5 開始的各�
 
 === 探索ONTAP 一個叢集
 
-您必須先在ONTAP Cloud Manager中建立內部的功能性環境、才能開始分層處理冷資料。
+您必須先在ONTAP BlueXP中建立內部的功能性環境、才能開始分層處理冷資料。
 
 https://docs.netapp.com/us-en/cloud-manager-ontap-onprem/task-discovering-ontap.html["瞭解如何探索叢集"^]。
 
@@ -120,9 +120,9 @@ https://docs.netapp.com/us-en/cloud-manager-ontap-onprem/task-discovering-ontap.
 
 === 確認您擁有必要的Connector權限
 
-如果您是使用Cloud Manager 3.9.7版或更新版本建立Connector、那麼您就已經設定好了。
+如果您使用BlueXP 3.9.7版或更新版本建立Connector、就會設定好。
 
-如果您使用舊版Cloud Manager建立Connector、則需要編輯權限清單、以新增2項必要權限：
+如果您使用舊版的BlueXP建立Connector、則需要編輯權限清單、以新增2項必要權限：
 
 [source, json]
 ----

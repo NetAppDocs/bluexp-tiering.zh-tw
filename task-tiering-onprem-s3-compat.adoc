@@ -39,13 +39,13 @@ summary: 將非作用中的資料分層至任何使用簡易儲存服務（S3）
 
 
 [role="quick-margin-para"]
-在Cloud Manager中、選取內部環境工作環境、按一下「*啟用*」以使用分層服務、然後依照提示將資料分層至S3相容的物件儲存設備。
+在BlueXP中、選取內部工作環境、按一下「*啟用*」以使用分層服務、然後依照提示將資料分層至S3相容的物件儲存設備。
 
 [role="quick-margin-para"]
 透過雲端供應商的隨用隨付訂閱、NetApp Cloud Tiering自帶授權、或兩者的組合、來支付雲端分層的費用：
 
-* 訂閱Cloud Manager的PAYGO產品 https://aws.amazon.com/marketplace/pp/prodview-oorxakq6lq7m4?sr=0-8&ref_=beagle&applicationId=AWSMPContessa["AWS Marketplace"^]、 https://azuremarketplace.microsoft.com/en-us/marketplace/apps/netapp.cloud-manager?tab=Overview["Azure Marketplace"^]或 https://console.cloud.google.com/marketplace/details/netapp-cloudmanager/cloud-manager?supportedpurview=project&rif_reserved["GCP 市場"^]，單擊*訂購*並按照提示進行操作。
-* 若要使用Cloud Tiering BYOL授權付款、請寄送電子郵件至ng-cloud-tiering@netapp.com？Subject=Licensing[如果您需要購買、請聯絡我們]、然後再寄送 link:task-licensing-cloud-tiering.html#add-cloud-tiering-byol-licenses-to-your-account["從Cloud Manager Digital Wallet將其新增至您的帳戶"]。
+* 訂閱的BlueXP PAYGO產品 https://aws.amazon.com/marketplace/pp/prodview-oorxakq6lq7m4?sr=0-8&ref_=beagle&applicationId=AWSMPContessa["AWS Marketplace"^]、 https://azuremarketplace.microsoft.com/en-us/marketplace/apps/netapp.cloud-manager?tab=Overview["Azure Marketplace"^]或 https://console.cloud.google.com/marketplace/details/netapp-cloudmanager/cloud-manager?supportedpurview=project&rif_reserved["GCP 市場"^]，單擊*訂購*並按照提示進行操作。
+* 若要使用Cloud Tiering BYOL授權付款、請寄送電子郵件至ng-cloud-tiering@netapp.com？Subject=Licensing[如果您需要購買、請聯絡我們]、然後再寄送 link:task-licensing-cloud-tiering.html#add-cloud-tiering-byol-licenses-to-your-account["從BlueXP Digital Wallet將其新增至您的帳戶"]。
 
 
 
@@ -88,7 +88,7 @@ NOTE: Connector與S3相容物件儲存伺服器之間的通訊僅供物件儲存
 
 
 --
-支援的磁碟區和集合體:: Cloud Tiering 可以分層的磁碟區總數可能低於 ONTAP 您的整套系統上的磁碟區數量。這是因為磁碟區無法從某些集合體分層。請參閱 ONTAP 的《》文件 https://docs.netapp.com/us-en/ontap/fabricpool/requirements-concept.html#functionality-or-features-not-supported-by-fabricpool["功能或功能不受 FabricPool 支援"^]。
+支援的磁碟區和集合體:: Cloud Tiering 可以分層的磁碟區總數可能低於 ONTAP 您的整套系統上的磁碟區數量。這是因為磁碟區無法從某些集合體分層。請參閱ONTAP 的《》文件 https://docs.netapp.com/us-en/ontap/fabricpool/requirements-concept.html#functionality-or-features-not-supported-by-fabricpool["功能或功能不受 FabricPool 支援"^]。
 
 
 
@@ -98,7 +98,7 @@ TIP: Cloud Tiering同時支援FlexVol 各種功能、包括：FlexGroup
 
 === 探索ONTAP 一個叢集
 
-您必須先在ONTAP Cloud Manager畫版中建立內部的功能性環境、才能開始分層處理冷資料。
+您必須先在ONTAP BlueXP畫版中建立內部的功能環境、才能開始分層處理冷資料。
 
 https://docs.netapp.com/us-en/cloud-manager-ontap-onprem/task-discovering-ontap.html["瞭解如何探索叢集"^]。
 

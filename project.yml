@@ -109,15 +109,15 @@ homepage:
     links:
     - title: NetApp社群
       url: https://community.netapp.com/t5/Cloud-Data-Services/ct-p/CDS
-    - title: Cloud Central部落格
+    - title: BlueXP部落格
       url: https://cloud.netapp.com/blog
     - title: 雲端網路研討會
       url: https://cloud.netapp.com/events
   - title: 其他資源
     links:
-    - title: Cloud Central使用案例
+    - title: BlueXP使用案例
       url: https://cloud.netapp.com/cloud-tiering
 product-family:
-  name: Cloud Manager
+  name: BlueXP
   repo: cloud-manager-family
-  sidebar_label: 所有Cloud Manager文件
+  sidebar_label: 所有BlueXP文件

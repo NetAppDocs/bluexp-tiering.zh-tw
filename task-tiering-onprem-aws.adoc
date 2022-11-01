@@ -35,7 +35,7 @@ summary: 將非作用中的資料分層至Amazon S3、以釋放內部ONTAP 資�
  your Connector,瞭解如何建立連接器、以及如何定義必要的網路設定。
 
 [role="quick-margin-para"]
-在ONTAP Cloud Manager中探索您的叢集、確認叢集符合最低需求、並自訂網路設定、讓叢集可以連線至AWS S3。
+在ONTAP BlueXP中探索您的叢集、確認叢集符合最低需求、並自訂網路設定、讓叢集可以連線至AWS S3。
 
 [role="quick-margin-para"]
  your ONTAP cluster,瞭解如何ONTAP 準備好內部部署的叢集。
@@ -56,7 +56,7 @@ summary: 將非作用中的資料分層至Amazon S3、以釋放內部ONTAP 資�
 免費試用結束後、請透過隨用隨付訂閱、ONTAP VMware Cloud Tiering BYOL授權或兩者的組合來支付雲端分層費用：
 
 * 若要從AWS Marketplace訂閱、 https://aws.amazon.com/marketplace/pp/prodview-oorxakq6lq7m4?sr=0-8&ref_=beagle&applicationId=AWSMPContessa["前往Cloud Manager Marketplace產品"^]，單擊*訂購*，然後按照提示進行操作。
-* 若要使用Cloud Tiering BYOL授權付款、請寄送電子郵件至ng-cloud-tiering@netapp.com？Subject=Licensing[如果您需要購買、請聯絡我們]、然後再寄送 link:task-licensing-cloud-tiering.html#add-cloud-tiering-byol-licenses-to-your-account["從Cloud Manager Digital Wallet將其新增至您的帳戶"]。
+* 若要使用Cloud Tiering BYOL授權付款、請寄送電子郵件至ng-cloud-tiering@netapp.com？Subject=Licensing[如果您需要購買、請聯絡我們]、然後再寄送 link:task-licensing-cloud-tiering.html#add-cloud-tiering-byol-licenses-to-your-account["從BlueXP Digital Wallet將其新增至您的帳戶"]。
 
 
 
@@ -84,7 +84,7 @@ NOTE: 連接器與 S3 之間的通訊僅供物件儲存設定使用。
 
 == 準備好連接器
 
-Cloud Manager Connector是Cloud Manager功能的主要軟體。需要連接器來分層處理您的非使用中ONTAP 的資訊。
+BlueXP Connector是用於BlueXP功能的主要軟體。需要連接器來分層處理您的非使用中ONTAP 的資訊。
 
 
 
@@ -139,7 +139,7 @@ Cloud Manager Connector是Cloud Manager功能的主要軟體。需要連接器�
 
 
 --
-支援的磁碟區和集合體:: Cloud Tiering 可以分層的磁碟區總數可能低於 ONTAP 您的整套系統上的磁碟區數量。這是因為磁碟區無法從某些集合體分層。請參閱 ONTAP 的《》文件 https://docs.netapp.com/us-en/ontap/fabricpool/requirements-concept.html#functionality-or-features-not-supported-by-fabricpool["功能或功能不受 FabricPool 支援"^]。
+支援的磁碟區和集合體:: Cloud Tiering 可以分層的磁碟區總數可能低於 ONTAP 您的整套系統上的磁碟區數量。這是因為磁碟區無法從某些集合體分層。請參閱ONTAP 的《》文件 https://docs.netapp.com/us-en/ontap/fabricpool/requirements-concept.html#functionality-or-features-not-supported-by-fabricpool["功能或功能不受 FabricPool 支援"^]。
 
 
 
@@ -176,9 +176,9 @@ IPspace內的所有叢集間生命體都必須擁有物件存放區的存取權�
 
 
 
-=== 在ONTAP Cloud Manager中探索您的叢集
+=== 在ONTAP BlueXP中探索您的叢集
 
-您必須先在ONTAP Cloud Manager中探索內部部署的叢集、才能開始將冷資料分層儲存至物件儲存。您必須知道叢集管理IP位址和管理使用者帳戶的密碼、才能新增叢集。
+您必須先在ONTAP BlueXP中探索內部部署的叢集、才能開始將冷資料分層儲存至物件儲存設備。您必須知道叢集管理IP位址和管理使用者帳戶的密碼、才能新增叢集。
 
 https://docs.netapp.com/us-en/cloud-manager-ontap-onprem/task-discovering-ontap.html["瞭解如何探索叢集"^]。
 
@@ -237,7 +237,7 @@ https://docs.aws.amazon.com/IAM/latest/UserGuide/id_credentials_access-keys.html
 如果您想要透過網際網路從內部資料中心連線至VPC、可以在分層啟動精靈中選取AWS Private Link連線。如果您打算使用VPN或AWS Direct Connect、透過使用私有IP位址的VPC端點介面來連接內部部署系統、就必須使用此功能。這種連線類型顯示於  diagrams for connection options,上圖第二。
 
 . 使用Amazon VPC主控台或命令列建立介面端點組態。 https://docs.aws.amazon.com/AmazonS3/latest/userguide/privatelink-interface-endpoints.html["如需使用AWS Private Link for Amazon S3的詳細資訊、請參閱"^]。
-. 修改與Cloud Manager Connector相關的安全群組組組態。您必須將原則變更為「Custom（自訂）」（從「Full Access（完整存取）」）、而且您必須如此  up S3 permissions,新增所需的S3 Connector權限 如前所示。
+. 修改與BlueXP Connector相關的安全性群組組態。您必須將原則變更為「Custom（自訂）」（從「Full Access（完整存取）」）、而且您必須如此  up S3 permissions,新增所需的S3 Connector權限 如前所示。
 +
 image:screenshot_tiering_aws_sec_group.png["與Connector相關聯的AWS安全性群組快照。"]
 
@@ -251,7 +251,7 @@ image:screenshot_tiering_aws_sec_group.png["與Connector相關聯的AWS安全性
 +
 image:screenshot_endpoint_dns_aws_console.png["AWS主控台VPC端點的DNS名稱快照。"]
 
-. 從VPC S3端點取得憑證。您的做法是 https://docs.netapp.com/us-en/cloud-manager-setup-admin/task-managing-connectors.html#connect-to-the-linux-vm["登入裝載Cloud Manager Connector的VM"^] 並執行下列命令。輸入端點的DNS名稱時、請在開頭加入「pucket」、取代「*」：
+. 從VPC S3端點取得憑證。您的做法是 https://docs.netapp.com/us-en/cloud-manager-setup-admin/task-managing-connectors.html#connect-to-the-linux-vm["登入裝載BlueXP Connector的VM"^] 並執行下列命令。輸入端點的DNS名稱時、請在開頭加入「pucket」、取代「*」：
 +
 [source, text]
 ----

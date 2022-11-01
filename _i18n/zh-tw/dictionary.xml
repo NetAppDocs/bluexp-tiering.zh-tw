@@ -9,8 +9,6 @@
   <block id="81290f6c22665f0b935cb3e892c415c5" category="paragraph">免費試用結束後、請透過隨用隨付訂閱、ONTAP VMware Cloud Tiering BYOL授權或兩者的組合來支付雲端分層費用：</block>
   <block id="f7f406d0800366ccfe60e6f109daeba3" category="inline-link">前往Cloud Manager Marketplace產品</block>
   <block id="e446d884fae3be910f7101a63469fe29" category="list-text">若要從AWS Marketplace訂閱、<block ref="107966ebb28a9da8e41c66a680ce7c07" category="inline-link-rx"></block>，單擊*訂購*，然後按照提示進行操作。</block>
-  <block id="3bcd777e6231261913a78a46e72f7403" category="inline-link-macro">從Cloud Manager Digital Wallet將其新增至您的帳戶</block>
-  <block id="3d8850139b457c8440a21a9f21b10d1a" category="list-text">若要使用Cloud Tiering BYOL授權付款、請寄送電子郵件至ng-cloud-tiering@netapp.com？Subject=Licensing[如果您需要購買、請聯絡我們]、然後再寄送 <block ref="4ec09dd889ab34b93c0fefa73eb0100d" category="inline-link-macro-rx"></block>。</block>
   <block id="5a2ebfb8baa378cfcfcba58bbb1380c2" category="section-title">需求</block>
   <block id="7751e2f58b56568c8a5106199a1e7857" category="paragraph">驗證 ONTAP 支援您的物件叢集、設定網路、以及準備物件儲存。</block>
   <block id="455299fd2e4b438ff8661df0bfd1cace" category="paragraph">下圖顯示每個元件及其之間需要準備的連線：</block>
@@ -33,7 +31,6 @@
   <block id="cbd3171b775ecc9b275479726c41ccec" category="inline-link-macro">功能或功能不受 FabricPool 支援</block>
   <block id="0f77736039f178c51403a15cb68853ee" category="admonition">Cloud Tiering支援FlexGroup 從ONTAP 推出支援支援從S25 9.5開始的各種功能。安裝程式的運作方式與任何其他 Volume 相同。</block>
   <block id="8141ab52bd695a7c4b2c43e785d8bf58" category="section-title">探索ONTAP 一個叢集</block>
-  <block id="3d9108b42583e778e301c7eb55fcb6df" category="paragraph">您必須先在ONTAP Cloud Manager中建立內部的功能性環境、才能開始分層處理冷資料。</block>
   <block id="6ff483ff43e1d1341ed8bca213a5d6c2" category="paragraph"><block ref="781159370dedb574e61a716048070385" category="inline-link-rx"></block>。</block>
   <block id="d32e4305e9f04e1cbc37d3e892619ee7" category="section-title">建立或切換連接器</block>
   <block id="e6e80588e9fe7cf89218fea44300f7ca" category="inline-link">深入瞭解連接器</block>
@@ -95,7 +92,6 @@
   <block id="d2f518b275848356f172ff6ae0c10fa8" category="list-text">內部ONTAP 使用的支援區叢集、執行ONTAP 的是2個9.4或更新版本、並有HTTPS連線至Azure Blob儲存設備。<block ref="afd80128eeaacb8238d3ffdcf8ecd8a8" category="inline-link-rx"></block>。</block>
   <block id="cd11b29aa1a96b5a94f154af73328fa6" category="list-text">安裝在Azure vnet或內部部署環境中的Connector。</block>
   <block id="744a82b075da253af57b3e1dea73fa72" category="list-text">連接器的網路功能、可將HTTPS連線傳出ONTAP 至資料中心內的物件叢集、Azure儲存設備、以及雲端分層服務。</block>
-  <block id="480587a1cee8829d86a45d1dced0419b" category="paragraph">在Cloud Manager中、選取內部作業環境、按一下「*啟用*」以使用分層服務、然後依照提示將資料分層至Azure Blob儲存設備。</block>
   <block id="6ab9a16b5362b2b79677f98f41abd356" category="list-text">若要從Azure Marketplace訂閱、<block ref="440ce4811d16144966c3eaec8a620f73" category="inline-link-rx"></block>，單擊*訂購*，然後按照提示進行操作。</block>
   <block id="9c30fbbd51fe1498326f030ec26c084e" category="paragraph"><block ref="9c30fbbd51fe1498326f030ec26c084e" category="inline-image-macro-rx" type="image"></block></block>
   <block id="144dfa5bd0d67a19aeb536f358a63c4c" category="admonition">Connector 與 Blob 儲存設備之間的通訊僅供物件儲存設定使用。連接器可位於內部部署環境、而非雲端。</block>
@@ -107,8 +103,6 @@
   <block id="3cb09efd98df836314cbd254dcf63296" category="admonition">Cloud Tiering 支援 FlexGroup 從 ONTAP 功能完善的 9.5 開始的各種功能。安裝程式的運作方式與任何其他 Volume 相同。</block>
   <block id="b7f76e21e320bc5e90f575d84c38f775" category="paragraph">需要連接器才能將資料分層至雲端。將資料分層至Azure Blob儲存設備時、您可以使用Azure vnet或內部部署中的Connector。您需要建立新的連接器、或確定目前選取的連接器位於Azure或內部部署。</block>
   <block id="b1e389999fc3500ff74c433071c6f3d0" category="section-title">確認您擁有必要的Connector權限</block>
-  <block id="9cf7397373647ce59fc85a522be218b9" category="paragraph">如果您是使用Cloud Manager 3.9.7版或更新版本建立Connector、那麼您就已經設定好了。</block>
-  <block id="8de47ea2ac854f7a21fa39e52589d5c4" category="paragraph">如果您使用舊版Cloud Manager建立Connector、則需要編輯權限清單、以新增2項必要權限：</block>
   <block id="8d553e78e79ca1abdf2ffdd1714a7698" category="paragraph">確認連接器具備所需的網路連線。連接器可安裝在內部部署或Azure上。</block>
   <block id="bb1241e3a37748e608dbbde25c75ea25" category="list-text">透過連接埠 443 連線至 Azure Blob 儲存設備的 HTTPS 連線</block>
   <block id="400985d5d8ad47af48b13e9fe604a6fe" category="list-text">如有需要、請為 Azure 儲存設備啟用 vnet 服務端點。</block>
@@ -136,27 +130,19 @@
   <block id="ade7907875a5b3e50997036947f13251" category="paragraph">您已成功設定資料分層、從叢集上的磁碟區到 Azure Blob 物件儲存設備。</block>
   <block id="f658b533f81ca87a3c235485a5ca7b33" category="summary">Cloud Tiering會自動將非作用中資料從內部部署ONTAP 的物件叢集分層、以將資料中心延伸至雲端。</block>
   <block id="18b67cdd6c50872fa0de2de9dfd11343" category="doc">雲端分層文件</block>
-  <block id="ce21e7ae4271271294ccbf54c8fd6864" category="summary">NetApp以多種方式支援Cloud Manager。我們全年無休提供豐富的免費自助支援選項、例如知識庫（KB）文章和社群論壇。您的支援註冊包括透過網路票證提供遠端技術支援。</block>
   <block id="fabfc25ef8996fd90836e58a4c0b26b6" category="doc">取得協助</block>
-  <block id="51719eefc68685ac0e2a11057a44b8be" category="paragraph">NetApp以多種方式支援Cloud Manager及其雲端服務。我們全年無休提供豐富的免費自助支援選項、例如知識庫（KB）文章和社群論壇。您的支援註冊包括透過網路票證提供遠端技術支援。</block>
   <block id="07d41912a6ab6b97216f8cf89e93205c" category="section-title">自我支援</block>
   <block id="5e4b821a1a82558dead1ef6961e90666" category="paragraph">這些選項可供免費使用、一天24小時、一週7天：</block>
   <block id="19111351b69b6b15668130b38b7f6038" category="inline-link">知識庫</block>
   <block id="fd6bb4fa1ad0caeedd6782d92cc54ea3" category="list-text"><block ref="fd6bb4fa1ad0caeedd6782d92cc54ea3" category="inline-link-rx"></block></block>
-  <block id="76b571fb5edea1c1994fa0ff01f7b1e2" category="paragraph">請搜尋Cloud Manager知識庫、找出有助於疑難排解問題的文章。</block>
   <block id="14526abd8bda5af347775025cd5342cf" category="inline-link">社群</block>
   <block id="410fdb9caa9c64da2ff3f88f4836960d" category="list-text"><block ref="410fdb9caa9c64da2ff3f88f4836960d" category="inline-link-rx"></block></block>
-  <block id="7f3490343cad8dc3bfdb72dd5d957e8d" category="paragraph">加入Cloud Manager社群、追蹤後續討論或建立新討論。</block>
   <block id="5b6cf869265c13af8566f192b4ab3d2a" category="list-text">文件</block>
-  <block id="3c313458d6e15dd2c4336e47118d0a8f" category="paragraph">您目前正在檢視的Cloud Manager文件。</block>
   <block id="80b1b0d2b1ebf2b3cba2d25759801afd" category="list-text">mailto：ng-cloudmanager-feedback@netapp.com [意見反應電子郵件]</block>
-  <block id="bff60abbc46aceed0f73a3a4f6cfb123" category="paragraph">我們非常重視您的意見。提交意見反應、協助我們改善Cloud Manager。</block>
   <block id="0659d428df833a806e29e65e632d380a" category="section-title">NetApp支援</block>
-  <block id="6c08c57e382a25a778455184cd9b1a4a" category="list-text">在Cloud Manager中、按一下*「說明」&gt;「支援」*。</block>
   <block id="f5052c65917d7341726235d4d4941461" category="list-text">在「Technical Support（技術支援）」下選擇可用的選項之一：</block>
   <block id="6b5920220b135ba1ff95cfb5b149f138" category="summary">NetApp 的雲端分層服務可自動將非作用中資料從內部部署 ONTAP 的物件叢集分層、以將資料中心延伸至雲端。如此一來、叢集上的寶貴空間就能釋出、以容納更多工作負載、而無需變更應用程式層。雲端分層可降低資料中心的成本、並可讓您從CAPEX模式切換至OPEX模式。</block>
   <block id="36afa058c74d288178950c27927bdb38" category="doc">深入瞭解雲端分層</block>
-  <block id="647439c1467c8118206ec0bd264e5f44" category="paragraph">Cloud Tiering 服務運用 _Estr__ 的功能 FabricPool 。NetApp Data Fabric 技術可自動將資料分層至低成本的物件儲存設備。 FabricPool作用中（熱）資料會保留在本機層（內部部署ONTAP 的資訊集合體）、而非作用中（冷）資料則移至雲端層、同時維持ONTAP 資料效率不變。</block>
   <block id="ec0515a8a06c1c0cf10efc6cbb1bfab9" category="inline-link">使用過程中的考量與要求FabricPool</block>
   <block id="98f770b0af18ca763421bac22b4b6805" category="section-title">功能</block>
   <block id="c6a7db5c25117c443a476e127b47fb7e" category="paragraph">雲端分層提供自動化、監控、報告及通用管理介面：</block>
@@ -166,10 +152,6 @@
   <block id="c1ad703a668852b216aa10032b7c0cda" category="list-text">報告會顯示每個叢集上的作用中和非作用中資料量</block>
   <block id="50ce53d55b005f76b356132a3901cfcf" category="list-text">分層健全狀況狀態可協助您識別並修正發生的問題</block>
   <block id="0b8949500e9883a23b1d4fbc204e90ee" category="list-text">如果您使用 Cloud Volumes ONTAP 的是 NetApp 系統、您可以在叢集儀表板中找到這些系統、以便在混合雲基礎架構中完整檢視資料分層</block>
-  <block id="87ade72d5bce2aa059ec00c3d0267dcd" category="inline-link">請參閱 NetApp Cloud Central 上的雲端分層頁面</block>
-  <block id="4074a4b2af431bb41b7d6a27a4a0fa8c" category="paragraph">如需雲端分層所提供價值的詳細資訊、<block ref="2b48faa4b3be6c213b2f92c388d8c1e9" category="inline-link-rx"></block>。</block>
-  <block id="0f2fe86a510d6ffda7900a01b49c88f9" category="inline-link">您可以在 Cloud Volumes ONTAP Cloud Manager 中設定針對運作環境的效能提升</block>
-  <block id="ce34acaac9ca080c6cf882736711598e" category="admonition">從 Cloud Tiering 讀取系統。 Cloud Volumes ONTAP<block ref="9af043ec07eda2b8761144420bc7ff5f" category="inline-link-rx"></block>。</block>
   <block id="002fca37a5e7d8eb724e874566419716" category="section-title">支援的物件儲存供應商</block>
   <block id="403df42df80267a7b2bc0be8c3e6685d" category="paragraph">您可以將非作用中的資料從內部部署ONTAP 的不活動資料系統分層處理至下列物件儲存供應商：</block>
   <block id="270fcb785810d0206945029bb05f4e97" category="list-text">Amazon S3</block>
@@ -205,7 +187,6 @@
   <block id="02778b04e5a037c1f79623dbe0edaeaa" category="paragraph"><block ref="ec35df1b46bc45bcde27ce05d4c1911f" category="inline-link-macro-rx"></block>。</block>
   <block id="fce5aebaf837d23e27b8a9d6a54a6467" category="section-title">請自帶授權</block>
   <block id="7b31eba1fa6d2aa1d3bf4ddb10d4b302" category="inline-link-macro">瞭解如何使用雲端分層BYOL授權</block>
-  <block id="02a6408f36d264f039b618304a9a4c10" category="paragraph">購買雲端分層授權之後、您需要使用Cloud Manager中的「Digital Wallet」頁面來新增授權。 <block ref="14bb9fa35d1b0028e213cd470536d52e" category="inline-link-macro-rx"></block>。</block>
   <block id="36d4c89fb6384ec2ea8ec2f77986b9e1" category="paragraph">如上所述、建議您設定隨用隨付訂閱、即使您已購買BYOL授權亦然。</block>
   <block id="209dbdc2b896741acf71bcae32e7eaf6" category="inline-link-macro">深入瞭解Cloud Tiering授權與FabricPool 不含本功能的使用許可有何不同</block>
   <block id="b61cf799f5237844b2087bc6dd0b753d" category="admonition">自2021年8月起、舊* FabricPool 《*》的授權已被* Cloud Tiering *授權取代。 <block ref="bfffc031a9446421b310340c17f792d7" category="inline-link-macro-rx"></block>。</block>
@@ -215,9 +196,7 @@
   <block id="986620013e524f528cb74827b57937fb" category="inline-image-macro">此架構影像顯示雲端分層服務、可連線至雲端供應商的 Connector 、連接 ONTAP 至您的叢集的 Connector 、 ONTAP 以及雲端供應商中的叢集與物件儲存設備之間的連線。作用中資料位於 ONTAP 資源中心叢集中、而非作用中資料則位於物件儲存區。</block>
   <block id="0f51635970973a7926f9dff8988d2751" category="paragraph"><block ref="0f51635970973a7926f9dff8988d2751" category="inline-image-macro-rx" type="image"></block></block>
   <block id="2267604bdde13d39a83a5f78be5a7e06" category="paragraph">在高層級、雲端分層的運作方式如下：</block>
-  <block id="26e4bd044876996b02b4075cecfadd4a" category="list-text">您可以從 Cloud Manager 探索內部叢集。</block>
   <block id="ee32623ddfba76c17a3869197764085b" category="list-text">您可以提供物件儲存設備的詳細資料、包括儲存庫/容器、儲存類別或存取層、以及階層式資料的生命週期規則、藉此設定分層。</block>
-  <block id="1f26d33b5f4eab4d98e019d22db076f7" category="list-text">Cloud Manager 可設定 ONTAP 使用物件儲存供應商、並探索叢集上的作用中和非作用中資料量。</block>
   <block id="f0fbe063f098b4fb5463ff8919a9c737" category="list-text">您可以選擇要分層的磁碟區、以及要套用至這些磁碟區的分層原則。</block>
   <block id="7cff4595565023a72889d0ae1bf58e66" category="list-text">一旦資料達到臨界值時、系統即會將非作用中的資料分層至物件存放區（請參閱ONTAP <block ref="3ab88d3ba20857380b0d484a33d90bf5" category="inline-xref-macro-rx"></block>）。</block>
   <block id="0976a1e155055359baa0c396e75dc0c4" category="list-text">如果您已將生命週期規則套用至階層式資料（僅適用於部分供應商）、則較舊的階層式資料會在一定天數後移至更具成本效益的階層。</block>
@@ -357,7 +336,6 @@
   <block id="2deaed2300671ee7d90104d75a9f9c41" category="list-text">具有預先定義儲存管理角色和儲存存取金鑰的服務帳戶。</block>
   <block id="e020f6db5f627706b6bc9c4d66d7c52f" category="list-text">安裝在 Google Cloud Platform VPC 上的 Connector 。</block>
   <block id="01c6106eee9f2585bce4736ffc82f921" category="list-text">連接器的網路功能、可將 HTTPS 連線傳出至 ONTAP 資料中心的叢集、 Google Cloud Storage 及雲端分層服務。</block>
-  <block id="d572b7a5cee638d438e0d8197ab490ca" category="paragraph">在Cloud Manager中、選取內部作業環境、按一下「*啟用*」以使用分層服務、然後依照提示將資料分層至Google Cloud Storage。</block>
   <block id="08341f574367a2e4888f17e3dbe48a5e" category="list-text">若要從GCP Marketplace訂閱、<block ref="02cbb65b7276055ef2da92a78a82ed12" category="inline-link-rx"></block>，單擊*訂購*，然後按照提示進行操作。</block>
   <block id="ae1e8d6457f4f506770cc59e1a0e0dcf" category="paragraph"><block ref="ae1e8d6457f4f506770cc59e1a0e0dcf" category="inline-image-macro-rx" type="image"></block></block>
   <block id="c459bb33c487017b428eb64415bb051b" category="admonition">Connector 與 Google Cloud Storage 之間的通訊僅供物件儲存設定使用。</block>
@@ -447,7 +425,6 @@
   <block id="0076173f0ac8d073b8ab32c9a088997b" category="paragraph"><block ref="0076173f0ac8d073b8ab32c9a088997b" category="inline-image-macro-rx" type="image"></block></block>
   <block id="8d7c169a466dfccc11fd70e4d5d9307c" category="paragraph">當叢集的CPU使用率低於50%時、最好執行此檢查。</block>
   <block id="12ebb37a8d91ff10a8eaff4834cdfd67" category="list-title">尚未設定分層的叢集步驟</block>
-  <block id="ae6799a7ede7ea798085f4eda09aca80" category="list-text">在 Cloud Manager 頂端、按一下 * 分層 * 。</block>
   <block id="c1d7cf1a6e1782b986990f5c14c566d8" category="list-text">在*叢集儀表板*中、按一下叢集的功能表圖示、然後選取*雲端效能測試*。</block>
   <block id="07ae28f7f79fff3c0b0b0cf1056fc2c1" category="list-text">檢閱詳細資料、然後按一下*繼續*。</block>
   <block id="bfdee4fb60271a04ea7de7300cf2719f" category="list-text">依照提示提供必要資訊。</block>
@@ -461,15 +438,12 @@
   <block id="5fce56af1e1158cc023bf250fa9ab688" category="list-text">支援 AWS 存取金鑰的 S3 權限、可支援支援支援支援的版本。 StorageGRID</block>
   <block id="576fdb5dd15e14e6977927216a394612" category="list-text">安裝在內部部署上的 Connector 。</block>
   <block id="77d226f03d33c38067535c89c7bb15ab" category="list-text">連接器的網路功能、可將 HTTPS 連線傳出 ONTAP 至物件叢集、 StorageGRID 到物件叢集和雲端分層服務。</block>
-  <block id="08cb8278d5d44c8df0dbbd840143caf1" category="paragraph">在Cloud Manager中、選取內部作業環境、按一下「*啟用*」以使用分層服務、然後依照提示將資料分層StorageGRID 至物件。</block>
   <block id="48598e26d0a17791401102b075c12bd3" category="inline-image-macro">此架構影像顯示雲端分層服務、可連線至內部部署的連接器、連接ONTAP 至您的故障叢集的連接器、ONTAP 以及連接至故障叢集與物件儲存設備的連接。作用中資料位於 ONTAP 資源中心叢集、而非作用中資料則位於物件儲存區。</block>
   <block id="94a098b3d7ebe3d650bf8ace03166b2e" category="paragraph"><block ref="94a098b3d7ebe3d650bf8ace03166b2e" category="inline-image-macro-rx" type="image"></block></block>
   <block id="9cd38a30ef1c3ae6b31cfb50d4f1a25f" category="admonition">Connector 與 StorageGRID 物件之間的通訊僅供物件儲存設定之用。</block>
   <block id="d819d0403e81c7160cb438c3a5d9a3c4" category="paragraph">將資料分層至異地時、您的叢集必須符合下列要求。 ONTAP StorageGRID</block>
   <block id="0b9c6eef4e3d3a222eb04e910d252339" category="list-text">授權</block>
-  <block id="9cda06c7df5991375adfd503e3cc7329" category="list-text">您的Cloud Manager帳戶不需要Cloud Tiering授權、FabricPool 也不需要ONTAP 在將資料分層StorageGRID 至無法使用的情況下、在這個叢集上使用非功能性授權。</block>
   <block id="b00b6421202892ef9c6f947253e944b4" category="list-text">連接器必須駐留在內部環境中、因此需要傳入連線。</block>
-  <block id="32c974abc8de44f817076a1e8eb5d4c8" category="paragraph">您必須先在ONTAP Cloud Manager畫版中建立內部的功能性環境、才能開始分層處理冷資料。</block>
   <block id="6be12c1b6627a3a9bb2aa4cb185fc866" category="section-title">準備 StorageGRID</block>
   <block id="36fe0b0906c418ae57a5a0bdc228ec2b" category="paragraph">必須符合下列需求。 StorageGRID</block>
   <block id="793640ee72b7150dff71a288a821c67c" category="list-text">支援 StorageGRID 的支援版本</block>
@@ -493,7 +467,6 @@
   <block id="4b75686c0a14158ec6b99e93fbf1828b" category="doc">設定雲端分層授權</block>
   <block id="80186f1230af2267e2c2e4d2ab8c030e" category="paragraph">在閱讀更多內容之前、請先提供幾個附註：</block>
   <block id="0727235314b2d6886610369d278fbe42" category="list-text">如果您已在雲端供應商的市場訂閱Cloud Manager（PAYGO）、那麼您也會自動從內部部署ONTAP 的悉尼系統訂閱Cloud Tiering。您會在Cloud Tiering * Licensing*（雲端分層*授權*）標籤中看到使用中的訂閱。您不需要再次訂閱。</block>
-  <block id="9a8698a0b6d7e163c4716425197a85fa" category="list-text">BYOL Cloud分層授權是一個_浮 點型授權、您可以在ONTAP Cloud Manager帳戶的多個內部部署的物件叢集之間使用。這與您過去為FabricPool 每個叢集購買_SUR__授權的情況不同。</block>
   <block id="e206957e9be19dce9acce268f36b6b4d" category="list-text">將資料分層至StorageGRID 不收費、因此不需要BYOL授權或PAYGO登錄。此階層式資料不會計入您授權中所購買的容量。</block>
   <block id="d42e6c6c0bd600babc489630de73058f" category="inline-link-macro">深入瞭解雲端分層的授權運作方式</block>
   <block id="6cba13359069adfeb75d96e433421999" category="paragraph"><block ref="4e584f79910f9a3a7129b23d958f91fd" category="inline-link-macro-rx"></block>。</block>
@@ -501,69 +474,52 @@
   <block id="bf842c9a2352dda7ee452c6389dda8b8" category="paragraph">透過雲端供應商市場的隨用隨付訂閱、您可以授權使用Cloud Volumes ONTAP 多方面的系統及雲端資料服務、例如雲端分層。</block>
   <block id="a70c9916d691b1eb3e72bf59caa27ce2" category="section-title">從 AWS Marketplace 訂閱</block>
   <block id="df5f272e4f3bf41f36db01caae48f251" category="paragraph">從 AWS Marketplace 訂閱 Cloud Tiering 、即可設定隨用隨付訂閱、將資料從 ONTAP 叢集分層到 AWS S3 。</block>
-  <block id="c7b083d4676e5a0afa6d6020794789a3" category="list-text">在 Cloud Manager 中、按一下 * 分層 &gt; 授權 * 。</block>
   <block id="22ebad5f828c1874ce79ac764661bead" category="list-text">按一下 AWS Marketplace 下的 * 「訂購 * 」、然後按一下「 * 繼續 * 」。</block>
   <block id="cab27dc53edb571cac663ce2e16450dc" category="inline-link">AWS Marketplace</block>
-  <block id="d90da034fb23c49f0b917bb3bbbe3215" category="list-text">從訂閱<block ref="d668c832ccb70eb717d6736e1082df78" category="inline-link-rx"></block>、然後重新登入Cloud Central以完成註冊。</block>
   <block id="03909f0465e674709c33e446a2657166" category="paragraph">下列影片顯示此程序：</block>
   <block id="8feab303f9a851219461fc3a5bccb103" category="section-title">從 Azure Marketplace 訂閱</block>
   <block id="852bc4eb9abdefdd230a032e3bb1c3f3" category="paragraph">從 Azure Marketplace 訂閱 Cloud Tiering 、即可設定隨用隨付訂閱、以將資料從 ONTAP 叢集分層到 Azure Blob 儲存設備。</block>
   <block id="3a1616493ce57887d77b3b14ad9e2110" category="list-text">按一下 Azure Marketplace 下的 * 「訂購 * 」、然後按一下 * 「繼續 * 」。</block>
   <block id="21e74b3c28d006317f38a2bc8eb1da3b" category="inline-link">Azure Marketplace</block>
-  <block id="c2661a0f9ca56f8290adb13d8779183f" category="list-text">從訂閱<block ref="41a6e7dc73b2f1e43bd8c26c6ce83782" category="inline-link-rx"></block>、然後重新登入Cloud Central以完成註冊。</block>
   <block id="d96cb6abed792dbbfc1aebbc934cb55d" category="section-title">從 GCP Marketplace 訂閱</block>
   <block id="0d51ae895f10dab0e96402b5dca83cae" category="paragraph">從 GCP Marketplace 訂閱 Cloud Tiering 、即可設定隨用隨付訂閱、以將資料從 ONTAP 整套叢集分層到 Google Cloud 儲存設備。</block>
   <block id="c86cd292411d2b20ff6afbb02e35888f" category="list-text">按一下「 GCP Marketplace 」下的「 * 訂購 * 」、然後按一下「 * 繼續 * 」。</block>
   <block id="12a896df7cf6cd5b5e5dcf4a46c0cebc" category="inline-link">GCP 市場</block>
-  <block id="be8850b30610a85a191ec0d192bcea70" category="list-text">從訂閱<block ref="92655de6fae7d07ed3897ce19d51b88d" category="inline-link-rx"></block>、然後重新登入Cloud Central以完成註冊。</block>
   <block id="8b09b5b1748988787957d62eb22076ff" category="section-title">使用Cloud Tiering BYOL授權</block>
   <block id="32d21336f5ff01b8e920d65646fad172" category="paragraph">如果您沒有雲端分層授權、請聯絡我們以購買：</block>
   <block id="7bd914491d17c534e3612cd97579060e" category="list-text">mailto：ng-cloud-tiering@netapp.com？Subject =授權[傳送電子郵件以購買授權]。</block>
-  <block id="666323488d4fa691054a8d6bff137cc3" category="list-text">按一下Cloud Manager右下角的聊天圖示以申請授權。</block>
   <block id="6aa300e24ddf3ee5a99bbb1cf5bb4a72" category="inline-link">如需詳細資料、請前往此處</block>
   <block id="72899f4178ab51a60b88e578be4f92f1" category="paragraph">或者、如果Cloud Volumes ONTAP 您擁有不使用的未指派節點型支援、您可以將其轉換成具有相同金額等同和相同到期日的雲端分層授權。<block ref="c110e5a4a66d7429a8ced7dc2264a8f5" category="inline-link-rx"></block>。</block>
-  <block id="3868e848af85900de1f54ff09666ee69" category="paragraph">您可以使用Cloud Manager中的「Digital Wallet」頁面來管理雲端分層BYOL授權。您可以新增授權並更新現有授權。</block>
   <block id="52cae96a75c3f07b159891ff3d6a95c0" category="section-title">新的雲端分層BYOL授權自2021年8月21日起生效</block>
   <block id="b5a6f9ddeef29501280ea54ee2e1a6a9" category="admonition">請注意、分層至StorageGRID 不需要FabricPool 使用功能不全的或雲端分層授權。</block>
   <block id="63b75697f87dc9e5a0f1c93ebf6056b5" category="paragraph">如果您目前使用FabricPool 的是「非功能性授權」、FabricPool 則除非您的不含功能性授權達到到期日或最大容量、否則不會受到影響。如需更新授權、請聯絡NetApp、或是更早更新授權、以確保您將資料分層至雲端的能力不會中斷。</block>
-  <block id="718a81b2bb7ab3ba5eaabdc569ee059d" category="list-text">如果您使用的是Cloud Manager支援的組態、FabricPool 則您的支援將轉換成Cloud Tiering授權、這些授權將會顯示在Digital Wallet中。當初始授權過期時、您需要更新雲端分層授權。</block>
   <block id="bc09c653f410975fa6dd7b35c33b6c6c" category="inline-link">瞭解如何使用System Manager授權分層</block>
-  <block id="f3aac0cc16fbf4b94d5ef657eafaf25c" category="list-text">如果您使用Cloud Manager不支援的組態、則將繼續使用FabricPool 此版的支援。<block ref="f4b8492105dcaca906c2ce90b9ccab9e" category="inline-link-rx"></block>。</block>
   <block id="a00fd369198fb13481097340d501bf38" category="paragraph">以下是兩份授權的一些須知事項：</block>
   <block id="d7050f5be573fbec3d0b437870a3a20d" category="cell">雲端分層授權</block>
   <block id="af6f7538512432a33b6eb5ae90974311" category="cell">不含授權FabricPool</block>
   <block id="fea02835528f4e4b182606c16346ded7" category="cell">這是一個_浮 點_授權、可在多ONTAP 個內部部署的叢集上使用。</block>
   <block id="7ef7e4f14899acc64a8c7b40a40b0c18" category="cell">這是您為_Every叢集購買及授權的每個叢集授權。</block>
-  <block id="1ad00adb2c9f2c7db3cb42d2b1bed540" category="cell">它已在Digital Wallet的Cloud Manager中註冊。</block>
   <block id="a63ad8d8cc3d36cf738227cc01faa143" category="cell">它會套用至使用System Manager或ONTAP CLI的個別叢集。</block>
-  <block id="aad7107b9f1db46fd10aef649a0d7684" category="cell">分層組態與管理是透過Cloud Manager中的雲端分層服務來完成。</block>
   <block id="a7bd9725f68ab51f56b292638f876d9b" category="cell">分層組態與管理是透過System Manager或ONTAP CLI來完成。</block>
   <block id="84d29247572532708a78dd9938063ac5" category="cell">設定完成後、您可以使用免費試用版、在30天內不需授權的情況下使用分層服務。</block>
   <block id="0f54a92e132940776f23febb26ca8ceb" category="cell">設定完成後、即可免費分層前10 TB的資料。</block>
   <block id="f0c1c15846dd8e300f9c681a6828fca2" category="section-title">取得您的雲端分層授權檔案</block>
-  <block id="a462c7b443883cc379512efd33e518b6" category="paragraph">購買Cloud Tiering授權之後、您可以在Cloud Manager中輸入Cloud Tiering序號和nss帳戶、或是上傳NLF授權檔案、以啟動授權。下列步驟說明如果您打算使用NLF授權檔案、該如何取得該檔案。</block>
   <block id="9d2169c1c2855b78a7aeaa4f42d27dc7" category="inline-link">NetApp 支援網站</block>
   <block id="80c4b6e3dfa1d4f33033585b7c74e7e9" category="list-text">登入<block ref="fcc52edac3ce57829c48ee35d97a295d" category="inline-link-rx"></block> 然後按一下*系統&gt;軟體授權*。</block>
   <block id="d36e28c3a18f5871c24c797ef99777ff" category="list-text">輸入您的雲端分層授權序號。</block>
   <block id="5190e9ec018f5e661ec4b31ff1b34423" category="inline-image-macro">顯示依序號搜尋後授權表格的快照。</block>
   <block id="d15379b9f839ac6523d1b06ad8763875" category="paragraph"><block ref="d15379b9f839ac6523d1b06ad8763875" category="inline-image-macro-rx" type="image"></block></block>
   <block id="8e04bab9d0c0964365e3483da66e2f09" category="list-text">在*授權金鑰*下、按一下*取得NetApp授權檔案*。</block>
-  <block id="fa468db90f03e95a4dac09262c027968" category="list-text">輸入您的Cloud Manager帳戶ID（在支援網站上稱為「租戶ID」）、然後按一下*提交*下載授權檔案。</block>
   <block id="56273f3344c87fabbf5196fba9816fff" category="inline-image-macro">螢幕擷取畫面會顯示「Get license（取得授權）」對話方塊、您可在此輸入租戶ID、然後按一下「Submit（提交）」下載授權檔案。</block>
   <block id="212f5a95c637538f9375d966345ca9f7" category="paragraph"><block ref="212f5a95c637538f9375d966345ca9f7" category="inline-image-macro-rx" type="image"></block></block>
-  <block id="630b1746cba34ee88564bdc613bf0b35" category="paragraph">您可以從Cloud Manager頂端選取* Account*下拉式清單、然後按一下帳戶旁的* Manage Account*、即可找到Cloud Manager帳戶ID。您的帳戶ID位於「總覽」索引標籤。</block>
   <block id="39578a52b476e59b429794b57bcf40bf" category="section-title">將雲端分層BYOL授權新增至您的帳戶</block>
-  <block id="ef65182a609d9cb0286ef3c7301f5daa" category="paragraph">為Cloud Manager帳戶購買雲端分層授權後、您必須將授權新增至Cloud Manager、才能使用Cloud Tiering服務。</block>
   <block id="14e73879f741aacd67e792f34954460d" category="list-text">按一下「*所有服務&gt;數位錢包&gt;資料服務授權*」。</block>
   <block id="ea9a2b9ac34c9aab133f21aa5b67976e" category="list-text">按一下「 * 新增授權 * 」。</block>
   <block id="c1b2dc0798d3960e25b8a12c751f53ec" category="list-text">在_新增授權_對話方塊中、輸入授權資訊、然後按一下*新增授權*：</block>
   <block id="80b8da08efcb9500667b0fc290bbe1f6" category="list-text">如果您有分層授權序號、而且知道您的nss-Account、請選取* Enter Serial Number*（輸入序號*）選項、然後輸入該資訊。</block>
-  <block id="f154773445f5f4ed354ad1d6b1458de0" category="inline-link">將新增至Cloud Manager的NSS帳戶</block>
-  <block id="f1532eb975cadb53a7b9ac3d19205000" category="paragraph">如果您的NetApp支援網站帳戶無法從下拉式清單取得、<block ref="6ee42390f038b7658fb8dfbbc6c21b14" category="inline-link-rx"></block>。</block>
   <block id="4488cc251929ad2c43c07191375ca26e" category="list-text">如果您有分層授權檔案、請選取*上傳授權檔案*選項、然後依照提示附加檔案。</block>
   <block id="1af7aeb738b0578aa31160e1d7355bcd" category="inline-image-macro">此快照顯示新增Cloud Tiering BYOL授權的頁面。</block>
   <block id="3420232b66d62d7611482ddabf1988c3" category="paragraph"><block ref="3420232b66d62d7611482ddabf1988c3" category="inline-image-macro-rx" type="image"></block></block>
-  <block id="364d1c5ae631668d1c4d1d18835b8421" category="paragraph">Cloud Manager會新增授權、讓您的雲端分層服務處於作用中狀態。</block>
   <block id="f505022cdcf9ea03cd7001912527ca6e" category="section-title">更新雲端分層BYOL授權</block>
   <block id="2adc8ac843334b9d1eb27a4b74650f05" category="paragraph">如果您的授權期限即將到期、或您的授權容量已達到上限、您將會在Cloud Tiering中收到通知。</block>
   <block id="08a606afbe21a428cf1f6937c7fcebfd" category="inline-image-macro">在Cloud Tiering頁面中顯示即將到期授權的快照。</block>
@@ -572,9 +528,6 @@
   <block id="89ec6475bcd2a52ce9ca1c8fa843339e" category="inline-image-macro">顯示「Digital Wallet」頁面即將到期授權的快照。</block>
   <block id="b3bd2cf375c900d20cf42dde79db63e2" category="paragraph"><block ref="b3bd2cf375c900d20cf42dde79db63e2" category="inline-image-macro-rx" type="image"></block></block>
   <block id="ee1dc2f67f917d3027531c379ca162ea" category="paragraph">您可以在雲端分層授權到期之前更新、如此一來、您就不會中斷將資料分層至雲端的能力。</block>
-  <block id="ba8719ef590307d0ff4541d7c49f2eda" category="list-text">按一下Cloud Manager右下角的聊天圖示、即可針對特定序號、要求將您的期限延長或增加至Cloud Tiering授權的容量。</block>
-  <block id="2c03e04d86836c39240387af58347149" category="paragraph">在您支付授權費用並向NetApp支援網站註冊之後、Cloud Manager會自動更新Digital Wallet中的授權、而Data Services授權頁面將會在5到10分鐘內反映變更。</block>
-  <block id="5cd8f01849080c583021a91f23942914" category="list-text">如果Cloud Manager無法自動更新授權、則您必須手動上傳授權檔案。</block>
   <block id="b2b168bd64a341a85c749cb61bba40cb" category="inline-xref">從NetApp支援網站取得授權檔案</block>
   <block id="dcb1cc98de5be5ebc848f6d527296548" category="list-text">您可以 <block ref="a628f2c6d1db91c5feff2141b635e1d6" category="inline-xref-macro-rx"></block>。</block>
   <block id="8f0a75d2d5a82f31f2cf069c3b0ee684" category="inline-image-macro">更多圖示</block>
@@ -582,26 +535,13 @@
   <block id="3ce750f001c2369e23b68f3210d9f100" category="inline-image-macro">選取特定服務的「更新授權」按鈕的快照。</block>
   <block id="2bdb7af2b6613fafdba930fb09034d3f" category="paragraph"><block ref="2bdb7af2b6613fafdba930fb09034d3f" category="inline-image-macro-rx" type="image"></block></block>
   <block id="41e921305ae1b027e5d364af4a2a9df2" category="list-text">在「更新授權」頁面上傳授權檔案、然後按一下「*更新授權*」。</block>
-  <block id="b0ef58afd6c0aa5458526e90f893a2f0" category="paragraph">Cloud Manager會更新授權、讓您的雲端分層服務持續運作。</block>
-  <block id="3c10116b37b407ac79092a38ffb292e4" category="summary">在您透過NetApp技術支援開啟支援案例之前、您必須先將NetApp支援網站帳戶新增至Cloud Manager、然後註冊以取得支援。</block>
   <block id="42748df9eaa0be17ddc5cc1593cf57ab" category="doc">註冊以取得支援</block>
-  <block id="aeaeee19a7c393222e407a525cf01991" category="section-title">新增一個NSS帳戶</block>
-  <block id="de2241fea60d98698faaa196ff73ee80" category="paragraph">「支援儀表板」可讓您從單一位置新增及管理所有NetApp支援網站帳戶。</block>
-  <block id="5be2593b5948f30a15179a32daa73ee2" category="inline-link">註冊一項</block>
-  <block id="14b05cf61f1aba58d38b393e69b69538" category="list-text">如果您還沒有 NetApp 支援網站帳戶、<block ref="0a8e82436ea73fe635862cfba3acf101" category="inline-link-rx"></block>。</block>
-  <block id="0046efb3377274ff3215d4b30269809e" category="list-text">在Cloud Manager主控台右上角、按一下「說明」圖示、然後選取*「支援」*。</block>
   <block id="b50f0a46135bcb7083b1f2f82032fc26" category="inline-image-macro">「說明」功能表的快照、其中「支援」是第一個列出的選項</block>
   <block id="868d9aa88f16ea923af1d15eac5d2647" category="paragraph"><block ref="868d9aa88f16ea923af1d15eac5d2647" category="inline-image-macro-rx" type="image"></block></block>
   <block id="d17d6b5dafebab6b7659da8850737e70" category="list-text">按一下「*」「nss管理」&gt;「新增nssAccount」*。</block>
   <block id="8aaf101e623c543c7eef3c65f6233366" category="list-text">出現提示時、按一下*繼續*以重新導向至Microsoft登入頁面。</block>
   <block id="19d089db572ee6a1e154a0c9c9e57bfd" category="paragraph">NetApp使用Microsoft Azure Active Directory做為身分識別供應商、提供專為支援與授權所設計的驗證服務。</block>
   <block id="465ec6d5eafa3524c948c99d8bfcd306" category="list-text">在登入頁面上、提供您的NetApp支援網站註冊電子郵件地址和密碼、以執行驗證程序。</block>
-  <block id="f5fb4199485234c409525f430b737010" category="paragraph">此動作可讓Cloud Manager使用您的NSS帳戶。</block>
-  <block id="b4c6a2f33e7b2a38495546b8d5cd8e84" category="paragraph">附註：帳戶必須是客戶層級的帳戶（非來賓帳戶或臨時帳戶）。</block>
-  <block id="fc65ebd4739f2f8ca46062a8280faea9" category="section-title">註冊您的帳戶以取得支援</block>
-  <block id="3e080914efe0d0ca025439fbb68d437f" category="paragraph">支援註冊可從支援儀表板的Cloud Manager取得。</block>
-  <block id="fb07bf6b7698dbe934b8b2164d915484" category="list-text">在* Resources（資源）*選項卡中，單擊* Register for Support*（註冊以獲得支持*）。</block>
-  <block id="392fb0270d0d84dbc3fdf8c67da1e5ad" category="list-text">選取您要登錄的NSS認證、然後按一下「*登錄*」。</block>
   <block id="339e18b687c59777d2931b47d72cb440" category="summary">現在您已經從內部ONTAP 的物件叢集設定資料分層、您可以從其他磁碟區分層資料、變更磁碟區的分層原則、探索其他叢集等。</block>
   <block id="93772529b8117fc8010ab6872129a19c" category="section-title">從其他磁碟區分層資料</block>
   <block id="d911ca369d48811297e1670d6c7a6096" category="paragraph">隨時設定其他磁碟區的資料分層、例如建立新磁碟區之後。</block>
@@ -655,7 +595,6 @@
   <block id="1c83b9f3fe7a93bae303e87b24061ebd" category="inline-image-macro">快照顯示FabricPool 叢集的資訊、使用FabricPool 來自於《知識》的「知識顧問」提供的資訊Active IQ 。</block>
   <block id="5c419f9c113c9e128223ece6c1e5fa59" category="paragraph"><block ref="5c419f9c113c9e128223ece6c1e5fa59" category="inline-image-macro-rx" type="image"></block></block>
   <block id="27df5f5776d4bab5bcdcfbdeafb746ca" category="section-title">修復作業健全狀況</block>
-  <block id="e2d857f900d57bfae2d4e7bb4e1455ed" category="paragraph">可能會發生故障。當他們執行此作業時、 Cloud Tiering 會在叢集儀表板上顯示「失敗」的作業健全狀況狀態。健全狀況反映 ONTAP 出功能不全系統和 Cloud Manager 的狀態。</block>
   <block id="f13e147df4e74e1146734748e3dd0663" category="list-text">識別任何運作健全狀況為「故障」的叢集。</block>
   <block id="9e83f9c3a288548ca874b7474ad20ae7" category="inline-image-macro">顯示叢集分層健全狀況失敗狀態的快照。</block>
   <block id="0a646d1dd4e247e747fdfa55baef2fdf" category="paragraph"><block ref="0a646d1dd4e247e747fdfa55baef2fdf" category="inline-image-macro-rx" type="image"></block></block>
@@ -663,24 +602,16 @@
   <block id="f1b827ea2154d73de73201426f9fd633" category="list-text">將游標暫留在上方 <block ref="52a44d73bfd43c47b155203f6b5de195" category="inline-image-macro-rx" type="image"></block> 圖示以查看故障原因。</block>
   <block id="97052eb243c56bbc0d990eff54f746c9" category="list-text">修正問題：</block>
   <block id="073279dcfecd605313d456f15c7a1b78" category="list-text">驗證 ONTAP 該叢集是否正常運作、以及是否有連至物件儲存供應商的傳入和傳出連線。</block>
-  <block id="1a55827fd9be90c2a018d597687cedb4" category="list-text">確認 Cloud Manager 已連線至 Cloud Tiering 服務、物件存放區及 ONTAP 其探索的物件叢集。</block>
   <block id="66009842ccd3b5b27255c54219dcb209" category="section-title">從雲端分層探索其他叢集</block>
-  <block id="61bf1156d2dd091eed9cbb25cf33c134" category="paragraph">您可以ONTAP 從分層叢集儀表板將未發現的內部叢集新增至Cloud Manager、以便為叢集啟用分層。</block>
   <block id="247d31f04619e7f1f03d685e8e2b2816" category="paragraph">請注意、按鈕也會顯示在「分層_高級版概述_」頁面上、供您探索其他叢集。</block>
   <block id="b57da0b2e8132c4d5a84d9f088fe75f2" category="list-text">若要查看任何未探索到的叢集、請按一下*顯示未探索到的叢集*。</block>
   <block id="68344976fe86b89a3fba62990a12e25a" category="inline-image-macro">顯示分層儀表板上「顯示未探索到的叢集」按鈕的快照。</block>
   <block id="ba7ed4fd521be5b57e051242d4d614a3" category="paragraph"><block ref="ba7ed4fd521be5b57e051242d4d614a3" category="inline-image-macro-rx" type="image"></block></block>
-  <block id="d179a129f5710f376070c6383680ac1e" category="paragraph">如果您的NSS認證資料儲存在Cloud Manager中、則您帳戶中的叢集會顯示在清單中。</block>
-  <block id="67f0c619c7afc190e76b843d86432846" category="paragraph">如果您的NSS認證資料未儲存在Cloud Manager中、系統會先提示您新增認證資料、然後才能看到未探索到的叢集。</block>
   <block id="ead41bd8c5b56fc59ca4fb2fef9d0b5b" category="list-text">向下捲動頁面以找出叢集。</block>
-  <block id="11d871a84223862ddf3500ae8409245a" category="inline-image-macro">快照顯示如何探索要新增至Cloud Manager和分層儀表板的現有叢集。</block>
-  <block id="378e43d7f05dcbdb489340afa135493c" category="paragraph"><block ref="378e43d7f05dcbdb489340afa135493c" category="inline-image-macro-rx" type="image"></block></block>
-  <block id="8140641da712e5abef88aeca772e33a4" category="list-text">按一下「*探索叢集*」、即可透過Cloud Manager管理叢集並實作資料分層。</block>
   <block id="13b9e6e3af52ca38ce11c3fd268b0306" category="list-text">在_選擇位置_頁面*內部部署ONTAP 的SURE*已預先選取、所以只要按一下*繼續*即可。</block>
   <block id="663909252cbf804332d40198bd07c3e1" category="list-text">在「_ ONTAP 此叢集詳細資料_」頁面上、輸入管理員使用者帳戶的密碼、然後按一下「*新增*」。</block>
   <block id="062f0087b4466a679466c422dc664f93" category="paragraph">請注意、叢集管理IP位址會根據您的NSS帳戶資訊填入。</block>
   <block id="dd7d25d7e52a6b920a44c09b9d6001c2" category="list-text">在「_Details &amp; Credentials_」頁面上、叢集名稱會新增為「工作環境名稱」、因此只要按一下「* Go *」即可。</block>
-  <block id="851ba55b7a9669c2b53281675a9400d7" category="paragraph">Cloud Manager會使用叢集名稱做為工作環境名稱、探索叢集並將其新增至Canvas中的工作環境。</block>
   <block id="65f5911f922c92104ab33c2cd05d4a45" category="paragraph">您可以在右側面板中啟用此叢集的分層服務或其他服務。</block>
   <block id="3de433a934cf84ca72051511d3965a3e" category="summary">雲端分層可支援兩個存取層級和大部分地區。</block>
   <block id="fa62afbf244eb2e9a07f57b1803fe0e6" category="doc">支援的 Azure Blob 存取層級和地區</block>
@@ -724,9 +655,7 @@
   <block id="9a45293d52da18005b218074e890e0e3" category="list-text">內部ONTAP 使用的支援物件叢集、執行ONTAP 的是功能不全的9.8或更新版本、並透過使用者指定的連接埠連線至S3相容的物件儲存設備。<block ref="afd80128eeaacb8238d3ffdcf8ecd8a8" category="inline-link-rx"></block>。</block>
   <block id="3451be8fc6792d6f67247f8a5ef41a6f" category="list-text">物件儲存伺服器的FQDN、存取金鑰和秘密金鑰、讓ONTAP 整個叢集能夠存取儲存區。</block>
   <block id="87a3564b6d98c1d208de16f4d082340c" category="list-text">連接器的網路功能、可將HTTPS連線傳出ONTAP 至該叢集、S3相容物件儲存設備、以及雲端分層服務。</block>
-  <block id="4133b91995f6c5e001c785740313c76d" category="paragraph">在Cloud Manager中、選取內部環境工作環境、按一下「*啟用*」以使用分層服務、然後依照提示將資料分層至S3相容的物件儲存設備。</block>
   <block id="278c3ce71d676877f5d8d09bbed6b670" category="paragraph">透過雲端供應商的隨用隨付訂閱、NetApp Cloud Tiering自帶授權、或兩者的組合、來支付雲端分層的費用：</block>
-  <block id="e144d82f3d61a83825fd379820d9d552" category="list-text">訂閱Cloud Manager的PAYGO產品<block ref="d668c832ccb70eb717d6736e1082df78" category="inline-link-rx"></block>、<block ref="41a6e7dc73b2f1e43bd8c26c6ce83782" category="inline-link-rx"></block>或<block ref="92655de6fae7d07ed3897ce19d51b88d" category="inline-link-rx"></block>，單擊*訂購*並按照提示進行操作。</block>
   <block id="8f9c7644f714e949ede8fc2b637bc2ba" category="paragraph"><block ref="8f9c7644f714e949ede8fc2b637bc2ba" category="inline-image-macro-rx" type="image"></block></block>
   <block id="0b0e66764c8cd937a79a9536c455d9de" category="admonition">Connector與S3相容物件儲存伺服器之間的通訊僅供物件儲存設定使用。</block>
   <block id="ad1ec7ded7151408a7d1593d40eb6a69" category="paragraph">將資料分層至S3相容物件儲存設備時、您的叢集必須符合下列需求。ONTAP</block>
@@ -783,10 +712,8 @@
   <block id="b19237098460d786516168b98687becc" category="sidebar">管理Aggregate上的分層設定</block>
   <block id="813011e2103649bb71f124adedcc10ea" category="sidebar">部落格社群</block>
   <block id="dd490b81914dd945601e442a41cb4222" category="sidebar">NetApp社群</block>
-  <block id="ff6c37cbc252e306a6b4e390ec13cbc1" category="sidebar">Cloud Central部落格</block>
   <block id="ad203e818e0c9d7f42f1c260b33875f3" category="sidebar">雲端網路研討會</block>
   <block id="4c7d5d7dfde4a7bd82b54348182043d3" category="sidebar">其他資源</block>
-  <block id="cc81b1698333ba727fd5bde305c3cf08" category="sidebar">Cloud Central使用案例</block>
   <block id="fd01295dbf857b2bc6bcef4166b23207" category="paragraph">原支援AFF 採用FAS All SSD集合體的支援功能、從ONTAP Select VMware 9.8開始ONTAP 、除了高效能SSD之外、您也可以從由HDD組成的集合體來分層資料。請參閱<block ref="6b92341e29e5578d52c0690ebbf4bdb7" category="inline-link-rx"></block> 以取得詳細資料。</block>
   <block id="dfbee056730af589714f6061683bf3c8" category="paragraph">雲端分層支援下列物件儲存供應商：</block>
   <block id="d3e8cd2e370974f27de1b310b4aa8cb3" category="section-title">2022年5月3日</block>
@@ -806,7 +733,6 @@
   <block id="a49fb32c3dc821374473edfc6c43950a" category="inline-link-macro">購買雲端分層授權</block>
   <block id="1bde59815d02b55060d6e8d13346a689" category="list-text"><block ref="7f252ad1d739a8ecccf6d5db96c80d7b" category="inline-link-macro-rx"></block> 以取得新叢集或叢集所需的容量。</block>
   <block id="cd545dee97443a0461021080f3101dc7" category="inline-link-macro">將授權新增至Digital Wallet</block>
-  <block id="25b9b4168a6301bf6c9a74727e1b576b" category="list-text">在Cloud Manager中、 <block ref="fe2e5134b9c10f1de1aa1ca1472fd7e2" category="inline-link-macro-rx"></block>。</block>
   <block id="2ef78cf4a1d7bf5f762483337e16bb3b" category="inline-link-macro">探索新叢集</block>
   <block id="8ba93d5fbdf24a09ecf1780c63d1122d" category="list-text">在雲端分層、 <block ref="7e9f01463f0c1bdc0791002bcf190788" category="inline-link-macro-rx"></block>。</block>
   <block id="2577e5e77f7a58d0996e4f2dd6bcb05e" category="list-text">在叢集儀表板中、按一下 <block ref="50acd719b1954eb4890c002b3b5e71a6" category="inline-image-macro-rx" type="image"></block> 針對叢集、選取*部署授權*。</block>
@@ -872,14 +798,12 @@
   <block id="f0597479b6555c19f89fc843f1c8d98c" category="inline-link">雲端儲存設備定價</block>
   <block id="80fb8aa8c4c5c3477d1c619e25dee21c" category="paragraph">是的。檢查<block ref="134b76f780a567f977f9c0667960c527" category="inline-link-rx"></block>、<block ref="42cfb61355c94594363648e2439176bf" category="inline-link-rx"></block>和<block ref="fb963a69fe55ff45676c36ad0b99dda1" category="inline-link-rx"></block> 以取得資料讀取/擷取所產生的額外價格。</block>
   <block id="03a5e5708e2ca1e0ed97c088a2f866a3" category="section-title">如何在啟用雲端分層之前、預估磁碟區的節約效益並取得冷資料報告？</block>
-  <block id="a0b89ab6b5eac539fb7e734c5325f52e" category="paragraph">若要取得預估、只要將ONTAP 您的叢集新增至Cloud Manager、然後透過位於分層索引標籤的雲端分層叢集儀表板進行檢查即可。當停用非使用中資料報告（IDR)停用或在一段足夠長的時間內尚未啟動時、Cloud Tiering會使用業界不變的70%來計算預估的節約效益。一旦有可用的印尼盾資料、Cloud Tiering就會將節約成本更新為準確的數據。</block>
   <block id="360f208f0200dcfe1f02d2beac7d1a99" category="section-title">雲端分層支援哪些ONTAP 版本？</block>
   <block id="d221b871da22439c86adc694691b8ac6" category="paragraph">Cloud Tiering支援ONTAP 不支援版本9.2及更新版本。</block>
   <block id="a876ec112f46ac7e9d03cc5e9d61ab8f" category="section-title">我可以僅使用FAS HDD來分層來自於各種不知道的系統的資料嗎？</block>
   <block id="6af3c671d9ae3cfdf4e5db8e741c4949" category="paragraph">是的、從ONTAP 功能區9.8開始、您可以從HDD集合體上裝載的磁碟區分層資料。</block>
   <block id="5f2bd910e80c6ecc503341b164c23796" category="section-title">我可以將AFF 資料從連接到叢集的不整合式資料分層FAS 、使其具有HDD的不整節點嗎？</block>
   <block id="5edcff9a2294626df4faaca093740318" category="paragraph">是的。雲端分層可設定為分層託管在任何集合體上的磁碟區。資料分層組態與所使用的控制器類型以及叢集是否為異質無關。</block>
-  <block id="c7e59c5a2a6e1a7e5b4077fc15af9a55" category="paragraph">如果您使用Cloud Volumes ONTAP 的是NetApp系統、您可以在雲端分層叢集儀表板中找到這些系統、以便在混合雲基礎架構中完整檢視資料分層。不過Cloud Volumes ONTAP 、從Cloud Tiering讀取的是隻讀的系統。您無法從 Cloud Volumes ONTAP Cloud Tiering 設定資料分層功能。<block ref="9af043ec07eda2b8761144420bc7ff5f" category="inline-link-rx"></block>。</block>
   <block id="3b12cd959256e1fe1998855f1f4469c7" category="section-title">我的叢集還需要哪些其他需求ONTAP ？</block>
   <block id="8a35952a9fd8375f6367c7e469edb4c8" category="paragraph">這取決於您分層 Cold 資料的位置。如需詳細資料、請參閱下列連結：</block>
   <block id="83d030b1e01c7afcd4424fd7357db055" category="inline-link-macro">將資料分層至Amazon S3</block>
@@ -910,9 +834,7 @@
   <block id="954ab271743046342c8c477272ccf1e2" category="paragraph">不可以在「標頭交換」程序中、唯一需要變更的是集合體的擁有權。在這種情況下、它將會變更為新的控制器、而不會有任何資料移動。</block>
   <block id="be06043e635d6e3bb909d73510b44e3d" category="section-title">我可以使用雲端供應商的主控台或物件儲存資源探查器來查看階層至儲存庫的資料嗎？我是否可以直接使用儲存在物件儲存區中的資料、而無需ONTAP 使用任何功能？</block>
   <block id="d430f061b4da1d93d76a477eed713ad9" category="paragraph">不可以建構並分層至雲端的物件不包含單一檔案、但最多可包含1、024個4 KB區塊、可與多個檔案區塊相同。磁碟區的中繼資料永遠保留在本機層上。</block>
-  <block id="0c5d4e7461b4c75d3988c9aa8d81ab4f" category="paragraph">下列問題與Cloud Manager Connector有關。</block>
   <block id="c6dbaaf1bef168a38de37623edb997f7" category="section-title">什麼是Connector？</block>
-  <block id="e8b472be2b48b970a46d41e8388e4a0e" category="paragraph">Connector是在雲端帳戶內或內部部署的運算執行個體上執行的軟體、可讓Cloud Manager安全地管理雲端資源。若要使用雲端分層服務、您必須部署連接器。</block>
   <block id="d2eea5ad2ae07890452da2aec5cffc98" category="section-title">我可以在內部部署連接器嗎？</block>
   <block id="b0ccf0f3fa1a27a2fbab1c35ebf8e0f5" category="inline-link">瞭解如何在內部環境中安裝Connector</block>
   <block id="de7433c1562faa5f9b2ee55c74f16fa2" category="paragraph">是的。Connector軟體可下載並手動安裝在網路中的Linux主機上。<block ref="5cffbbed8cdfbd25b645e94434fee757" category="inline-link-rx"></block>。</block>
@@ -966,7 +888,6 @@
   <block id="db5702fcf8c9d887ce36ddb56a8e8e04" category="paragraph">是的。叢集間LIF必須在乙太網路連接埠上設定、位於HA配對內的每個節點上、該HA配對會將磁碟區與您計畫分層至雲端的資料裝載在一起。如需詳細資訊、請參閱您計畫分層資料之雲端供應商的需求一節。</block>
   <block id="1d1150417245464a6bc4030ff12d98ba" category="section-title">需要哪些權限？</block>
   <block id="6d7e8531e0360d0263e2ca053e0a6984" category="inline-link-macro">Amazon需要權限才能管理S3儲存區</block>
-  <block id="7b051265cea15bef56b2013258a3a024" category="list-text">對於Azure而言、您不需要額外的權限即可提供給Cloud Manager。</block>
   <block id="ba49bda4c6c598703b1a9de3bd715d7f" category="inline-link-macro">對於Google Cloud、具有儲存存取金鑰的服務帳戶需要儲存管理權限</block>
   <block id="b416160ef653d48172d39e018c5edc09" category="list-text"><block ref="6da5859ea88129ba1f8030c6efa043ea" category="inline-link-macro-rx"></block>。</block>
   <block id="6e7f22bebfa4a36d17ec5f7763059b4c" category="inline-link-macro">若要執行此功能、需要S3權限StorageGRID</block>
@@ -1039,7 +960,6 @@
   <block id="096dcd3788cecb603666aeab1323e016" category="list-text">必要的應用程式存取參數</block>
   <block id="5a5be55d6d19108a5a53e94d4b8bca13" category="inline-link">如需詳細資訊、請參閱「安全登入」命令</block>
   <block id="fcccb04322797151b1c63a24fdbe8596" category="list-text">叢集管理使用者必須擁有「主控台」應用程式存取權。您可以使用ONTAP 指令「安全登入show」來驗證這一點。「admin」使用者的「_Application_」欄應顯示「Console」。如有必要、請使用「安全登入create」命令來新增主控台應用程式存取。<block ref="c49e76a401ad77700c5ead0ea46ac66a" category="inline-link-rx"></block>。</block>
-  <block id="73d1fc3974be551e4fd6613740db6cba" category="list-text">Cloud Tiering 可以分層的磁碟區總數可能低於 ONTAP 您的整套系統上的磁碟區數量。這是因為磁碟區無法從某些集合體分層。請參閱 ONTAP 的《》文件<block ref="bc16a784cd65f4901578ebb3b70f2118" category="inline-link-rx"></block>。</block>
   <block id="8bde27dc2a4816433b259374095d8da3" category="inline-link">在Linux主機上部署Connector</block>
   <block id="72e0bcbd663626f0d086598014dfbeb0" category="list-text"><block ref="72e0bcbd663626f0d086598014dfbeb0" category="inline-link-rx"></block></block>
   <block id="303b6b375dcceef17b9d24c15d95c29b" category="list-text">*選擇供應商*：選取* Amazon Web Services*、然後按一下*繼續*。</block>
@@ -1099,7 +1019,6 @@
   <block id="9cf094682408ca5d57128e006a54b2f0" category="paragraph">如果您已在AWS VPC或內部部署部署了Connector、您就能輕鬆完成所有設定。如果沒有、則您需要建立連接器、將ONTAP 資訊分層保存至AWS S3儲存設備。您也需要自訂Connector的網路設定、以便連接至AWS S3。</block>
   <block id="e4f1f56a3ef3efdb69f573c54e373407" category="inline-xref">瞭解如何建立連接器、以及如何定義必要的網路設定。</block>
   <block id="547ff9b6a5e6f25a471ff36aabad9172" category="paragraph"><block ref="955ce6b96fd48d62c162b65277148f6a" category="inline-xref-macro-rx"></block></block>
-  <block id="aba3af0142718cdcd318e58a13cac0e0" category="paragraph">在ONTAP Cloud Manager中探索您的叢集、確認叢集符合最低需求、並自訂網路設定、讓叢集可以連線至AWS S3。</block>
   <block id="6ac7a4162c2e3c973c8dcb8ad3493ff7" category="inline-xref">瞭解如何ONTAP 準備好內部部署的叢集。</block>
   <block id="499fc037a59ef7c075fdde4e7b0311d1" category="paragraph"><block ref="0293805a32fb419ae9403f81b2c4ce54" category="inline-xref-macro-rx"></block></block>
   <block id="381ea68c9177a4bf66e46b23e8b00041" category="paragraph">設定Connector的權限、以建立及管理S3儲存區。您也需要設定內部部署ONTAP 的叢集權限、以便能夠讀取及寫入S3儲存區的資料。</block>
@@ -1120,7 +1039,6 @@
   <block id="7d683aa0f26840c84294373f234a2a0d" category="paragraph"><block ref="7d683aa0f26840c84294373f234a2a0d" category="inline-image-macro-rx" type="image"></block></block>
   <block id="460820727f3b7117c5da2a76a02f36bc" category="admonition">連接器與 S3 之間的通訊僅供物件儲存設定使用。</block>
   <block id="ea97cc2428a460eae122a94c68a8b16a" category="section-title">準備好連接器</block>
-  <block id="1abdc3d16a215df3ca7d958a5768b2f4" category="paragraph">Cloud Manager Connector是Cloud Manager功能的主要軟體。需要連接器來分層處理您的非使用中ONTAP 的資訊。</block>
   <block id="cc8fa83637def0ab4b26b2c73eaf58b1" category="paragraph">如果您已在AWS VPC或內部部署部署了Connector、您就能輕鬆完成所有設定。如果沒有、您需要在上述任一位置建立連接器、以便將ONTAP 資訊分層保存至AWS S3儲存設備。您無法使用部署於其他雲端供應商的Connector。</block>
   <block id="d41b031ef25fff764808749edcc2cd28" category="inline-link">連接器入門</block>
   <block id="b37ed402641ff6f2d1b0b55061547f2d" category="list-text"><block ref="b37ed402641ff6f2d1b0b55061547f2d" category="inline-link-rx"></block></block>
@@ -1151,8 +1069,6 @@
   <block id="e3cb89ec96389280988a5bc1aab122d8" category="list-text">如果您使用AWS中的私有VPC介面端點進行S3連線、則為了使用https/443、您必須將S3端點憑證載入ONTAP 到叢集。 <block ref="1dbd4fd842a70fbdf055f03b19c52e23" category="inline-xref-macro-rx"></block></block>
   <block id="7f04f32c4656d50b5019019cf54c568c" category="inline-xref">確保ONTAP 您的叢集擁有存取S3儲存區的權限。</block>
   <block id="6a860c670eba971ed1e208c2792da896" category="list-text"><block ref="0a3b1eb507b43212a236c7019d9d78bf" category="inline-xref-macro-rx"></block></block>
-  <block id="c5fe798394fdf9d90bcf14b0e01b5dda" category="section-title">在ONTAP Cloud Manager中探索您的叢集</block>
-  <block id="9398b4bdb55b447165274ab7edd67756" category="paragraph">您必須先在ONTAP Cloud Manager中探索內部部署的叢集、才能開始將冷資料分層儲存至物件儲存。您必須知道叢集管理IP位址和管理使用者帳戶的密碼、才能新增叢集。</block>
   <block id="aa82b0633ff8ba724f265336515caa95" category="section-title">準備AWS環境</block>
   <block id="95be42e50b8072b622c23cf84099c7b8" category="section-title">設定S3權限</block>
   <block id="0d0602824136f714807f54069c6d5a89" category="paragraph">您需要設定兩組權限：</block>
@@ -1172,7 +1088,6 @@
   <block id="a08b285fd78cf03936887841fbc87805" category="inline-link">如需使用AWS Private Link for Amazon S3的詳細資訊、請參閱</block>
   <block id="c2217bd93d297ddc08ba3a9c93fb29aa" category="list-text">使用Amazon VPC主控台或命令列建立介面端點組態。<block ref="4b288ecb11624923e7ee69f96a59c546" category="inline-link-rx"></block>。</block>
   <block id="8c7e8492b349031290e65cb7dd034b88" category="inline-xref">新增所需的S3 Connector權限</block>
-  <block id="e063a584bd16a136805e452428bda5e1" category="list-text">修改與Cloud Manager Connector相關的安全群組組組態。您必須將原則變更為「Custom（自訂）」（從「Full Access（完整存取）」）、而且您必須如此 <block ref="2e3aa01a102d96f1118abd47a89529bc" category="inline-xref-macro-rx"></block> 如前所示。</block>
   <block id="54979ba354582c6f2824abc12558cf5a" category="inline-image-macro">與Connector相關聯的AWS安全性群組快照。</block>
   <block id="ba9ccb641f252cf5f2df3c92824ecfb5" category="paragraph"><block ref="ba9ccb641f252cf5f2df3c92824ecfb5" category="inline-image-macro-rx" type="image"></block></block>
   <block id="01069141c04702b64a86089c7157b442" category="paragraph">如果您使用連接埠80（HTTP）來與私有端點通訊、您就能輕鬆完成所有設定。您現在可以在叢集上啟用雲端分層。</block>
@@ -1180,8 +1095,6 @@
   <block id="39bab378d876d4ae9f917360ff7b633a" category="list-text">從AWS主控台取得端點的DNS名稱。</block>
   <block id="51cca00855dd27ddbb729c64d6988680" category="inline-image-macro">AWS主控台VPC端點的DNS名稱快照。</block>
   <block id="63c7ff1056127bdaee465b05c7c83d3c" category="paragraph"><block ref="63c7ff1056127bdaee465b05c7c83d3c" category="inline-image-macro-rx" type="image"></block></block>
-  <block id="31b738479d7d16ff849ac312f5649e77" category="inline-link">登入裝載Cloud Manager Connector的VM</block>
-  <block id="9494561b819165d9f1e8e339562e316d" category="list-text">從VPC S3端點取得憑證。您的做法是<block ref="0617c2fce5134dbc852516af04fe18ee" category="inline-link-rx"></block> 並執行下列命令。輸入端點的DNS名稱時、請在開頭加入「pucket」、取代「*」：</block>
   <block id="b11703e578eba56af91d25ee75ec1594" category="list-text">從這個命令的輸出中、複製S3憑證的資料（包括BEGIN / END憑證標記之間的所有資料）：</block>
   <block id="042284b067b431d7d21168a5ada6e448" category="list-text">登入ONTAP 叢集式CLI、然後套用您使用下列命令複製的憑證（替代您自己的儲存VM名稱）：</block>
   <block id="b5cc03c234fd0b33ad38196195be66b1" category="section-title">將非作用中資料從第一個叢集分層至Amazon S3</block>
@@ -1196,7 +1109,6 @@
   <block id="7b39b0e487b44a339910223511ac5932" category="paragraph">您也可以選擇是否要使用先前設定的AWS Private Link。 <block ref="e6b15c4e63006b05802c430924113019" category="inline-xref-macro-rx"></block></block>
   <block id="ef2b048eb0f31f088c41f8317126f2c2" category="paragraph">此時會顯示一個對話方塊、協助您完成端點組態。</block>
   <block id="4d4499464e1749775c821bea4d3050f7" category="paragraph">您也可以建立額外的物件儲存設備、以便在叢集上的特定集合體將資料分層至不同的物件存放區。或者、如果您打算使用FabricPool 「支援物件鏡射」、將階層式資料複寫到其他物件存放區。 <block ref="f977424bbc57cc401e0fdede18cc12da" category="inline-link-macro-rx"></block>。</block>
-  <block id="beadf5cee99a14a3247e8fe8e6ecba97" category="summary">在您從第一個叢集設定分層時、就會開始免費試用30天的雲端分層。免費試用結束後、您必須透過雲端供應商市場的隨用隨付或年度Cloud Manager訂閱、NetApp的BYOL授權、或兩者的組合、來支付Cloud Tiering的費用。</block>
   <block id="66145e361f72b54aa011f59d543dfb08" category="section-title">使用年度合約</block>
   <block id="f13eb2181d08fc7abed9205d37d0c184" category="paragraph">購買年度合約、每年支付雲端分層費用。</block>
   <block id="2351127acb653fd60dafc73c8efcb79d" category="inline-link">AWS Marketplace頁面</block>
@@ -1204,8 +1116,6 @@
   <block id="54b98a81c2ba2da3e9c721b03a4585b5" category="inline-link">將訂閱與AWS認證資料建立關聯</block>
   <block id="29b2b8613d3a7ed690246613f8654828" category="paragraph">如果您要使用此選項、請從「市場」頁面設定您的訂閱、然後再進行設定<block ref="f1f7c973fce685b876017d26d677c721" category="inline-link-rx"></block>。</block>
   <block id="29f6791775c21cd38fbdcb5b18589d37" category="paragraph">目前不支援將年度合約分層至Azure或GCP。</block>
-  <block id="07c165be091a386388a58ec51c7b0482" category="paragraph">NetApp自帶授權、提供1年、2年或3年期限。BYOL * Cloud Tiering *授權是一個_浮 點型授權、您可以在ONTAP Cloud Manager帳戶的多個內部部署的叢集之間使用。雲端分層授權中定義的總分層容量會在內部部署叢集*全部*之間共享、讓初始授權與續約變得更簡單。</block>
-  <block id="85ae9bef317bd3c11475e84eb54944db" category="paragraph">全新的*雲端分層*授權於2021年8月推出、適用於使用雲端分層服務的Cloud Manager所支援的分層組態。Cloud Manager目前支援分層至下列雲端儲存設備：Amazon S3、Azure Blob儲存設備、Google Cloud Storage、S3相容的物件儲存設備、StorageGRID 以及</block>
   <block id="beecf2fd8c511928c5d65a11860f7c21" category="paragraph">您過去將內部部署的各項資料分層保存至雲端時、可能FabricPool 使用的*《*》授權ONTAP 僅適用於ONTAP 無法存取網際網路（又稱為「暗點」）的站台、以及將組態分層至IBM Cloud Object Storage的站台。如果您使用這種組態、則會FabricPool 使用System Manager或ONTAP the介紹的CLI、在每個叢集上安裝一份「版本資訊」授權。</block>
   <block id="6b96b48c014b5645274b443e9b351af2" category="paragraph">下列組態的叢集可使用雲端分層授權、但套用授權的方式必須不同於單節點叢集、HA組態叢集、分層鏡射組態叢集、以及使用「鏡射鏡射」進行的不一致組態：ONTAP MetroCluster FabricPool</block>
   <block id="0b5da3f47f30c986be576c900e39dc5e" category="list-text">安裝在「暗點」中的叢集</block>
@@ -1232,14 +1142,10 @@
   <block id="1ca6869c60d4b26c9ebd2bc63dd19e71" category="paragraph">向NetApp購買* Cloud Tiering *授權、即可自帶授權。您可以購買1、2或3年期授權、並指定任何數量的分層容量。BYOL Cloud分層授權是一個_浮 點型授權、可用於多ONTAP 個內部部署的物件叢集。您在雲端分層授權中定義的總分層容量、可用於所有內部部署叢集。</block>
   <block id="82812db645b6ff5e9c2a24ddfb66c8d6" category="paragraph">除了上述的自我支援選項、您也可以在啟動支援之後、與NetApp支援專家合作解決任何問題。</block>
   <block id="e2a733504c4088b809813bbb35a3ddfd" category="inline-link-macro">瞭解如何註冊以取得支援</block>
-  <block id="09651e14b46d7e8697d32de90d0deacb" category="paragraph">若要使用*建立案例*功能、您必須先執行Cloud Manager帳戶ID序號的一次性登錄（即960xxxx）。 <block ref="3349e4b3d05f646f2f1421bee7c2ad26" category="inline-link-macro-rx"></block>。</block>
   <block id="383133cb6f7207b1c65c3ace94aa5e95" category="list-text">如果您想與電話上的其他人通話、請按一下*「呼叫我們*」。您將會被導向netapp.com上的頁面、其中列出您可以撥打的電話號碼。</block>
   <block id="bf5bc6ab0f95f17f4e98c9d766b8c11d" category="list-text">按一下*建立案例*、與NetApp支援專家一起開啟問題單：</block>
   <block id="b53e0a259f4a0c8e7da80d6c94e26c84" category="list-text">*《支援帳戶*》：選取與開立支援案例的人員相關的適用的NSS帳戶。NetApp 支援網站除了以下提供的其他電子郵件之外、此人將是NetApp聯絡的主要聯絡人。</block>
-  <block id="ec65cc87efda54741062da1fce99ff76" category="paragraph">如果您看不到您的NSS帳戶、可以瀏覽至Cloud Manager「Support（支援）」區段中的「* nssn* Management（* nssnss管理*）」索引標籤、將其新增至該處。</block>
-  <block id="b3144caf7d928b7954447c757b3ed77b" category="list-text">*服務*：選取問題相關的服務。例如、Cloud Manager在特定於服務工作流程或功能的技術支援問題時。</block>
   <block id="2e50c5f85523f0aba9ff2db10f18279c" category="list-text">*工作環境*：如果適用於儲存設備、請選取* Cloud Volumes ONTAP 《*》或*《內部部署*》、然後選取相關的工作環境。</block>
-  <block id="1e38219c106fb9d07d173c027b8911c7" category="paragraph">工作環境清單位於您在服務的最上層橫幅中所選的Cloud Manager帳戶、工作區和Connector範圍內。</block>
   <block id="e6f29fb3c7636dc0040600dd0e84bb79" category="list-text">*案例優先順序*：選擇案例的優先順序、可以是低、中、高或嚴重。</block>
   <block id="835eb4008e97c2a7f69bbb2725285e34" category="paragraph">若要深入瞭解這些優先順序、請將滑鼠游標暫留在欄位名稱旁的資訊圖示上。</block>
   <block id="0f7d9319c95a8be1492e74601c4b3259" category="list-text">*問題說明*：提供問題的詳細說明、包括任何適用的錯誤訊息或您執行的疑難排解步驟。</block>
@@ -1250,10 +1156,8 @@
   <block id="04e15da1deae9568b4dcda64fbb0c8d5" category="paragraph">如需支援案例的記錄、請按一下*設定&gt;時間軸*、然後尋找名為「create support case」的行動。 最右側的按鈕可讓您展開動作以查看詳細資料。</block>
   <block id="5c56753585e89a84941bb3a78bc681af" category="paragraph">嘗試建立案例時、可能會遇到下列錯誤訊息：</block>
   <block id="a30f69ab0ec85d427a3e8835713525bd" category="paragraph">"您無權針對所選服務建立案例"</block>
-  <block id="148f13242c3e296dc276821cdc574921" category="paragraph">此錯誤可能表示、與此相關聯的NSS帳戶及記錄公司與Cloud Manager帳戶序號的記錄公司不同（例如960xxxx)或工作環境序號。您可以在「建立案例*」表單頂端查看您的NSS帳戶清單、以找出最適合的項目、或使用下列其中一個選項尋求協助：</block>
   <block id="e01df0b4dfd95eba2c59333419e4fac6" category="list-text">使用產品內對談</block>
   <block id="639be990cfca56ab4b63685d8bacd437" category="list-text">請至提交非技術案例<block ref="2298f47e4dad19a3156da7ce6116d9b1" category="inline-link-rx"></block></block>
-  <block id="7ff191df90fac0fa94ab5c2b5101a5e9" category="sidebar">所有Cloud Manager文件</block>
   <block id="0da0639ab808878f568f3c4f06c02689" category="inline-link">如需MetroCluster 更多關於功能需求的資訊、請參閱ONTAP 《產品介紹》文件</block>
   <block id="a9435afbc015cc1ee7d59ebcb4c910fd" category="paragraph">將非使用中資料分層至Amazon S3時、雲端分層提供年度合約。提供1年、2年或3年期限。</block>
   <block id="c3d7ada1f42d9b916dd8624c5b5661c1" category="section-title">分層精靈可讓您在分層至S3儲存設備時、設定AWS Private Link</block>
@@ -1264,6 +1168,148 @@
   <block id="2dc183e0073f3c1e0402cafe50273750" category="paragraph">使用MetroCluster 靜態組態時、最佳實務做法是在不同可用度區域的公有雲中使用物件存放區。<block ref="8cdfadb67efe7ac0be1266ed1d493d6d" category="inline-link-rx"></block>。</block>
   <block id="6b483bd3d7c70c49e8ad823d9d4bbf64" category="paragraph">請注意、當使用StorageGRID 支援MetroCluster 物件儲存的功能時、ONTAP 兩個支援的系統都可以FabricPool 執行將物件儲存在單StorageGRID 一的不支援系統上的功能。每ONTAP 個資料系統都必須將資料分層至不同的儲存區。</block>
   <block id="64430472f9b760efd0fff8a56c3dfe2d" category="paragraph">當兩個物件存放區正在同步時、鏡射狀態會顯示為「同步處理中」。同步完成時、狀態會變更為「Synchronized」（同步）。</block>
-  <block id="d14a27b37d19411318313c75f11baf13" category="inline-link">Cloud Manager注意事項</block>
-  <block id="8f4eecef1c8abf547a153a1486d48ab2" category="list-text"><block ref="8f4eecef1c8abf547a153a1486d48ab2" category="inline-link-rx"></block></block>
+  <block id="243263104c829e77835d632f591230d5" category="summary">在您透過NetApp技術支援開啟支援案例之前、您必須先在NetApp 支援網站 BlueXP中新增一個支援帳戶、然後註冊以取得支援。</block>
+  <block id="8bf30fadf784022b073adb9233678a71" category="paragraph">在您透過NetApp技術支援開啟支援案例之前、您必須先在NetApp 支援網站 BlueXP中新增一個支援（NSS）帳戶、然後註冊以取得支援。</block>
+  <block id="0b0e252af8897fbe981ec6682d2aa33b" category="section-title">支援登錄總覽</block>
+  <block id="192054ad7601240a3e8be54cc5cc548e" category="paragraph">有兩種登錄形式可啟動支援服務權利：</block>
+  <block id="2322ca552c2b0ebe090c8485519246a8" category="list-text">註冊您的BlueXP帳戶ID支援訂閱（您的20位數960xxxxxxx序號位於BlueXP的「Support Resources（支援資源）」頁面）。</block>
+  <block id="23fdcbefa6d9cd877be7ceb7a18bb936" category="paragraph">這是您在BlueXP內任何服務的單一支援訂閱ID。每個BlueXP帳戶層級的支援訂閱都必須註冊。</block>
+  <block id="55ff64467cd508971910145ab5d6b3b8" category="list-text">在Cloud Volumes ONTAP 雲端供應商的市場中註冊與訂閱相關的支援服務序號（這些序號為20位數909601xxxxxxxx序號）。</block>
+  <block id="67dbdeb11e22ea7def810bade59ce818" category="paragraph">這些序號通常稱為「_PAYGO」序號、並在Cloud Volumes ONTAP 部署時由BlueXP產生。</block>
+  <block id="9d4125dc88bb9db6eb4be939905761ce" category="paragraph">註冊這兩種類型的序號、即可開啟支援服務單和自動建立個案。</block>
+  <block id="98bc603dcb6d5a57d540b13b541fa41a" category="paragraph">您的註冊方式取決於您是新客戶或現有客戶或合作夥伴。</block>
+  <block id="e5646198d2e01aab2cec9ef946f9c53a" category="list-text">現有客戶或合作夥伴</block>
+  <block id="76928f97884b4332b83c5be9b99d93d3" category="paragraph">身為現有的NetApp客戶或合作夥伴、您可以使用NetApp 支援網站 您的畫面（NSS）SSO帳戶執行上述登錄。在「支援儀表板」中、BlueXP提供一個* nssn*管理*頁面、您可以在其中新增您的nssa帳戶。新增您的NSS帳戶後、BlueXP會自動為您註冊這些序號。</block>
+  <block id="4e6af37fb81d50483d832d4de6e2b26a" category="inline-xref">瞭解如何新增您的NSS帳戶</block>
+  <block id="8d80298f51b7ff2da78e26e60195c7a3" category="paragraph"><block ref="cbec7c1a4a2acff5e84457dd449ac01d" category="inline-xref-macro-rx"></block>。</block>
+  <block id="1c91f3adc957364cb01d33e100ee1ea3" category="list-text">NetApp新推出</block>
+  <block id="679f2cae4657f177cc89458d49c97e5f" category="paragraph">如果您是NetApp的新客戶、您必須在NetApp的支援註冊網站上完成一次性註冊您的BlueXP帳戶ID序號。完成此註冊並建立新的NSS帳戶之後、您就可以在BlueXP中使用此帳戶自動註冊、以便繼續進行。</block>
+  <block id="00fc9d0c515c69ea2c368521453d982e" category="inline-xref">瞭解如何向NetApp註冊</block>
+  <block id="97454ce87333f7ebd50ee38b8126fb39" category="paragraph"><block ref="37544f11913357c4e8c8a4ec607ae247" category="inline-xref-macro-rx"></block>。</block>
+  <block id="a92ec860f505b318fd0f0eba6165d607" category="section-title">新增一個NSS帳戶至藍圖XP</block>
+  <block id="77bdda0b5be7d2725f2b5941d74db0e2" category="paragraph">「支援儀表板」可讓您新增及管理NetApp 支援網站 要搭配Cloud Manager使用的各種不一致帳戶。</block>
+  <block id="328a2c1e7778e9edaf79d90c51409ac4" category="list-text">如果您有客戶層級的帳戶、可以新增一或多個NSS帳戶。</block>
+  <block id="4fde72c535fd0cd463dbeb49347cdfae" category="list-text">如果您有合作夥伴或經銷商帳戶、您可以新增一或多個NSS帳戶、但這些帳戶無法與客戶層級帳戶一起新增。</block>
+  <block id="1afe19576f77bb0073c93359ed2cbb18" category="list-text">在BlueXP主控台右上角、按一下「說明」圖示、然後選取「*支援*」。</block>
+  <block id="cbc6cc3bb022583403171b447b2a962c" category="paragraph">這些行動可讓BlueXP將您的nssa帳戶用於授權下載、軟體升級驗證、以及未來的支援註冊等項目。</block>
+  <block id="cf3a2d2c139bf5c9cc87fe714bfff3b1" category="paragraph">請注意下列事項：</block>
+  <block id="0f0a0d646a020cf3a65ce82ada4cfb01" category="list-text">帳戶必須是客戶層級的帳戶（不是來賓帳戶或臨時帳戶）。</block>
+  <block id="1dcb63fd55c4d22e87cb32275b8cc808" category="inline-image-macro">三個橫點的圖示</block>
+  <block id="ff67299785d475e87002751aa6ab5eb8" category="list-text">成功登入後、NetApp會儲存NSS.使用者名稱。這是系統產生的ID、會對應至您的電子郵件。在「* nssn*管理*」頁面上、您可以從顯示電子郵件 <block ref="0d0843f26c0819e5369f690fefbf68b7" category="inline-image-macro-rx" type="image"></block> 功能表。</block>
+  <block id="505da61efe6bebebbaf092da18f64613" category="list-text">如果您需要重新整理登入認證憑證權杖、也可以在中使用*更新認證*選項 <block ref="0d0843f26c0819e5369f690fefbf68b7" category="inline-image-macro-rx" type="image"></block> 功能表。使用此選項會提示您重新登入。</block>
+  <block id="ad56c7289bc13dcf4f78c285f7f03878" category="section-title">向NetApp註冊</block>
+  <block id="f1bac79c2c71fbd93863b9fbd718094c" category="paragraph">您如何註冊NetApp支援取決於您是否已擁有NetApp 支援網站 一個NetApp（NSS）帳戶。</block>
+  <block id="bf4c731c0ee7f60c8018ad8f96828dda" category="section-title">現有的客戶、擁有一個新服務客戶帳戶</block>
+  <block id="7e177185e7eddff33dd8f3aeb7551132" category="paragraph">如果您是擁有NSS帳戶的NetApp客戶、您只需透過BlueXP註冊即可獲得支援。</block>
+  <block id="25b94e7b58140f12be91fa8fd935fa59" category="list-text">如果您尚未這麼做、請將您的NSS帳戶新增至藍圖XP。</block>
+  <block id="819aff12752b7e6a1828e755c7664de7" category="list-text">在*資源*頁面上、按一下*註冊以取得支援*。</block>
+  <block id="e8a3d9970b8fc1d92caaf33d9e116bd4" category="inline-image-macro">顯示帳戶序號和「Register for Support」（註冊支援）選項的快照</block>
+  <block id="113f9cd7bac6f4faa6b8d58e3e099a8e" category="paragraph"><block ref="113f9cd7bac6f4faa6b8d58e3e099a8e" category="inline-image-macro-rx" type="image"></block></block>
+  <block id="1ff5aefce774ec72a211f2b3bb10b950" category="section-title">現有客戶、但無NSS.帳戶</block>
+  <block id="cc1d3c161bcf25e6445c2fc771647849" category="paragraph">如果您是現有的NetApp客戶、擁有現有授權和序號、但_否_ nss_帳戶、您只需要建立一個nss.帳戶。</block>
+  <block id="5b2b7f628f804bcb786a097c7e45aa41" category="inline-link">《使用者登錄表》NetApp 支援網站</block>
+  <block id="0c4a8b62da9473fbd5401273c4f85ee0" category="list-text">完成建立NetApp 支援網站 一個不完善的帳戶<block ref="041bcb6d9bdf91f7d6ac92ae3a196e12" category="inline-link-rx"></block></block>
+  <block id="d61c9f72493817776f392db42ac446a2" category="list-text">請務必選擇適當的使用者層級、通常為* NetApp客戶/終端使用者*。</block>
+  <block id="5226d4ec1f4f81b740cbbd27635b441f" category="list-text">請務必複製上述序號欄位使用的BlueXP帳戶序號（960xxxx）。這將加速帳戶處理。</block>
+  <block id="e9b1f53d6cabb3394833a4e102eb6a69" category="section-title">NetApp全新推出</block>
+  <block id="c20c107d0d4eef6351660f3590324232" category="paragraph">如果您是NetApp的新客戶、而且您沒有新的NSS帳戶、請依照下列每個步驟操作。</block>
+  <block id="59dd2a274c2c6a3cc5b3dce08109019d" category="list-text">從「Support Registration（支援登錄）」頁面找到Cloud Manager帳戶ID序號。</block>
+  <block id="ef5e63bb6b6827440a13cc2ec7e9cf56" category="paragraph"><block ref="ef5e63bb6b6827440a13cc2ec7e9cf56" category="inline-image-macro-rx" type="image"></block></block>
+  <block id="dd50e314c18933734174c1156dd9237f" category="inline-link">NetApp的支援註冊網站</block>
+  <block id="78f94e749b89d69dcbf3baff21ccb958" category="list-text">瀏覽至<block ref="e1c4be66250fd76d5c52bfe2cb7daee2" category="inline-link-rx"></block> 並選擇*我不是NetApp註冊客戶*。</block>
+  <block id="d4f633ef130727b2776fa7f45024ca7d" category="list-text">填寫必填欄位（紅色星號）。</block>
+  <block id="1128fc8d5ec64880f4d49337ed798d31" category="list-text">在*產品系列*欄位中、選取* Cloud Manager*、然後選取適用的帳單供應商。</block>
+  <block id="1192dec4cc2b923397748a651cef178f" category="list-text">複製上述步驟2的Cloud Manager帳戶序號、完成安全性檢查、然後確認您已閱讀NetApp的全球資料隱私權政策。</block>
+  <block id="3a24c87c9971d2011b4df223718f84b4" category="paragraph">系統會立即將電子郵件傳送至提供的信箱、以完成此安全交易。如果驗證電子郵件在幾分鐘內未送達、請務必檢查您的垃圾郵件資料夾。</block>
+  <block id="03413baeca1ff7222737d8ce299bd4e8" category="list-text">確認電子郵件中的行動。</block>
+  <block id="201080500e946070a2e4873042507c77" category="paragraph">確認將您的申請提交給NetApp、並建議您建立NetApp 支援網站 一個申請表。</block>
+  <block id="d6cb31c22f8f843a781cccec33157281" category="list-text">請務必將上述使用的Cloud Manager帳戶序號（960xxxx）複製到序號欄位。這將加速帳戶處理。</block>
+  <block id="684375e279a289295b72a006d93e2c4c" category="paragraph">在此過程中、NetApp應與您聯絡。這是新使用者的一次性就職練習。</block>
+  <block id="1c0e45ef07d0dbc13ca2394d5e285fd7" category="paragraph">一旦擁有NetApp 支援網站 您的不二帳戶、您就可以瀏覽至BlueXP、新增此新的NSS-帳戶以供日後登錄。</block>
+  <block id="c9df4195a305212ffd7b56d24f67129d" category="summary">NetApp以多種方式提供對BlueXP的支援。我們全年無休提供豐富的免費自助支援選項、例如知識庫（KB）文章和社群論壇。您的支援註冊包括透過網路票證提供遠端技術支援。</block>
+  <block id="7c5661ab6b39ee901cea00a6e7020a49" category="paragraph">NetApp以多種方式支援BlueXP及其雲端服務。我們全年無休提供豐富的免費自助支援選項、例如知識庫（KB）文章和社群論壇。您的支援註冊包括透過網路票證提供遠端技術支援。</block>
+  <block id="9a3db1abe5491d0eb9bb5d125981356c" category="paragraph">請搜尋BlueXP知識庫、找出有助於疑難排解問題的文章。</block>
+  <block id="00c5fef3bb9d593ae96bf5d2ee60354a" category="paragraph">歡迎加入BlueXP社群、以追蹤後續討論或建立新討論。</block>
+  <block id="a4a6c2ea0078252eac2d74ef3e6c917c" category="paragraph">您目前正在檢視的BlueXP文件。</block>
+  <block id="6702efec14563f45f1ee2f8c613b8ad8" category="paragraph">我們非常重視您的意見。提交意見反應、協助我們改善藍圖。</block>
+  <block id="1012a287397c66025d7748edf06a36e2" category="paragraph">若要使用*建立案例*功能、您必須先執行一次性註冊您的BlueXP帳戶ID序號（例如960xxxx）。 <block ref="3349e4b3d05f646f2f1421bee7c2ad26" category="inline-link-macro-rx"></block>。</block>
+  <block id="6254a4afeeb76765a127fe74d31c1b3d" category="list-text">在BlueXP中、按一下*「說明」&gt;「支援」*。</block>
+  <block id="d950fb930d7f7e6bfdda1b91b4639a02" category="paragraph">如果您看不到您的NSS帳戶、可以瀏覽至BlueXP「Support（支援）」區段中的「* nssn* Management（* nssnss管理*）」索引標籤、將其新增至該處。</block>
+  <block id="d63bf50426f4c712554faec55b30c548" category="list-text">*服務*：選取問題相關的服務。例如、特定於服務工作流程或功能的技術支援問題的BlueXP。</block>
+  <block id="aa996e20900197b0ea41485ada083d8c" category="paragraph">工作環境清單位於您在服務的最上層橫幅中所選的BlueXP帳戶、工作區和Connector範圍內。</block>
+  <block id="fa6b601b2fb4e3e5c7b466ecb8bd70ac" category="paragraph">此錯誤可能表示、與該帳戶相關聯的NSS帳戶及記錄公司與BlueXP帳戶序號的記錄公司不同（例如960xxxx)或工作環境序號。您可以在「建立案例*」表單頂端查看您的NSS帳戶清單、以找出最適合的項目、或使用下列其中一個選項尋求協助：</block>
+  <block id="d7945c5e359d6ac7ea9f91926a2538da" category="list-text">從左側導覽功能表中、選取*行動性&gt;分層*。</block>
+  <block id="ad8c34b90b1b627d896428db9d76abbf" category="paragraph">可能會發生故障。當他們執行此作業時、 Cloud Tiering 會在叢集儀表板上顯示「失敗」的作業健全狀況狀態。健全狀況反映ONTAP 出功能不全系統和藍圖的狀態。</block>
+  <block id="dbb60a2477e4a79b7b61c01b39a67a22" category="list-text">驗證BlueXP是否有連至雲端分層服務、物件存放區及ONTAP 其發現的物件叢集的傳出連線。</block>
+  <block id="f1ee4da4d06b79566714d877d17746a6" category="paragraph">您可以ONTAP 從分層叢集儀表板將未發現的內部叢集新增至BlueXP、以便為叢集啟用分層。</block>
+  <block id="77c2f2a395526537d532a604d4148171" category="paragraph">如果您的NSS認證資料儲存在BluedXP中、則您帳戶中的叢集會顯示在清單中。</block>
+  <block id="05d09a490352dd1a62f556737b4e126c" category="paragraph">如果您的NSS認證資料未儲存在BlueXP中、系統會先提示您新增認證資料、然後才能看到未探索到的叢集。</block>
+  <block id="8a29c3a17e5abf29dce483e1e0e0c869" category="inline-image-macro">快照顯示如何探索要新增至BlueXP和分層儀表板的現有叢集。</block>
+  <block id="5382926e2e616f4c5f70b30bbc0a12d3" category="paragraph"><block ref="5382926e2e616f4c5f70b30bbc0a12d3" category="inline-image-macro-rx" type="image"></block></block>
+  <block id="d5c1e697c8b22502370d8a4d89241230" category="list-text">按一下「*探索叢集*」以瞭解您要透過BlueXP管理的叢集、並實作資料分層。</block>
+  <block id="46922e6b0c07daba7c3d3a262105baa4" category="paragraph">BlueXP會使用叢集名稱做為工作環境名稱、探索叢集並將其新增至Canvas中的工作環境。</block>
+  <block id="985b7d4c5c97b3b1b7b1d93298dbfbe8" category="paragraph">在BlueXP中、選取內部工作環境、按一下「*啟用*」以使用分層服務、然後依照提示將資料分層至S3相容的物件儲存設備。</block>
+  <block id="aa8039f331e46144ebc93c818d6c073d" category="list-text">訂閱的BlueXP PAYGO產品<block ref="d668c832ccb70eb717d6736e1082df78" category="inline-link-rx"></block>、<block ref="41a6e7dc73b2f1e43bd8c26c6ce83782" category="inline-link-rx"></block>或<block ref="92655de6fae7d07ed3897ce19d51b88d" category="inline-link-rx"></block>，單擊*訂購*並按照提示進行操作。</block>
+  <block id="3fe1a647c6d6e3ecb4beb9fdbf88698a" category="inline-link-macro">從BlueXP Digital Wallet將其新增至您的帳戶</block>
+  <block id="44e77e3f6f32777fdda0f302f6eeb384" category="list-text">若要使用Cloud Tiering BYOL授權付款、請寄送電子郵件至ng-cloud-tiering@netapp.com？Subject=Licensing[如果您需要購買、請聯絡我們]、然後再寄送 <block ref="6e5253c1105cb457fb1e1040cb387b28" category="inline-link-macro-rx"></block>。</block>
+  <block id="fb033ea193d99adc8d3553114c5fe47d" category="list-text">Cloud Tiering 可以分層的磁碟區總數可能低於 ONTAP 您的整套系統上的磁碟區數量。這是因為磁碟區無法從某些集合體分層。請參閱ONTAP 的《》文件<block ref="bc16a784cd65f4901578ebb3b70f2118" category="inline-link-rx"></block>。</block>
+  <block id="115976a072e6ce2f2ab2d16440a6eced" category="paragraph">您必須先在ONTAP BlueXP畫版中建立內部的功能環境、才能開始分層處理冷資料。</block>
+  <block id="dbb7149740d936c40081fce28d4ee35c" category="paragraph">在BlueXP中、選取內部工作環境、按一下「*啟用*」以使用分層服務、然後依照提示將資料分層至Azure Blob儲存設備。</block>
+  <block id="6f7498318061ab9585a9a930576417e9" category="paragraph">您必須先在ONTAP BlueXP中建立內部的功能性環境、才能開始分層處理冷資料。</block>
+  <block id="c591cadfaae2c0910945f6c26e696561" category="paragraph">如果您使用BlueXP 3.9.7版或更新版本建立Connector、就會設定好。</block>
+  <block id="df8fa8381504770cbc85054471165786" category="paragraph">如果您使用舊版的BlueXP建立Connector、則需要編輯權限清單、以新增2項必要權限：</block>
+  <block id="62b4885d3e4f3aa3a6da101753a59fd4" category="paragraph">若要取得預估、只要將ONTAP 您的不可靠叢集新增至BlueXP、然後透過位於分層索引標籤的雲端分層叢集儀表板進行檢查即可。當停用非使用中資料報告（IDR)停用或在一段足夠長的時間內尚未啟動時、Cloud Tiering會使用業界不變的70%來計算預估的節約效益。一旦有可用的印尼盾資料、Cloud Tiering就會將節約成本更新為準確的數據。</block>
+  <block id="f0e21f59ae2ac8831058af2eeb6352ab" category="inline-link">您在Cloud Volumes ONTAP BlueXP的工作環境中設定了針對功能的分層功能</block>
+  <block id="61d4aa7877925f71314d23b9f09b7393" category="paragraph">如果您使用Cloud Volumes ONTAP 的是NetApp系統、您可以在雲端分層叢集儀表板中找到這些系統、以便在混合雲基礎架構中完整檢視資料分層。不過Cloud Volumes ONTAP 、從Cloud Tiering讀取的是隻讀的系統。您無法從 Cloud Volumes ONTAP Cloud Tiering 設定資料分層功能。<block ref="7477c38194261f0954175f853359735c" category="inline-link-rx"></block>。</block>
+  <block id="f92115ef83b34980e3bba84c1a861bac" category="paragraph">下列問題與BlueXP Connector有關。</block>
+  <block id="367329787d30f75b30521f88dfa0d7c1" category="paragraph">Connector是在雲端帳戶內或內部部署的運算執行個體上執行的軟體、可讓BlueXP安全地管理雲端資源。若要使用雲端分層服務、您必須部署連接器。</block>
+  <block id="b3ac7359e28ad36cfcfef7d4cff76670" category="list-text">對於Azure而言、您不需要在需要提供給BlueXP的權限範圍之外額外取得權限。</block>
+  <block id="c729029c71a16ede9005a43bf89a6174" category="summary">在您從第一個叢集設定分層時、就會開始免費試用30天的雲端分層。在免費試用結束後、您必須透過雲端供應商的市場付費或年度訂閱、NetApp的BYOL授權、或兩者的組合、來支付雲端分層費用。</block>
+  <block id="1612cb846aef0cf7c32d67e2e37dac9f" category="list-text">BYOL Cloud分層授權是一個_浮 點型授權、可在ONTAP 您的BlueXP帳戶中跨多個內部部署的物件叢集使用。這與您過去為FabricPool 每個叢集購買_SUR__授權的情況不同。</block>
+  <block id="01af7160175380d80805730009c1a541" category="list-text">在BlueXP中、按一下*行動性&gt;分層&gt;授權*。</block>
+  <block id="f1b10f6f612755bd0b4bd43376cb6834" category="list-text">從訂閱<block ref="d668c832ccb70eb717d6736e1082df78" category="inline-link-rx"></block>，然後重新登入BlueXP網站以完成註冊。</block>
+  <block id="0c664d98088fac0e3d869a21cac0c6c4" category="list-text">從訂閱<block ref="41a6e7dc73b2f1e43bd8c26c6ce83782" category="inline-link-rx"></block>，然後重新登入BlueXP網站以完成註冊。</block>
+  <block id="e4db414e6112e54da73cbeaaacf47826" category="list-text">從訂閱<block ref="92655de6fae7d07ed3897ce19d51b88d" category="inline-link-rx"></block>，然後重新登入BlueXP網站以完成註冊。</block>
+  <block id="e8f7f5b880c6195dc3e51b413120ca98" category="paragraph">NetApp自帶授權、提供1年、2年或3年期限。BYOL * Cloud Tiering *授權是一個_浮 點型授權、可在ONTAP 您的BlueXP帳戶中跨多個內部部署的叢集使用。雲端分層授權中定義的總分層容量會在內部部署叢集*全部*之間共享、讓初始授權與續約變得更簡單。</block>
+  <block id="6193e62acb4a86204633b2d093e49546" category="list-text">按一下BlueXP右下角的聊天圖示、申請授權。</block>
+  <block id="67723246c92a96be8e4186d119291c28" category="paragraph">您可以使用BlueXP中的「Digital Wallet」頁面來管理雲端分層BYOL授權。您可以新增授權並更新現有授權。</block>
+  <block id="d6bdd6528f876c8f9fd69af8dc6bc0a7" category="paragraph">全新的*雲端分層*授權於2021年8月推出、適用於使用雲端分層服務在BlueXP中支援的分層組態。BlueXP目前支援分層至下列雲端儲存設備：Amazon S3、Azure Blob儲存設備、Google Cloud Storage、S3相容的物件儲存設備、StorageGRID 以及</block>
+  <block id="d1d50097366a11a94bfed0659512b727" category="list-text">如果您使用的是BlueXP支援的組態、FabricPool 則您的支援將轉換成Cloud Tiering授權、這些授權將會顯示在Digital Wallet中。當初始授權過期時、您需要更新雲端分層授權。</block>
+  <block id="e031d1891af14066db39ea9bc5a67edb" category="list-text">如果您使用的組態不受BlueXP支援、則您將繼續使用FabricPool 此版的支援。<block ref="f4b8492105dcaca906c2ce90b9ccab9e" category="inline-link-rx"></block>。</block>
+  <block id="6cfdec23b6ef5dae92d4fd2e80a8b71b" category="cell">它已在BlueXP的Digital Wallet中註冊。</block>
+  <block id="8a4bbf69640344f326365dfa25a4901b" category="cell">分層組態與管理是透過BlueXP中的雲端分層服務來完成。</block>
+  <block id="0a02222ab0b46539096d165f4323c30c" category="paragraph">購買Cloud Tiering授權之後、您可以在BlueXP中輸入Cloud Tiering序號和nssnl帳戶、或上傳NLF授權檔案、以啟動授權。下列步驟說明如果您打算使用NLF授權檔案、該如何取得該檔案。</block>
+  <block id="f68bf28051d836364652b5a91d1bcd3a" category="list-text">輸入您的BlueXP帳戶ID（在支援網站上稱為「租戶ID」）、然後按一下*提交*下載授權檔案。</block>
+  <block id="257ff1df6b80ed0bf9b3463d53be79f9" category="paragraph">您可以從BlueXP頂端選取「*帳戶*」下拉式清單、然後按一下帳戶旁的「*管理帳戶*」、即可找到您的BlueXP帳戶ID。您的帳戶ID位於「總覽」索引標籤。</block>
+  <block id="15ce40623343d05c0444afd02e2c35bb" category="paragraph">為您的BlueXP帳戶購買雲端分層授權之後、您必須將授權新增至BlueXP、才能使用雲端分層服務。</block>
+  <block id="bae190eec3db4a0dd635ae72756acde8" category="inline-link">將新增至BlueXP的NSS帳戶</block>
+  <block id="fc76651edf85f11e6b8f2a81226ab59d" category="paragraph">如果下拉式清單中沒有您的 NetApp 支援網站帳戶，<block ref="6d9745cd4f1d60b55f06aef4c5cb6ec4" category="inline-link-rx"></block>。</block>
+  <block id="beed46ff9b8cb197e70173271551eb15" category="paragraph">BlueXP會新增授權、讓您的雲端分層服務處於作用中狀態。</block>
+  <block id="2a1a6ce6532bc43b546f90932dcc9018" category="list-text">按一下BlueXP右下角的聊天圖示、即可針對特定序號、要求延長您的期限或增加雲端分層授權容量。</block>
+  <block id="8061535eb5e8bab52c4a8a0fdc119d14" category="paragraph">在您支付授權費用並向NetApp 支援網站 《The》（《The》）註冊之後、BlueXP會自動更新「Digital Wallet」（數位錢包）中的授權、而「Data Services Licenses」（資料服務授權）頁面將會在5到10分鐘內反映變更。</block>
+  <block id="214cacc5f23c512f4926b241fbfd1544" category="list-text">如果BlueXP無法自動更新授權、則您需要手動上傳授權檔案。</block>
+  <block id="7abaea97100d61cae59d8ff3e63c7ecd" category="paragraph">BlueXP會更新授權、讓您的雲端分層服務持續運作。</block>
+  <block id="2e6fc7efa287b2fe3ed8bb7cf5c6500f" category="list-text">在BlueXP中、 <block ref="fe2e5134b9c10f1de1aa1ca1472fd7e2" category="inline-link-macro-rx"></block>。</block>
+  <block id="8816958eed360786a943983e0bd031fd" category="paragraph">在BlueXP中、選取內部作業環境、按一下「*啟用*」以使用分層服務、然後依照提示將資料分層至Google Cloud Storage。</block>
+  <block id="0f41d5111907904b1b8d390c2c27b6fc" category="paragraph">BlueXP中的雲端分層服務（前身為Cloud Manager）運用了_S__的功能FabricPool 。NetApp Data Fabric 技術可自動將資料分層至低成本的物件儲存設備。 FabricPool作用中（熱）資料會保留在本機層（內部部署ONTAP 的資訊集合體）、而非作用中（冷）資料則移至雲端層、同時維持ONTAP 資料效率不變。</block>
+  <block id="e8395f15de9e60e2f10e3d0598808276" category="inline-link">請參閱BlueXP網站上的雲端分層頁面</block>
+  <block id="643db1b55251062b39af68b66b294d99" category="paragraph">如需雲端分層所提供價值的詳細資訊、<block ref="a183fd414a6868970d08a7f98447aa3e" category="inline-link-rx"></block>。</block>
+  <block id="6ba24c7d2cccc768e3092f47f5af4915" category="admonition">從 Cloud Tiering 讀取系統。 Cloud Volumes ONTAP<block ref="7477c38194261f0954175f853359735c" category="inline-link-rx"></block>。</block>
+  <block id="9342584e61c9312677349e1f9c840d56" category="paragraph">購買Cloud Tiering授權之後、您需要使用BlueXP中的Digital Wallet來新增授權。 <block ref="14bb9fa35d1b0028e213cd470536d52e" category="inline-link-macro-rx"></block>。</block>
+  <block id="955a264d46a1f0536f93bcb5a3e454f1" category="list-text">您可以從BlueXP探索內部叢集。</block>
+  <block id="92d46e494e7ad2aeddc2f61967fd1763" category="list-text">BlueXP可設定ONTAP 使用物件儲存供應商、並探索叢集上的作用中和非作用中資料量。</block>
+  <block id="d2c482346f4646ff22b0d802d84f0468" category="paragraph">在BluXP中、選取內部作業環境、按一下「*啟用*」以使用分層服務、然後依照提示將資料分層StorageGRID 至物件。</block>
+  <block id="64f5a141e95a85b5c7adc328cad6065b" category="list-text">您的BlueXP帳戶不需要Cloud Tiering授權、FabricPool 也不需要ONTAP 在將資料分層StorageGRID 至無法使用的情況下、在該叢集上取得任何非功能性授權。</block>
+  <block id="1fdc9d2d6f254f32143c31bdb680c25a" category="paragraph">在ONTAP BlueXP中探索您的叢集、確認叢集符合最低需求、並自訂網路設定、讓叢集可以連線至AWS S3。</block>
+  <block id="ffe46224318100d3f7bec7eca2ef7e3f" category="paragraph">BlueXP Connector是用於BlueXP功能的主要軟體。需要連接器來分層處理您的非使用中ONTAP 的資訊。</block>
+  <block id="44ead0e70e856f32d3afe2f909f3fbe2" category="section-title">在ONTAP BlueXP中探索您的叢集</block>
+  <block id="49f77dce60fe49e3589be24b4ed37731" category="paragraph">您必須先在ONTAP BlueXP中探索內部部署的叢集、才能開始將冷資料分層儲存至物件儲存設備。您必須知道叢集管理IP位址和管理使用者帳戶的密碼、才能新增叢集。</block>
+  <block id="761bfdc0fcb01bfd39ee5fe957d6cc2e" category="list-text">修改與BlueXP Connector相關的安全性群組組態。您必須將原則變更為「Custom（自訂）」（從「Full Access（完整存取）」）、而且您必須如此 <block ref="2e3aa01a102d96f1118abd47a89529bc" category="inline-xref-macro-rx"></block> 如前所示。</block>
+  <block id="667b744af05e085368d150edc4b8a344" category="inline-link">登入裝載BlueXP Connector的VM</block>
+  <block id="53580765f208bf3a21b9b94ab077bfb1" category="list-text">從VPC S3端點取得憑證。您的做法是<block ref="baa295d957d2e86c0ec7224e7ed425da" category="inline-link-rx"></block> 並執行下列命令。輸入端點的DNS名稱時、請在開頭加入「pucket」、取代「*」：</block>
+  <block id="c95623cd0395d5a6bb6105b9d32f197b" category="inline-link">藍圖XP注意事項</block>
+  <block id="e8a6d0f19a957eac14b9917a6c92899b" category="list-text"><block ref="e8a6d0f19a957eac14b9917a6c92899b" category="inline-link-rx"></block></block>
+  <block id="bd5465eb0e8cf8f303aee7ea9420c8b1" category="sidebar">BlueXP部落格</block>
+  <block id="e4f8a35ee8df8b5c247f6e3286e42891" category="sidebar">BlueXP使用案例</block>
+  <block id="7a45e6298bb69116e2c6db653fb88884" category="sidebar">所有BlueXP文件</block>
 </blocks>

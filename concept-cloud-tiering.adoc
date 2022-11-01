@@ -16,7 +16,7 @@ summary: NetApp 的雲端分層服務可自動將非作用中資料從內部部�
 [role="lead"]
 NetApp 的雲端分層服務可自動將非作用中資料從內部部署 ONTAP 的物件叢集分層、以將資料中心延伸至雲端。如此一來、叢集上的寶貴空間就能釋出、以容納更多工作負載、而無需變更應用程式層。雲端分層可降低資料中心的成本、並可讓您從CAPEX模式切換至OPEX模式。
 
-Cloud Tiering 服務運用 _Estr__ 的功能 FabricPool 。NetApp Data Fabric 技術可自動將資料分層至低成本的物件儲存設備。 FabricPool作用中（熱）資料會保留在本機層（內部部署ONTAP 的資訊集合體）、而非作用中（冷）資料則移至雲端層、同時維持ONTAP 資料效率不變。
+BlueXP中的雲端分層服務（前身為Cloud Manager）運用了_S__的功能FabricPool 。NetApp Data Fabric 技術可自動將資料分層至低成本的物件儲存設備。 FabricPool作用中（熱）資料會保留在本機層（內部部署ONTAP 的資訊集合體）、而非作用中（冷）資料則移至雲端層、同時維持ONTAP 資料效率不變。
 
 原支援AFF 採用FAS All SSD集合體的支援功能、從ONTAP Select VMware 9.8開始ONTAP 、除了高效能SSD之外、您也可以從由HDD組成的集合體來分層資料。請參閱 https://docs.netapp.com/us-en/ontap/fabricpool/requirements-concept.html["使用過程中的考量與要求FabricPool"^] 以取得詳細資料。
 
@@ -38,10 +38,10 @@ Cloud Tiering 服務運用 _Estr__ 的功能 FabricPool 。NetApp Data Fabric �
 * 如果您使用 Cloud Volumes ONTAP 的是 NetApp 系統、您可以在叢集儀表板中找到這些系統、以便在混合雲基礎架構中完整檢視資料分層
 
 
-如需雲端分層所提供價值的詳細資訊、 https://cloud.netapp.com/cloud-tiering["請參閱 NetApp Cloud Central 上的雲端分層頁面"^]。
+如需雲端分層所提供價值的詳細資訊、 https://cloud.netapp.com/cloud-tiering["請參閱BlueXP網站上的雲端分層頁面"^]。
 
 
-TIP: 從 Cloud Tiering 讀取系統。 Cloud Volumes ONTAP https://docs.netapp.com/us-en/cloud-manager-cloud-volumes-ontap/task-tiering.html["您可以在 Cloud Volumes ONTAP Cloud Manager 中設定針對運作環境的效能提升"^]。
+TIP: 從 Cloud Tiering 讀取系統。 Cloud Volumes ONTAP https://docs.netapp.com/us-en/cloud-manager-cloud-volumes-ontap/task-tiering.html["您在Cloud Volumes ONTAP BlueXP的工作環境中設定了針對功能的分層功能"^]。
 
 
 
@@ -131,7 +131,7 @@ link:task-licensing-cloud-tiering.html#use-a-cloud-tiering-paygo-subscription["�
 
 向NetApp購買* Cloud Tiering *授權、即可自帶授權。您可以購買1、2或3年期授權、並指定任何數量的分層容量。BYOL Cloud分層授權是一個_浮 點型授權、可用於多ONTAP 個內部部署的物件叢集。您在雲端分層授權中定義的總分層容量、可用於所有內部部署叢集。
 
-購買雲端分層授權之後、您需要使用Cloud Manager中的「Digital Wallet」頁面來新增授權。 link:task-licensing-cloud-tiering.html#use-a-cloud-tiering-byol-license["瞭解如何使用雲端分層BYOL授權"]。
+購買Cloud Tiering授權之後、您需要使用BlueXP中的Digital Wallet來新增授權。 link:task-licensing-cloud-tiering.html#use-a-cloud-tiering-byol-license["瞭解如何使用雲端分層BYOL授權"]。
 
 如上所述、建議您設定隨用隨付訂閱、即使您已購買BYOL授權亦然。
 
@@ -150,9 +150,9 @@ image:diagram_cloud_tiering.png["此架構影像顯示雲端分層服務、可�
 
 在高層級、雲端分層的運作方式如下：
 
-. 您可以從 Cloud Manager 探索內部叢集。
+. 您可以從BlueXP探索內部叢集。
 . 您可以提供物件儲存設備的詳細資料、包括儲存庫/容器、儲存類別或存取層、以及階層式資料的生命週期規則、藉此設定分層。
-. Cloud Manager 可設定 ONTAP 使用物件儲存供應商、並探索叢集上的作用中和非作用中資料量。
+. BlueXP可設定ONTAP 使用物件儲存供應商、並探索叢集上的作用中和非作用中資料量。
 . 您可以選擇要分層的磁碟區、以及要套用至這些磁碟區的分層原則。
 . 一旦資料達到臨界值時、系統即會將非作用中的資料分層至物件存放區（請參閱ONTAP  tiering policies）。
 . 如果您已將生命週期規則套用至階層式資料（僅適用於部分供應商）、則較舊的階層式資料會在一定天數後移至更具成本效益的階層。

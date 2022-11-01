@@ -26,7 +26,7 @@ summary: 現在您已經從內部ONTAP 的物件叢集設定資料分層、您�
 TIP: 您不需要設定物件儲存設備、因為它已在最初設定叢集分層時進行設定。將非作用中資料從任何其他磁碟區分層至同一個物件存放區。ONTAP
 
 .步驟
-. 在 Cloud Manager 頂端、按一下 * 分層 * 。
+. 從左側導覽功能表中、選取*行動性>分層*。
 . 在*叢集儀表板*中、按一下*叢集的基本分層設定*。
 +
 image:screenshot_tiering_tier_volumes_button.png["顯示如何為叢集選取「階層磁碟區」按鈕的快照。"]
@@ -59,7 +59,7 @@ image:screenshot_tiering_policy_settings.png["顯示可設定分層原則設定�
 變更磁碟區的分層原則、可改變 ONTAP 將資料冷階移至物件儲存的方式。變更從您變更原則的那一刻開始。它只會變更磁碟區的後續分層行為、不會將資料追溯到雲端層。
 
 .步驟
-. 在 Cloud Manager 頂端、按一下 * 分層 * 。
+. 從左側導覽功能表中、選取*行動性>分層*。
 . 在*叢集儀表板*中、按一下叢集的*層級磁碟區*。
 . 按一下某個磁碟區的列、選取分層原則、或是調整冷卻天數、然後按一下「*套用*」。
 +
@@ -99,7 +99,7 @@ NOTE: 您的雲端供應商可能會根據從雲端傳輸的資料量向您收�
 
 確保效能層有足夠的空間容納從雲端移出的所有資料。
 
-. 在 Cloud Manager 頂端、按一下 * 分層 * 。
+. 從左側導覽功能表中、選取*行動性>分層*。
 . 在*叢集儀表板*中、按一下叢集的*層級磁碟區*。
 . 按一下 image:screenshot_edit_icon.gif["表格中每一列結尾的編輯圖示快照、用於分層磁碟區"] 圖示、選擇您要使用的擷取選項、然後按一下*套用*。
 +
@@ -153,7 +153,7 @@ image:screenshot_tiering_modify_aggregate.png["螢幕快照顯示滑桿、可用
 您可能想要查看雲端層中有多少資料、以及磁碟上有多少資料。或者、您可能想要查看叢集磁碟上的熱和冷資料量。雲端分層可為每個叢集提供此資訊。
 
 .步驟
-. 在 Cloud Manager 頂端、按一下 * 分層 * 。
+. 從左側導覽功能表中、選取*行動性>分層*。
 . 在*叢集儀表板*中、按一下叢集的功能表圖示、然後選取*叢集資訊*。
 . 檢閱叢集的詳細資料。
 +
@@ -172,7 +172,7 @@ image:screenshot_tiering_aiq_fabricpool_info.png["快照顯示FabricPool 叢集�
 
 == 修復作業健全狀況
 
-可能會發生故障。當他們執行此作業時、 Cloud Tiering 會在叢集儀表板上顯示「失敗」的作業健全狀況狀態。健全狀況反映 ONTAP 出功能不全系統和 Cloud Manager 的狀態。
+可能會發生故障。當他們執行此作業時、 Cloud Tiering 會在叢集儀表板上顯示「失敗」的作業健全狀況狀態。健全狀況反映ONTAP 出功能不全系統和藍圖的狀態。
 
 .步驟
 . 識別任何運作健全狀況為「故障」的叢集。
@@ -183,7 +183,7 @@ image:https://docs.netapp.com/us-en/cloud-tiering/media/screenshot_tiering_healt
 . 修正問題：
 +
 .. 驗證 ONTAP 該叢集是否正常運作、以及是否有連至物件儲存供應商的傳入和傳出連線。
-.. 確認 Cloud Manager 已連線至 Cloud Tiering 服務、物件存放區及 ONTAP 其探索的物件叢集。
+.. 驗證BlueXP是否有連至雲端分層服務、物件存放區及ONTAP 其發現的物件叢集的傳出連線。
 
 
 
@@ -192,7 +192,7 @@ image:https://docs.netapp.com/us-en/cloud-tiering/media/screenshot_tiering_healt
 
 == 從雲端分層探索其他叢集
 
-您可以ONTAP 從分層叢集儀表板將未發現的內部叢集新增至Cloud Manager、以便為叢集啟用分層。
+您可以ONTAP 從分層叢集儀表板將未發現的內部叢集新增至BlueXP、以便為叢集啟用分層。
 
 請注意、按鈕也會顯示在「分層_高級版概述_」頁面上、供您探索其他叢集。
 
@@ -203,16 +203,16 @@ image:https://docs.netapp.com/us-en/cloud-tiering/media/screenshot_tiering_healt
 image:screenshot_tiering_show_undiscovered_cluster.png["顯示分層儀表板上「顯示未探索到的叢集」按鈕的快照。"]
 
 +
-如果您的NSS認證資料儲存在Cloud Manager中、則您帳戶中的叢集會顯示在清單中。
+如果您的NSS認證資料儲存在BluedXP中、則您帳戶中的叢集會顯示在清單中。
 
 +
-如果您的NSS認證資料未儲存在Cloud Manager中、系統會先提示您新增認證資料、然後才能看到未探索到的叢集。
+如果您的NSS認證資料未儲存在BlueXP中、系統會先提示您新增認證資料、然後才能看到未探索到的叢集。
 
 . 向下捲動頁面以找出叢集。
 +
-image:screenshot_tiering_discover_cluster.png["快照顯示如何探索要新增至Cloud Manager和分層儀表板的現有叢集。"]
+image:screenshot_tiering_discover_cluster.png["快照顯示如何探索要新增至BlueXP和分層儀表板的現有叢集。"]
 
-. 按一下「*探索叢集*」、即可透過Cloud Manager管理叢集並實作資料分層。
+. 按一下「*探索叢集*」以瞭解您要透過BlueXP管理的叢集、並實作資料分層。
 . 在_選擇位置_頁面*內部部署ONTAP 的SURE*已預先選取、所以只要按一下*繼續*即可。
 . 在「_ ONTAP 此叢集詳細資料_」頁面上、輸入管理員使用者帳戶的密碼、然後按一下「*新增*」。
 +
@@ -221,6 +221,6 @@ image:screenshot_tiering_discover_cluster.png["快照顯示如何探索要新增
 . 在「_Details & Credentials_」頁面上、叢集名稱會新增為「工作環境名稱」、因此只要按一下「* Go *」即可。
 
 
-Cloud Manager會使用叢集名稱做為工作環境名稱、探索叢集並將其新增至Canvas中的工作環境。
+BlueXP會使用叢集名稱做為工作環境名稱、探索叢集並將其新增至Canvas中的工作環境。
 
 您可以在右側面板中啟用此叢集的分層服務或其他服務。
