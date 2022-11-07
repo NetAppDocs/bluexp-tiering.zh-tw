@@ -1312,4 +1312,10 @@
   <block id="bd5465eb0e8cf8f303aee7ea9420c8b1" category="sidebar">BlueXP部落格</block>
   <block id="e4f8a35ee8df8b5c247f6e3286e42891" category="sidebar">BlueXP使用案例</block>
   <block id="7a45e6298bb69116e2c6db653fb88884" category="sidebar">所有BlueXP文件</block>
+  <block id="39cff02cd4c2bfac12f446d78e59e3ca" category="paragraph">如果Azure Blob分層目的地是以工作環境形式存在於Canvas上、您可以將叢集拖曳至Azure Blob工作環境、以啟動設定精靈。</block>
+  <block id="0e8a08e502abe437efca593eced30efb" category="paragraph">如果Google Cloud Storage分層目的地在畫版上作為工作環境存在、您可以將叢集拖曳至Google Cloud Storage工作環境、以啟動設定精靈。</block>
+  <block id="bb9a67152dc7c7f6ad99d55da23a9b5c" category="paragraph">如果StorageGRID 在畫版上存在可作為工作環境的資料點、您可以將叢集拖曳到StorageGRID 可運作的環境中、以啟動設定精靈。</block>
+  <block id="5a4346a01828d72104a6540080377b25" category="section-title">2022年11月6日</block>
+  <block id="8f4621192fd1fe94f1b365ae34c1e0ed" category="section-title">拖放即可將雲端分層移至Azure Blob、Google Cloud Storage及StorageGRID</block>
+  <block id="6586247c64ea3f20421ae518b26fc973" category="paragraph">如果Azure Blob、Google Cloud Storage或StorageGRID Setiering目的地是在CanvasTM上的工作環境、您可以將內部ONTAP 環境拖曳至目的地、以啟動分層設定精靈。</block>
 </blocks>

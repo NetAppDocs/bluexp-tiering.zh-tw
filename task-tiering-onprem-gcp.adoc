@@ -175,6 +175,9 @@ NOTE: 如果您計畫設定雲端分層以使用較低成本的儲存類別、�
 . 選取內部叢集。
 . 按一下「*啟用*」以取得分層服務。
 +
+如果Google Cloud Storage分層目的地在畫版上作為工作環境存在、您可以將叢集拖曳至Google Cloud Storage工作環境、以啟動設定精靈。
+
++
 image:screenshot_setup_tiering_onprem.png["螢幕擷取畫面顯示當您選取內部ONTAP 環境時、畫面右側會出現「Enable（啟用）」選項。"]
 
 . *定義物件儲存名稱*：輸入此物件儲存設備的名稱。它必須與此叢集上的Aggregate所使用的任何其他物件儲存設備都是獨一無二的。

@@ -18,6 +18,16 @@ summary: 瞭解雲端分層的新功能。
 
 
 
+== 2022年11月6日
+
+
+
+=== 拖放即可將雲端分層移至Azure Blob、Google Cloud Storage及StorageGRID
+
+如果Azure Blob、Google Cloud Storage或StorageGRID Setiering目的地是在CanvasTM上的工作環境、您可以將內部ONTAP 環境拖曳至目的地、以啟動分層設定精靈。
+
+
+
 == 2022年9月19日
 
 
