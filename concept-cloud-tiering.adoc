@@ -85,7 +85,7 @@ NOTE: 您無法為階層式資料至StorageGRID 不支援支援功能或S3的儲
 
 將資料分層至 StorageGRID 不徵收任何費用。不需要 BYOL 授權或 PAYGO 登錄。
 
-https://cloud.netapp.com/cloud-tiering["檢視價格詳細資料"^]。
+https://bluexp.netapp.com/pricing#tiering["檢視價格詳細資料"^]。
 
 
 

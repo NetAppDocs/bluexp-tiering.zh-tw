@@ -55,7 +55,7 @@ summary: 將非作用中的資料分層至Amazon S3、以釋放內部ONTAP 資�
 [role="quick-margin-para"]
 免費試用結束後、請透過隨用隨付訂閱、ONTAP VMware Cloud Tiering BYOL授權或兩者的組合來支付雲端分層費用：
 
-* 若要從AWS Marketplace訂閱、 https://aws.amazon.com/marketplace/pp/prodview-oorxakq6lq7m4?sr=0-8&ref_=beagle&applicationId=AWSMPContessa["前往Cloud Manager Marketplace產品"^]，單擊*訂購*，然後按照提示進行操作。
+* 若要從AWS Marketplace訂閱、 https://aws.amazon.com/marketplace/pp/prodview-oorxakq6lq7m4?sr=0-8&ref_=beagle&applicationId=AWSMPContessa["前往BlueXP Marketplace產品"^]，單擊*訂購*，然後按照提示進行操作。
 * 若要使用Cloud Tiering BYOL授權付款、請寄送電子郵件至ng-cloud-tiering@netapp.com？Subject=Licensing[如果您需要購買、請聯絡我們]、然後再寄送 link:task-licensing-cloud-tiering.html#add-cloud-tiering-byol-licenses-to-your-account["從BlueXP Digital Wallet將其新增至您的帳戶"]。
 
 

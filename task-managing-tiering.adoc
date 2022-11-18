@@ -164,9 +164,9 @@ image:screenshot_tiering_cluster_info.png["顯示叢集報告的快照、其中�
 
 
 
-您也可以 https://docs.netapp.com/us-en/active-iq/task_monitor_and_tier_inactive_data_with_FabricPool_Advisor.html["從Active IQ 「物件數位顧問」檢視叢集的分層資訊"^] 如果您熟悉此NetApp產品、只要從FabricPool 左側導覽窗格中選取*《顧問*》即可。
+您也可以 https://docs.netapp.com/us-en/active-iq/task-informed-decisions-based-on-cloud-recommendations.html#tiering["從Digital Advisor檢視叢集的分層資訊"^] 如果您熟悉此NetApp產品、只要從左側導覽窗格中選取*雲端建議*即可。
 
-image:screenshot_tiering_aiq_fabricpool_info.png["快照顯示FabricPool 叢集的資訊、使用FabricPool 來自於《知識》的「知識顧問」提供的資訊Active IQ 。"]
+image:screenshot_tiering_aiq_fabricpool_info.png["顯示FabricPool 叢集的資訊的快照、使用FabricPool Digital Advisor提供的「資訊顧問」。"]
 
 
 
@@ -177,9 +177,9 @@ image:screenshot_tiering_aiq_fabricpool_info.png["快照顯示FabricPool 叢集�
 .步驟
 . 識別任何運作健全狀況為「故障」的叢集。
 +
-image:https://docs.netapp.com/us-en/cloud-tiering/media/screenshot_tiering_health.gif["顯示叢集分層健全狀況失敗狀態的快照。"]
+image:screenshot_tiering_health.gif["顯示叢集分層健全狀況失敗狀態的快照。"]
 
-. 將游標暫留在上方 image:https://docs.netapp.com/us-en/cloud-tiering/media/screenshot_info_icon.gif["顯示失敗原因的 i 圖示快照"] 圖示以查看故障原因。
+. 將游標暫留在上方 image:screenshot_info_icon.gif["顯示失敗原因的 i 圖示快照"] 圖示以查看故障原因。
 . 修正問題：
 +
 .. 驗證 ONTAP 該叢集是否正常運作、以及是否有連至物件儲存供應商的傳入和傳出連線。

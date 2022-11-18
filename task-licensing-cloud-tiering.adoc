@@ -18,7 +18,7 @@ summary: 在您從第一個叢集設定分層時、就會開始免費試用30天
 
 在閱讀更多內容之前、請先提供幾個附註：
 
-* 如果您已在雲端供應商的市場訂閱Cloud Manager（PAYGO）、那麼您也會自動從內部部署ONTAP 的悉尼系統訂閱Cloud Tiering。您會在Cloud Tiering * Licensing*（雲端分層*授權*）標籤中看到使用中的訂閱。您不需要再次訂閱。
+* 如果您已在雲端供應商的市場訂閱BlueXP（PAYGO）、那麼您也會自動從內部部署ONTAP 的__LW_Y1_Y1_Y1_Y1_Y1_Y1_Y1_Y1_Y1_Y1_Y1_Y1_Y1_Y1_您會在Cloud Tiering * Licensing*（雲端分層*授權*）標籤中看到使用中的訂閱。您不需要再次訂閱。
 * BYOL Cloud分層授權是一個_浮 點型授權、可在ONTAP 您的BlueXP帳戶中跨多個內部部署的物件叢集使用。這與您過去為FabricPool 每個叢集購買_SUR__授權的情況不同。
 * 將資料分層至StorageGRID 不收費、因此不需要BYOL授權或PAYGO登錄。此階層式資料不會計入您授權中所購買的容量。
 

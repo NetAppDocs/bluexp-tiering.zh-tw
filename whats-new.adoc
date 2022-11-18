@@ -100,7 +100,7 @@ Cloud Tiering UI已新增一組物件儲存組態頁面。您可以新增物件�
 
 === Cloud Tiering BYOL授權取代FabricPool 了不含功能的授權
 
-雲端分層服務的Cloud Manager支援分層組態、現在提供全新的* Cloud Tiering *授權。這是一種浮動授權、您可以在多ONTAP 個內部部署的叢集上使用。您過去可能使用的* FabricPool 僅保留給Cloud Manager不支援的組態。
+全新的*雲端分層*授權現已推出、可用於使用雲端分層服務在BlueXP中支援的分層組態。這是一種浮動授權、您可以在多ONTAP 個內部部署的叢集上使用。您過去可能使用的* FabricPool Sfor *授權僅保留給不支援BlueXP的組態。
 
 https://docs.netapp.com/us-en/cloud-manager-tiering/task-licensing-cloud-tiering.html#use-a-cloud-tiering-byol-license["深入瞭解新的雲端分層授權"]。
 

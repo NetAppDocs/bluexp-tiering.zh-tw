@@ -130,7 +130,7 @@ NetApp是ONTAP的分層技術、可透過CLI和System Manager進行自我管理�
 
 === 如果我達到BYOL容量上限、會發生什麼事？
 
-如果您達到BYOL容量限制、新的冷資料分層作業就會停止、而先前所有階層式資料仍可存取。如果您訂閱了「_Cloud Manager -部署與管理雲端資料服務」的PAYGO市場訂閱、新的Cold資料將繼續分層至物件式儲存設備、而且您將依每次使用付費。
+如果您達到BYOL容量限制、新的冷資料分層作業就會停止、而先前所有階層式資料仍可存取。如果您訂閱了_藍圖XP -部署與管理雲端資料服務_的PAYGO市場訂閱、新的Cold資料將繼續分層至物件式儲存設備、而且您將依每次使用付費。
 
 
 
@@ -204,7 +204,7 @@ Cloud Tiering支援ONTAP 不支援版本9.2及更新版本。
 
 這取決於您分層 Cold 資料的位置。如需詳細資料、請參閱下列連結：
 
-* link:task-tiering-onprem-aws.html#preparing-your-ontap-clusters["將資料分層至Amazon S3"]
+* link:task-tiering-onprem-aws.html#prepare-your-ontap-cluster["將資料分層至Amazon S3"]
 * link:task-tiering-onprem-azure.html#preparing-your-ontap-clusters["將資料分層至Azure Blob儲存設備"]
 * link:task-tiering-onprem-gcp.html#preparing-your-ontap-clusters["將資料分層儲存至Google Cloud Storage"]
 * link:task-tiering-onprem-storagegrid.html#preparing-your-ontap-clusters["將資料分層至StorageGRID 物件"]
