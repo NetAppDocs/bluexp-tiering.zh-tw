@@ -22,15 +22,18 @@ summary: 將非作用中的資料分層到物件上、以釋放內部ONTAP 物�
 
 請依照下列步驟快速入門、或向下捲動至其餘部分以取得完整詳細資料。
 
+.image:https://raw.githubusercontent.com/NetAppDocs/common/main/media/number-1.png["一"] 準備將資料分層 StorageGRID 以供運用
 [role="quick-margin-para"]
 您需要下列項目：
 
+[role="quick-margin-list"]
 * 內部ONTAP 執行ONTAP 的內部版本的叢集執行的是更新版本的版本、並透過使用者指定的連接埠連線StorageGRID 至更新版本。 https://docs.netapp.com/us-en/cloud-manager-ontap-onprem/task-discovering-ontap.html["瞭解如何探索叢集"^]。
 * 支援 AWS 存取金鑰的 S3 權限、可支援支援支援支援的版本。 StorageGRID
 * 安裝在內部部署上的 Connector 。
 * 連接器的網路功能、可將 HTTPS 連線傳出 ONTAP 至物件叢集、 StorageGRID 到物件叢集和雲端分層服務。
 
 
+.image:https://raw.githubusercontent.com/NetAppDocs/common/main/media/number-2.png["二"] 設定分層
 [role="quick-margin-para"]
 在BluXP中、選取內部作業環境、按一下「*啟用*」以使用分層服務、然後依照提示將資料分層StorageGRID 至物件。
 
@@ -154,7 +157,7 @@ S3 認證:: 當您設定 StorageGRID 層疊至物件時、您需要使用 S3 存
 
 準備好環境之後、請從第一個叢集開始分層處理非作用中資料。
 
-.您需要的是 #8217 ；需要的是什麼
+.您需要的產品
 * https://docs.netapp.com/us-en/cloud-manager-ontap-onprem/task-discovering-ontap.html["內部部署工作環境"^]。
 * 用來進行HTTPS通訊的FQDN、以及連接埠。StorageGRID
 * 具備所需 S3 權限的 AWS 存取金鑰。
@@ -203,8 +206,10 @@ image:screenshot_tiering_policy_settings.png["顯示可設定分層原則設定�
 
 
 
+.結果
 您已成功設定資料分層、從叢集上的磁碟區到 StorageGRID 物件。
 
+.接下來呢？
 您可以檢閱叢集上作用中和非作用中資料的相關資訊。 link:task-managing-tiering.html["深入瞭解如何管理分層設定"]。
 
 您也可以建立額外的物件儲存設備、以便在叢集上的特定集合體將資料分層至不同的物件存放區。或者、如果您打算使用FabricPool 「支援物件鏡射」、將階層式資料複寫到其他物件存放區。 link:task-managing-object-storage.html["深入瞭解物件存放區的管理"]。

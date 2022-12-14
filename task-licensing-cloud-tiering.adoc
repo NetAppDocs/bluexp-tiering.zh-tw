@@ -193,6 +193,7 @@ image:screenshot_services_license_add.png["此快照顯示新增Cloud Tiering BY
 
 
 
+.結果
 BlueXP會新增授權、讓您的雲端分層服務處於作用中狀態。
 
 
@@ -216,7 +217,7 @@ image:screenshot_services_license_expire1.png["顯示「Digital Wallet」頁面�
 
 . 如果BlueXP無法自動更新授權、則您需要手動上傳授權檔案。
 +
-.. 您可以  your Cloud Tiering license file,從NetApp支援網站取得授權檔案。
+.. 您可以 <<取得您的雲端分層授權檔案,從NetApp支援網站取得授權檔案>>。
 .. 在「_資料服務授權_」索引標籤的「數位錢包」頁面上、按一下 image:screenshot_horizontal_more_button.gif["更多圖示"] 如需您要更新的服務序號、請按一下*更新授權*。
 +
 image:screenshot_services_license_update.png["選取特定服務的「更新授權」按鈕的快照。"]
@@ -226,6 +227,7 @@ image:screenshot_services_license_update.png["選取特定服務的「更新授�
 
 
 
+.結果
 BlueXP會更新授權、讓您的雲端分層服務持續運作。
 
 

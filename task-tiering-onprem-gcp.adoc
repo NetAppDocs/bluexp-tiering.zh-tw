@@ -22,21 +22,26 @@ summary: 將非作用中的資料分層儲存至Google Cloud Storage、以釋放
 
 請依照下列步驟快速入門、或向下捲動至其餘部分以取得完整詳細資料。
 
+.image:https://raw.githubusercontent.com/NetAppDocs/common/main/media/number-1.png["一"] 準備將資料分層至 Google Cloud Storage
 [role="quick-margin-para"]
 您需要下列項目：
 
+[role="quick-margin-list"]
 * 內部ONTAP 使用的支援功能、執行ONTAP 不支援功能的叢集9.6或更新版本、並可透過HTTPS連線至Google Cloud Storage。 https://docs.netapp.com/us-en/cloud-manager-ontap-onprem/task-discovering-ontap.html["瞭解如何探索叢集"^]。
 * 具有預先定義儲存管理角色和儲存存取金鑰的服務帳戶。
 * 安裝在 Google Cloud Platform VPC 上的 Connector 。
 * 連接器的網路功能、可將 HTTPS 連線傳出至 ONTAP 資料中心的叢集、 Google Cloud Storage 及雲端分層服務。
 
 
+.image:https://raw.githubusercontent.com/NetAppDocs/common/main/media/number-2.png["二"] 設定分層
 [role="quick-margin-para"]
 在BlueXP中、選取內部作業環境、按一下「*啟用*」以使用分層服務、然後依照提示將資料分層至Google Cloud Storage。
 
+.image:https://raw.githubusercontent.com/NetAppDocs/common/main/media/number-3.png["三"] 設定授權
 [role="quick-margin-para"]
 免費試用結束後、請透過隨用隨付訂閱、ONTAP VMware Cloud Tiering BYOL授權或兩者的組合來支付雲端分層費用：
 
+[role="quick-margin-list"]
 * 若要從GCP Marketplace訂閱、 https://console.cloud.google.com/marketplace/details/netapp-cloudmanager/cloud-manager?supportedpurview=project&rif_reserved["前往BlueXP Marketplace產品"^]，單擊*訂購*，然後按照提示進行操作。
 * 若要使用Cloud Tiering BYOL授權付款、請寄送電子郵件至ng-cloud-tiering@netapp.com？Subject=Licensing[如果您需要購買、請聯絡我們]、然後再寄送 link:task-licensing-cloud-tiering.html#add-cloud-tiering-byol-licenses-to-your-account["從BlueXP Digital Wallet將其新增至您的帳戶"]。
 
@@ -166,7 +171,7 @@ NOTE: 如果您計畫設定雲端分層以使用較低成本的儲存類別、�
 
 在您準備好 Google Cloud 環境之後、請從第一個叢集開始分層處理非作用中資料。
 
-.您需要的是 #8217 ；需要的是什麼
+.您需要的產品
 * https://docs.netapp.com/us-en/cloud-manager-ontap-onprem/task-discovering-ontap.html["內部部署工作環境"^]。
 * 具有 Storage Admin 角色之服務帳戶的儲存存取金鑰。
 
@@ -225,8 +230,10 @@ image:screenshot_tiering_policy_settings.png["顯示可設定分層原則設定�
 
 
 
+.結果
 您已成功設定從叢集上的磁碟區到 Google Cloud 物件儲存區的資料分層。
 
+.接下來呢？
 link:task-licensing-cloud-tiering.html["請務必訂閱雲端分層服務"]。
 
 您可以檢閱叢集上作用中和非作用中資料的相關資訊。 link:task-managing-tiering.html["深入瞭解如何管理分層設定"]。

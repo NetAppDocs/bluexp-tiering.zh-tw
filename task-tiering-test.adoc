@@ -20,6 +20,7 @@ summary: 執行雲端效能測試、以測量ONTAP 設定資料分層之前和�
 
 image:screenshot_cloud_performance_test.gif["雲端效能測試叢集效能結果的快照。"]
 
+.開始之前
 當叢集的CPU使用率低於50%時、最好執行此檢查。
 
 .尚未設定分層的叢集步驟

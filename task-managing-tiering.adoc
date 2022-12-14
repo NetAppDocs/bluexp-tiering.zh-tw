@@ -50,6 +50,7 @@ image:screenshot_tiering_policy_settings.png["顯示可設定分層原則設定�
 
 
 
+.結果
 選定的磁碟區開始將資料階層化至雲端。
 
 
@@ -70,8 +71,9 @@ image:screenshot_tiering_policy_settings.png["顯示可設定分層原則設定�
 
 
 
-*附註：*如果您看到「擷取分層資料」選項、請參閱  data from the cloud tier back to the performance tier,將資料從雲端層移轉回效能層 以取得詳細資料。
+*附註：*如果您看到「擷取分層資料」選項、請參閱 <<將資料從雲端層移轉回效能層,將資料從雲端層移轉回效能層>> 以取得詳細資料。
 
+.結果
 分層原則隨即變更、資料也會開始根據新原則進行階層。
 
 
@@ -97,6 +99,7 @@ image:screenshot_tiering_policy_settings.png["顯示可設定分層原則設定�
 
 NOTE: 您的雲端供應商可能會根據從雲端傳輸的資料量向您收取費用。
 
+.步驟
 確保效能層有足夠的空間容納從雲端移出的所有資料。
 
 . 從左側導覽功能表中、選取*行動性>分層*。
@@ -107,6 +110,7 @@ image:screenshot_tiering_policy_settings_with_retrieve.png["顯示可設定分�
 
 
 
+.結果
 分層原則隨即變更、階層式資料也會開始移轉回效能層。視雲端資料量而定、傳輸程序可能需要一些時間。
 
 
@@ -221,6 +225,7 @@ image:screenshot_tiering_discover_cluster.png["快照顯示如何探索要新增
 . 在「_Details & Credentials_」頁面上、叢集名稱會新增為「工作環境名稱」、因此只要按一下「* Go *」即可。
 
 
+.結果
 BlueXP會使用叢集名稱做為工作環境名稱、探索叢集並將其新增至Canvas中的工作環境。
 
 您可以在右側面板中啟用此叢集的分層服務或其他服務。
