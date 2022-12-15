@@ -18,6 +18,28 @@ summary: 瞭解雲端分層的新功能。
 
 
 
+== 2022年12月6日
+
+
+
+=== 必要的連接器輸出網際網路存取端點變更
+
+由於雲端分層發生變更、您必須變更下列連接器端點、才能成功執行雲端分層作業：
+
+[cols="50,50"]
+|===
+| 舊端點 | 新的端點 
+
+
+| \https://cloudmanager.cloud.netapp.com | \https://api.bluexp.netapp.com 
+
+
+| \https://*.cloudmanager.cloud.netapp.com | \https://*.api.bluexp.netapp.com 
+|===
+請參閱的完整端點清單 https://docs.netapp.com/us-en/cloud-manager-setup-admin/task-creating-connectors-aws.html#outbound-internet-access["AWS"^]、 https://docs.netapp.com/us-en/cloud-manager-setup-admin/task-creating-connectors-gcp.html#outbound-internet-access["Google Cloud"^]或 https://docs.netapp.com/us-en/cloud-manager-setup-admin/task-creating-connectors-azure.html#outbound-internet-access["Azure"^] 雲端環境：
+
+
+
 == 2022年11月6日
 
 
@@ -91,21 +113,3 @@ Cloud Tiering UI已新增一組物件儲存組態頁面。您可以新增物件�
 === Cloud Tiering已完全符合ONTAP Select 資格、可在不同步系統上執行
 
 除了將資料從AFF 您的功能區和FAS 功能區系統分層、現在您可以將非作用中的資料從ONTAP Select 您的功能區系統分層處理至雲端儲存設備。
-
-
-
-== 2021年9月2日
-
-
-
-=== Cloud Tiering BYOL授權取代FabricPool 了不含功能的授權
-
-全新的*雲端分層*授權現已推出、可用於使用雲端分層服務在BlueXP中支援的分層組態。這是一種浮動授權、您可以在多ONTAP 個內部部署的叢集上使用。您過去可能使用的* FabricPool Sfor *授權僅保留給不支援BlueXP的組態。
-
-https://docs.netapp.com/us-en/cloud-manager-tiering/task-licensing-cloud-tiering.html#use-a-cloud-tiering-byol-license["深入瞭解新的雲端分層授權"]。
-
-
-
-=== 將非作用中資料從內部ONTAP 的支援叢集分成S3相容的物件儲存設備
-
-現在、您可以將非作用中資料分層至任何使用簡易儲存服務（S3）傳輸協定的物件儲存服務。 https://docs.netapp.com/us-en/cloud-manager-tiering/task-tiering-onprem-s3-compat.html["瞭解如何將資料分層至S3相容的物件儲存設備"]。
