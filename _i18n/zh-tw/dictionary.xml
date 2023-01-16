@@ -106,7 +106,6 @@
   <block id="256fb1d2776e7f3b364ce4414a65b2cd" category="section-title">準備Azure Blob儲存設備</block>
   <block id="e353341b9f86b1c5a8255f3f47459da4" category="paragraph">設定分層時、您需要識別要使用的資源群組、以及屬於資源群組的儲存帳戶和Azure容器。儲存帳戶可讓雲端分層驗證及存取用於資料分層的Blob容器。</block>
   <block id="0cab1d18e33888aa4f85218003d9de5a" category="paragraph">雲端分層僅支援通用v2和優質區塊Blob類型的儲存帳戶。</block>
-  <block id="3b59962ea13402bb6ea753b627310e7c" category="paragraph">Blob容器必須位於中 <block ref="a290baa3c16e15d9514a65f3a654d403" category="inline-link-macro-rx"></block>。</block>
   <block id="30c0faff624015e8c8016427ebe986eb" category="admonition">如果您計畫將Cloud Tiering設定為使用較低成本的存取層、以便階層式資料在特定天數後轉換至該層、則在Azure帳戶中設定容器時、不得選擇任何生命週期規則。雲端分層可管理生命週期的轉換。</block>
   <block id="0cff75f8a1ea859d852b43f30a5a65c5" category="section-title">將第一個叢集的非作用中資料分層至 Azure Blob 儲存設備</block>
   <block id="eeee7c2206f30d34992557feb0d7900f" category="paragraph">準備好 Azure 環境之後、請從第一個叢集開始分層處理非作用中資料。</block>
@@ -549,8 +548,6 @@
   <block id="b45317b449074be01eb535dc51134b25" category="cell">分層原則會變更為「冷快照」。</block>
   <block id="4462bf0f5ca8a6a2218e38c86b45446e" category="admonition">您的雲端供應商可能會根據從雲端傳輸的資料量向您收取費用。</block>
   <block id="518c45bb71686bd34cfd0dd7adfb3ce0" category="paragraph">確保效能層有足夠的空間容納從雲端移出的所有資料。</block>
-  <block id="621f6f17b31c046c0e769d995604f944" category="inline-image-macro">表格中每一列結尾的編輯圖示快照、用於分層磁碟區</block>
-  <block id="d20bf3b0bd8d1cd785f6590b7b461afe" category="list-text">按一下 <block ref="8a7b4d9eeceba80332a45bd9abdd9ed5" category="inline-image-macro-rx" type="image"></block> 圖示、選擇您要使用的擷取選項、然後按一下*套用*。</block>
   <block id="39ccd40812695aaa7bc077a0fc353a0e" category="paragraph"><block ref="39ccd40812695aaa7bc077a0fc353a0e" category="inline-image-macro-rx" type="image"></block></block>
   <block id="56687950ee1692c1c4b88c4fd8cd206f" category="paragraph">分層原則隨即變更、階層式資料也會開始移轉回效能層。視雲端資料量而定、傳輸程序可能需要一些時間。</block>
   <block id="176eb530d68328d73cd752bcf53ad2be" category="section-title">管理 Aggregate 上的分層設定</block>
@@ -571,8 +568,6 @@
   <block id="5afc7ef8d3c3feeb50817eff11cca91d" category="paragraph"><block ref="5afc7ef8d3c3feeb50817eff11cca91d" category="inline-image-macro-rx" type="image"></block></block>
   <block id="27df5f5776d4bab5bcdcfbdeafb746ca" category="section-title">修復作業健全狀況</block>
   <block id="f13e147df4e74e1146734748e3dd0663" category="list-text">識別任何運作健全狀況為「故障」的叢集。</block>
-  <block id="9e83f9c3a288548ca874b7474ad20ae7" category="inline-image-macro">顯示叢集分層健全狀況失敗狀態的快照。</block>
-  <block id="039ac5249f10b659e32e0dcebb1526da" category="inline-image-macro">顯示失敗原因的 i 圖示快照</block>
   <block id="97052eb243c56bbc0d990eff54f746c9" category="list-text">修正問題：</block>
   <block id="073279dcfecd605313d456f15c7a1b78" category="list-text">驗證 ONTAP 該叢集是否正常運作、以及是否有連至物件儲存供應商的傳入和傳出連線。</block>
   <block id="66009842ccd3b5b27255c54219dcb209" category="section-title">從雲端分層探索其他叢集</block>
@@ -593,34 +588,6 @@
   <block id="dee2bc58a49a84e9b7244f93fdc4a53a" category="paragraph">當您設定雲端分層生命週期規則時、在Azure帳戶中設定容器時、不得設定任何生命週期規則。</block>
   <block id="07e61ccfcb604b4d08fc03603677751d" category="inline-link">瞭解Azure Blob存取層級</block>
   <block id="e298f51ca48eff0d92cee75ca43aaa3a" category="paragraph"><block ref="ac0a406faf148be2b386c73b962697e7" category="inline-link-rx"></block>。</block>
-  <block id="52850ea5b0c4063c74ca8ab0c4533d28" category="paragraph">雲端分層支援下列 Azure 地區。</block>
-  <block id="f5cd262901883dff68d06b215fb0f28e" category="section-title">非洲</block>
-  <block id="d5daca31a462e138266141f6d01ca814" category="list-text">南非北部</block>
-  <block id="cee3f0213dd8b7eb15d7b31824e01754" category="list-text">澳洲東部</block>
-  <block id="c2701212de431ec66277aeb9ec636184" category="list-text">澳洲東南部</block>
-  <block id="f74e1c0c8ee8410fa5bfe03676347257" category="list-text">東南亞</block>
-  <block id="12fd3aa0a9f080663613364badb43e93" category="list-text">日本東部</block>
-  <block id="33e5ad3a780212ee47f127965a2dda72" category="list-text">日本西部</block>
-  <block id="6da3164e9884fb44e54fda035450cfaa" category="list-text">韓國中央</block>
-  <block id="cbbf2ae44538816cc573fa3ad561a434" category="list-text">南韓</block>
-  <block id="ef005ab2b7187e0e4953a0abfdacad42" category="list-text">東南亞</block>
-  <block id="bea1bd3d23555c539dab5f3f5426184c" category="list-text">法國中部</block>
-  <block id="1dab3491cdeeb2a6d567b21ee3063ae4" category="list-text">德國中西部</block>
-  <block id="85c1bd2190b5e1105a9c4e7e6a224a96" category="list-text">德國北方</block>
-  <block id="d0fe0e3b6520479f718b98f0d471b7d0" category="list-text">北歐洲</block>
-  <block id="390a1a81c9b43f7d364b54144161673d" category="list-text">英國南方</block>
-  <block id="23d58738c27b56ae980ce7b45716f6a5" category="list-text">英國西部</block>
-  <block id="8fb2033d01e3efa2825282a13f86c14e" category="list-text">西歐</block>
-  <block id="ea7c65fe418bef9cfe86be4944b30bcb" category="list-text">加拿大東部</block>
-  <block id="2e168141b8f719cbd37e6beec663b599" category="list-text">美國中部</block>
-  <block id="3c110de67497eb3f8d4c100e43101c81" category="list-text">美國東部</block>
-  <block id="7c61981f0be77fb7e4061ba5395ff02b" category="list-text">美國東部 2.</block>
-  <block id="e306e59ae933d5705ad58b576840cfb7" category="list-text">美國中北部</block>
-  <block id="00a0c4ce62672ec36639c314d0d8e114" category="list-text">美國中南部</block>
-  <block id="f3397c566fedcaa2f63145169ba345fc" category="list-text">美國西部</block>
-  <block id="c349d3a26cf4231660785a0c5b4cb007" category="list-text">美國西部 2.</block>
-  <block id="e74523dfd57d69116c6dc03759fe0a7b" category="list-text">美國中西部</block>
-  <block id="47b9af39407829080e9cfeee3607c39c" category="list-text">巴西南方</block>
   <block id="56e7e76078700fc13565626e04d55715" category="summary">將非作用中的資料分層至任何使用簡易儲存服務（S3）傳輸協定的物件儲存服務、以釋放內部ONTAP 物件叢集上的空間。</block>
   <block id="0a4e30d54ad79cb4d323fcc522b4c463" category="paragraph">將非作用中的資料分層至任何使用簡易儲存服務（S3）傳輸協定的物件儲存服務、以釋放內部ONTAP 物件叢集上的空間。</block>
   <block id="280cb258925e656482b6dc7f7cb2d1de" category="paragraph">想要使用非正式支援的物件存放區做為雲端層的客戶、可以使用這些指示來執行。客戶必須測試並確認物件存放區符合其需求。</block>
@@ -1282,8 +1249,6 @@
   <block id="4beb855fa991422619d33c99b74d1365" category="paragraph">您也可以<block ref="ba21940cc7b1756c6b93b4daf8cfd4fb" category="inline-link-rx"></block> 如果您熟悉此NetApp產品、只要從左側導覽窗格中選取*雲端建議*即可。</block>
   <block id="d80d78ee61a9d0887caddafbd12776c6" category="inline-image-macro">顯示FabricPool 叢集的資訊的快照、使用FabricPool Digital Advisor提供的「資訊顧問」。</block>
   <block id="dc0605b8b2de4441cff5b013be511267" category="paragraph"><block ref="dc0605b8b2de4441cff5b013be511267" category="inline-image-macro-rx" type="image"></block></block>
-  <block id="58b4dc3ce866601f6466363f42d61123" category="paragraph"><block ref="58b4dc3ce866601f6466363f42d61123" category="inline-image-macro-rx" type="image"></block></block>
-  <block id="3c35b41a16deb03425c723cee8f03be8" category="list-text">將游標暫留在上方 <block ref="edf8c533ab635c618137908ca0fbe456" category="inline-image-macro-rx" type="image"></block> 圖示以查看故障原因。</block>
   <block id="154756f3451aa7d3c9c0ff18e7159503" category="inline-link">前往BlueXP Marketplace產品</block>
   <block id="8888d46d611948a30ba2c08d3adb6945" category="list-text">若要從Azure Marketplace訂閱、<block ref="c7c84f194b790bd1614b3007104e1172" category="inline-link-rx"></block>，單擊*訂購*，然後按照提示進行操作。</block>
   <block id="a857c8adb9c1cde4acd264143a3e3ad1" category="paragraph">如果您達到BYOL容量限制、新的冷資料分層作業就會停止、而先前所有階層式資料仍可存取。如果您訂閱了_藍圖XP -部署與管理雲端資料服務_的PAYGO市場訂閱、新的Cold資料將繼續分層至物件式儲存設備、而且您將依每次使用付費。</block>
@@ -1343,4 +1308,10 @@
   <block id="4f2ba178f02065cd43bc7615b226c05d" category="paragraph">將ONTAP 資料分層至S3相容物件儲存設備時、您的來源元集叢集必須符合下列需求。</block>
   <block id="9378df978e3f22322e7d49bdc1ff98b9" category="paragraph">來源ONTAP 系統可從物件儲存設備讀取和寫入資料。物件儲存設備從未啟動、只是回應而已。</block>
   <block id="1cf86146f536cd28b2772a235c4b89f2" category="list-text">當您設定與S3相容的物件儲存區分層時、系統會提示您建立S3儲存區或選取現有的S3儲存區。您需要提供S3存取金鑰和秘密金鑰的雲端分層。雲端分層使用關鍵來存取您的儲存庫。</block>
+  <block id="b8639afb3f4840600c6c36fd2685cc07" category="paragraph">雲端分層可支援分層至任何區域中任何可透過Connector存取的儲存帳戶。</block>
+  <block id="77cf2aec599c4e8df2dcafbc11506767" category="list-text">若要選取所有Volume、請勾選標題列中的方塊（<block ref="48e674c3b35bfe3d3a9cb29d2c6ff5c1" category="inline-image-macro-rx" type="image"></block>），然後單擊* Configure Volume*（配置卷*）。</block>
+  <block id="7db1d7841fc321b177d854a04ffc5eba" category="list-text">若要選取多個磁碟區、請勾選每個磁碟區的方塊（<block ref="27922440534843fc73bbce66b8385327" category="inline-image-macro-rx" type="image"></block>），然後單擊* Configure Volume*（配置卷*）。</block>
+  <block id="79385e330c7175cb5887cc8f4befaed8" category="inline-image-macro">表格中每一列結尾的編輯圖示、用於分層磁碟區</block>
+  <block id="58d8ea9b13cad2e6453367ec5718e38a" category="list-text">按一下 <block ref="53af160daf8754f7e9dcd6d07cc514b7" category="inline-image-macro-rx" type="image"></block> 圖示、選擇您要使用的擷取選項、然後按一下*套用*。</block>
+  <block id="b151844c81732b344718260aa69943af" category="list-text">將游標移到資訊性的「i」圖示上、即可看到故障原因。</block>
 </blocks>

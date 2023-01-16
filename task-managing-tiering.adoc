@@ -104,7 +104,7 @@ NOTE: 您的雲端供應商可能會根據從雲端傳輸的資料量向您收�
 
 . 從左側導覽功能表中、選取*行動性>分層*。
 . 在*叢集儀表板*中、按一下叢集的*層級磁碟區*。
-. 按一下 image:screenshot_edit_icon.gif["表格中每一列結尾的編輯圖示快照、用於分層磁碟區"] 圖示、選擇您要使用的擷取選項、然後按一下*套用*。
+. 按一下 image:screenshot_edit_icon.gif["表格中每一列結尾的編輯圖示、用於分層磁碟區"] 圖示、選擇您要使用的擷取選項、然後按一下*套用*。
 +
 image:screenshot_tiering_policy_settings_with_retrieve.png["顯示可設定分層原則設定的快照。"]
 
@@ -180,10 +180,7 @@ image:screenshot_tiering_aiq_fabricpool_info.png["顯示FabricPool 叢集的資�
 
 .步驟
 . 識別任何運作健全狀況為「故障」的叢集。
-+
-image:screenshot_tiering_health.gif["顯示叢集分層健全狀況失敗狀態的快照。"]
-
-. 將游標暫留在上方 image:screenshot_info_icon.gif["顯示失敗原因的 i 圖示快照"] 圖示以查看故障原因。
+. 將游標移到資訊性的「i」圖示上、即可看到故障原因。
 . 修正問題：
 +
 .. 驗證 ONTAP 該叢集是否正常運作、以及是否有連至物件儲存供應商的傳入和傳出連線。

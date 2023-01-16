@@ -160,9 +160,9 @@ Microsoft.Storage/storageAccounts/managementPolicies/write
 
 設定分層時、您需要識別要使用的資源群組、以及屬於資源群組的儲存帳戶和Azure容器。儲存帳戶可讓雲端分層驗證及存取用於資料分層的Blob容器。
 
-雲端分層僅支援通用v2和優質區塊Blob類型的儲存帳戶。
+雲端分層可支援分層至任何區域中任何可透過Connector存取的儲存帳戶。
 
-Blob容器必須位於中 link:reference-azure-support.html#supported-azure-regions["支援雲端分層的區域"]。
+雲端分層僅支援通用v2和優質區塊Blob類型的儲存帳戶。
 
 
 NOTE: 如果您計畫將Cloud Tiering設定為使用較低成本的存取層、以便階層式資料在特定天數後轉換至該層、則在Azure帳戶中設定容器時、不得選擇任何生命週期規則。雲端分層可管理生命週期的轉換。
