@@ -52,8 +52,6 @@
   <block id="04e0208908b4c6086bf83c95b22aff8b" category="inline-link">內部部署工作環境</block>
   <block id="5b47faa45c60368d15dfdd5dfe93817e" category="list-text"><block ref="05e67941b6656a354bb250fa5965cbfe" category="inline-link-rx"></block>。</block>
   <block id="1595204d9df7479eb1cce9861446c4a3" category="list-text">具備所需 S3 權限的 IAM 使用者的 AWS 存取金鑰。</block>
-  <block id="bf873eef8ea9c1247876739a70ed365a" category="list-text">選取內部叢集。</block>
-  <block id="6700c45eabe136b9fc9be1be1c2604d7" category="list-text">按一下「*啟用*」以取得分層服務。</block>
   <block id="b2a8895a08251e3a0ba8598464e85f4a" category="inline-image-macro">螢幕擷取畫面顯示當您選取內部ONTAP 環境時、畫面右側會出現「Enable（啟用）」選項。</block>
   <block id="b7507ffc73507c1071aa3369e64f9b02" category="paragraph"><block ref="b7507ffc73507c1071aa3369e64f9b02" category="inline-image-macro-rx" type="image"></block></block>
   <block id="9dcb4338cde0614db53499ea9fe7fe74" category="paragraph">使用內部連接器時、您必須輸入AWS帳戶ID、以便存取現有的S3儲存區或將要建立的新S3儲存區。</block>
@@ -71,8 +69,6 @@
   <block id="3da4793f70832a1f06de77ca02441aed" category="paragraph">選擇正確的 IPspace 、可確保 Cloud Tiering 能夠設定從 ONTAP 效益到雲端供應商物件儲存的連線。</block>
   <block id="97c6279c799edb5b91946106e4bd7ead" category="list-text">在「_層級磁碟區_」頁面上、選取您要設定分層的磁碟區、然後啟動「層級原則」頁面：</block>
   <block id="d41d8cd98f00b204e9800998ecf8427e" category="inline-image-macro"></block>
-  <block id="a2c3063bd8f8a037bda26950fc2fa130" category="list-text">若要選取所有Volume、請勾選標題列中的方塊（<block ref="2b1190f90c2c717d2aa70aabd2fc4c36" category="inline-image-macro-rx" type="image"></block>），然後單擊* Configure Volume*（配置卷*）。</block>
-  <block id="7ede142e047a9c43e3ec4a50352f53b4" category="list-text">若要選取多個磁碟區、請勾選每個磁碟區的方塊（<block ref="f3b0afa317fb06ade03449dd632d08e0" category="inline-image-macro-rx" type="image"></block>），然後單擊* Configure Volume*（配置卷*）。</block>
   <block id="27d7b10352920ea311d933853a157434" category="inline-image-macro">編輯鉛筆圖示</block>
   <block id="df5e176205e9c59d302111a246c6358e" category="list-text">若要選取單一Volume、請按一下該列（或 <block ref="8e860c5cca0144ac9d126d75205476b6" category="inline-image-macro-rx" type="image"></block> 圖示）。</block>
   <block id="8042a9373e3ae1f8fbfa77b3faf46f7d" category="list-text">在_分層原則_對話方塊中、選取分層原則、選擇性地調整所選磁碟區的冷卻天數、然後按一下*套用*。</block>
@@ -97,7 +93,6 @@
   <block id="bbdf6f541b4707ac092673fa798cd221" category="paragraph">雖然 ExpressRoute 提供更好的效能和更低的資料傳輸費用、 ONTAP 但在 VMware 叢集與 Azure Blob 儲存設備之間並不需要。但建議您採用最佳實務做法。</block>
   <block id="1530d1823861aa989d35b92ad0b2fd9e" category="list-text">連接器必須有傳入連線、連接器可位於Azure vnet或內部部署環境中。</block>
   <block id="3cb09efd98df836314cbd254dcf63296" category="admonition">Cloud Tiering 支援 FlexGroup 從 ONTAP 功能完善的 9.5 開始的各種功能。安裝程式的運作方式與任何其他 Volume 相同。</block>
-  <block id="b7f76e21e320bc5e90f575d84c38f775" category="paragraph">需要連接器才能將資料分層至雲端。將資料分層至Azure Blob儲存設備時、您可以使用Azure vnet或內部部署中的Connector。您需要建立新的連接器、或確定目前選取的連接器位於Azure或內部部署。</block>
   <block id="b1e389999fc3500ff74c433071c6f3d0" category="section-title">確認您擁有必要的Connector權限</block>
   <block id="8d553e78e79ca1abdf2ffdd1714a7698" category="paragraph">確認連接器具備所需的網路連線。連接器可安裝在內部部署或Azure上。</block>
   <block id="bb1241e3a37748e608dbbde25c75ea25" category="list-text">透過連接埠 443 連線至 Azure Blob 儲存設備的 HTTPS 連線</block>
@@ -109,9 +104,6 @@
   <block id="30c0faff624015e8c8016427ebe986eb" category="admonition">如果您計畫將Cloud Tiering設定為使用較低成本的存取層、以便階層式資料在特定天數後轉換至該層、則在Azure帳戶中設定容器時、不得選擇任何生命週期規則。雲端分層可管理生命週期的轉換。</block>
   <block id="0cff75f8a1ea859d852b43f30a5a65c5" category="section-title">將第一個叢集的非作用中資料分層至 Azure Blob 儲存設備</block>
   <block id="eeee7c2206f30d34992557feb0d7900f" category="paragraph">準備好 Azure 環境之後、請從第一個叢集開始分層處理非作用中資料。</block>
-  <block id="3ee477979f5c167102e6a5ac24838ded" category="list-text">*資源群組*：選取管理現有容器的資源群組、或您要在其中建立階層式資料的新容器、然後按一下*繼續*。</block>
-  <block id="942f0e4fa69f4641e5d7a36f624bfc71" category="list-text">* Azure Container *：將新的Blob容器新增至儲存帳戶、或選取現有的容器、然後按一下*繼續*。</block>
-  <block id="7c5961bc8d85d1e030c4394a4df65272" category="paragraph">此步驟中顯示的儲存帳戶和容器屬於您在上一步中選取的資源群組。</block>
   <block id="9933a95d80335a087c29022e3e618660" category="list-text">*存取層生命週期*：雲端分層可管理階層式資料的生命週期轉換。資料會從_hot_類別開始、但您可以建立規則、在特定天數後將資料移至_cool類別。</block>
   <block id="f9ec0a0e3f7751a980419c9235987d65" category="paragraph">選取您要將階層式資料移轉至的存取層、以及資料移動前的天數、然後按一下*繼續*。例如、以下螢幕快照顯示、階層式資料會在物件儲存設備的45天後、從_hot_類別移至_cle__類別。</block>
   <block id="a6de011c08144280abbea085810f3465" category="inline-link-macro">請參閱支援的存取層</block>
@@ -119,7 +111,6 @@
   <block id="68a83a6344da48ff48b7dfe970c4f766" category="inline-image-macro">螢幕擷取畫面顯示如何選擇在特定天數後移動資料的另一個存取層。</block>
   <block id="76ebfce4c2c67a5c80f5e3389cadd984" category="paragraph"><block ref="76ebfce4c2c67a5c80f5e3389cadd984" category="inline-image-macro-rx" type="image"></block></block>
   <block id="d2f15cc1f6b52e91b3fa0f67c5683cc7" category="paragraph">請注意、生命週期規則會套用至所選儲存帳戶中的所有blob容器。</block>
-  <block id="b9c2da820a39ae715e453dbc44b9065a" category="paragraph"><block ref="b3f320eea54b95003707e5e870c0dfaf" category="inline-xref-macro-rx"></block> 生命週期管理功能。</block>
   <block id="16c1b13c5edce68f96a3166081c6dd73" category="inline-image-macro">螢幕擷取畫面顯示如何選取單一Volume、多個Volume或所有Volume、以及「修改選取的Volume」按鈕。</block>
   <block id="ade7907875a5b3e50997036947f13251" category="paragraph">您已成功設定資料分層、從叢集上的磁碟區到 Azure Blob 物件儲存設備。</block>
   <block id="f658b533f81ca87a3c235485a5ca7b33" category="summary">Cloud Tiering會自動將非作用中資料從內部部署ONTAP 的物件叢集分層、以將資料中心延伸至雲端。</block>
@@ -342,7 +333,6 @@
   <block id="442a5b2cd4109c0203483d91fc544ccf" category="list-text"><block ref="cbd838ab5a582921645cc152129d502d" category="inline-link-rx"></block>。</block>
   <block id="037f057bec36e168c4cbef4fb3d7baef" category="inline-link">GCP 儲存設定</block>
   <block id="53b7d7a30f51832e17a6116b67b1ed1b" category="list-text">前往<block ref="68a5b209ce3843ce6d342e4d1299b53b" category="inline-link-rx"></block> 並建立服務帳戶的存取金鑰：</block>
-  <block id="b1ca97074a9a438ddbe4b7a8de533728" category="list-text">選取專案、然後按一下 * 互通性 * 。如果您尚未啟用、請按一下 * 「啟用互通性存取」 * 。</block>
   <block id="2888f76ffbc5da2864448f44f9438096" category="list-text">在 * 服務帳戶的存取金鑰 * 下、按一下 * 建立服務帳戶的金鑰 * 、選取您剛建立的服務帳戶、然後按一下 * 建立金鑰 * 。</block>
   <block id="630337f9212a0c34ec9f5d53517b1325" category="paragraph">之後設定雲端分層時、您需要輸入金鑰。</block>
   <block id="b409d90e9c9774952be98ddeac919772" category="section-title">將第一個叢集的非作用中資料分層至 Google Cloud Storage</block>
@@ -446,7 +436,6 @@
   <block id="d211aa9c9b0d32735c22312d6ced0bfb" category="paragraph">您已成功設定資料分層、從叢集上的磁碟區到 StorageGRID 物件。</block>
   <block id="4b75686c0a14158ec6b99e93fbf1828b" category="doc">設定雲端分層授權</block>
   <block id="80186f1230af2267e2c2e4d2ab8c030e" category="paragraph">在閱讀更多內容之前、請先提供幾個附註：</block>
-  <block id="e206957e9be19dce9acce268f36b6b4d" category="list-text">將資料分層至StorageGRID 不收費、因此不需要BYOL授權或PAYGO登錄。此階層式資料不會計入您授權中所購買的容量。</block>
   <block id="d42e6c6c0bd600babc489630de73058f" category="inline-link-macro">深入瞭解雲端分層的授權運作方式</block>
   <block id="6cba13359069adfeb75d96e433421999" category="paragraph"><block ref="4e584f79910f9a3a7129b23d958f91fd" category="inline-link-macro-rx"></block>。</block>
   <block id="2c747bf611c932e034372048fa569c80" category="section-title">使用Cloud Tiering PAYGO訂閱</block>
@@ -606,7 +595,6 @@
   <block id="aa972ed8d4cd18a54d3bfc872e508a63" category="section-title">將第一個叢集的非作用中資料分層、以儲存至S3相容的物件儲存設備</block>
   <block id="13b81562751bbcb9ff3beecfc691d73d" category="list-text">S3相容物件儲存伺服器的FQDN、以及用於HTTPS通訊的連接埠。</block>
   <block id="d4087a3156960fb7d03ac9037d76ef8e" category="list-text">具有所需S3權限的存取金鑰和秘密金鑰。</block>
-  <block id="8d43d9cd74de6ffefa944510fdac9def" category="list-text">在右側面板中、按一下「*啟用*」以使用分層服務。</block>
   <block id="6676b3f6fd0aacd6a191518bb81aa206" category="inline-image-macro">螢幕快照顯示選取內部ONTAP 環境後、畫面右側會出現分層選項。</block>
   <block id="00daa784b7dee12cb2819fac0ab07fda" category="paragraph"><block ref="00daa784b7dee12cb2819fac0ab07fda" category="inline-image-macro-rx" type="image"></block></block>
   <block id="c681fc1169309fdbbc2003946bcf5c4c" category="list-text">*伺服器*：輸入S3相容物件儲存伺服器的FQDN、ONTAP 用來與伺服器進行HTTPS通訊的連接埠、以及具有所需S3權限之帳戶的存取金鑰和秘密金鑰。</block>
@@ -634,13 +622,11 @@
   <block id="51ae64fb3620d7b88a6fc20148f0e2d7" category="sidebar">支援的 Amazon S3 儲存類別和地區</block>
   <block id="483b947377ff3a8f0bfe2df65d4f5292" category="sidebar">支援的 Azure 存取層級和地區</block>
   <block id="0adc03eac86772ad2c75c8f140be417e" category="sidebar">知識與支援</block>
-  <block id="5fef629b836b60819e0c0ce49cd2b9d7" category="sidebar">新增功能</block>
   <block id="2081f1ce1d1b21d487730d917f2fc133" category="sidebar">將ONTAP 內部資源的資料分層至雲端</block>
   <block id="9c24075097cef2efbfa6d34acbbb775d" category="sidebar">層級至Azure Blob</block>
   <block id="a62425c23786654b084b1fbadf9c41f1" category="sidebar">分層至Google Cloud</block>
   <block id="932b49a2d53968bfae607cb915ef9ec2" category="sidebar">分層至一般S3</block>
   <block id="6efa402b5baeb2ad1984997697bc2d7b" category="sidebar">管理分層設定</block>
-  <block id="2379913388089eb3bb86ea09ddd47c5c" category="sidebar">變更磁碟區的分層原則</block>
   <block id="00e64b31a7ad3617adbda7547414223a" category="sidebar">檢閱叢集的分層資訊</block>
   <block id="34698ad735e6046f93fbdd61cb2d3804" category="sidebar">從其他磁碟區分層資料</block>
   <block id="004509d192f15716a8c5185cda0cc0da" category="sidebar">將資料從雲端移回效能層</block>
@@ -695,9 +681,7 @@
   <block id="5e7895e85d2a8ce94a95b1e2d63c9a62" category="section-title">雲端分層是否能在雲端層保留我的儲存效率節約效益？</block>
   <block id="ae3e415a4fc13a56be5e1868c9aa2a6e" category="paragraph">是的、ONTAP 將資料移至雲端層時、會保留諸如壓縮、重複資料刪除和壓縮等功能的不同步磁碟區層級儲存效率。</block>
   <block id="fe862e8407cd35832c11efb6a90397ff" category="section-title">與眾不同的是、「不只是」「不一樣的FabricPool 「不一樣」和「雲端分層」？</block>
-  <block id="7f7e71c666ac6e3a63bc3a7132680d3e" category="paragraph">NetApp是ONTAP的分層技術、可透過CLI和System Manager進行自我管理、或是透過雲端分層來管理即服務。FabricPool ONTAPCloud Tiering利用FabricPool 先進的自動化程序、在ONTAP 整個過程中、無論是在內部或雲端上、都能讓您更清楚地瞭解及控制混合雲和多雲端部署之間的分層作業。</block>
   <block id="0dcf524393e05cee3deb3f046b007d6a" category="section-title">分層至雲端的資料是否可用於災難恢復或備份/歸檔？</block>
-  <block id="11a0d2337d67ae21839695ee035fc0a0" category="paragraph">不可以由於磁碟區的中繼資料永遠不會從效能層分層、因此無法直接存取儲存在物件儲存設備中的資料。</block>
   <block id="ede19369ca5aebd79f174cfded223842" category="paragraph">不過、雲端分層可用於達成具成本效益的備份與災難恢復、方法是在二線系統和SnapMirror目的地磁碟區（DP磁碟區）上進行備份與災難恢復、以分層處理所有資料（不含中繼資料）、進而減少資料中心的佔用空間和TCO。</block>
   <block id="889a2ba97a353c789347d312f006b7c8" category="section-title">雲端分層是在磁碟區或集合層級套用嗎？</block>
   <block id="20ff712f2c649ea611970e47fc3bb71d" category="paragraph">將分層原則與每個Volume建立關聯、即可在磁碟區層級啟用雲端分層。冷資料識別是在區塊層級完成。</block>
@@ -732,7 +716,6 @@
   <block id="c7fe1da619ea4dc60271978fef1e44fe" category="inline-link">區塊Blob定價</block>
   <block id="f0597479b6555c19f89fc843f1c8d98c" category="inline-link">雲端儲存設備定價</block>
   <block id="80fb8aa8c4c5c3477d1c619e25dee21c" category="paragraph">是的。檢查<block ref="134b76f780a567f977f9c0667960c527" category="inline-link-rx"></block>、<block ref="42cfb61355c94594363648e2439176bf" category="inline-link-rx"></block>和<block ref="fb963a69fe55ff45676c36ad0b99dda1" category="inline-link-rx"></block> 以取得資料讀取/擷取所產生的額外價格。</block>
-  <block id="03a5e5708e2ca1e0ed97c088a2f866a3" category="section-title">如何在啟用雲端分層之前、預估磁碟區的節約效益並取得冷資料報告？</block>
   <block id="360f208f0200dcfe1f02d2beac7d1a99" category="section-title">雲端分層支援哪些ONTAP 版本？</block>
   <block id="d221b871da22439c86adc694691b8ac6" category="paragraph">Cloud Tiering支援ONTAP 不支援版本9.2及更新版本。</block>
   <block id="a876ec112f46ac7e9d03cc5e9d61ab8f" category="section-title">我可以僅使用FAS HDD來分層來自於各種不知道的系統的資料嗎？</block>
@@ -765,9 +748,6 @@
   <block id="4eb0e04ff79ba8e58d2cc578b23ac20a" category="paragraph">從ONTAP S地理 資訊9.6開始、如果目的地Aggregate使用與來源Aggregate相同的雲端層、則Cold資料不會移回本機層。</block>
   <block id="594e5f8f87d3f9aee64730282f1d9d11" category="inline-link-macro">瞭解如何將資料移回效能層</block>
   <block id="5b9fbe75fbcd16763752424288950fad" category="section-title">以新的AFF/FAS控制器取代現有的AFF/FAS控制器時、階層式資料是否會在內部部署上重新移轉？</block>
-  <block id="954ab271743046342c8c477272ccf1e2" category="paragraph">不可以在「標頭交換」程序中、唯一需要變更的是集合體的擁有權。在這種情況下、它將會變更為新的控制器、而不會有任何資料移動。</block>
-  <block id="be06043e635d6e3bb909d73510b44e3d" category="section-title">我可以使用雲端供應商的主控台或物件儲存資源探查器來查看階層至儲存庫的資料嗎？我是否可以直接使用儲存在物件儲存區中的資料、而無需ONTAP 使用任何功能？</block>
-  <block id="d430f061b4da1d93d76a477eed713ad9" category="paragraph">不可以建構並分層至雲端的物件不包含單一檔案、但最多可包含1、024個4 KB區塊、可與多個檔案區塊相同。磁碟區的中繼資料永遠保留在本機層上。</block>
   <block id="c6dbaaf1bef168a38de37623edb997f7" category="section-title">什麼是Connector？</block>
   <block id="d2eea5ad2ae07890452da2aec5cffc98" category="section-title">我可以在內部部署連接器嗎？</block>
   <block id="b0ccf0f3fa1a27a2fbab1c35ebf8e0f5" category="inline-link">瞭解如何在內部環境中安裝Connector</block>
@@ -782,7 +762,6 @@
   <block id="2719cad5460eb9108696993a4c233dc2" category="inline-link-macro">深入瞭解分層原則</block>
   <block id="5ef61948a073dbcdfdb7d93caa1067ac" category="paragraph"><block ref="b9368c1c43c24f87d7a3626332a607af" category="inline-link-macro-rx"></block>。</block>
   <block id="d0252572656bbedd8e24eed72a5822ea" category="section-title">我的資料在哪一點被視為冷資料？</block>
-  <block id="106e953d8d4bea7ebaea7ab2455cf23d" category="paragraph">由於資料分層是在區塊層級執行、因此在一段時間內未存取資料區塊後、資料區塊就會被視為冷資料區塊、這是由分層原則的minimum冷卻天數屬性所定義。適用範圍為ONTAP 2至63天（含更新版本）、更新版本為2至9.7、更新版本則為2至183天（從ONTAP 更新版本9.8開始）。</block>
   <block id="aa3f449e50a7b69fa0c38b77d2315143" category="section-title">在資料分層至雲端層之前、資料的預設冷卻期為何？</block>
   <block id="e72bc0c8a17dadf8e8ad885b9700456f" category="paragraph">Cold Snapshot原則的預設冷卻週期為2天、Cold User Data和Snapshot的預設冷卻週期為31天。「冷卻天數」參數不適用於「所有分層」原則。</block>
   <block id="4c8d66eef4460316cfa98d7ddb65f407" category="section-title">當我執行完整備份時、是否從物件儲存設備擷取所有階層式資料？</block>
@@ -829,7 +808,6 @@
   <block id="049da913e478d360bf3fba0732f3ffe7" category="inline-link-macro">對於S3相容的物件儲存設備、需要S3權限</block>
   <block id="de865f0ebc8f66fc8e1331d7e2a7f1d4" category="list-text"><block ref="2efc8cc4b2027ed3eb0bfad94737c839" category="inline-link-macro-rx"></block>。</block>
   <block id="6ace93b12d62dd3912b132e79298337d" category="section-title">雲端分層如何影響磁碟區容量？</block>
-  <block id="9edbed19ba22406e2515654036d6d7af" category="paragraph">雲端分層不會影響磁碟區的容量、而是會影響到集合體的效能層使用量。</block>
   <block id="bd661fa541ade4c845ce21fee80a6364" category="section-title">雲端分層是否支援使用生命週期管理原則？</block>
   <block id="ab432a40ce280c4620566a0570350625" category="paragraph">是的。您可以啟用生命週期管理、以便在特定天數後、將資料從預設儲存類別/存取層移轉至更具成本效益的層級。生命週期規則會套用至Amazon S3和Google Cloud儲存設備所選儲存區中的所有物件、以及Azure Blob所選儲存帳戶中的所有容器。</block>
   <block id="864bccaf8b856c65bcec49d71eaad8e6" category="section-title">如何將階層式資料重新放回內部部署的效能層級？</block>
@@ -1181,10 +1159,7 @@
   <block id="44e77e3f6f32777fdda0f302f6eeb384" category="list-text">若要使用Cloud Tiering BYOL授權付款、請寄送電子郵件至ng-cloud-tiering@netapp.com？Subject=Licensing[如果您需要購買、請聯絡我們]、然後再寄送 <block ref="6e5253c1105cb457fb1e1040cb387b28" category="inline-link-macro-rx"></block>。</block>
   <block id="fb033ea193d99adc8d3553114c5fe47d" category="list-text">Cloud Tiering 可以分層的磁碟區總數可能低於 ONTAP 您的整套系統上的磁碟區數量。這是因為磁碟區無法從某些集合體分層。請參閱ONTAP 的《》文件<block ref="bc16a784cd65f4901578ebb3b70f2118" category="inline-link-rx"></block>。</block>
   <block id="115976a072e6ce2f2ab2d16440a6eced" category="paragraph">您必須先在ONTAP BlueXP畫版中建立內部的功能環境、才能開始分層處理冷資料。</block>
-  <block id="dbb7149740d936c40081fce28d4ee35c" category="paragraph">在BlueXP中、選取內部工作環境、按一下「*啟用*」以使用分層服務、然後依照提示將資料分層至Azure Blob儲存設備。</block>
   <block id="6f7498318061ab9585a9a930576417e9" category="paragraph">您必須先在ONTAP BlueXP中建立內部的功能性環境、才能開始分層處理冷資料。</block>
-  <block id="c591cadfaae2c0910945f6c26e696561" category="paragraph">如果您使用BlueXP 3.9.7版或更新版本建立Connector、就會設定好。</block>
-  <block id="df8fa8381504770cbc85054471165786" category="paragraph">如果您使用舊版的BlueXP建立Connector、則需要編輯權限清單、以新增2項必要權限：</block>
   <block id="62b4885d3e4f3aa3a6da101753a59fd4" category="paragraph">若要取得預估、只要將ONTAP 您的不可靠叢集新增至BlueXP、然後透過位於分層索引標籤的雲端分層叢集儀表板進行檢查即可。當停用非使用中資料報告（IDR)停用或在一段足夠長的時間內尚未啟動時、Cloud Tiering會使用業界不變的70%來計算預估的節約效益。一旦有可用的印尼盾資料、Cloud Tiering就會將節約成本更新為準確的數據。</block>
   <block id="f0e21f59ae2ac8831058af2eeb6352ab" category="inline-link">您在Cloud Volumes ONTAP BlueXP的工作環境中設定了針對功能的分層功能</block>
   <block id="61d4aa7877925f71314d23b9f09b7393" category="paragraph">如果您使用Cloud Volumes ONTAP 的是NetApp系統、您可以在雲端分層叢集儀表板中找到這些系統、以便在混合雲基礎架構中完整檢視資料分層。不過Cloud Volumes ONTAP 、從Cloud Tiering讀取的是隻讀的系統。您無法從 Cloud Volumes ONTAP Cloud Tiering 設定資料分層功能。<block ref="7477c38194261f0954175f853359735c" category="inline-link-rx"></block>。</block>
@@ -1214,7 +1189,6 @@
   <block id="beed46ff9b8cb197e70173271551eb15" category="paragraph">BlueXP會新增授權、讓您的雲端分層服務處於作用中狀態。</block>
   <block id="2a1a6ce6532bc43b546f90932dcc9018" category="list-text">按一下BlueXP右下角的聊天圖示、即可針對特定序號、要求延長您的期限或增加雲端分層授權容量。</block>
   <block id="8061535eb5e8bab52c4a8a0fdc119d14" category="paragraph">在您支付授權費用並向NetApp 支援網站 《The》（《The》）註冊之後、BlueXP會自動更新「Digital Wallet」（數位錢包）中的授權、而「Data Services Licenses」（資料服務授權）頁面將會在5到10分鐘內反映變更。</block>
-  <block id="214cacc5f23c512f4926b241fbfd1544" category="list-text">如果BlueXP無法自動更新授權、則您需要手動上傳授權檔案。</block>
   <block id="7abaea97100d61cae59d8ff3e63c7ecd" category="paragraph">BlueXP會更新授權、讓您的雲端分層服務持續運作。</block>
   <block id="2e6fc7efa287b2fe3ed8bb7cf5c6500f" category="list-text">在BlueXP中、 <block ref="fe2e5134b9c10f1de1aa1ca1472fd7e2" category="inline-link-macro-rx"></block>。</block>
   <block id="8816958eed360786a943983e0bd031fd" category="paragraph">在BlueXP中、選取內部作業環境、按一下「*啟用*」以使用分層服務、然後依照提示將資料分層至Google Cloud Storage。</block>
@@ -1226,7 +1200,6 @@
   <block id="955a264d46a1f0536f93bcb5a3e454f1" category="list-text">您可以從BlueXP探索內部叢集。</block>
   <block id="92d46e494e7ad2aeddc2f61967fd1763" category="list-text">BlueXP可設定ONTAP 使用物件儲存供應商、並探索叢集上的作用中和非作用中資料量。</block>
   <block id="d2c482346f4646ff22b0d802d84f0468" category="paragraph">在BluXP中、選取內部作業環境、按一下「*啟用*」以使用分層服務、然後依照提示將資料分層StorageGRID 至物件。</block>
-  <block id="64f5a141e95a85b5c7adc328cad6065b" category="list-text">您的BlueXP帳戶不需要Cloud Tiering授權、FabricPool 也不需要ONTAP 在將資料分層StorageGRID 至無法使用的情況下、在該叢集上取得任何非功能性授權。</block>
   <block id="1fdc9d2d6f254f32143c31bdb680c25a" category="paragraph">在ONTAP BlueXP中探索您的叢集、確認叢集符合最低需求、並自訂網路設定、讓叢集可以連線至AWS S3。</block>
   <block id="ffe46224318100d3f7bec7eca2ef7e3f" category="paragraph">BlueXP Connector是用於BlueXP功能的主要軟體。需要連接器來分層處理您的非使用中ONTAP 的資訊。</block>
   <block id="44ead0e70e856f32d3afe2f909f3fbe2" category="section-title">在ONTAP BlueXP中探索您的叢集</block>
@@ -1236,7 +1209,6 @@
   <block id="53580765f208bf3a21b9b94ab077bfb1" category="list-text">從VPC S3端點取得憑證。您的做法是<block ref="baa295d957d2e86c0ec7224e7ed425da" category="inline-link-rx"></block> 並執行下列命令。輸入端點的DNS名稱時、請在開頭加入「pucket」、取代「*」：</block>
   <block id="c95623cd0395d5a6bb6105b9d32f197b" category="inline-link">藍圖XP注意事項</block>
   <block id="e8a6d0f19a957eac14b9917a6c92899b" category="list-text"><block ref="e8a6d0f19a957eac14b9917a6c92899b" category="inline-link-rx"></block></block>
-  <block id="bd5465eb0e8cf8f303aee7ea9420c8b1" category="sidebar">BlueXP部落格</block>
   <block id="e4f8a35ee8df8b5c247f6e3286e42891" category="sidebar">BlueXP使用案例</block>
   <block id="7a45e6298bb69116e2c6db653fb88884" category="sidebar">所有BlueXP文件</block>
   <block id="39cff02cd4c2bfac12f446d78e59e3ca" category="paragraph">如果Azure Blob分層目的地是以工作環境形式存在於Canvas上、您可以將叢集拖曳至Azure Blob工作環境、以啟動設定精靈。</block>
@@ -1253,7 +1225,6 @@
   <block id="8888d46d611948a30ba2c08d3adb6945" category="list-text">若要從Azure Marketplace訂閱、<block ref="c7c84f194b790bd1614b3007104e1172" category="inline-link-rx"></block>，單擊*訂購*，然後按照提示進行操作。</block>
   <block id="a857c8adb9c1cde4acd264143a3e3ad1" category="paragraph">如果您達到BYOL容量限制、新的冷資料分層作業就會停止、而先前所有階層式資料仍可存取。如果您訂閱了_藍圖XP -部署與管理雲端資料服務_的PAYGO市場訂閱、新的Cold資料將繼續分層至物件式儲存設備、而且您將依每次使用付費。</block>
   <block id="91a68e06c0ddb0dde07439f8f6bd8af6" category="list-text"><block ref="91a68e06c0ddb0dde07439f8f6bd8af6" category="inline-link-macro-rx"></block></block>
-  <block id="01bd12cba613f42e9ff6400f639a48dc" category="list-text">如果您已在雲端供應商的市場訂閱BlueXP（PAYGO）、那麼您也會自動從內部部署ONTAP 的__LW_Y1_Y1_Y1_Y1_Y1_Y1_Y1_Y1_Y1_Y1_Y1_Y1_Y1_Y1_您會在Cloud Tiering * Licensing*（雲端分層*授權*）標籤中看到使用中的訂閱。您不需要再次訂閱。</block>
   <block id="a4106436d00150633e4b615291f0b5c4" category="list-text">若要從GCP Marketplace訂閱、<block ref="7e960c467ff9bbcd90615ea936733251" category="inline-link-rx"></block>，單擊*訂購*，然後按照提示進行操作。</block>
   <block id="bd25c3527b85ace964c6837242630a19" category="paragraph"><block ref="316080080631334cc8b0ad0316a8ebff" category="inline-link-rx"></block>。</block>
   <block id="be161e727970da45fa68901ea907f28e" category="list-text">若要從AWS Marketplace訂閱、<block ref="39d4482f47ca47b562b106b1d8bbeae0" category="inline-link-rx"></block>，單擊*訂購*，然後按照提示進行操作。</block>
@@ -1292,7 +1263,6 @@
   <block id="b5aec059d3f0c191720983ba1eb05690" category="list-text">訂閱可確保在免費試用結束後、服務不會中斷。</block>
   <block id="121bc0fb41d07ce979966173203acae0" category="paragraph">試用結束時、您將會根據分層的資料量、每小時收取一次費用。</block>
   <block id="5c0fff562b33dc0a5a3acac30ed2d313" category="section-title">2022年12月6日</block>
-  <block id="73358bf2a9d2d2c32dbbab5b76681d7f" category="section-title">必要的連接器輸出網際網路存取端點變更</block>
   <block id="c433416a8f427b90caab6f6eed1f6323" category="paragraph">由於雲端分層發生變更、您必須變更下列連接器端點、才能成功執行雲端分層作業：</block>
   <block id="eb75f7332becd8b3fbb2a59ea0bd0536" category="cell">舊端點</block>
   <block id="afcce2fe2d959c0f4554e7815a50e8e4" category="cell">新的端點</block>
@@ -1314,4 +1284,41 @@
   <block id="79385e330c7175cb5887cc8f4befaed8" category="inline-image-macro">表格中每一列結尾的編輯圖示、用於分層磁碟區</block>
   <block id="58d8ea9b13cad2e6453367ec5718e38a" category="list-text">按一下 <block ref="53af160daf8754f7e9dcd6d07cc514b7" category="inline-image-macro-rx" type="image"></block> 圖示、選擇您要使用的擷取選項、然後按一下*套用*。</block>
   <block id="b151844c81732b344718260aa69943af" category="list-text">將游標移到資訊性的「i」圖示上、即可看到故障原因。</block>
+  <block id="b2b5aa0c45edd9f1055e515a5bfde8eb" category="list-text">選擇內部ONTAP 環境的不正常運作環境。</block>
+  <block id="57c0e1741966187a33a00eea2622a5ec" category="list-text">從右側面板按一下「*啟用*」以取得分層服務。</block>
+  <block id="0375f4855be072c7d856a0233cc21de9" category="section-title">支援雲端供應商解決方案</block>
+  <block id="be845c219bb74b14349ffa6e27e7aef3" category="paragraph">如需您已整合至BlueXP的下列雲端供應商解決方案的技術支援、請參閱該產品的藍圖XP文件中的「取得協助」。</block>
+  <block id="18cf072964a583150dd247485ba75b92" category="inline-link-macro">Amazon FSX for ONTAP Sf</block>
+  <block id="5bf5309465f91318228a7f956b826348" category="list-text"><block ref="5bf5309465f91318228a7f956b826348" category="inline-link-macro-rx"></block></block>
+  <block id="7450cfde7058dc5e1f7909d0280fd7ae" category="inline-link-macro">Azure NetApp Files</block>
+  <block id="0e2bc9c853e0af52ead12823c025e58b" category="list-text"><block ref="0e2bc9c853e0af52ead12823c025e58b" category="inline-link-macro-rx"></block></block>
+  <block id="b0cee72642f5457a71ddd0b49efb6d93" category="inline-link-macro">適用於 Google Cloud Cloud Volumes Service</block>
+  <block id="02efcbea18b9485a78a41871dce1e64d" category="list-text"><block ref="02efcbea18b9485a78a41871dce1e64d" category="inline-link-macro-rx"></block></block>
+  <block id="67e8236f9873d4ba827069cbe6f40bcb" category="list-text">您的BlueXP帳戶不需要Cloud Tiering授權、FabricPool 也不需要ONTAP 在將資料分層StorageGRID 至無法使用的情況下、在該叢集上取得任何非功能性授權。</block>
+  <block id="6b97c869d129075dc99119cc6c266fd4" category="paragraph">在BluXP中、選取內部ONTAP 環境的支援環境、按一下「*啟用*」以使用分層服務、然後依照提示將資料分層至Azure Blob儲存設備。</block>
+  <block id="8d69c6a87500bfb8cb04a6182b6d844b" category="paragraph">需要連接器才能將資料分層至雲端。將資料分層至Azure Blob儲存設備時、您可以使用Azure vnet或內部部署中的Connector。您需要建立新的連接器、或確定目前選取的連接器位於Azure或內部部署。</block>
+  <block id="5354529f47c862f65799910961248e94" category="inline-link">必要的自訂角色權限</block>
+  <block id="83a989bd64e0e5885e1dec6274ea42ed" category="inline-link">雲端分層所需的特定權限</block>
+  <block id="01a5c8408150004575ed5198397b888a" category="paragraph">如果您使用BlueXP 3.9.25版或更新版本建立Connector、就會設定好。預設會設定自訂角色、以提供Connector管理Azure網路中資源和程序所需的權限。請參閱<block ref="2e92f9b7c581d4f70c6be4a7886872e3" category="inline-link-rx"></block> 和<block ref="11be4b468aa0767f9d6625c9158df171" category="inline-link-rx"></block>。</block>
+  <block id="93319d1fbdd154c5602c392140110702" category="paragraph">如果您使用舊版的BlueXP建立Connector、則必須編輯Azure帳戶的權限清單、才能新增任何遺失的權限。</block>
+  <block id="5fef57bc0c1b18c77c5be5c6d63bd96d" category="list-text">*資源群組*：選取管理現有容器的資源群組、或是您要在其中建立階層式資料的新容器、然後按一下*繼續*。</block>
+  <block id="973273fb1ef1a057d43299c67a2fa0c2" category="list-text">* Azure Container *：選取選項按鈕、即可將新的Blob容器新增至儲存帳戶或使用現有的容器。然後選取儲存帳戶並選擇現有的容器、或輸入新容器的名稱。然後按一下 * 繼續 * 。</block>
+  <block id="19a7b69e14b99b6d561b88afc3f34695" category="paragraph">此步驟中顯示的儲存帳戶和容器屬於您在上一步中選取的資源群組。</block>
+  <block id="1b9cd9f1d110a19c8b1050fa1e561e7b" category="list-text">選取專案、然後按一下 * 互通性 * 。如果您尚未啟用、請按一下 * 「啟用互通性存取」 * 。</block>
+  <block id="433c1ccd6c6d5af5fc78b729975e5f20" category="section-title">連接器輸出網際網路存取端點變更</block>
+  <block id="0c1c6a391ae1d68d3507d3080a25b274" category="paragraph">支援的是可透過CLI和System Manager自我管理的功能、或是透過雲端分層管理的「即服務」技術ONTAP ONTAP FabricPool 。Cloud Tiering利用FabricPool 先進的自動化程序、在ONTAP 整個過程中、無論是在內部或雲端上、都能讓您更清楚地瞭解及控制混合雲和多雲端部署之間的分層作業。</block>
+  <block id="09c40a36a20188e380186d68dab9075a" category="paragraph">不可以由於磁碟區的中繼資料永遠不會從效能層分層、因此無法直接存取儲存在物件儲存設備中的資料。</block>
+  <block id="3986f01092f147c9d6cdec6e2d56ae9e" category="paragraph">雲端分層不會影響磁碟區的容量、而是會影響到集合體的效能層使用量。</block>
+  <block id="de8fae09cd33447b4a5792798abb8a9b" category="section-title">如何在啟用雲端分層之前、預估磁碟區的節約效益並取得冷資料報告？</block>
+  <block id="97649bd4040c0307cd57ff763d551780" category="paragraph">不可以在「標頭交換」程序中、唯一需要變更的是集合體的擁有權。在這種情況下、它將會變更為新的控制器、而不會有任何資料移動。</block>
+  <block id="32524986634cdd65eea18c94ba7aa138" category="section-title">我可以使用雲端供應商的主控台或物件儲存資源探查器來查看階層至儲存庫的資料嗎？我是否可以直接使用儲存在物件儲存區中的資料、而無需ONTAP 使用任何功能？</block>
+  <block id="05278fe4264fa7714f2deb1dc83a1f0f" category="paragraph">不可以建構並分層至雲端的物件不包含單一檔案、但最多可包含1、024個4 KB區塊、可與多個檔案區塊相同。磁碟區的中繼資料永遠保留在本機層上。</block>
+  <block id="d8de974cae25c190e1656a12aae05ac0" category="paragraph">由於資料分層是在區塊層級執行、因此在一段時間內未存取資料區塊、資料區塊就會被視為冷的、這是由分層原則的minimum冷卻天數屬性所定義。適用範圍為ONTAP 2至63天（含更新版本）、更新版本為2至9.7、更新版本則為2至183天（從ONTAP 更新版本9.8開始）。</block>
+  <block id="997ad1f279c3ec4615df50788475bd1b" category="paragraph">在您從第一個叢集設定分層時、就會開始免費試用30天的雲端分層。在免費試用結束後、您必須透過雲端供應商的市場付費或每年訂閱、NetApp的BYOL授權、或兩者的組合、來支付雲端分層費用。</block>
+  <block id="c50ed19c37a3a0b4ff682e979d40e06a" category="list-text">如果您已在雲端供應商的市場訂閱BlueXP（PAYGO）、那麼您也會自動從內部部署ONTAP 的__LW_Y1_Y1_Y1_Y1_Y1_Y1_Y1_Y1_Y1_Y1_Y1_Y1_Y1_Y1_您會在 Cloud Tiering * Licensing* （雲端分層 * 授權 * ）索引標籤中看到使用中的訂閱。您不需要再次訂閱。</block>
+  <block id="538632f98286e11da7898a8dd8c5940a" category="list-text">將資料分層至StorageGRID 不收費、因此不需要BYOL授權或PAYGO登錄。此階層式資料不會計入您授權中所購買的容量。</block>
+  <block id="822f69d2e49d7da6f8c764e0680f2f75" category="list-text">如果BlueXP無法自動更新授權、則您需要手動上傳授權檔案。</block>
+  <block id="91770f038cd944a1d3b9b347edeb2b10" category="sidebar">新增功能</block>
+  <block id="4f5b5f1d13dfc896b9f5faa0807d8a6c" category="sidebar">變更磁碟區的分層原則</block>
+  <block id="e7719a97642051ee358e5d15cf1ab284" category="sidebar">雲端分層部落格</block>
 </blocks>

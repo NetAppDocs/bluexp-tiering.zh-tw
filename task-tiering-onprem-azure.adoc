@@ -34,7 +34,7 @@ summary: 將非作用中資料分層存放至Azure Blob儲存設備、以釋放�
 
 .image:https://raw.githubusercontent.com/NetAppDocs/common/main/media/number-2.png["二"] 設定分層
 [role="quick-margin-para"]
-在BlueXP中、選取內部工作環境、按一下「*啟用*」以使用分層服務、然後依照提示將資料分層至Azure Blob儲存設備。
+在BluXP中、選取內部ONTAP 環境的支援環境、按一下「*啟用*」以使用分層服務、然後依照提示將資料分層至Azure Blob儲存設備。
 
 .image:https://raw.githubusercontent.com/NetAppDocs/common/main/media/number-3.png["三"] 設定授權
 [role="quick-margin-para"]
@@ -125,15 +125,10 @@ https://docs.netapp.com/us-en/cloud-manager-ontap-onprem/task-discovering-ontap.
 
 === 確認您擁有必要的Connector權限
 
-如果您使用BlueXP 3.9.7版或更新版本建立Connector、就會設定好。
+如果您使用BlueXP 3.9.25版或更新版本建立Connector、就會設定好。預設會設定自訂角色、以提供Connector管理Azure網路中資源和程序所需的權限。請參閱 https://docs.netapp.com/us-en/cloud-manager-setup-admin/reference-permissions-azure.html#custom-role-permissions["必要的自訂角色權限"^] 和 https://docs.netapp.com/us-en/cloud-manager-setup-admin/reference-permissions-azure.html#cloud-tiering["雲端分層所需的特定權限"^]。
 
-如果您使用舊版的BlueXP建立Connector、則需要編輯權限清單、以新增2項必要權限：
+如果您使用舊版的BlueXP建立Connector、則必須編輯Azure帳戶的權限清單、才能新增任何遺失的權限。
 
-[source, json]
-----
-Microsoft.Storage/storageAccounts/managementPolicies/read
-Microsoft.Storage/storageAccounts/managementPolicies/write
-----
 
 
 === 為連接器準備網路
@@ -177,8 +172,8 @@ NOTE: 如果您計畫將Cloud Tiering設定為使用較低成本的存取層、�
 https://docs.netapp.com/us-en/cloud-manager-ontap-onprem/task-discovering-ontap.html["內部部署工作環境"^]。
 
 .步驟
-. 選取內部叢集。
-. 按一下「*啟用*」以取得分層服務。
+. 選擇內部ONTAP 環境的不正常運作環境。
+. 從右側面板按一下「*啟用*」以取得分層服務。
 +
 如果Azure Blob分層目的地是以工作環境形式存在於Canvas上、您可以將叢集拖曳至Azure Blob工作環境、以啟動設定精靈。
 
@@ -189,11 +184,11 @@ image:screenshot_setup_tiering_onprem.png["螢幕擷取畫面顯示當您選取�
 . *選擇供應商*：選擇* Microsoft Azure *、然後按一下*繼續*。
 . 完成「*建立物件儲存*」頁面上的步驟：
 +
-.. *資源群組*：選取管理現有容器的資源群組、或您要在其中建立階層式資料的新容器、然後按一下*繼續*。
+.. *資源群組*：選取管理現有容器的資源群組、或是您要在其中建立階層式資料的新容器、然後按一下*繼續*。
 +
 使用內部部署連接器時、您必須輸入可存取資源群組的Azure訂閱。
 
-.. * Azure Container *：將新的Blob容器新增至儲存帳戶、或選取現有的容器、然後按一下*繼續*。
+.. * Azure Container *：選取選項按鈕、即可將新的Blob容器新增至儲存帳戶或使用現有的容器。然後選取儲存帳戶並選擇現有的容器、或輸入新容器的名稱。然後按一下 * 繼續 * 。
 +
 此步驟中顯示的儲存帳戶和容器屬於您在上一步中選取的資源群組。
 
@@ -209,9 +204,6 @@ image:screenshot_tiering_lifecycle_selection_azure.png["螢幕擷取畫面顯示
 
 +
 請注意、生命週期規則會套用至所選儲存帳戶中的所有blob容器。
-
-+
-<<確認您擁有必要的Connector權限,確認您擁有必要的Connector權限>> 生命週期管理功能。
 
 .. *叢集網路*：選取ONTAP 要用於連接物件儲存設備的IPspace、然後按一下*繼續*。
 +

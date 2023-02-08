@@ -8,7 +8,7 @@ settings:
     pdf_enabled: true
     harmony_enabled: false
   rss_page: whats-new.html
-  langs: zh-tw,us-en,ja-jp,zh-cn,ko-kr,fr-fr,de-de
+  langs: zh-tw,us-en,ja-jp,ko-kr,zh-cn,de-de,fr-fr
 sidebar:
   entries:
   - title: 雲端分層文件
@@ -108,15 +108,15 @@ homepage:
   - title: 部落格社群
     links:
     - title: NetApp社群
-      url: https://community.netapp.com/t5/Cloud-Data-Services/ct-p/CDS
-    - title: BlueXP部落格
-      url: https://cloud.netapp.com/blog
+      url: https://community.netapp.com/t5/BlueXP-and-Services/ct-p/CDS
+    - title: 雲端分層部落格
+      url: https://bluexp.netapp.com/blog/topic/cloud-tiering
     - title: 雲端網路研討會
-      url: https://cloud.netapp.com/events
+      url: https://bluexp.netapp.com/events
   - title: 其他資源
     links:
     - title: BlueXP使用案例
-      url: https://cloud.netapp.com/cloud-tiering
+      url: https://bluexp.netapp.com/cloud-tiering
 product-family:
   name: BlueXP
   repo: cloud-manager-family
