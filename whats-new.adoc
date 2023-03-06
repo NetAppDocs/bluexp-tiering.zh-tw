@@ -18,6 +18,16 @@ summary: 瞭解雲端分層的新功能。
 
 
 
+== 2023年3月5日
+
+
+
+=== 現在您可以為磁碟區產生分層報告
+
+您可以從「層級磁碟區」頁面下載報告、以便檢閱所管理叢集上所有磁碟區的分層狀態。雲端分層會產生.CSV檔案、您可以視需要檢閱並傳送給貴公司的其他人員。 https://docs.netapp.com/us-en/cloud-manager-tiering/task-managing-tiering.html#download-a-tiering-report-for-your-volumes["瞭解如何下載分層報告"]。
+
+
+
 == 2022年12月6日
 
 

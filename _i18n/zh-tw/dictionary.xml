@@ -116,7 +116,6 @@
   <block id="f658b533f81ca87a3c235485a5ca7b33" category="summary">Cloud Tiering會自動將非作用中資料從內部部署ONTAP 的物件叢集分層、以將資料中心延伸至雲端。</block>
   <block id="18b67cdd6c50872fa0de2de9dfd11343" category="doc">雲端分層文件</block>
   <block id="fabfc25ef8996fd90836e58a4c0b26b6" category="doc">取得協助</block>
-  <block id="07d41912a6ab6b97216f8cf89e93205c" category="section-title">自我支援</block>
   <block id="5e4b821a1a82558dead1ef6961e90666" category="paragraph">這些選項可供免費使用、一天24小時、一週7天：</block>
   <block id="19111351b69b6b15668130b38b7f6038" category="inline-link">知識庫</block>
   <block id="fd6bb4fa1ad0caeedd6782d92cc54ea3" category="list-text"><block ref="fd6bb4fa1ad0caeedd6782d92cc54ea3" category="inline-link-rx"></block></block>
@@ -124,8 +123,6 @@
   <block id="410fdb9caa9c64da2ff3f88f4836960d" category="list-text"><block ref="410fdb9caa9c64da2ff3f88f4836960d" category="inline-link-rx"></block></block>
   <block id="5b6cf869265c13af8566f192b4ab3d2a" category="list-text">文件</block>
   <block id="80b1b0d2b1ebf2b3cba2d25759801afd" category="list-text">mailto：ng-cloudmanager-feedback@netapp.com [意見反應電子郵件]</block>
-  <block id="0659d428df833a806e29e65e632d380a" category="section-title">NetApp支援</block>
-  <block id="f5052c65917d7341726235d4d4941461" category="list-text">在「Technical Support（技術支援）」下選擇可用的選項之一：</block>
   <block id="6b5920220b135ba1ff95cfb5b149f138" category="summary">NetApp 的雲端分層服務可自動將非作用中資料從內部部署 ONTAP 的物件叢集分層、以將資料中心延伸至雲端。如此一來、叢集上的寶貴空間就能釋出、以容納更多工作負載、而無需變更應用程式層。雲端分層可降低資料中心的成本、並可讓您從CAPEX模式切換至OPEX模式。</block>
   <block id="36afa058c74d288178950c27927bdb38" category="doc">深入瞭解雲端分層</block>
   <block id="ec0515a8a06c1c0cf10efc6cbb1bfab9" category="inline-link">使用過程中的考量與要求FabricPool</block>
@@ -1053,7 +1050,6 @@
   <block id="82812db645b6ff5e9c2a24ddfb66c8d6" category="paragraph">除了上述的自我支援選項、您也可以在啟動支援之後、與NetApp支援專家合作解決任何問題。</block>
   <block id="e2a733504c4088b809813bbb35a3ddfd" category="inline-link-macro">瞭解如何註冊以取得支援</block>
   <block id="383133cb6f7207b1c65c3ace94aa5e95" category="list-text">如果您想與電話上的其他人通話、請按一下*「呼叫我們*」。您將會被導向netapp.com上的頁面、其中列出您可以撥打的電話號碼。</block>
-  <block id="bf5bc6ab0f95f17f4e98c9d766b8c11d" category="list-text">按一下*建立案例*、與NetApp支援專家一起開啟問題單：</block>
   <block id="b53e0a259f4a0c8e7da80d6c94e26c84" category="list-text">*《支援帳戶*》：選取與開立支援案例的人員相關的適用的NSS帳戶。NetApp 支援網站除了以下提供的其他電子郵件之外、此人將是NetApp聯絡的主要聯絡人。</block>
   <block id="2e50c5f85523f0aba9ff2db10f18279c" category="list-text">*工作環境*：如果適用於儲存設備、請選取* Cloud Volumes ONTAP 《*》或*《內部部署*》、然後選取相關的工作環境。</block>
   <block id="e6f29fb3c7636dc0040600dd0e84bb79" category="list-text">*案例優先順序*：選擇案例的優先順序、可以是低、中、高或嚴重。</block>
@@ -1321,4 +1317,17 @@
   <block id="91770f038cd944a1d3b9b347edeb2b10" category="sidebar">新增功能</block>
   <block id="4f5b5f1d13dfc896b9f5faa0807d8a6c" category="sidebar">變更磁碟區的分層原則</block>
   <block id="e7719a97642051ee358e5d15cf1ab284" category="sidebar">雲端分層部落格</block>
+  <block id="1c573cd95f6407add05436f6ac05d6ec" category="section-title">下載適用於您磁碟區的分層報告</block>
+  <block id="801ab24683a4a8c433c6eb40c48bcd9d" category="inline-image-macro">下載</block>
+  <block id="1133c5d4d5ce8a369839f12ca5a07313" category="paragraph">您可以下載「層級磁碟區」頁面的報告、以便檢閱所管理叢集上所有磁碟區的分層狀態。只要按一下即可 <block ref="d2e5c9ca6fcd7f605e1d5f7b4f6a6a99" category="inline-image-macro-rx" type="image"></block> 按鈕。雲端分層會產生.CSV檔案、您可以視需要檢閱並傳送給其他群組。CSV檔案最多包含10、000列資料。</block>
+  <block id="fe8e7e0f08b18c3c012d94d74e8386ce" category="inline-image-macro">顯示如何產生CSV檔案的快照、列出所有磁碟區的分層狀態。</block>
+  <block id="da2d758c47ecb3eaa92541c9f800dcb9" category="paragraph"><block ref="da2d758c47ecb3eaa92541c9f800dcb9" category="inline-image-macro-rx" type="image"></block></block>
+  <block id="edd15fbeb7b2dffa163336ecd4f3e80c" category="section-title">使用自我支援選項</block>
+  <block id="d88bacf2a9fdcbbc844edcba97c34e30" category="section-title">利用NetApp支援建立案例</block>
+  <block id="08d96fdd1a845d80db99e6e1dffb8bc7" category="list-text">在「*資源*」頁面上、選擇「技術支援」下的其中一個可用選項：</block>
+  <block id="5be2e1dfe4bf215289731df45ec8157b" category="list-text">按一下*建立案例*、與NetApp支援專家一起開啟問題單：</block>
+  <block id="d0693e7bf28b7bbc94287cee0e4b0768" category="section-title">2023年3月5日</block>
+  <block id="b92f2131d3d225c3c3327daaa8862624" category="section-title">現在您可以為磁碟區產生分層報告</block>
+  <block id="f86857f0a51fde5819da3a17258b5448" category="inline-link">瞭解如何下載分層報告</block>
+  <block id="10607665fc9de51ae2bf29927d3673b9" category="paragraph">您可以從「層級磁碟區」頁面下載報告、以便檢閱所管理叢集上所有磁碟區的分層狀態。雲端分層會產生.CSV檔案、您可以視需要檢閱並傳送給貴公司的其他人員。<block ref="b6be70acd3f28aaa18a7e212c9bc7736" category="inline-link-rx"></block>。</block>
 </blocks>
