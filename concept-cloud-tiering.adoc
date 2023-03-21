@@ -53,7 +53,7 @@ TIP: 從 Cloud Tiering 讀取系統。 Cloud Volumes ONTAP https://docs.netapp.c
 * Microsoft Azure Blob
 * Google Cloud Storage
 * NetApp StorageGRID
-* S3相容的物件儲存設備
+* S3相容的物件儲存設備（例如MinIO）
 
 
 雲端分層授權也可與叢集共享、這些叢集會將資料分層儲存至IBM Cloud Object Storage。必須使用System Manager或CLI來設定此功能、FabricPool ONTAP 但是 https://docs.netapp.com/us-en/cloud-manager-tiering/task-licensing-cloud-tiering.html#apply-cloud-tiering-licenses-to-clusters-in-special-configurations["此類組態的授權是使用雲端分層完成。"]
@@ -86,6 +86,8 @@ NOTE: 您無法為階層式資料至StorageGRID 不支援支援功能或S3的儲
 將資料分層至 StorageGRID 不徵收任何費用。不需要 BYOL 授權或 PAYGO 登錄。
 
 https://bluexp.netapp.com/pricing#tiering["檢視價格詳細資料"^]。
+
+由於Cloud Tiering保留了來源磁碟區的儲存效率、因此您需要支付雲端供應商的物件式儲存成本、以便在ONTAP 達到非效率（在套用重複資料刪除和壓縮之後、只需支付較少的資料量）之後、再用於階層式資料。
 
 
 

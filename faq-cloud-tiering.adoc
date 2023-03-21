@@ -227,7 +227,7 @@ Cloud Tiering支援ONTAP 不支援版本9.2及更新版本。
 * Microsoft Azure Blob
 * Google Cloud Storage
 * NetApp StorageGRID
-* S3相容的物件儲存設備
+* S3相容的物件儲存設備（例如MinIO）
 * IBM Cloud Object Storage（FabricPool 必須使用System Manager或ONTAP CLI執行此功能的不實組態）
 
 
@@ -260,7 +260,7 @@ Amazon S3 Glacier Flexible和S3 Glacier Deep歸檔不受支援的主要原因、
 
 
 
-=== 我可以使用其他S3相容的物件儲存服務、例如瓦斯比、搭配雲端分層嗎？
+=== 我可以使用其他S3相容的物件儲存服務、例如MinIO、搭配雲端分層嗎？
 
 是的、叢集使用ONTAP 的是支援透過分層UI設定S3相容的物件儲存設備、這些叢集使用的是更新版本的版本。 link:task-tiering-onprem-s3-compat.html["請參閱此處的詳細資料"]。
 
