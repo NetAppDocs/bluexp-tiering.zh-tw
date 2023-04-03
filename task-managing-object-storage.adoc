@@ -23,7 +23,7 @@ summary: 將內部ONTAP 的物件叢集設定為將資料分層至特定物件�
 您可能想要查看已針對叢集設定的所有物件存放區、以及它們所附加的集合體。雲端分層可為每個叢集提供此資訊。
 
 .步驟
-. 在*叢集儀表板*中、按一下叢集的功能表圖示、然後選取*物件儲存資訊*。
+. 在 * 叢集 * 頁面中、按一下叢集的功能表圖示、然後選取 * 物件儲存區資訊 * 。
 . 檢閱物件存放區的詳細資料。
 +
 此範例顯示Amazon S3和Azure Blob物件存放區、兩者都附加至叢集上的不同集合體。
@@ -40,7 +40,7 @@ image:screenshot_tiering_object_store_view.png["顯示物件儲存資訊的快�
 您可以新增可用於叢集中集合體的新物件存放區。建立之後、您可以將其附加至集合體。
 
 .步驟
-. 在*叢集儀表板*中、按一下叢集的功能表圖示、然後選取*物件儲存資訊*。
+. 在 * 叢集 * 頁面中、按一下叢集的功能表圖示、然後選取 * 物件儲存區資訊 * 。
 . 在「物件存放區資訊」頁面中、按一下「*建立新物件存放區*」。
 +
 image:screenshot_tiering_object_store_create_button.png["顯示「建立新物件存放區」按鈕的快照、可用來建立新的物件存放區。"]
@@ -96,7 +96,7 @@ IAM 使用者必須與您在「 * S3 Bucket * 」頁面上選取或建立的儲�
 請注意、當使用StorageGRID 支援MetroCluster 物件儲存的功能時、ONTAP 兩個支援的系統都可以FabricPool 執行將物件儲存在單StorageGRID 一的不支援系統上的功能。每ONTAP 個資料系統都必須將資料分層至不同的儲存區。
 
 .步驟
-. 在*叢集儀表板*中、按一下所選叢集的*進階設定*。
+. 在 * 叢集 * 頁面中、按一下所選叢集的 * 進階設定 * 。
 +
 image:screenshot_tiering_advanced_setup_button.png["顯示叢集「進階設定」按鈕的快照。"]
 
@@ -119,11 +119,11 @@ image:screenshot_tiering_mirror_config_complete.png["顯示附加至Aggregate之
 您可以交換主要物件存放區和鏡射物件存放區以取得Aggregate。物件存放區鏡像會成為主要鏡射、而原始主要鏡射會變成鏡射。
 
 .步驟
-. 在*叢集儀表板*中、按一下所選叢集的*進階設定*。
+. 在 * 叢集 * 頁面中、按一下所選叢集的 * 進階設定 * 。
 +
 image:screenshot_tiering_advanced_setup_button.png["顯示叢集「進階設定」按鈕的快照。"]
 
-. 在「進階設定」頁面中、按一下Aggregate的功能表圖示、然後選取「* Swap Destinations*」。
+. 在「進階設定」頁面中、按一下集合的功能表圖示、然後選取 * 交換目的地 * 。
 +
 image:screenshot_tiering_mirror_swap.png["顯示Aggregate「Swap目的地」選項的快照。"]
 
@@ -137,11 +137,11 @@ image:screenshot_tiering_mirror_swap.png["顯示Aggregate「Swap目的地」選�
 如果不再需要複寫到其他物件存放區、您可以移除FabricPool 此鏡射。
 
 .步驟
-. 在*叢集儀表板*中、按一下所選叢集的*進階設定*。
+. 在 * 叢集 * 頁面中、按一下所選叢集的 * 進階設定 * 。
 +
 image:screenshot_tiering_advanced_setup_button.png["顯示叢集「進階設定」按鈕的快照。"]
 
-. 在「進階設定」頁面中、按一下Aggregate的功能表圖示、然後選取「*取消鏡射物件存放區*」。
+. 在「進階設定」頁面中、按一下集合的功能表圖示、然後選取 * 取消鏡射物件存放區 * 。
 +
 image:screenshot_tiering_mirror_delete.png["顯示Aggregate之「Unmirror Object Store」（取消鏡射物件存放區）選項的快照。"]
 
