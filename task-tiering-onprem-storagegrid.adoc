@@ -131,7 +131,7 @@ S3 認證:: 當您設定 StorageGRID 層疊至物件時、您需要使用 S3 存
 需要連接器才能將資料分層至雲端。將資料分層至 StorageGRID 無法使用時、內部環境中必須有連接器可供使用。您可能需要安裝新的 Connector 、或確定目前選取的 Connector 位於內部部署。
 
 * https://docs.netapp.com/us-en/cloud-manager-setup-admin/concept-connectors.html["深入瞭解連接器"^]
-* https://docs.netapp.com/us-en/cloud-manager-setup-admin/task-installing-linux.html["在Linux主機上部署Connector"^]
+* https://docs.netapp.com/us-en/cloud-manager-setup-admin/task-quick-start-connector-on-prem.html["在 Linux 主機上安裝 Connector"^]
 * https://docs.netapp.com/us-en/cloud-manager-setup-admin/task-managing-connectors.html["在連接器之間切換"^]
 
 

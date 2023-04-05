@@ -123,7 +123,7 @@ image:screenshot_tiering_mirror_config_complete.png["顯示附加至Aggregate之
 +
 image:screenshot_tiering_advanced_setup_button.png["顯示叢集「進階設定」按鈕的快照。"]
 
-. 在「進階設定」頁面中、按一下集合的功能表圖示、然後選取 * 交換目的地 * 。
+. 在「進階設定」頁面中、按一下Aggregate的功能表圖示、然後選取「* Swap Destinations*」。
 +
 image:screenshot_tiering_mirror_swap.png["顯示Aggregate「Swap目的地」選項的快照。"]
 
@@ -141,7 +141,7 @@ image:screenshot_tiering_mirror_swap.png["顯示Aggregate「Swap目的地」選�
 +
 image:screenshot_tiering_advanced_setup_button.png["顯示叢集「進階設定」按鈕的快照。"]
 
-. 在「進階設定」頁面中、按一下集合的功能表圖示、然後選取 * 取消鏡射物件存放區 * 。
+. 在「進階設定」頁面中、按一下Aggregate的功能表圖示、然後選取「*取消鏡射物件存放區*」。
 +
 image:screenshot_tiering_mirror_delete.png["顯示Aggregate之「Unmirror Object Store」（取消鏡射物件存放區）選項的快照。"]
 

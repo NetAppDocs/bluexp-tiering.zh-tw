@@ -133,7 +133,6 @@
   <block id="63df1b7fcfa29df67a9798d7767e4c54" category="list-text">單一窗口可讓您不再需要在 FabricPool 多個叢集之間獨立管理各種功能</block>
   <block id="c1ad703a668852b216aa10032b7c0cda" category="list-text">報告會顯示每個叢集上的作用中和非作用中資料量</block>
   <block id="50ce53d55b005f76b356132a3901cfcf" category="list-text">分層健全狀況狀態可協助您識別並修正發生的問題</block>
-  <block id="0b8949500e9883a23b1d4fbc204e90ee" category="list-text">如果您使用 Cloud Volumes ONTAP 的是 NetApp 系統、您可以在叢集儀表板中找到這些系統、以便在混合雲基礎架構中完整檢視資料分層</block>
   <block id="002fca37a5e7d8eb724e874566419716" category="section-title">支援的物件儲存供應商</block>
   <block id="403df42df80267a7b2bc0be8c3e6685d" category="paragraph">您可以將非作用中的資料從內部部署ONTAP 的不活動資料系統分層處理至下列物件儲存供應商：</block>
   <block id="270fcb785810d0206945029bb05f4e97" category="list-text">Amazon S3</block>
@@ -154,7 +153,6 @@
   <block id="591a2cff7f748b04420333fcacaf56fd" category="paragraph">將資料分層至 StorageGRID 不徵收任何費用。不需要 BYOL 授權或 PAYGO 登錄。</block>
   <block id="8f66314cc87864910e23571f159f6180" category="inline-link">檢視價格詳細資料</block>
   <block id="5ef05167488611c5bd4ff0f410595ce4" category="section-title">30 天免費試用</block>
-  <block id="66415c946116518cc6899512da0314ea" category="paragraph">如果您的免費試用結束、但您尚未訂閱或新增授權、 ONTAP 則不再將冷資料分層儲存至物件儲存設備、但現有資料仍可供存取。</block>
   <block id="d1517db071086971f3453ded8278c7a1" category="section-title">隨用隨付訂閱</block>
   <block id="a287e316989c25a2ee988a3e9950bf89" category="paragraph">即使您有免費試用版或自帶授權（ BYOL ）、您仍應訂閱：</block>
   <block id="7b8b7c4201f97e18e28054d96ce898a0" category="list-text">如果您分層的資料超過BYOL授權所允許的數量、則資料分層會透過隨用隨付訂閱繼續進行。</block>
@@ -842,8 +840,6 @@
   <block id="096dcd3788cecb603666aeab1323e016" category="list-text">必要的應用程式存取參數</block>
   <block id="5a5be55d6d19108a5a53e94d4b8bca13" category="inline-link">如需詳細資訊、請參閱「安全登入」命令</block>
   <block id="fcccb04322797151b1c63a24fdbe8596" category="list-text">叢集管理使用者必須擁有「主控台」應用程式存取權。您可以使用ONTAP 指令「安全登入show」來驗證這一點。「admin」使用者的「_Application_」欄應顯示「Console」。如有必要、請使用「安全登入create」命令來新增主控台應用程式存取。<block ref="c49e76a401ad77700c5ead0ea46ac66a" category="inline-link-rx"></block>。</block>
-  <block id="8bde27dc2a4816433b259374095d8da3" category="inline-link">在Linux主機上部署Connector</block>
-  <block id="72e0bcbd663626f0d086598014dfbeb0" category="list-text"><block ref="72e0bcbd663626f0d086598014dfbeb0" category="inline-link-rx"></block></block>
   <block id="303b6b375dcceef17b9d24c15d95c29b" category="list-text">*選擇供應商*：選取* Amazon Web Services*、然後按一下*繼續*。</block>
   <block id="c22f32bc9795fa45c61320309de1c56e" category="list-text">* S3 Bucket *：新增S3儲存區或選取以前置字元_Fabric集區_開頭的現有S3儲存區、選取儲存區區域、然後按一下*繼續*。</block>
   <block id="7de06bb2b943b6fd5754912e3f1d4ceb" category="paragraph"><block ref="7de06bb2b943b6fd5754912e3f1d4ceb" category="inline-image-macro-rx" type="image"></block></block>
@@ -872,7 +868,6 @@
   <block id="37d627356844b359763aa1dbb8695283" category="list-text">在顯示的對話方塊中、修改完整度臨界值、並選擇啟用或停用非使用中資料報告。</block>
   <block id="b2531ab74e4b89a1d4fe9224355475de" category="paragraph"><block ref="b2531ab74e4b89a1d4fe9224355475de" category="inline-image-macro-rx" type="image"></block></block>
   <block id="bda2a863882afc8f61b71a756b1ea690" category="inline-link">在Azure中部署Connector</block>
-  <block id="1dacca07d9ba20ab896874ca3c68ea8d" category="list-text"><block ref="1dacca07d9ba20ab896874ca3c68ea8d" category="inline-link-rx"></block></block>
   <block id="462a06b2a85bbbf735ba8fa3fc4dd871" category="list-text">*選擇供應商*：選擇* Microsoft Azure *、然後按一下*繼續*。</block>
   <block id="ba34121e3527a1918b936c79899e68fa" category="paragraph">為了鏡射、每個集合最多可附加兩個儲存區、其中冷資料會同步分層至兩個儲存區。這些庫位可以來自不同的供應商和不同的位置。自2022年8月起、您可以使用*進階設定*頁面、將兩個物件存放區附加至單一Aggregate。</block>
   <block id="6c66decef59a00987dd2d537b80e9092" category="paragraph">是的。一般最佳實務做法是將單一儲存區附加至多個集合體。不過、使用公有雲時、物件儲存服務的IOPS限制最大、因此必須考量多個儲存區。</block>
@@ -915,12 +910,6 @@
   <block id="460820727f3b7117c5da2a76a02f36bc" category="admonition">連接器與 S3 之間的通訊僅供物件儲存設定使用。</block>
   <block id="ea97cc2428a460eae122a94c68a8b16a" category="section-title">準備好連接器</block>
   <block id="cc8fa83637def0ab4b26b2c73eaf58b1" category="paragraph">如果您已在AWS VPC或內部部署部署了Connector、您就能輕鬆完成所有設定。如果沒有、您需要在上述任一位置建立連接器、以便將ONTAP 資訊分層保存至AWS S3儲存設備。您無法使用部署於其他雲端供應商的Connector。</block>
-  <block id="d41b031ef25fff764808749edcc2cd28" category="inline-link">連接器入門</block>
-  <block id="b37ed402641ff6f2d1b0b55061547f2d" category="list-text"><block ref="b37ed402641ff6f2d1b0b55061547f2d" category="inline-link-rx"></block></block>
-  <block id="cd10ae990b1a676dcb9da574833197dc" category="inline-link">在AWS中安裝Connector</block>
-  <block id="fe96b3be0fd11571a6c8ea6ac43f23fe" category="list-text"><block ref="fe96b3be0fd11571a6c8ea6ac43f23fe" category="inline-link-rx"></block></block>
-  <block id="c434332bb7ea2d6636a3d41a262f1e7e" category="inline-link">在內部環境中安裝連接器</block>
-  <block id="408e970a6e2ac7b03356ff4f61689ed3" category="list-text"><block ref="408e970a6e2ac7b03356ff4f61689ed3" category="inline-link-rx"></block></block>
   <block id="929d25665bc92d22cf4a79265248dd36" category="section-title">連接器網路需求</block>
   <block id="572373ae1e78fa8826ac1a5468d0b8c1" category="list-text">透過連接埠443（HTTPS）連線至雲端分層服務的傳出網際網路連線</block>
   <block id="2e379f93711508ab69eec06837dd271c" category="inline-link">請參閱端點清單</block>
@@ -1011,7 +1000,6 @@
   <block id="84b50dc471c57455cf0359ad021a8c58" category="paragraph">如果Amazon S3分層目的地是在Canvas上的工作環境、您可以將內部ONTAP 的支援環境拖曳到目的地、以啟動分層設定精靈。</block>
   <block id="b57c0deab1a5287b0457bf7ca26a95f4" category="admonition">從MetroCluster 物件庫的組態中移除鏡射物件存放區時、系統會提示您是否也要移除主要物件存放區。您可以選擇將主要物件存放區附加至集合體、或是移除它。</block>
   <block id="6eecabc0d7fe334dd9e87b08c1b64c93" category="paragraph">雲端分層可設定為單節點叢集、HA組態叢集、分層鏡射組態叢集、MetroCluster 以及使用FabricPool 「鏡射」的鏡射組態。雲端分層授權可在所有叢集之間共享。</block>
-  <block id="85e6332aa0d0ad8f46ae520da6d1c0c7" category="paragraph">如果您沒有Cloud Tiering授權、則在設定分層至第一個叢集時、即可免費試用30天的Cloud Tiering。30天免費試用結束後、您必須透過隨用隨付訂閱、年度訂閱、BYOL授權或組合來支付Cloud Tiering的費用。</block>
   <block id="421539f25601331f9f5f1e59cdb43e21" category="section-title">年度合約</block>
   <block id="1ca6869c60d4b26c9ebd2bc63dd19e71" category="paragraph">向NetApp購買* Cloud Tiering *授權、即可自帶授權。您可以購買1、2或3年期授權、並指定任何數量的分層容量。BYOL Cloud分層授權是一個_浮 點型授權、可用於多ONTAP 個內部部署的物件叢集。您在雲端分層授權中定義的總分層容量、可用於所有內部部署叢集。</block>
   <block id="82812db645b6ff5e9c2a24ddfb66c8d6" category="paragraph">除了上述的自我支援選項、您也可以在啟動支援之後、與NetApp支援專家合作解決任何問題。</block>
@@ -1120,7 +1108,6 @@
   <block id="6f7498318061ab9585a9a930576417e9" category="paragraph">您必須先在ONTAP BlueXP中建立內部的功能性環境、才能開始分層處理冷資料。</block>
   <block id="62b4885d3e4f3aa3a6da101753a59fd4" category="paragraph">若要取得預估、只要將ONTAP 您的不可靠叢集新增至BlueXP、然後透過位於分層索引標籤的雲端分層叢集儀表板進行檢查即可。當停用非使用中資料報告（IDR)停用或在一段足夠長的時間內尚未啟動時、Cloud Tiering會使用業界不變的70%來計算預估的節約效益。一旦有可用的印尼盾資料、Cloud Tiering就會將節約成本更新為準確的數據。</block>
   <block id="f0e21f59ae2ac8831058af2eeb6352ab" category="inline-link">您在Cloud Volumes ONTAP BlueXP的工作環境中設定了針對功能的分層功能</block>
-  <block id="61d4aa7877925f71314d23b9f09b7393" category="paragraph">如果您使用Cloud Volumes ONTAP 的是NetApp系統、您可以在雲端分層叢集儀表板中找到這些系統、以便在混合雲基礎架構中完整檢視資料分層。不過Cloud Volumes ONTAP 、從Cloud Tiering讀取的是隻讀的系統。您無法從 Cloud Volumes ONTAP Cloud Tiering 設定資料分層功能。<block ref="7477c38194261f0954175f853359735c" category="inline-link-rx"></block>。</block>
   <block id="f92115ef83b34980e3bba84c1a861bac" category="paragraph">下列問題與BlueXP Connector有關。</block>
   <block id="367329787d30f75b30521f88dfa0d7c1" category="paragraph">Connector是在雲端帳戶內或內部部署的運算執行個體上執行的軟體、可讓BlueXP安全地管理雲端資源。若要使用雲端分層服務、您必須部署連接器。</block>
   <block id="b3ac7359e28ad36cfcfef7d4cff76670" category="list-text">對於Azure而言、您不需要在需要提供給BlueXP的權限範圍之外額外取得權限。</block>
@@ -1177,7 +1164,6 @@
   <block id="dc0605b8b2de4441cff5b013be511267" category="paragraph"><block ref="dc0605b8b2de4441cff5b013be511267" category="inline-image-macro-rx" type="image"></block></block>
   <block id="154756f3451aa7d3c9c0ff18e7159503" category="inline-link">前往BlueXP Marketplace產品</block>
   <block id="8888d46d611948a30ba2c08d3adb6945" category="list-text">若要從Azure Marketplace訂閱、<block ref="c7c84f194b790bd1614b3007104e1172" category="inline-link-rx"></block>，單擊*訂購*，然後按照提示進行操作。</block>
-  <block id="a857c8adb9c1cde4acd264143a3e3ad1" category="paragraph">如果您達到BYOL容量限制、新的冷資料分層作業就會停止、而先前所有階層式資料仍可存取。如果您訂閱了_藍圖XP -部署與管理雲端資料服務_的PAYGO市場訂閱、新的Cold資料將繼續分層至物件式儲存設備、而且您將依每次使用付費。</block>
   <block id="91a68e06c0ddb0dde07439f8f6bd8af6" category="list-text"><block ref="91a68e06c0ddb0dde07439f8f6bd8af6" category="inline-link-macro-rx"></block></block>
   <block id="a4106436d00150633e4b615291f0b5c4" category="list-text">若要從GCP Marketplace訂閱、<block ref="7e960c467ff9bbcd90615ea936733251" category="inline-link-rx"></block>，單擊*訂購*，然後按照提示進行操作。</block>
   <block id="bd25c3527b85ace964c6837242630a19" category="paragraph"><block ref="316080080631334cc8b0ad0316a8ebff" category="inline-link-rx"></block>。</block>
@@ -1329,7 +1315,6 @@
   <block id="0748730b16e2af0499abfb4f8fbcd91a" category="section-title">我可以使用其他S3相容的物件儲存服務、例如MinIO、搭配雲端分層嗎？</block>
   <block id="5f25ca5749124089f38921fb40d73668" category="paragraph">由於Cloud Tiering保留了來源磁碟區的儲存效率、因此您需要支付雲端供應商的物件式儲存成本、以便在ONTAP 達到非效率（在套用重複資料刪除和壓縮之後、只需支付較少的資料量）之後、再用於階層式資料。</block>
   <block id="ad54fbabce5f384433a02d947362a539" category="paragraph">目前、MinIO物件儲存設備已符合資格。</block>
-  <block id="5f1025b90c4f0c635572eda715d87a10" category="paragraph">只要按一下 * 階層 &gt; 內部管理儀表板 * 即可。雲端分層提供下列環境詳細資料。</block>
   <block id="75ae3190ee97d211e630e0c0f1b5ddeb" category="inline-image-macro">內部儀表板頁面的螢幕擷取畫面。</block>
   <block id="59b117edc0d3d63aaf2729e082c38261" category="paragraph"><block ref="59b117edc0d3d63aaf2729e082c38261" category="inline-image-macro-rx" type="image"></block></block>
   <block id="7a7553c4b7ed244f088a49d323385c57" category="list-text">探索到的叢集</block>
@@ -1337,15 +1322,11 @@
   <block id="8ee0131ead01994f7bd95933f4e9a923" category="list-text">分層概述</block>
   <block id="4e03a2d38322e40af6a6e79c953fef0e" category="list-text">目前正在分層的資料量、以及可能分層的資料量。</block>
   <block id="f9600e20b044515122327f9895faca66" category="list-text">市場訂閱</block>
-  <block id="36c8c017c31e43cab58a5f2513c46696" category="list-text">在 * 叢集 * 頁面中、按一下 * 叢集的基本分層設定 * 。</block>
-  <block id="310e5a0853c673dc4faabacaee25d4fc" category="list-text">在 * 叢集 * 頁面中、按一下所選叢集的 * 進階設定 * 。</block>
-  <block id="4b25601db98fc4ec4887d38db18f833e" category="list-text">在「進階設定」頁面中、按一下集合的功能表圖示、然後選取 * 修改 Aggregate * 。</block>
   <block id="14cbdefab43f51a65021d80ce80980c0" category="list-text">在 * 叢集 * 頁面中、按一下叢集的功能表圖示、然後選取 * 叢集資訊 * 。</block>
   <block id="bff5f986b8f0d22acffc0010e8d56dde" category="paragraph">您可以從「分層 _ 叢集 _ 」頁面將未探索到的內部部署 ONTAP 叢集新增至 BlueXP 、以便啟用叢集的分層功能。</block>
   <block id="36b6d559a801013af8e2d0cd8f190efe" category="paragraph">請注意、按鈕也會出現在 Tiering _on-Prem 儀表板頁面上、供您探索其他叢集。</block>
   <block id="9b1a75be486d93c4df9e13eef4128dc2" category="list-text">從 Cloud Tiering 按一下 * Clusters* 標籤。</block>
   <block id="f202e1cf2a8a770d553e2f87c2b11801" category="list-text">若要查看任何未探索到的叢集、請按一下 * 顯示未探索到的叢集 * 。</block>
-  <block id="e643ccb2870b9bbfdbc24bc87d300f4d" category="list-text">按一下 * 新增叢集 * 以取得您要透過 BlueXP 管理的叢集、並實作資料分層。</block>
   <block id="25a16ca1880cc1d4f1ff63f91034c468" category="list-text">在 _ 叢集詳細資料 _ 頁面中、輸入管理使用者帳戶的密碼、然後按一下 * 探索 * 。</block>
   <block id="78663d9137e3cc2c3049532938b4c70f" category="list-text">在「 _ 詳細資料與認證 _ 」頁面中、叢集名稱會新增為工作環境名稱、所以只要按一下「 * 執行 * 」即可。</block>
   <block id="102787ed6297b34a7504b527e91d01d3" category="section-title">2023年4月3日</block>
@@ -1359,16 +1340,34 @@
   <block id="f8011f6560ae9c67fe47dfaf64d311be" category="paragraph"><block ref="f8011f6560ae9c67fe47dfaf64d311be" category="inline-image-macro-rx" type="image"></block></block>
   <block id="3e35b4d71fa62eacb0a5bb388fcaaefc" category="list-text">在 * 叢集 * 頁面中、按一下叢集的功能表圖示、然後選取 * 雲端效能測試 * 。</block>
   <block id="7bd2b7eee5b0e3ccc0cee448e5f16af6" category="list-text">在 * 叢集 * 頁面中、按一下叢集的功能表圖示、然後選取 * 物件儲存區資訊 * 。</block>
-  <block id="d6bf3a1568674e80c2c2ee91b89321aa" category="list-text">從「進階設定」頁面、將您要使用的物件存放區拖曳到鏡射物件存放區的位置。</block>
-  <block id="cd11e47501303547dfe86752a503190f" category="list-text">在「進階設定」頁面中、按一下集合的功能表圖示、然後選取 * 交換目的地 * 。</block>
-  <block id="3147fedbcc0be3024be497b0c4a9a86e" category="list-text">在「進階設定」頁面中、按一下集合的功能表圖示、然後選取 * 取消鏡射物件存放區 * 。</block>
-  <block id="512d20b1222e443735ce4d4233102c8b" category="list-text">如果您已在雲端供應商的市場中訂閱 BlueXP 訂閱（ PAYGO ）、則您也會自動訂閱內部部署 ONTAP 系統的 Cloud Tiering 。您會在 Cloud Tiering * 內部部署儀表板 * 索引標籤中看到有效的訂閱。您不需要再次訂閱。</block>
   <block id="199835e9739f64711df8c553667c0873" category="list-text">BYOL Cloud分層授權是一個_浮 點型授權、可在ONTAP 您的BlueXP帳戶中跨多個內部部署的物件叢集使用。這與您過去為每個叢集購買 FabricPool 授權的地方不同（而且更容易）。</block>
-  <block id="c6cfe277ff95e8b00e4a3526eb00d9de" category="list-text">在 BlueXP 中、按一下 * 行動性 &gt; 階層 &gt; 內部儀表板 * 。</block>
   <block id="b1fac0d88d99bf87572b3a3dbde5021c" category="list-text">在「 _Marketplace 訂閱 _ 」區段中、按一下 Amazon Web Services 下的 * 訂閱 * 、然後按一下 * 繼續 * 。</block>
   <block id="25fa54aa1e74279c5dd0574c255c9395" category="list-text">在「 _Marketplace 訂閱 _ 」區段中、按一下 Microsoft Azure 下的 * 訂閱 * 、然後按一下 * 繼續 * 。</block>
   <block id="1aeaa2e92434fc1c27cf37cfd23e8592" category="list-text">在 _Marketplace 訂閱 _ 區段中、按一下 Google Cloud 下的 * 訂閱 * 、然後按一下 * 繼續 * 。</block>
   <block id="35bfd546b4a554afcc648a0c8807406b" category="paragraph">全新的*雲端分層*授權於2021年8月推出、適用於使用雲端分層服務在BlueXP中支援的分層組態。BlueXP 目前支援分層至下列雲端儲存設備： Amazon S3 、 Azure Blob 儲存設備、 Google Cloud Storage 、 NetApp StorageGRID 和 S3 相容物件儲存設備。</block>
   <block id="5ed5be6c0303be48aaede9dd17a25f11" category="list-text">按一下 * 治理 &gt; 數位錢包 &gt; 資料服務授權 * 。</block>
   <block id="f16cf9a738fef68b5c516203192da03b" category="list-text">在「叢集」頁面中、按一下 <block ref="50acd719b1954eb4890c002b3b5e71a6" category="inline-image-macro-rx" type="image"></block> 針對叢集、選取*部署授權*。</block>
+  <block id="99cff1b26f15f21c85863c646752fd8a" category="paragraph">只要按一下 * 階層 &gt; 內部管理儀表板 * 即可。雲端分層提供下列環境詳細資料。</block>
+  <block id="7e3b03fb1795db2dd05995429974e133" category="inline-link">在 Linux 主機上安裝 Connector</block>
+  <block id="b911d3b2a309c413ee66b9b771d150de" category="list-text"><block ref="b911d3b2a309c413ee66b9b771d150de" category="inline-link-rx"></block></block>
+  <block id="67238cd5edf831d6bf11f3b651f7c0ce" category="list-text">在 * 叢集 * 頁面中、按一下 * 階層磁碟區 * 以取得叢集。</block>
+  <block id="19bbde7543a4103105c6f45a4826d973" category="list-text">在 * 叢集 * 頁面中、按一下所選叢集的 * 進階設定 * 。</block>
+  <block id="9bfca8fb5771e5278530e3aec5c99564" category="list-text">在「進階設定」頁面中、按一下Aggregate的功能表圖示、然後選取*修改Aggregate *。</block>
+  <block id="d5c1e697c8b22502370d8a4d89241230" category="list-text">按一下「*探索叢集*」以瞭解您要透過BlueXP管理的叢集、並實作資料分層。</block>
+  <block id="d94cbfae2c85d4e68e18566207dbca79" category="list-text"><block ref="d94cbfae2c85d4e68e18566207dbca79" category="inline-link-rx"></block></block>
+  <block id="fcb56b02923ad8fee5725ea3ab197730" category="inline-link">在AWS中部署Connector</block>
+  <block id="aeab24d7d3032243d8637fa1f7ff200c" category="list-text"><block ref="aeab24d7d3032243d8637fa1f7ff200c" category="inline-link-rx"></block></block>
+  <block id="19a7096cffff1081298250811a27a2c9" category="list-text">如果您有 Cloud Volumes ONTAP 系統、您可以在「叢集」頁面中找到這些系統、以便完整檢視混合雲基礎架構中的資料分層</block>
+  <block id="4e06fcbdd87dccfbea49bd9c084521b4" category="paragraph">如果您沒有Cloud Tiering授權、則在設定分層至第一個叢集時、即可免費試用30天的Cloud Tiering。30 天免費試用結束後、您必須透過隨用隨付訂閱、年度訂閱、 BYOL 授權或組合、支付雲端分層費用。</block>
+  <block id="9da46a2ddb041da98995ffb63fb8ed72" category="paragraph">如果您的免費試用期結束、但您尚未訂閱或新增授權、則 ONTAP 將不再將冷資料分層至物件儲存設備。所有先前的階層式資料仍可存取、這表示您可以擷取及使用此資料。擷取後、此資料會從雲端移回效能層。</block>
+  <block id="23382689bb5023b2975968f57d098105" category="list-text">從「進階設定」頁面、將您要使用的物件存放區拖曳到鏡射物件存放區的位置。</block>
+  <block id="ebfa7c7e62c629e534a590d9c5bd48ac" category="list-text">在「進階設定」頁面中、按一下Aggregate的功能表圖示、然後選取「* Swap Destinations*」。</block>
+  <block id="85c797dc141e0eb32826e3caf502008c" category="list-text">在「進階設定」頁面中、按一下Aggregate的功能表圖示、然後選取「*取消鏡射物件存放區*」。</block>
+  <block id="c3b0021cb8b4d6a81a5732c2832b2ddf" category="list-text">如果您已在雲端供應商的市場中訂閱 BlueXP 訂閱（ PAYGO ）、則您也會自動訂閱內部部署 ONTAP 系統的 Cloud Tiering 。您會在 Cloud Tiering * 內部部署儀表板 * 索引標籤中看到有效的訂閱。您不需要再次訂閱。您會在Digital Wallet中看到使用中的訂閱內容。</block>
+  <block id="48266b46c49dd5c5afbe71046b3b1261" category="list-text">在 BlueXP 中、按一下 * 行動性 &gt; 階層 &gt; 內部儀表板 * 。</block>
+  <block id="e44d709d5fa4c3c47b7380bfc09d83fa" category="inline-link">請參閱定價詳細資料</block>
+  <block id="874323801a4fa98c0f05aaa80c3c1d82" category="paragraph"><block ref="f7ce611d89d41a39c0cd111c48bbba76" category="inline-link-rx"></block>。</block>
+  <block id="2b36f8b3b2cccdc6807233a79e1b8d1d" category="paragraph">如果您達到 BYOL 容量上限、新冷資料的分層作業就會停止。所有先前的階層式資料仍可存取、這表示您可以擷取及使用此資料。擷取後、此資料會從雲端移回效能層。</block>
+  <block id="91c0c3f0911cf0aa7791e2815ecf2507" category="paragraph">不過、如果您訂閱了 PAYGO 市場訂閱的 _BlueXP - 部署與管理雲端資料服務 _ 、新的 Cold 資料將會繼續分層至物件儲存、您將會根據每次使用的情況支付這些費用。</block>
+  <block id="9c7d287d0ce7d0d1654a49d75c7314f0" category="paragraph">如果您有 Cloud Volumes ONTAP 系統、您可以在「雲端分層叢集」頁面找到這些系統、以便完整檢視混合雲基礎架構中的資料分層。不過Cloud Volumes ONTAP 、從Cloud Tiering讀取的是隻讀的系統。您無法從 Cloud Volumes ONTAP Cloud Tiering 設定資料分層功能。<block ref="7477c38194261f0954175f853359735c" category="inline-link-rx"></block>。</block>
 </blocks>

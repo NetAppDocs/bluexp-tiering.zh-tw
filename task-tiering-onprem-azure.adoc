@@ -116,9 +116,8 @@ https://docs.netapp.com/us-en/cloud-manager-ontap-onprem/task-discovering-ontap.
 需要連接器才能將資料分層至雲端。將資料分層至Azure Blob儲存設備時、您可以使用Azure vnet或內部部署中的Connector。您需要建立新的連接器、或確定目前選取的連接器位於Azure或內部部署。
 
 * https://docs.netapp.com/us-en/cloud-manager-setup-admin/concept-connectors.html["深入瞭解連接器"^]
-* https://docs.netapp.com/us-en/cloud-manager-setup-admin/task-creating-connectors-azure.html["在Azure中部署Connector"^]
-* https://docs.netapp.com/us-en/cloud-manager-setup-admin/task-installing-linux.html["在Linux主機上部署Connector"^]
-* https://docs.netapp.com/us-en/cloud-manager-setup-admin/task-managing-connectors.html["在連接器之間切換"^]
+* https://docs.netapp.com/us-en/cloud-manager-setup-admin/task-quick-start-connector-azure.html["在Azure中部署Connector"^]
+* https://docs.netapp.com/us-en/cloud-manager-setup-admin/task-quick-start-connector-on-prem.html["在 Linux 主機上安裝 Connector"^]
 
 
 

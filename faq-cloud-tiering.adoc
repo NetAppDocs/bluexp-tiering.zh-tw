@@ -118,6 +118,8 @@ summary: 如果您只是想要快速回答問題、這個常見問題集就能�
 * 每年（BYOL）的定期訂閱：每月每GB $0.033起。
 
 
+https://bluexp.netapp.com/pricing["請參閱定價詳細資料"]。
+
 將冷資料分層至NetApp StorageGRID 的整個系統（私有雲端）、完全不需花費任何成本。
 
 
@@ -130,7 +132,9 @@ summary: 如果您只是想要快速回答問題、這個常見問題集就能�
 
 === 如果我達到BYOL容量上限、會發生什麼事？
 
-如果您達到BYOL容量限制、新的冷資料分層作業就會停止、而先前所有階層式資料仍可存取。如果您訂閱了_藍圖XP -部署與管理雲端資料服務_的PAYGO市場訂閱、新的Cold資料將繼續分層至物件式儲存設備、而且您將依每次使用付費。
+如果您達到 BYOL 容量上限、新冷資料的分層作業就會停止。所有先前的階層式資料仍可存取、這表示您可以擷取及使用此資料。擷取後、此資料會從雲端移回效能層。
+
+不過、如果您訂閱了 PAYGO 市場訂閱的 _BlueXP - 部署與管理雲端資料服務 _ 、新的 Cold 資料將會繼續分層至物件儲存、您將會根據每次使用的情況支付這些費用。
 
 
 
@@ -196,7 +200,7 @@ Cloud Tiering支援ONTAP 不支援版本9.2及更新版本。
 
 === 關於此功能呢 Cloud Volumes ONTAP ？
 
-如果您使用Cloud Volumes ONTAP 的是NetApp系統、您可以在雲端分層叢集儀表板中找到這些系統、以便在混合雲基礎架構中完整檢視資料分層。不過Cloud Volumes ONTAP 、從Cloud Tiering讀取的是隻讀的系統。您無法從 Cloud Volumes ONTAP Cloud Tiering 設定資料分層功能。 https://docs.netapp.com/us-en/cloud-manager-cloud-volumes-ontap/task-tiering.html["您在Cloud Volumes ONTAP BlueXP的工作環境中設定了針對功能的分層功能"^]。
+如果您有 Cloud Volumes ONTAP 系統、您可以在「雲端分層叢集」頁面找到這些系統、以便完整檢視混合雲基礎架構中的資料分層。不過Cloud Volumes ONTAP 、從Cloud Tiering讀取的是隻讀的系統。您無法從 Cloud Volumes ONTAP Cloud Tiering 設定資料分層功能。 https://docs.netapp.com/us-en/cloud-manager-cloud-volumes-ontap/task-tiering.html["您在Cloud Volumes ONTAP BlueXP的工作環境中設定了針對功能的分層功能"^]。
 
 
 

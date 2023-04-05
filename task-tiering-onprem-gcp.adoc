@@ -118,7 +118,6 @@ https://docs.netapp.com/us-en/cloud-manager-ontap-onprem/task-discovering-ontap.
 
 * https://docs.netapp.com/us-en/cloud-manager-setup-admin/concept-connectors.html["深入瞭解連接器"^]
 * https://docs.netapp.com/us-en/cloud-manager-setup-admin/task-creating-connectors-gcp.html["在GCP中部署Connector"^]
-* https://docs.netapp.com/us-en/cloud-manager-setup-admin/task-managing-connectors.html["在連接器之間切換"^]
 
 
 

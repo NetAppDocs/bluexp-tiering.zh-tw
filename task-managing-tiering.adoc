@@ -27,7 +27,7 @@ TIP: 您不需要設定物件儲存設備、因為它已在最初設定叢集分
 
 .步驟
 . 從左側導覽功能表中、選取*行動性>分層*。
-. 在 * 叢集 * 頁面中、按一下 * 叢集的基本分層設定 * 。
+. 在 * 叢集 * 頁面中、按一下 * 階層磁碟區 * 以取得叢集。
 +
 image:screenshot_tiering_tier_volumes_button.png["顯示如何為叢集選取「階層磁碟區」按鈕的快照。"]
 
@@ -61,7 +61,7 @@ image:screenshot_tiering_policy_settings.png["顯示可設定分層原則設定�
 
 .步驟
 . 從左側導覽功能表中、選取*行動性>分層*。
-. 在 * 叢集 * 頁面中、按一下 * 叢集的基本分層設定 * 。
+. 在 * 叢集 * 頁面中、按一下 * 階層磁碟區 * 以取得叢集。
 . 按一下某個磁碟區的列、選取分層原則、或是調整冷卻天數、然後按一下「*套用*」。
 +
 link:concept-cloud-tiering.html#volume-tiering-policies["深入瞭解磁碟區分層原則和冷卻天數"]。
@@ -111,7 +111,7 @@ NOTE: 您的雲端供應商可能會根據從雲端傳輸的資料量向您收�
 確保效能層有足夠的空間容納從雲端移出的所有資料。
 
 . 從左側導覽功能表中、選取*行動性>分層*。
-. 在 * 叢集 * 頁面中、按一下 * 叢集的基本分層設定 * 。
+. 在 * 叢集 * 頁面中、按一下 * 階層磁碟區 * 以取得叢集。
 . 按一下 image:screenshot_edit_icon.gif["表格中每一列結尾的編輯圖示、用於分層磁碟區"] 圖示、選擇您要使用的擷取選項、然後按一下*套用*。
 +
 image:screenshot_tiering_policy_settings_with_retrieve.png["顯示可設定分層原則設定的快照。"]
@@ -147,7 +147,7 @@ TIP: 最好保持啟用印尼盾、因為它有助於識別您的非使用中資
 +
 image:screenshot_tiering_advanced_setup_button.png["顯示叢集「進階設定」按鈕的快照。"]
 
-. 在「進階設定」頁面中、按一下集合的功能表圖示、然後選取 * 修改 Aggregate * 。
+. 在「進階設定」頁面中、按一下Aggregate的功能表圖示、然後選取*修改Aggregate *。
 +
 image:screenshot_tiering_modify_aggr.png["顯示Aggregate修改Aggregate選項的快照。"]
 
@@ -220,7 +220,7 @@ image:screenshot_tiering_show_undiscovered_cluster.png["顯示分層儀表板上
 +
 image:screenshot_tiering_discover_cluster.png["快照顯示如何探索要新增至BlueXP和分層儀表板的現有叢集。"]
 
-. 按一下 * 新增叢集 * 以取得您要透過 BlueXP 管理的叢集、並實作資料分層。
+. 按一下「*探索叢集*」以瞭解您要透過BlueXP管理的叢集、並實作資料分層。
 . 在 _ 叢集詳細資料 _ 頁面中、輸入管理使用者帳戶的密碼、然後按一下 * 探索 * 。
 +
 請注意、叢集管理IP位址會根據您的NSS帳戶資訊填入。

@@ -18,7 +18,7 @@ summary: 在您從第一個叢集設定分層時、就會開始免費試用30天
 
 在閱讀更多內容之前、請先提供幾個附註：
 
-* 如果您已在雲端供應商的市場中訂閱 BlueXP 訂閱（ PAYGO ）、則您也會自動訂閱內部部署 ONTAP 系統的 Cloud Tiering 。您會在 Cloud Tiering * 內部部署儀表板 * 索引標籤中看到有效的訂閱。您不需要再次訂閱。
+* 如果您已在雲端供應商的市場中訂閱 BlueXP 訂閱（ PAYGO ）、則您也會自動訂閱內部部署 ONTAP 系統的 Cloud Tiering 。您會在 Cloud Tiering * 內部部署儀表板 * 索引標籤中看到有效的訂閱。您不需要再次訂閱。您會在Digital Wallet中看到使用中的訂閱內容。
 * BYOL Cloud分層授權是一個_浮 點型授權、可在ONTAP 您的BlueXP帳戶中跨多個內部部署的物件叢集使用。這與您過去為每個叢集購買 FabricPool 授權的地方不同（而且更容易）。
 * 將資料分層至StorageGRID 不收費、因此不需要BYOL授權或PAYGO登錄。此階層式資料不會計入您授權中所購買的容量。
 
