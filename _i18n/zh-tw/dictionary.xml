@@ -38,7 +38,6 @@
   <block id="a8e8e48001e032c3b5939047d15db5a2" category="section-title">為連接器準備網路</block>
   <block id="f3a29486bed19a90f2da6d007818b427" category="list-title">步驟</block>
   <block id="aadbd6cd1f8b4e9deafea8f1d6c8333c" category="list-text">確保安裝 Connector 的網路啟用下列連線：</block>
-  <block id="841f7e7eb4c540f0ef284f9a0806448c" category="list-text">透過連接埠 443 （ HTTPS ）連至雲端分層服務的傳出網際網路連線</block>
   <block id="699a71169310a3553bddb7e36ecb8a5c" category="list-text">透過連接埠443連線至ONTAP 您的SURF叢 集管理LIF的HTTPS連線</block>
   <block id="1fa74ff5a0547c12a6e2f2b89c3c8d6e" category="paragraph">當您設定資料分層至新叢集時、系統會提示您建立 S3 儲存區、或在設定 Connector 的 AWS 帳戶中選取現有的 S3 儲存區。AWS 帳戶必須具有權限、並有存取金鑰、您可以在 Cloud Tiering 中輸入。這個支援功能叢集使用存取金鑰來將資料分層進出 S3 。 ONTAP</block>
   <block id="41e85822b15d5899d14062cd9df9aded" category="inline-link-macro">支援雲端分層的區域</block>
@@ -95,7 +94,6 @@
   <block id="3cb09efd98df836314cbd254dcf63296" category="admonition">Cloud Tiering 支援 FlexGroup 從 ONTAP 功能完善的 9.5 開始的各種功能。安裝程式的運作方式與任何其他 Volume 相同。</block>
   <block id="b1e389999fc3500ff74c433071c6f3d0" category="section-title">確認您擁有必要的Connector權限</block>
   <block id="8d553e78e79ca1abdf2ffdd1714a7698" category="paragraph">確認連接器具備所需的網路連線。連接器可安裝在內部部署或Azure上。</block>
-  <block id="bb1241e3a37748e608dbbde25c75ea25" category="list-text">透過連接埠 443 連線至 Azure Blob 儲存設備的 HTTPS 連線</block>
   <block id="400985d5d8ad47af48b13e9fe604a6fe" category="list-text">如有需要、請為 Azure 儲存設備啟用 vnet 服務端點。</block>
   <block id="0eb60239b46482f7f72a4986fa40c73a" category="paragraph">如果 ONTAP 您從 DB2 叢集到 vnet 有 ExpressRoute 或 VPN 連線、而您想要連接器與 Blob 儲存設備之間的通訊保持在虛擬私有網路中、建議使用 vnet 服務端點到 Azure 儲存設備。</block>
   <block id="256fb1d2776e7f3b364ce4414a65b2cd" category="section-title">準備Azure Blob儲存設備</block>
@@ -118,7 +116,6 @@
   <block id="fabfc25ef8996fd90836e58a4c0b26b6" category="doc">取得協助</block>
   <block id="5e4b821a1a82558dead1ef6961e90666" category="paragraph">這些選項可供免費使用、一天24小時、一週7天：</block>
   <block id="19111351b69b6b15668130b38b7f6038" category="inline-link">知識庫</block>
-  <block id="fd6bb4fa1ad0caeedd6782d92cc54ea3" category="list-text"><block ref="fd6bb4fa1ad0caeedd6782d92cc54ea3" category="inline-link-rx"></block></block>
   <block id="14526abd8bda5af347775025cd5342cf" category="inline-link">社群</block>
   <block id="410fdb9caa9c64da2ff3f88f4836960d" category="list-text"><block ref="410fdb9caa9c64da2ff3f88f4836960d" category="inline-link-rx"></block></block>
   <block id="5b6cf869265c13af8566f192b4ab3d2a" category="list-text">文件</block>
@@ -315,7 +312,6 @@
   <block id="6f8de70a130cd2e986950accf1528a82" category="paragraph">需要連接器才能將資料分層至雲端。將資料分層至 Google Cloud Storage 時、 Google Cloud Platform VPC 必須提供 Connector 。您需要建立新的連接器、或確定目前選取的連接器位於 GCP 中。</block>
   <block id="7b16b8b258668ab05a1e5d83e084b477" category="paragraph">確認連接器具備所需的網路連線。</block>
   <block id="499449d439c0676b8921b5ff6e0ca806" category="list-text">確認安裝連接器的 VPC 啟用下列連線：</block>
-  <block id="d83f012d1d2a88fdb1e7cb28d94b081d" category="list-text">透過連接埠 443 連線至 Google Cloud Storage 的 HTTPS 連線</block>
   <block id="bad85e9654b782928f6763c3008e8dd4" category="list-text">選用：在您打算部署Connector的子網路上啟用私有Google Access。</block>
   <block id="b092138563f7b68473c3bf2a6a23a434" category="inline-link">私有 Google 存取</block>
   <block id="f4daaef45bd7d11ebf3a4c8dc607eaa4" category="paragraph"><block ref="d1ea0c6b3f95b3376607c57ca3a4265e" category="inline-link-rx"></block> 如果 ONTAP 您從某個叢集直接連線至 VPC 、而且想要連接器與 Google Cloud Storage 之間的通訊保持在虛擬私有網路中、建議您使用。請注意、 Private Google Access 適用於僅有內部（私有） IP 位址（無外部 IP 位址）的 VM 執行個體。</block>
@@ -409,7 +405,6 @@
   <block id="a1b7de43a5472d2ba57c5f863040eec2" category="list-text">物件版本管理</block>
   <block id="aa4788e27cdbd61e4d722970587d99c5" category="list-text">您不得在 StorageGRID 物件存放區上啟用物件版本管理功能。</block>
   <block id="1c3c05f52f226acac800b43e5ce83b67" category="paragraph">需要連接器才能將資料分層至雲端。將資料分層至 StorageGRID 無法使用時、內部環境中必須有連接器可供使用。您可能需要安裝新的 Connector 、或確定目前選取的 Connector 位於內部部署。</block>
-  <block id="a3049b761ff526799f3b1881932b1c8c" category="list-text">透過連接埠 443 連線至 StorageGRID 支援的 HTTPS 連線</block>
   <block id="de9570886e9849852133b61caefd03b2" category="section-title">將非作用中資料從第一個叢集分層到 StorageGRID 不活動資料</block>
   <block id="a71f0f53c9824602e78a79bc5fa52d43" category="paragraph">準備好環境之後、請從第一個叢集開始分層處理非作用中資料。</block>
   <block id="1b8a3756b590cb811f9726f247097028" category="list-text">具備所需 S3 權限的 AWS 存取金鑰。</block>
@@ -911,9 +906,7 @@
   <block id="ea97cc2428a460eae122a94c68a8b16a" category="section-title">準備好連接器</block>
   <block id="cc8fa83637def0ab4b26b2c73eaf58b1" category="paragraph">如果您已在AWS VPC或內部部署部署了Connector、您就能輕鬆完成所有設定。如果沒有、您需要在上述任一位置建立連接器、以便將ONTAP 資訊分層保存至AWS S3儲存設備。您無法使用部署於其他雲端供應商的Connector。</block>
   <block id="929d25665bc92d22cf4a79265248dd36" category="section-title">連接器網路需求</block>
-  <block id="572373ae1e78fa8826ac1a5468d0b8c1" category="list-text">透過連接埠443（HTTPS）連線至雲端分層服務的傳出網際網路連線</block>
   <block id="2e379f93711508ab69eec06837dd271c" category="inline-link">請參閱端點清單</block>
-  <block id="070ae2b938526f98049114b311cf4a90" category="list-text">透過連接埠443連線至S3物件儲存設備的HTTPS連線 <block ref="2b717f51e9f0e108fc936d861142f7b4" category="inline-link-rx"></block>）</block>
   <block id="76e709935c290dea4c7b1c0de4918211" category="inline-link">確認Connector具有管理S3儲存區的權限</block>
   <block id="4e96d68b20a8c2caa7ac1a77b15169c3" category="list-text"><block ref="4e96d68b20a8c2caa7ac1a77b15169c3" category="inline-link-rx"></block></block>
   <block id="db41e7a8de9567fec002e93320c428ad" category="inline-xref">瞭解如何設定VPC端點介面。</block>
@@ -1370,4 +1363,10 @@
   <block id="2b36f8b3b2cccdc6807233a79e1b8d1d" category="paragraph">如果您達到 BYOL 容量上限、新冷資料的分層作業就會停止。所有先前的階層式資料仍可存取、這表示您可以擷取及使用此資料。擷取後、此資料會從雲端移回效能層。</block>
   <block id="91c0c3f0911cf0aa7791e2815ecf2507" category="paragraph">不過、如果您訂閱了 PAYGO 市場訂閱的 _BlueXP - 部署與管理雲端資料服務 _ 、新的 Cold 資料將會繼續分層至物件儲存、您將會根據每次使用的情況支付這些費用。</block>
   <block id="9c7d287d0ce7d0d1654a49d75c7314f0" category="paragraph">如果您有 Cloud Volumes ONTAP 系統、您可以在「雲端分層叢集」頁面找到這些系統、以便完整檢視混合雲基礎架構中的資料分層。不過Cloud Volumes ONTAP 、從Cloud Tiering讀取的是隻讀的系統。您無法從 Cloud Volumes ONTAP Cloud Tiering 設定資料分層功能。<block ref="7477c38194261f0954175f853359735c" category="inline-link-rx"></block>。</block>
+  <block id="942c9249796cf6b78c981ebf15195809" category="list-text"><block ref="942c9249796cf6b78c981ebf15195809" category="inline-link-rx"></block></block>
+  <block id="827819483dd4d9a78711b6afa4da92ab" category="list-text">透過連接埠 443 連接到雲端分層服務和 Google Cloud Storage 的 HTTPS 連線 <block ref="d9defc1077847b67f008853c06990134" category="inline-link-rx"></block>）</block>
+  <block id="7ec3e00e427ce2f28dc1338f2397328b" category="list-text">透過連接埠 443 與雲端分層服務的 HTTPS 連線 <block ref="4a7a4f89081133703af86b4e7832dbdb" category="inline-link-rx"></block>）</block>
+  <block id="5bfe7676a3f4e4197bf9f895c6b2fcb4" category="list-text">透過連接埠 443 與 StorageGRID 系統的 HTTPS 連線</block>
+  <block id="0d2084a4e3ff91eb61a6e20f85d92399" category="list-text">透過連接埠 443 連接到雲端分層服務和 S3 物件儲存設備的 HTTPS 連線 <block ref="e55fc914b3d027a7a2463283008a8fbf" category="inline-link-rx"></block>）</block>
+  <block id="bd0e0977c46457979423f05da93b43de" category="list-text">透過連接埠 443 連接到 Cloud Tiering 服務和 Azure Blob 物件儲存設備的 HTTPS 連線 <block ref="5bf1914e1013b2901a1aed42fbd7a1ac" category="inline-link-rx"></block>）</block>
 </blocks>

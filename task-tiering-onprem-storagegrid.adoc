@@ -144,8 +144,8 @@ S3 認證:: 當您設定 StorageGRID 層疊至物件時、您需要使用 S3 存
 .步驟
 . 確保安裝 Connector 的網路啟用下列連線：
 +
-** 透過連接埠 443 （ HTTPS ）連至雲端分層服務的傳出網際網路連線
-** 透過連接埠 443 連線至 StorageGRID 支援的 HTTPS 連線
+** 透過連接埠 443 與雲端分層服務的 HTTPS 連線 (https://docs.netapp.com/us-en/cloud-manager-setup-admin/task-set-up-networking-on-prem.html#endpoints-contacted-for-day-to-day-operations["請參閱端點清單"^]）
+** 透過連接埠 443 與 StorageGRID 系統的 HTTPS 連線
 ** 透過連接埠443連線至ONTAP 您的SURF叢 集管理LIF的HTTPS連線
 
 

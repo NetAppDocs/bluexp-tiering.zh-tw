@@ -110,8 +110,7 @@ BlueXP Connector是用於BlueXP功能的主要軟體。需要連接器來分層�
 
 * 確保安裝 Connector 的網路啟用下列連線：
 +
-** 透過連接埠443（HTTPS）連線至雲端分層服務的傳出網際網路連線
-** 透過連接埠443連線至S3物件儲存設備的HTTPS連線 (https://docs.netapp.com/us-en/cloud-manager-setup-admin/reference-checklist-cm.html["請參閱端點清單"^]）
+** 透過連接埠 443 連接到雲端分層服務和 S3 物件儲存設備的 HTTPS 連線 (https://docs.netapp.com/us-en/cloud-manager-setup-admin/task-set-up-networking-aws.html#endpoints-contacted-for-day-to-day-operations["請參閱端點清單"^]）
 ** 透過連接埠443連線至ONTAP 您的SURF叢 集管理LIF的HTTPS連線
 
 

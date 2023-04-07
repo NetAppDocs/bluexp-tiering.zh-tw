@@ -129,8 +129,7 @@ https://docs.netapp.com/us-en/cloud-manager-ontap-onprem/task-discovering-ontap.
 .步驟
 . 確認安裝連接器的 VPC 啟用下列連線：
 +
-** 透過連接埠 443 （ HTTPS ）連至雲端分層服務的傳出網際網路連線
-** 透過連接埠 443 連線至 Google Cloud Storage 的 HTTPS 連線
+** 透過連接埠 443 連接到雲端分層服務和 Google Cloud Storage 的 HTTPS 連線 (https://docs.netapp.com/us-en/cloud-manager-setup-admin/task-set-up-networking-google.html#endpoints-contacted-for-day-to-day-operations["請參閱端點清單"^]）
 ** 透過連接埠443連線至ONTAP 您的SURF叢 集管理LIF的HTTPS連線
 
 
