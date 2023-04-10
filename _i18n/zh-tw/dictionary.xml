@@ -719,7 +719,6 @@
   <block id="c6dbaaf1bef168a38de37623edb997f7" category="section-title">什麼是Connector？</block>
   <block id="d2eea5ad2ae07890452da2aec5cffc98" category="section-title">我可以在內部部署連接器嗎？</block>
   <block id="b0ccf0f3fa1a27a2fbab1c35ebf8e0f5" category="inline-link">瞭解如何在內部環境中安裝Connector</block>
-  <block id="de7433c1562faa5f9b2ee55c74f16fa2" category="paragraph">是的。Connector軟體可下載並手動安裝在網路中的Linux主機上。<block ref="5cffbbed8cdfbd25b645e94434fee757" category="inline-link-rx"></block>。</block>
   <block id="eef7b8a2b79a5ecae955422af0ab3b72" category="section-title">使用雲端分層之前、是否需要向雲端服務供應商提供帳戶？</block>
   <block id="71b5e4019a71131db2052326884d8bbe" category="paragraph">是的。您必須擁有帳戶、才能定義要使用的物件儲存設備。在VPC或vnet的雲端上設定Connector時、也需要使用雲端儲存設備供應商的帳戶。</block>
   <block id="8ca6e099f9e16583824ee8e6a5727c40" category="section-title">如果連接器故障、會有什麼影響？</block>
@@ -847,7 +846,6 @@
   <block id="6dfc91892c8d766a3db42ec08d3c133e" category="paragraph"><block ref="6dfc91892c8d766a3db42ec08d3c133e" category="inline-link-rx"></block></block>
   <block id="7c14243eb88d8593d5e3377a174647d2" category="paragraph"><block ref="7c14243eb88d8593d5e3377a174647d2" category="inline-link-rx"></block></block>
   <block id="da67ca84863fc0110febe22c08877274" category="inline-link">在GCP中部署Connector</block>
-  <block id="3b8a5aa33e51c71b8f37ac5972ac20d7" category="list-text"><block ref="3b8a5aa33e51c71b8f37ac5972ac20d7" category="inline-link-rx"></block></block>
   <block id="a42fb1ba03bcfed59842ef0ade58297a" category="list-text">*選擇供應商*：選擇* Google Cloud *、然後按一下*繼續*。</block>
   <block id="207355fa06161fe61fe18f75db4c59d5" category="paragraph"><block ref="207355fa06161fe61fe18f75db4c59d5" category="inline-image-macro-rx" type="image"></block></block>
   <block id="af35d8c52cd337b400dfea1bfe174a1d" category="list-text">*選擇供應商*：選擇* StorageGRID 《*》*、然後按一下*「Continue *（繼續*）」。</block>
@@ -1203,7 +1201,6 @@
   <block id="e1095ff19466581c5274f67123c95036" category="cell">\https://api.bluexp.netapp.com</block>
   <block id="9e434ddc2ad4b9de005368b77254223d" category="cell">\https://*.cloudmanager.cloud.netapp.com</block>
   <block id="37ba276f010f4ea07f1196b487811443" category="cell">\https://*.api.bluexp.netapp.com</block>
-  <block id="0e40b9cba041560c9517bc49757da3c7" category="paragraph">請參閱的完整端點清單<block ref="4c9e3e17ba20f553394e5bc78e402946" category="inline-link-rx"></block>、<block ref="cd3c6f623ccf3e34f9d46b28c47f2a3d" category="inline-link-rx"></block>或<block ref="80755100f97c37f8aa8e3d999b0a43d9" category="inline-link-rx"></block> 雲端環境：</block>
   <block id="c1b8b8c1767ffef37beebd6dca294a19" category="paragraph">使用內部部署連接器時、您必須輸入可存取資源群組的Azure訂閱。</block>
   <block id="838b026c40657f60dbef105628a74c67" category="paragraph">對於任何第三方物件存放服務所產生的任何問題、NetApp不提供支援、也不承擔任何責任、特別是當它未與產品來源的第三方達成協議時。茲確認並同意、對於任何相關損害、NetApp概不負責、也不需要以其他方式為該第三方產品提供支援。</block>
   <block id="cde18ab8c63e317f54bbc67366c538fb" category="list-text">執行不支援更新版本的來源內部ONTAP 資源叢集ONTAP 、以及透過使用者指定連接埠連線至目的地S3相容物件儲存設備。<block ref="afd80128eeaacb8238d3ffdcf8ecd8a8" category="inline-link-rx"></block>。</block>
@@ -1369,4 +1366,7 @@
   <block id="5bfe7676a3f4e4197bf9f895c6b2fcb4" category="list-text">透過連接埠 443 與 StorageGRID 系統的 HTTPS 連線</block>
   <block id="0d2084a4e3ff91eb61a6e20f85d92399" category="list-text">透過連接埠 443 連接到雲端分層服務和 S3 物件儲存設備的 HTTPS 連線 <block ref="e55fc914b3d027a7a2463283008a8fbf" category="inline-link-rx"></block>）</block>
   <block id="bd0e0977c46457979423f05da93b43de" category="list-text">透過連接埠 443 連接到 Cloud Tiering 服務和 Azure Blob 物件儲存設備的 HTTPS 連線 <block ref="5bf1914e1013b2901a1aed42fbd7a1ac" category="inline-link-rx"></block>）</block>
+  <block id="f8fffd3ee443f29d36b65a0e66a5f03a" category="paragraph">是的。Connector軟體可下載並手動安裝在網路中的Linux主機上。<block ref="1b7ddd38e792a03a4b15132910b94d8c" category="inline-link-rx"></block>。</block>
+  <block id="99d3ed1cc58df8ac52e23dd69320374b" category="list-text"><block ref="99d3ed1cc58df8ac52e23dd69320374b" category="inline-link-rx"></block></block>
+  <block id="c395006d6063b66336be768382280c9e" category="paragraph">請參閱的完整端點清單<block ref="684a3f4234dd7d8f8b7d90e00da95138" category="inline-link-rx"></block>、<block ref="fd66fc554da543d0f7f94dcde36b2a2f" category="inline-link-rx"></block>或<block ref="2484264a704a749bc992bec76f43f13d" category="inline-link-rx"></block> 雲端環境：</block>
 </blocks>
