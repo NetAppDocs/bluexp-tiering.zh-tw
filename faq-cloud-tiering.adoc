@@ -164,7 +164,7 @@ https://bluexp.netapp.com/pricing["請參閱定價詳細資料"]。
 
 === 如何在啟用雲端分層之前、預估磁碟區的節約效益並取得冷資料報告？
 
-若要取得預估、只要將ONTAP 您的不可靠叢集新增至BlueXP、然後透過位於分層索引標籤的雲端分層叢集儀表板進行檢查即可。當停用非使用中資料報告（IDR)停用或在一段足夠長的時間內尚未啟動時、Cloud Tiering會使用業界不變的70%來計算預估的節約效益。一旦有可用的印尼盾資料、Cloud Tiering就會將節約成本更新為準確的數據。
+若要取得預估、只要將 ONTAP 叢集新增至 BlueXP 、然後透過「雲端分層叢集」頁面進行檢查即可。按一下 * 計算叢集的潛在分層節約 * 以啟動 https://bluexp.netapp.com/cloud-tiering-service-tco["雲端分層 TCO 計算機"^] 看看您可以省下多少錢。
 
 
 
@@ -200,7 +200,7 @@ Cloud Tiering支援ONTAP 不支援版本9.2及更新版本。
 
 === 關於此功能呢 Cloud Volumes ONTAP ？
 
-如果您有 Cloud Volumes ONTAP 系統、您可以在「雲端分層叢集」頁面找到這些系統、以便完整檢視混合雲基礎架構中的資料分層。不過Cloud Volumes ONTAP 、從Cloud Tiering讀取的是隻讀的系統。您無法從 Cloud Volumes ONTAP Cloud Tiering 設定資料分層功能。 https://docs.netapp.com/us-en/cloud-manager-cloud-volumes-ontap/task-tiering.html["您在Cloud Volumes ONTAP BlueXP的工作環境中設定了針對功能的分層功能"^]。
+如果您有 Cloud Volumes ONTAP 系統、您可以在「雲端分層叢集」頁面找到這些系統、以便完整檢視混合雲基礎架構中的資料分層。不過Cloud Volumes ONTAP 、從Cloud Tiering讀取的是隻讀的系統。您無法從 Cloud Volumes ONTAP Cloud Tiering 設定資料分層功能。 https://docs.netapp.com/us-en/cloud-manager-cloud-volumes-ontap/task-tiering.html["您可以在 BlueXP 的工作環境中設定 Cloud Volumes ONTAP 系統的分層"^]。
 
 
 

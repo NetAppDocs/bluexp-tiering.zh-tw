@@ -1097,8 +1097,6 @@
   <block id="fb033ea193d99adc8d3553114c5fe47d" category="list-text">Cloud Tiering 可以分層的磁碟區總數可能低於 ONTAP 您的整套系統上的磁碟區數量。這是因為磁碟區無法從某些集合體分層。請參閱ONTAP 的《》文件<block ref="bc16a784cd65f4901578ebb3b70f2118" category="inline-link-rx"></block>。</block>
   <block id="115976a072e6ce2f2ab2d16440a6eced" category="paragraph">您必須先在ONTAP BlueXP畫版中建立內部的功能環境、才能開始分層處理冷資料。</block>
   <block id="6f7498318061ab9585a9a930576417e9" category="paragraph">您必須先在ONTAP BlueXP中建立內部的功能性環境、才能開始分層處理冷資料。</block>
-  <block id="62b4885d3e4f3aa3a6da101753a59fd4" category="paragraph">若要取得預估、只要將ONTAP 您的不可靠叢集新增至BlueXP、然後透過位於分層索引標籤的雲端分層叢集儀表板進行檢查即可。當停用非使用中資料報告（IDR)停用或在一段足夠長的時間內尚未啟動時、Cloud Tiering會使用業界不變的70%來計算預估的節約效益。一旦有可用的印尼盾資料、Cloud Tiering就會將節約成本更新為準確的數據。</block>
-  <block id="f0e21f59ae2ac8831058af2eeb6352ab" category="inline-link">您在Cloud Volumes ONTAP BlueXP的工作環境中設定了針對功能的分層功能</block>
   <block id="f92115ef83b34980e3bba84c1a861bac" category="paragraph">下列問題與BlueXP Connector有關。</block>
   <block id="367329787d30f75b30521f88dfa0d7c1" category="paragraph">Connector是在雲端帳戶內或內部部署的運算執行個體上執行的軟體、可讓BlueXP安全地管理雲端資源。若要使用雲端分層服務、您必須部署連接器。</block>
   <block id="b3ac7359e28ad36cfcfef7d4cff76670" category="list-text">對於Azure而言、您不需要在需要提供給BlueXP的權限範圍之外額外取得權限。</block>
@@ -1126,9 +1124,6 @@
   <block id="8816958eed360786a943983e0bd031fd" category="paragraph">在BlueXP中、選取內部作業環境、按一下「*啟用*」以使用分層服務、然後依照提示將資料分層至Google Cloud Storage。</block>
   <block id="0f41d5111907904b1b8d390c2c27b6fc" category="paragraph">BlueXP中的雲端分層服務（前身為Cloud Manager）運用了_S__的功能FabricPool 。NetApp Data Fabric 技術可自動將資料分層至低成本的物件儲存設備。 FabricPool作用中（熱）資料會保留在本機層（內部部署ONTAP 的資訊集合體）、而非作用中（冷）資料則移至雲端層、同時維持ONTAP 資料效率不變。</block>
   <block id="e8395f15de9e60e2f10e3d0598808276" category="inline-link">請參閱BlueXP網站上的雲端分層頁面</block>
-  <block id="643db1b55251062b39af68b66b294d99" category="paragraph">如需雲端分層所提供價值的詳細資訊、<block ref="a183fd414a6868970d08a7f98447aa3e" category="inline-link-rx"></block>。</block>
-  <block id="6ba24c7d2cccc768e3092f47f5af4915" category="admonition">從 Cloud Tiering 讀取系統。 Cloud Volumes ONTAP<block ref="7477c38194261f0954175f853359735c" category="inline-link-rx"></block>。</block>
-  <block id="9342584e61c9312677349e1f9c840d56" category="paragraph">購買Cloud Tiering授權之後、您需要使用BlueXP中的Digital Wallet來新增授權。 <block ref="14bb9fa35d1b0028e213cd470536d52e" category="inline-link-macro-rx"></block>。</block>
   <block id="955a264d46a1f0536f93bcb5a3e454f1" category="list-text">您可以從BlueXP探索內部叢集。</block>
   <block id="92d46e494e7ad2aeddc2f61967fd1763" category="list-text">BlueXP可設定ONTAP 使用物件儲存供應商、並探索叢集上的作用中和非作用中資料量。</block>
   <block id="d2c482346f4646ff22b0d802d84f0468" category="paragraph">在BluXP中、選取內部作業環境、按一下「*啟用*」以使用分層服務、然後依照提示將資料分層StorageGRID 至物件。</block>
@@ -1359,7 +1354,6 @@
   <block id="874323801a4fa98c0f05aaa80c3c1d82" category="paragraph"><block ref="f7ce611d89d41a39c0cd111c48bbba76" category="inline-link-rx"></block>。</block>
   <block id="2b36f8b3b2cccdc6807233a79e1b8d1d" category="paragraph">如果您達到 BYOL 容量上限、新冷資料的分層作業就會停止。所有先前的階層式資料仍可存取、這表示您可以擷取及使用此資料。擷取後、此資料會從雲端移回效能層。</block>
   <block id="91c0c3f0911cf0aa7791e2815ecf2507" category="paragraph">不過、如果您訂閱了 PAYGO 市場訂閱的 _BlueXP - 部署與管理雲端資料服務 _ 、新的 Cold 資料將會繼續分層至物件儲存、您將會根據每次使用的情況支付這些費用。</block>
-  <block id="9c7d287d0ce7d0d1654a49d75c7314f0" category="paragraph">如果您有 Cloud Volumes ONTAP 系統、您可以在「雲端分層叢集」頁面找到這些系統、以便完整檢視混合雲基礎架構中的資料分層。不過Cloud Volumes ONTAP 、從Cloud Tiering讀取的是隻讀的系統。您無法從 Cloud Volumes ONTAP Cloud Tiering 設定資料分層功能。<block ref="7477c38194261f0954175f853359735c" category="inline-link-rx"></block>。</block>
   <block id="942c9249796cf6b78c981ebf15195809" category="list-text"><block ref="942c9249796cf6b78c981ebf15195809" category="inline-link-rx"></block></block>
   <block id="827819483dd4d9a78711b6afa4da92ab" category="list-text">透過連接埠 443 連接到雲端分層服務和 Google Cloud Storage 的 HTTPS 連線 <block ref="d9defc1077847b67f008853c06990134" category="inline-link-rx"></block>）</block>
   <block id="7ec3e00e427ce2f28dc1338f2397328b" category="list-text">透過連接埠 443 與雲端分層服務的 HTTPS 連線 <block ref="4a7a4f89081133703af86b4e7832dbdb" category="inline-link-rx"></block>）</block>
@@ -1369,4 +1363,13 @@
   <block id="f8fffd3ee443f29d36b65a0e66a5f03a" category="paragraph">是的。Connector軟體可下載並手動安裝在網路中的Linux主機上。<block ref="1b7ddd38e792a03a4b15132910b94d8c" category="inline-link-rx"></block>。</block>
   <block id="99d3ed1cc58df8ac52e23dd69320374b" category="list-text"><block ref="99d3ed1cc58df8ac52e23dd69320374b" category="inline-link-rx"></block></block>
   <block id="c395006d6063b66336be768382280c9e" category="paragraph">請參閱的完整端點清單<block ref="684a3f4234dd7d8f8b7d90e00da95138" category="inline-link-rx"></block>、<block ref="fd66fc554da543d0f7f94dcde36b2a2f" category="inline-link-rx"></block>或<block ref="2484264a704a749bc992bec76f43f13d" category="inline-link-rx"></block> 雲端環境：</block>
+  <block id="5a9e33885fce7948860e5a957a6fb29f" category="inline-link">使用雲端分層 TCO 計算機來查看您可以節省多少成本</block>
+  <block id="a6f0f70c7a597fb210e8ae036288a1c7" category="paragraph"><block ref="61f3ae130fd6497c4c039b23b58d1478" category="inline-link-rx"></block>。</block>
+  <block id="4a97347622bcc4ff17d08f47dbd6058e" category="paragraph">如需雲端分層所提供價值的詳細資訊、<block ref="6d561328137aaacc2dac117ec87092f5" category="inline-link-rx"></block>。</block>
+  <block id="90d333fba347612ff8ecc43a29a3eed9" category="inline-link">您可以在 BlueXP 的工作環境中設定 Cloud Volumes ONTAP 系統的分層</block>
+  <block id="5e4db263e473f9cd49f73bc884701b27" category="admonition">從 Cloud Tiering 讀取系統。 Cloud Volumes ONTAP<block ref="d841e2ca06a23a295269523a8cf3293d" category="inline-link-rx"></block>。</block>
+  <block id="ff036adb1c47937772e87468ec99c6ff" category="paragraph">購買Cloud Tiering授權之後、您需要使用BlueXP中的Digital Wallet來新增授權。 <block ref="14bb9fa35d1b0028e213cd470536d52e" category="inline-link-macro-rx"></block>。</block>
+  <block id="dfe334fbbb64c2a1ad464bafa6253a79" category="inline-link">雲端分層 TCO 計算機</block>
+  <block id="e1041666338a1691b7104a6d8a48d67e" category="paragraph">若要取得預估、只要將 ONTAP 叢集新增至 BlueXP 、然後透過「雲端分層叢集」頁面進行檢查即可。按一下 * 計算叢集的潛在分層節約 * 以啟動<block ref="aacb9a70fb6d33ff9c71983d26ca8a9f" category="inline-link-rx"></block> 看看您可以省下多少錢。</block>
+  <block id="532cc143d94eb1465c9c79a1dfcd49a1" category="paragraph">如果您有 Cloud Volumes ONTAP 系統、您可以在「雲端分層叢集」頁面找到這些系統、以便完整檢視混合雲基礎架構中的資料分層。不過Cloud Volumes ONTAP 、從Cloud Tiering讀取的是隻讀的系統。您無法從 Cloud Volumes ONTAP Cloud Tiering 設定資料分層功能。<block ref="d841e2ca06a23a295269523a8cf3293d" category="inline-link-rx"></block>。</block>
 </blocks>

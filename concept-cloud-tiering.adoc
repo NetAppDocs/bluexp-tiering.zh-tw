@@ -22,6 +22,8 @@ BlueXP中的雲端分層服務（前身為Cloud Manager）運用了_S__的功能
 
 雲端分層可設定為單節點叢集、HA組態叢集、分層鏡射組態叢集、MetroCluster 以及使用FabricPool 「鏡射」的鏡射組態。雲端分層授權可在所有叢集之間共享。
 
+https://bluexp.netapp.com/cloud-tiering-service-tco["使用雲端分層 TCO 計算機來查看您可以節省多少成本"^]。
+
 
 
 == 功能
@@ -38,10 +40,10 @@ BlueXP中的雲端分層服務（前身為Cloud Manager）運用了_S__的功能
 * 如果您有 Cloud Volumes ONTAP 系統、您可以在「叢集」頁面中找到這些系統、以便完整檢視混合雲基礎架構中的資料分層
 
 
-如需雲端分層所提供價值的詳細資訊、 https://cloud.netapp.com/cloud-tiering["請參閱BlueXP網站上的雲端分層頁面"^]。
+如需雲端分層所提供價值的詳細資訊、 https://bluexp.netapp.com/cloud-tiering["請參閱BlueXP網站上的雲端分層頁面"^]。
 
 
-TIP: 從 Cloud Tiering 讀取系統。 Cloud Volumes ONTAP https://docs.netapp.com/us-en/cloud-manager-cloud-volumes-ontap/task-tiering.html["您在Cloud Volumes ONTAP BlueXP的工作環境中設定了針對功能的分層功能"^]。
+TIP: 從 Cloud Tiering 讀取系統。 Cloud Volumes ONTAP https://docs.netapp.com/us-en/cloud-manager-cloud-volumes-ontap/task-tiering.html["您可以在 BlueXP 的工作環境中設定 Cloud Volumes ONTAP 系統的分層"^]。
 
 
 
