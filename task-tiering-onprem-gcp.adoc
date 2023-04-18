@@ -30,7 +30,7 @@ summary: 將非作用中的資料分層儲存至Google Cloud Storage、以釋放
 * 內部ONTAP 使用的支援功能、執行ONTAP 不支援功能的叢集9.6或更新版本、並可透過HTTPS連線至Google Cloud Storage。 https://docs.netapp.com/us-en/cloud-manager-ontap-onprem/task-discovering-ontap.html["瞭解如何探索叢集"^]。
 * 具有預先定義儲存管理角色和儲存存取金鑰的服務帳戶。
 * 安裝在 Google Cloud Platform VPC 上的 Connector 。
-* 連接器的網路功能、可將 HTTPS 連線傳出至 ONTAP 資料中心的叢集、 Google Cloud Storage 及雲端分層服務。
+* Connector 的網路連線功能、可讓您將 HTTPS 輸出連線至資料中心的 ONTAP 叢集、 Google Cloud Storage 、以及 BlueXP 分層服務。
 
 
 .image:https://raw.githubusercontent.com/NetAppDocs/common/main/media/number-2.png["二"] 設定分層
@@ -39,11 +39,11 @@ summary: 將非作用中的資料分層儲存至Google Cloud Storage、以釋放
 
 .image:https://raw.githubusercontent.com/NetAppDocs/common/main/media/number-3.png["三"] 設定授權
 [role="quick-margin-para"]
-免費試用結束後、請透過隨用隨付訂閱、ONTAP VMware Cloud Tiering BYOL授權或兩者的組合來支付雲端分層費用：
+免費試用結束後、請透過隨用隨付訂閱、 ONTAP BlueXP 分層 BYOL 授權、或兩者的組合、支付 BlueXP 分層分層的費用：
 
 [role="quick-margin-list"]
 * 若要從GCP Marketplace訂閱、 https://console.cloud.google.com/marketplace/details/netapp-cloudmanager/cloud-manager?supportedpurview=project&rif_reserved["前往BlueXP Marketplace產品"^]，單擊*訂購*，然後按照提示進行操作。
-* 若要使用Cloud Tiering BYOL授權付款、請寄送電子郵件至ng-cloud-tiering@netapp.com？Subject=Licensing[如果您需要購買、請聯絡我們]、然後再寄送 link:task-licensing-cloud-tiering.html#add-cloud-tiering-byol-licenses-to-your-account["從BlueXP Digital Wallet將其新增至您的帳戶"]。
+* 若要使用 BlueXP 分層 BYOL 授權付款、請寄送 mailto ： ng-cloud-tiering@netapp.com ？ subject=Licensing[ 如果您需要購買一項授權、請聯絡我們 ] 、然後寄送給我們 link:task-licensing-cloud-tiering.html#add-bluexp-tiering-byol-licenses-to-your-account["從BlueXP Digital Wallet將其新增至您的帳戶"]。
 
 
 
@@ -54,7 +54,7 @@ summary: 將非作用中的資料分層儲存至Google Cloud Storage、以釋放
 
 下圖顯示每個元件及其之間需要準備的連線：
 
-image:diagram_cloud_tiering_google.png["此架構影像顯示雲端分層服務、可連線至雲端供應商的 Connector 、連接 ONTAP 至您的叢集的 Connector 、 ONTAP 以及雲端供應商中的叢集與物件儲存設備之間的連線。作用中資料位於 ONTAP 資源中心叢集、而非作用中資料則位於物件儲存區。"]
+image:diagram_cloud_tiering_google.png["顯示 BlueXP 分層服務的架構映像、其中會連線至雲端供應商的 Connector 、連線至 ONTAP 叢集的 Connector 、以及雲端供應商的 ONTAP 叢集與物件儲存設備之間的連線。作用中資料位於 ONTAP 資源中心叢集、而非作用中資料則位於物件儲存區。"]
 
 
 NOTE: Connector 與 Google Cloud Storage 之間的通訊僅供物件儲存設定使用。
@@ -87,20 +87,20 @@ NOTE: Connector 與 Google Cloud Storage 之間的通訊僅供物件儲存設定
 
 * 連接器位於Google Cloud Platform VPC中、因此需要傳入連線。
 +
-叢集與雲端分層服務之間不需要連線。
+叢集與 BlueXP 分層服務之間不需要連線。
 
 * 每個裝載您要分層的磁碟區的節點都需要叢集間LIF ONTAP 。LIF 必須與 _IPspac__ 建立關聯、 ONTAP 以便連接物件儲存設備。
 +
-設定資料分層時、 Cloud Tiering 會提示您使用 IPspace 。您應該選擇每個 LIF 所關聯的 IPspace 。這可能是您建立的「預設」 IPspace 或自訂 IPspace 。深入瞭解 https://docs.netapp.com/us-en/ontap/networking/create_a_lif.html["生命"^] 和 https://docs.netapp.com/us-en/ontap/networking/standard_properties_of_ipspaces.html["IPspaces"^]。
+設定資料分層時、 BlueXP 分層會提示您使用 IPspace 。您應該選擇每個 LIF 所關聯的 IPspace 。這可能是您建立的「預設」 IPspace 或自訂 IPspace 。深入瞭解 https://docs.netapp.com/us-en/ontap/networking/create_a_lif.html["生命"^] 和 https://docs.netapp.com/us-en/ontap/networking/standard_properties_of_ipspaces.html["IPspaces"^]。
 
 
 
 --
-支援的磁碟區和集合體:: Cloud Tiering 可以分層的磁碟區總數可能低於 ONTAP 您的整套系統上的磁碟區數量。這是因為磁碟區無法從某些集合體分層。請參閱ONTAP 的《》文件 https://docs.netapp.com/us-en/ontap/fabricpool/requirements-concept.html#functionality-or-features-not-supported-by-fabricpool["功能或功能不受 FabricPool 支援"^]。
+支援的磁碟區和集合體:: BlueXP 分層可分層的磁碟區總數可能少於 ONTAP 系統上的磁碟區數量。這是因為磁碟區無法從某些集合體分層。請參閱ONTAP 的《》文件 https://docs.netapp.com/us-en/ontap/fabricpool/requirements-concept.html#functionality-or-features-not-supported-by-fabricpool["功能或功能不受 FabricPool 支援"^]。
 
 
 
-NOTE: 雲端分層可支援 FlexGroup 支援不同步磁碟區。安裝程式的運作方式與任何其他 Volume 相同。
+NOTE: BlueXP 分層支援 FlexGroup 磁碟區。安裝程式的運作方式與任何其他 Volume 相同。
 
 
 
@@ -129,7 +129,7 @@ https://docs.netapp.com/us-en/cloud-manager-ontap-onprem/task-discovering-ontap.
 .步驟
 . 確認安裝連接器的 VPC 啟用下列連線：
 +
-** 透過連接埠 443 連接到雲端分層服務和 Google Cloud Storage 的 HTTPS 連線 (https://docs.netapp.com/us-en/cloud-manager-setup-admin/task-set-up-networking-google.html#endpoints-contacted-for-day-to-day-operations["請參閱端點清單"^]）
+** 透過連接埠 443 連接到 BlueXP 分層服務和 Google Cloud Storage 的 HTTPS 連線 (https://docs.netapp.com/us-en/cloud-manager-setup-admin/task-set-up-networking-google.html#endpoints-contacted-for-day-to-day-operations["請參閱端點清單"^]）
 ** 透過連接埠443連線至ONTAP 您的SURF叢 集管理LIF的HTTPS連線
 
 
@@ -143,12 +143,12 @@ https://cloud.google.com/vpc/docs/configure-private-google-access["私有 Google
 
 === 準備Google Cloud Storage
 
-當您設定分層時、需要為具有 Storage Admin 權限的服務帳戶提供儲存存取金鑰。服務帳戶可讓雲端分層驗證及存取用於資料分層的雲端儲存桶。這些金鑰是必要的、以便 Google Cloud Storage 知道誰在提出要求。
+當您設定分層時、需要為具有 Storage Admin 權限的服務帳戶提供儲存存取金鑰。服務帳戶可讓 BlueXP 分層驗證及存取用於資料分層的雲端儲存貯體。這些金鑰是必要的、以便 Google Cloud Storage 知道誰在提出要求。
 
-雲端儲存桶必須位於 link:reference-google-support.html#supported-google-cloud-regions["支援雲端分層的區域"]。
+雲端儲存桶必須位於 link:reference-google-support.html#supported-google-cloud-regions["支援 BlueXP 分層的區域"]。
 
 
-NOTE: 如果您計畫設定雲端分層以使用較低成本的儲存類別、以便階層式資料在特定天數後轉換至該類別、則在GCP帳戶中設定儲存區時、不得選擇任何生命週期規則。雲端分層可管理生命週期的轉換。
+NOTE: 如果您計畫設定 BlueXP 分層以使用低成本的儲存類別、讓階層式資料在一定天數後轉換至、則在 GCP 帳戶中設定儲存區時、您不得選擇任何生命週期規則。BlueXP 分層管理生命週期轉換。
 
 .步驟
 . https://cloud.google.com/iam/docs/creating-managing-service-accounts#creating_a_service_account["建立具有預先定義儲存管理角色的服務帳戶"^]。
@@ -157,7 +157,7 @@ NOTE: 如果您計畫設定雲端分層以使用較低成本的儲存類別、�
 .. 選取專案、然後按一下 * 互通性 * 。如果您尚未啟用、請按一下 * 「啟用互通性存取」 * 。
 .. 在 * 服務帳戶的存取金鑰 * 下、按一下 * 建立服務帳戶的金鑰 * 、選取您剛建立的服務帳戶、然後按一下 * 建立金鑰 * 。
 +
-之後設定雲端分層時、您需要輸入金鑰。
+設定 BlueXP 分層時、您需要在稍後輸入金鑰。
 
 
 
@@ -188,7 +188,7 @@ image:screenshot_setup_tiering_onprem.png["螢幕擷取畫面顯示當您選取�
 . 完成「*建立物件儲存*」頁面上的步驟：
 +
 .. * Bucket *：新增Google Cloud Storage儲存庫或選擇現有儲存庫。
-.. *儲存設備類別生命週期*：雲端分層管理階層式資料的生命週期轉換。資料是從_Standard_類別開始、但您可以建立規則、以便在特定天數後將資料移至其他類別。
+.. * 儲存類別生命週期 * ： BlueXP 分層管理階層資料的生命週期轉換。資料是從_Standard_類別開始、但您可以建立規則、以便在特定天數後將資料移至其他類別。
 +
 選取您要將階層式資料移轉至的Google Cloud儲存類別、以及資料移動前的天數、然後按一下*繼續*。例如、以下螢幕快照顯示、階層式資料會在物件儲存設備的30天後、從_Standard_類別移至_Nearlin__類別、然後在物件儲存設備的60天後移至_Coldlin__類別。
 
@@ -204,7 +204,7 @@ image:screenshot_tiering_lifecycle_selection_gcp.png["螢幕擷取畫面顯示�
 .. * 認證 * ：輸入具有儲存管理角色之服務帳戶的儲存存取金鑰和秘密金鑰。
 .. *叢集網路*：選取ONTAP 要用於連接物件儲存設備的IPspace。
 +
-選擇正確的 IPspace 、可確保 Cloud Tiering 能夠設定從 ONTAP 效益到雲端供應商物件儲存的連線。
+選擇正確的 IPspace 可確保 BlueXP 分層可設定從 ONTAP 到雲端供應商物件儲存設備的連線。
 
 
 
@@ -232,7 +232,7 @@ image:screenshot_tiering_policy_settings.png["顯示可設定分層原則設定�
 您已成功設定從叢集上的磁碟區到 Google Cloud 物件儲存區的資料分層。
 
 .接下來呢？
-link:task-licensing-cloud-tiering.html["請務必訂閱雲端分層服務"]。
+link:task-licensing-cloud-tiering.html["請務必訂閱 BlueXP 分層服務"]。
 
 您可以檢閱叢集上作用中和非作用中資料的相關資訊。 link:task-managing-tiering.html["深入瞭解如何管理分層設定"]。
 

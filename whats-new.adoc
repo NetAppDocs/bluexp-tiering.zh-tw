@@ -2,9 +2,9 @@
 sidebar: sidebar 
 permalink: whats-new.html 
 keywords: 'what"s new, features, new, release notes, bugs, limitations, known issues, enhancements, fixes, tiering' 
-summary: 瞭解雲端分層的新功能。 
+summary: 瞭解 BlueXP 分層的新功能。 
 ---
-= 雲端分層的新功能
+= BlueXP 分層的新功能
 :hardbreaks:
 :allow-uri-read: 
 :nofooter: 
@@ -14,7 +14,7 @@ summary: 瞭解雲端分層的新功能。
 
 
 [role="lead"]
-瞭解雲端分層的新功能。
+瞭解 BlueXP 分層的新功能。
 
 
 
@@ -24,7 +24,7 @@ summary: 瞭解雲端分層的新功能。
 
 === 授權標籤已移除
 
-「授權」標籤已從雲端分層介面中移除。所有隨用隨付（ PAYGO ）訂閱授權都可立即從 Cloud Tiering 的內部部署儀表板存取。您也可以從該頁面連結至 Digital Wallet 、以便檢視和管理任何雲端分層自帶授權（ BYOL ）。
+授權標籤已從 BlueXP 分層介面中移除。所有隨用隨付（ PAYGO ）訂閱授權都可從 BlueXP 內部部署儀表板存取。您也可以從該頁面連結至 Digital Wallet 、以便檢視和管理任何 BlueXP 分層自帶授權（ BYOL ）。
 
 
 
@@ -40,7 +40,7 @@ summary: 瞭解雲端分層的新功能。
 
 === 現在您可以為磁碟區產生分層報告
 
-您可以從「層級磁碟區」頁面下載報告、以便檢閱所管理叢集上所有磁碟區的分層狀態。雲端分層會產生.CSV檔案、您可以視需要檢閱並傳送給貴公司的其他人員。 https://docs.netapp.com/us-en/cloud-manager-tiering/task-managing-tiering.html#download-a-tiering-report-for-your-volumes["瞭解如何下載分層報告"]。
+您可以從「層級磁碟區」頁面下載報告、以便檢閱所管理叢集上所有磁碟區的分層狀態。BlueXP 分層會產生 .CSV 檔案、您可以視需要檢閱並傳送給公司中的其他人。 https://docs.netapp.com/us-en/cloud-manager-tiering/task-managing-tiering.html#download-a-tiering-report-for-your-volumes["瞭解如何下載分層報告"]。
 
 
 
@@ -50,7 +50,7 @@ summary: 瞭解雲端分層的新功能。
 
 === 連接器輸出網際網路存取端點變更
 
-由於雲端分層發生變更、您必須變更下列連接器端點、才能成功執行雲端分層作業：
+由於 BlueXP 分層的變更、您必須變更下列 Connector 端點、才能成功執行 BlueXP 分層作業：
 
 [cols="50,50"]
 |===
@@ -70,7 +70,7 @@ summary: 瞭解雲端分層的新功能。
 
 
 
-=== 拖放即可將雲端分層移至Azure Blob、Google Cloud Storage及StorageGRID
+=== 拖放即可啟用 BlueXP 分層功能、將其分層至 Azure Blob 、 Google Cloud Storage 和 StorageGRID
 
 如果Azure Blob、Google Cloud Storage或StorageGRID Setiering目的地是在CanvasTM上的工作環境、您可以將內部ONTAP 環境拖曳至目的地、以啟動分層設定精靈。
 
@@ -88,7 +88,7 @@ https://docs.netapp.com/us-en/cloud-manager-tiering/task-tiering-onprem-aws.html
 
 
 
-=== 拖放以啟用雲端分層至Amazon S3
+=== 拖放以啟用 BlueXP 分層至 Amazon S3
 
 如果Amazon S3分層目的地是在Canvas上的工作環境、您可以將內部ONTAP 的支援環境拖曳到目的地、以啟動分層設定精靈。
 
@@ -112,7 +112,7 @@ Cloud Tiering UI已新增一組物件儲存組態頁面。您可以新增物件�
 
 === 支援MetroCluster 以雲端分層的授權進行支援、以利執行各種組態
 
-雲端分層授權現在可與MetroCluster 採用各種組態的叢集共享。您不再需要在FabricPool 這些情況下使用過時的不再使用的功能介紹授權。如此一來、您就能更輕鬆地在更多叢集上使用「浮動」雲端分層授權。 https://docs.netapp.com/us-en/cloud-manager-tiering/task-licensing-cloud-tiering.html#apply-cloud-tiering-licenses-to-clusters-in-special-configurations["瞭解如何授權及設定這些類型的叢集。"]
+雲端分層授權現在可與MetroCluster 採用各種組態的叢集共享。您不再需要在FabricPool 這些情況下使用過時的不再使用的功能介紹授權。如此一來、您就能更輕鬆地在更多叢集上使用「浮動」雲端分層授權。 https://docs.netapp.com/us-en/cloud-manager-tiering/task-licensing-cloud-tiering.html#apply-bluexp-tiering-licenses-to-clusters-in-special-configurations["瞭解如何授權及設定這些類型的叢集。"]
 
 
 
@@ -122,7 +122,7 @@ Cloud Tiering UI已新增一組物件儲存組態頁面。您可以新增物件�
 
 === 雲端分層授權支援、可用於其他叢集組態
 
-雲端分層授權現在可與分層鏡射組態（不含MetroCluster 非功能組態）的叢集、以及分層至IBM Cloud Object Storage的叢集共享。您不再需要在FabricPool 這些情況下使用過時的不再使用的功能介紹授權。如此一來、您就能更輕鬆地在更多叢集上使用「浮動」雲端分層授權。 https://docs.netapp.com/us-en/cloud-manager-tiering/task-licensing-cloud-tiering.html#apply-cloud-tiering-licenses-to-clusters-in-special-configurations["瞭解如何授權及設定這些類型的叢集。"]
+雲端分層授權現在可與分層鏡射組態（不含MetroCluster 非功能組態）的叢集、以及分層至IBM Cloud Object Storage的叢集共享。您不再需要在FabricPool 這些情況下使用過時的不再使用的功能介紹授權。如此一來、您就能更輕鬆地在更多叢集上使用「浮動」雲端分層授權。 https://docs.netapp.com/us-en/cloud-manager-tiering/task-licensing-cloud-tiering.html#apply-bluexp-tiering-licenses-to-clusters-in-special-configurations["瞭解如何授權及設定這些類型的叢集。"]
 
 
 

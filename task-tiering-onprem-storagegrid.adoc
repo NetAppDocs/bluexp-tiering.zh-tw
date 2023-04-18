@@ -30,7 +30,7 @@ summary: 將非作用中的資料分層到物件上、以釋放內部ONTAP 物�
 * 內部ONTAP 執行ONTAP 的內部版本的叢集執行的是更新版本的版本、並透過使用者指定的連接埠連線StorageGRID 至更新版本。 https://docs.netapp.com/us-en/cloud-manager-ontap-onprem/task-discovering-ontap.html["瞭解如何探索叢集"^]。
 * 支援 AWS 存取金鑰的 S3 權限、可支援支援支援支援的版本。 StorageGRID
 * 安裝在內部部署上的 Connector 。
-* 連接器的網路功能、可將 HTTPS 連線傳出 ONTAP 至物件叢集、 StorageGRID 到物件叢集和雲端分層服務。
+* 用於連接器的網路、可讓 ONTAP 叢集的輸出 HTTPS 連線、 StorageGRID 連線、以及 BlueXP 分層服務。
 
 
 .image:https://raw.githubusercontent.com/NetAppDocs/common/main/media/number-2.png["二"] 設定分層
@@ -45,7 +45,7 @@ summary: 將非作用中的資料分層到物件上、以釋放內部ONTAP 物�
 
 下圖顯示每個元件及其之間需要準備的連線：
 
-image:diagram_cloud_tiering_storagegrid.png["此架構影像顯示雲端分層服務、可連線至內部部署的連接器、連接ONTAP 至您的故障叢集的連接器、ONTAP 以及連接至故障叢集與物件儲存設備的連接。作用中資料位於 ONTAP 資源中心叢集、而非作用中資料則位於物件儲存區。"]
+image:diagram_cloud_tiering_storagegrid.png["架構映像、顯示連線至內部部署 Connector 的 BlueXP 分層服務、連線至 ONTAP 叢集的 Connector 、以及 ONTAP 叢集與物件儲存設備之間的連線。作用中資料位於 ONTAP 資源中心叢集、而非作用中資料則位於物件儲存區。"]
 
 
 NOTE: Connector 與 StorageGRID 物件之間的通訊僅供物件儲存設定之用。
@@ -66,7 +66,7 @@ NOTE: Connector 與 StorageGRID 物件之間的通訊僅供物件儲存設定之
 --
 支援 ONTAP 的支援版本:: 更新版本 ONTAP
 必要的應用程式存取參數:: 叢集管理使用者必須擁有「主控台」應用程式存取權。您可以使用ONTAP 指令「安全登入show」來驗證這一點。「admin」使用者的「_Application_」欄應顯示「Console」。如有必要、請使用「安全登入create」命令來新增主控台應用程式存取。 https://docs.netapp.com/us-en/ontap-cli-9111/security-login-create.html["如需詳細資訊、請參閱「安全登入」命令"]。
-授權:: 您的BlueXP帳戶不需要Cloud Tiering授權、FabricPool 也不需要ONTAP 在將資料分層StorageGRID 至無法使用的情況下、在該叢集上取得任何非功能性授權。
+授權:: BlueXP 帳戶不需要 BlueXP 分層授權、也不需要 ONTAP 叢集上的 FabricPool 授權、才能將資料分層至 StorageGRID 。
 叢集網路連線需求::
 +
 --
@@ -76,20 +76,20 @@ NOTE: Connector 與 StorageGRID 物件之間的通訊僅供物件儲存設定之
 
 * 連接器必須駐留在內部環境中、因此需要傳入連線。
 +
-叢集與雲端分層服務之間不需要連線。
+叢集與 BlueXP 分層服務之間不需要連線。
 
 * 每個裝載您要分層的磁碟區的節點都需要叢集間LIF ONTAP 。LIF 必須與 _IPspac__ 建立關聯、 ONTAP 以便連接物件儲存設備。
 +
-設定資料分層時、 Cloud Tiering 會提示您使用 IPspace 。您應該選擇每個 LIF 所關聯的 IPspace 。這可能是您建立的「預設」 IPspace 或自訂 IPspace 。深入瞭解 https://docs.netapp.com/us-en/ontap/networking/create_a_lif.html["生命"^] 和 https://docs.netapp.com/us-en/ontap/networking/standard_properties_of_ipspaces.html["IPspaces"^]。
+設定資料分層時、 BlueXP 分層會提示您使用 IPspace 。您應該選擇每個 LIF 所關聯的 IPspace 。這可能是您建立的「預設」 IPspace 或自訂 IPspace 。深入瞭解 https://docs.netapp.com/us-en/ontap/networking/create_a_lif.html["生命"^] 和 https://docs.netapp.com/us-en/ontap/networking/standard_properties_of_ipspaces.html["IPspaces"^]。
 
 
 
 --
-支援的磁碟區和集合體:: Cloud Tiering 可以分層的磁碟區總數可能低於 ONTAP 您的整套系統上的磁碟區數量。這是因為磁碟區無法從某些集合體分層。請參閱ONTAP 的《》文件 https://docs.netapp.com/us-en/ontap/fabricpool/requirements-concept.html#functionality-or-features-not-supported-by-fabricpool["功能或功能不受 FabricPool 支援"^]。
+支援的磁碟區和集合體:: BlueXP 分層可分層的磁碟區總數可能少於 ONTAP 系統上的磁碟區數量。這是因為磁碟區無法從某些集合體分層。請參閱ONTAP 的《》文件 https://docs.netapp.com/us-en/ontap/fabricpool/requirements-concept.html#functionality-or-features-not-supported-by-fabricpool["功能或功能不受 FabricPool 支援"^]。
 
 
 
-NOTE: Cloud Tiering 支援 FlexGroup 從 ONTAP 功能完善的 9.5 開始的各種功能。安裝程式的運作方式與任何其他 Volume 相同。
+NOTE: BlueXP 分層支援 FlexGroup 磁碟區、從 ONTAP 9.5 開始。安裝程式的運作方式與任何其他 Volume 相同。
 
 
 
@@ -106,7 +106,7 @@ https://docs.netapp.com/us-en/cloud-manager-ontap-onprem/task-discovering-ontap.
 必須符合下列需求。 StorageGRID
 
 支援 StorageGRID 的支援版本:: 支援不支援更新版本的支援。StorageGRID
-S3 認證:: 當您設定 StorageGRID 層疊至物件時、您需要使用 S3 存取金鑰和秘密金鑰來提供 Cloud Tiering 。雲端分層使用關鍵來存取您的儲存庫。
+S3 認證:: 當您設定 StorageGRID 分層時、您需要提供 BlueXP 分層、並提供 S3 存取金鑰和秘密金鑰。BlueXP 分層使用金鑰來存取您的貯體。
 +
 --
 這些存取金鑰必須與具有下列權限的使用者相關聯：
@@ -144,7 +144,7 @@ S3 認證:: 當您設定 StorageGRID 層疊至物件時、您需要使用 S3 存
 .步驟
 . 確保安裝 Connector 的網路啟用下列連線：
 +
-** 透過連接埠 443 與雲端分層服務的 HTTPS 連線 (https://docs.netapp.com/us-en/cloud-manager-setup-admin/task-set-up-networking-on-prem.html#endpoints-contacted-for-day-to-day-operations["請參閱端點清單"^]）
+** 透過連接埠 443 與 BlueXP 分層服務的 HTTPS 連線 (https://docs.netapp.com/us-en/cloud-manager-setup-admin/task-set-up-networking-on-prem.html#endpoints-contacted-for-day-to-day-operations["請參閱端點清單"^]）
 ** 透過連接埠 443 與 StorageGRID 系統的 HTTPS 連線
 ** 透過連接埠443連線至ONTAP 您的SURF叢 集管理LIF的HTTPS連線
 
@@ -183,7 +183,7 @@ image:screenshot_setup_tiering_onprem.png["螢幕擷取畫面顯示選取內部 
 
 .. * 叢集網路 * ：選取 ONTAP 要用於連接物件儲存設備的 IPspace 、然後按一下 * 繼續 * 。
 +
-選擇正確的IPspace可確保Cloud Tiering能夠設定從ONTAP 物件儲存到物件StorageGRID 儲存的連線。
+選擇正確的 IPspace 可確保 BlueXP 分層可設定從 ONTAP 到 StorageGRID 物件儲存設備的連線。
 
 
 

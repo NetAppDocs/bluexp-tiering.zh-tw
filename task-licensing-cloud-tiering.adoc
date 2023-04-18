@@ -2,9 +2,9 @@
 sidebar: sidebar 
 permalink: task-licensing-cloud-tiering.html 
 keywords: subscribe, trial, marketplace, subscription, paygo, pay as you go, byol, bring your own license, annual, tiering, cloud tiering 
-summary: 在您從第一個叢集設定分層時、就會開始免費試用30天的雲端分層。在免費試用結束後、您必須透過雲端供應商的市場付費或每年訂閱、NetApp的BYOL授權、或兩者的組合、來支付雲端分層費用。 
+summary: 當您從第一個叢集設定分層時、將會開始 30 天的 BlueXP 分層免費試用。免費試用結束後、您必須透過雲端供應商市場的隨用隨付或年度訂閱、 NetApp 的 BYOL 授權、或兩者的組合、支付 BlueXP 分層費用。 
 ---
-= 設定雲端分層授權
+= 設定 BlueXP 分層授權
 :hardbreaks:
 :allow-uri-read: 
 :nofooter: 
@@ -14,28 +14,28 @@ summary: 在您從第一個叢集設定分層時、就會開始免費試用30天
 
 
 [role="lead"]
-在您從第一個叢集設定分層時、就會開始免費試用30天的雲端分層。在免費試用結束後、您必須透過雲端供應商的市場付費或每年訂閱、NetApp的BYOL授權、或兩者的組合、來支付雲端分層費用。
+當您從第一個叢集設定分層時、將會開始 30 天的 BlueXP 分層免費試用。免費試用結束後、您必須透過雲端供應商市場的隨用隨付或年度訂閱、 NetApp 的 BYOL 授權、或兩者的組合、支付 BlueXP 分層費用。
 
 在閱讀更多內容之前、請先提供幾個附註：
 
-* 如果您已在雲端供應商的市場中訂閱 BlueXP 訂閱（ PAYGO ）、則您也會自動訂閱內部部署 ONTAP 系統的 Cloud Tiering 。您會在 Cloud Tiering * 內部部署儀表板 * 索引標籤中看到有效的訂閱。您不需要再次訂閱。您會在Digital Wallet中看到使用中的訂閱內容。
-* BYOL Cloud分層授權是一個_浮 點型授權、可在ONTAP 您的BlueXP帳戶中跨多個內部部署的物件叢集使用。這與您過去為每個叢集購買 FabricPool 授權的地方不同（而且更容易）。
+* 如果您已在雲端供應商的市場中訂閱 BlueXP 訂閱（ PAYGO ）、則您也會自動訂閱 BlueXP 內部部署 ONTAP 系統分層功能。您會在 BlueXP 分層 * 內部部署儀表板 * 索引標籤中看到有效的訂閱。您不需要再次訂閱。您會在Digital Wallet中看到使用中的訂閱內容。
+* BYOL BlueXP 分層授權（先前稱為「雲端分層」授權）是一個 _ 浮動 _ 授權、您可以在 BlueXP 帳戶中的多個內部部署 ONTAP 叢集上使用。這與您過去為每個叢集購買 FabricPool 授權的地方不同（而且更容易）。
 * 將資料分層至StorageGRID 不收費、因此不需要BYOL授權或PAYGO登錄。此階層式資料不會計入您授權中所購買的容量。
 
 
-link:concept-cloud-tiering.html#pricing-and-licenses["深入瞭解雲端分層的授權運作方式"]。
+link:concept-cloud-tiering.html#pricing-and-licenses["深入瞭解 BlueXP 分層授權的運作方式"]。
 
 
 
-== 使用Cloud Tiering PAYGO訂閱
+== 使用 BlueXP 分層 PAYGO 訂閱
 
-透過雲端供應商市場的隨用隨付訂閱、您可以授權使用Cloud Volumes ONTAP 多方面的系統及雲端資料服務、例如雲端分層。
+雲端供應商的隨用隨付訂閱可讓您授權使用 Cloud Volumes ONTAP 系統和許多雲端資料服務、例如 BlueXP 分層。
 
 
 
 === 從 AWS Marketplace 訂閱
 
-從 AWS Marketplace 訂閱 Cloud Tiering 、即可設定隨用隨付訂閱、將資料從 ONTAP 叢集分層到 AWS S3 。
+從 AWS Marketplace 訂閱 BlueXP 分層功能、設定從 ONTAP 叢集到 AWS S3 的隨用隨付資料分層訂閱。
 
 [[subscribe-aws]]
 .步驟
@@ -53,7 +53,7 @@ video::video_subscribing_aws_tiering.mp4[width=848,height=480]
 
 === 從 Azure Marketplace 訂閱
 
-從 Azure Marketplace 訂閱 Cloud Tiering 、即可設定隨用隨付訂閱、以將資料從 ONTAP 叢集分層到 Azure Blob 儲存設備。
+從 Azure Marketplace 訂閱 BlueXP 分層功能、設定從 ONTAP 叢集到 Azure Blob 儲存設備的隨用隨付資料分層訂閱。
 
 [[subscribe-azure]]
 .步驟
@@ -71,7 +71,7 @@ video::video_subscribing_azure_tiering.mp4[width=848,height=480]
 
 === 從 GCP Marketplace 訂閱
 
-從 GCP Marketplace 訂閱 Cloud Tiering 、即可設定隨用隨付訂閱、以將資料從 ONTAP 整套叢集分層到 Google Cloud 儲存設備。
+從 GCP Marketplace 訂閱 BlueXP 分層功能、設定從 ONTAP 叢集到 Google Cloud 儲存設備的隨用隨付資料分層訂閱。
 
 [[subscribe-gcp]]
 .步驟
@@ -89,7 +89,7 @@ video::video_subscribing_gcp_tiering.mp4[width=848,height=480]
 
 == 使用年度合約
 
-購買年度合約、每年支付雲端分層費用。
+購買年度合約、每年支付 BlueXP 分層費用。
 
 將非作用中資料分層至AWS時、您可以訂閱一年一度的合約、該合約可從取得 https://aws.amazon.com/marketplace/pp/B086PDWSS8["AWS Marketplace頁面"^]。提供1年、2年或3年期限。
 
@@ -99,34 +99,34 @@ video::video_subscribing_gcp_tiering.mp4[width=848,height=480]
 
 
 
-== 使用Cloud Tiering BYOL授權
+== 使用 BlueXP 分層 BYOL 授權
 
-NetApp自帶授權、提供1年、2年或3年期限。BYOL * Cloud Tiering *授權是一個_浮 點型授權、可在ONTAP 您的BlueXP帳戶中跨多個內部部署的叢集使用。雲端分層授權中定義的總分層容量會在內部部署叢集*全部*之間共享、讓初始授權與續約變得更簡單。
+NetApp自帶授權、提供1年、2年或3年期限。BYOL * BlueXP 分層 * 授權（先前稱為「雲端分層」授權）是一個 _ 浮動 _ 授權、您可以在 BlueXP 帳戶中的多個內部部署 ONTAP 叢集上使用。BlueXP 分層授權中定義的總分層容量會在 * 全部 * 的內部叢集之間共用、讓初始授權和續約變得更簡單。
 
-如果您沒有雲端分層授權、請聯絡我們以購買：
+如果您沒有 BlueXP 分層授權、請聯絡我們購買：
 
 * mailto：ng-cloud-tiering@netapp.com？Subject =授權[傳送電子郵件以購買授權]。
 * 按一下BlueXP右下角的聊天圖示、申請授權。
 
 
-或者、如果Cloud Volumes ONTAP 您擁有不使用的未指派節點型支援、您可以將其轉換成具有相同金額等同和相同到期日的雲端分層授權。 https://docs.netapp.com/us-en/cloud-manager-cloud-volumes-ontap/task-manage-node-licenses.html#exchange-unassigned-node-based-licenses["如需詳細資料、請前往此處"^]。
+或者、如果您沒有使用未指派的 Cloud Volumes ONTAP 節點型授權、您可以將其轉換為具有相同美元等效和相同到期日的 BlueXP 分層授權。 https://docs.netapp.com/us-en/cloud-manager-cloud-volumes-ontap/task-manage-node-licenses.html#exchange-unassigned-node-based-licenses["如需詳細資料、請前往此處"^]。
 
-您可以使用BlueXP中的「Digital Wallet」頁面來管理雲端分層BYOL授權。您可以新增授權並更新現有授權。
+您可以使用 BlueXP 中的「數位錢包」頁面來管理 BlueXP 分層 BYOL 授權。您可以新增授權並更新現有授權。
 
 
 
-=== 新的雲端分層BYOL授權自2021年8月21日起生效
+=== BlueXP 分層 BYOL 授權從 2021 開始
 
-全新的*雲端分層*授權於2021年8月推出、適用於使用雲端分層服務在BlueXP中支援的分層組態。BlueXP 目前支援分層至下列雲端儲存設備： Amazon S3 、 Azure Blob 儲存設備、 Google Cloud Storage 、 NetApp StorageGRID 和 S3 相容物件儲存設備。
+全新的 * BlueXP 分層 * 授權於 2021 年 8 月推出、適用於使用 BlueXP 分層服務在 BlueXP 中支援的分層組態。BlueXP 目前支援分層至下列雲端儲存設備： Amazon S3 、 Azure Blob 儲存設備、 Google Cloud Storage 、 NetApp StorageGRID 和 S3 相容物件儲存設備。
 
 您過去將內部部署的各項資料分層保存至雲端時、可能FabricPool 使用的*《*》授權ONTAP 僅適用於ONTAP 無法存取網際網路（又稱為「暗點」）的站台、以及將組態分層至IBM Cloud Object Storage的站台。如果您使用這種組態、則會FabricPool 使用System Manager或ONTAP the介紹的CLI、在每個叢集上安裝一份「版本資訊」授權。
 
 
-TIP: 請注意、分層至StorageGRID 不需要FabricPool 使用功能不全的或雲端分層授權。
+TIP: 請注意、分層至 StorageGRID 不需要 FabricPool 或 BlueXP 分層授權。
 
 如果您目前使用FabricPool 的是「非功能性授權」、FabricPool 則除非您的不含功能性授權達到到期日或最大容量、否則不會受到影響。如需更新授權、請聯絡NetApp、或是更早更新授權、以確保您將資料分層至雲端的能力不會中斷。
 
-* 如果您使用的是BlueXP支援的組態、FabricPool 則您的支援將轉換成Cloud Tiering授權、這些授權將會顯示在Digital Wallet中。當初始授權過期時、您需要更新雲端分層授權。
+* 如果您使用 BlueXP 支援的組態、您的 FabricPool 授權將會轉換成 BlueXP 分層授權、並顯示在數位錢包中。當這些初始授權過期時、您需要更新 BlueXP 分層授權。
 * 如果您使用的組態不受BlueXP支援、則您將繼續使用FabricPool 此版的支援。 https://docs.netapp.com/us-en/ontap/cloud-install-fabricpool-task.html["瞭解如何使用System Manager授權分層"^]。
 
 
@@ -134,29 +134,29 @@ TIP: 請注意、分層至StorageGRID 不需要FabricPool 使用功能不全的�
 
 [cols="50,50"]
 |===
-| 雲端分層授權 | 不含授權FabricPool 
+| BlueXP 分層授權 | 不含授權FabricPool 
 
 
 | 這是一個_浮 點_授權、可在多ONTAP 個內部部署的叢集上使用。 | 這是您為_Every叢集購買及授權的每個叢集授權。 
 
 
-| 它已在BlueXP的Digital Wallet中註冊。 | 它會套用至使用System Manager或ONTAP CLI的個別叢集。 
+| 在 BlueXP 中註冊的數位錢包。 | 它會套用至使用System Manager或ONTAP CLI的個別叢集。 
 
 
-| 分層組態與管理是透過BlueXP中的雲端分層服務來完成。 | 分層組態與管理是透過System Manager或ONTAP CLI來完成。 
+| 分層組態與管理是透過 BlueXP 中的 BlueXP 分層服務來完成。 | 分層組態與管理是透過System Manager或ONTAP CLI來完成。 
 
 
 | 設定完成後、您可以使用免費試用版、在30天內不需授權的情況下使用分層服務。 | 設定完成後、即可免費分層前10 TB的資料。 
 |===
 
 
-=== 取得您的雲端分層授權檔案
+=== 取得 BlueXP 分層授權檔案
 
-購買Cloud Tiering授權之後、您可以在BlueXP中輸入Cloud Tiering序號和nssnl帳戶、或上傳NLF授權檔案、以啟動授權。下列步驟說明如果您打算使用NLF授權檔案、該如何取得該檔案。
+購買 BlueXP 分層授權後、您可以在 BlueXP 中輸入 BlueXP 分層序號和 NSS 帳戶、或上傳 NLF 授權檔案來啟動授權。下列步驟說明如果您打算使用NLF授權檔案、該如何取得該檔案。
 
 .步驟
 . 登入 https://mysupport.netapp.com["NetApp 支援網站"^] 然後按一下*系統>軟體授權*。
-. 輸入您的雲端分層授權序號。
+. 輸入 BlueXP 分層授權序號。
 +
 image:screenshot_cloud_tiering_license_step1.gif["顯示依序號搜尋後授權表格的快照。"]
 
@@ -172,9 +172,9 @@ image:screenshot_cloud_tiering_license_step2.gif["螢幕擷取畫面會顯示「
 
 
 
-=== 將雲端分層BYOL授權新增至您的帳戶
+=== 將 BlueXP 分層 BYOL 授權新增至您的帳戶
 
-為您的BlueXP帳戶購買雲端分層授權之後、您必須將授權新增至BlueXP、才能使用雲端分層服務。
+購買 BlueXP 帳戶的 BlueXP 分層授權後、您必須將授權新增至 BlueXP 、才能使用 BlueXP 分層服務。
 
 .步驟
 . 按一下 * 治理 > 數位錢包 > 資料服務授權 * 。
@@ -187,37 +187,37 @@ image:screenshot_cloud_tiering_license_step2.gif["螢幕擷取畫面會顯示「
 
 ** 如果您有分層授權檔案、請選取*上傳授權檔案*選項、然後依照提示附加檔案。
 +
-image:screenshot_services_license_add.png["此快照顯示新增Cloud Tiering BYOL授權的頁面。"]
+image:screenshot_services_license_add.png["螢幕擷取畫面顯示新增 BlueXP 分層 BYOL 授權的頁面。"]
 
 
 
 
 
 .結果
-BlueXP會新增授權、讓您的雲端分層服務處於作用中狀態。
+BlueXP 新增授權、讓 BlueXP 分層服務處於作用中狀態。
 
 
 
-=== 更新雲端分層BYOL授權
+=== 更新 BlueXP 分層 BYOL 授權
 
-如果您的授權期限即將到期、或您的授權容量已達到上限、您將會在Cloud Tiering中收到通知。
+如果您的授權期限即將到期、或是您的授權容量已達到上限、您將會在 BlueXP 分層中收到通知。
 
-image:screenshot_services_license_expire2.png["在Cloud Tiering頁面中顯示即將到期授權的快照。"]
+image:screenshot_services_license_expire2.png["在 BlueXP 分層頁面中顯示過期授權的螢幕擷取畫面。"]
 
 此狀態也會顯示在「數位錢包」頁面中。
 
 image:screenshot_services_license_expire1.png["顯示「Digital Wallet」頁面即將到期授權的快照。"]
 
-您可以在雲端分層授權到期之前更新、如此一來、您就不會中斷將資料分層至雲端的能力。
+您可以在 BlueXP 分層授權過期前更新、讓您將資料分層至雲端的能力不會中斷。
 
 .步驟
-. 按一下BlueXP右下角的聊天圖示、即可針對特定序號、要求延長您的期限或增加雲端分層授權容量。
+. 按一下 BlueXP 右下角的聊天圖示、以申請延長您的期限、或申請特定序號的 BlueXP 分層授權額外容量。
 +
 在您支付授權費用並向NetApp 支援網站 《The》（《The》）註冊之後、BlueXP會自動更新「Digital Wallet」（數位錢包）中的授權、而「Data Services Licenses」（資料服務授權）頁面將會在5到10分鐘內反映變更。
 
 . 如果BlueXP無法自動更新授權、則您需要手動上傳授權檔案。
 +
-.. 您可以 <<取得您的雲端分層授權檔案,從NetApp支援網站取得授權檔案>>。
+.. 您可以 <<取得 BlueXP 分層授權檔案,從NetApp支援網站取得授權檔案>>。
 .. 在「_資料服務授權_」索引標籤的「數位錢包」頁面上、按一下 image:screenshot_horizontal_more_button.gif["更多圖示"] 如需您要更新的服務序號、請按一下*更新授權*。
 +
 image:screenshot_services_license_update.png["選取特定服務的「更新授權」按鈕的快照。"]
@@ -228,38 +228,38 @@ image:screenshot_services_license_update.png["選取特定服務的「更新授�
 
 
 .結果
-BlueXP會更新授權、讓您的雲端分層服務持續運作。
+BlueXP 會更新授權、讓 BlueXP 分層服務持續作用。
 
 
 
-== 將雲端分層授權套用至特殊組態的叢集
+== 將 BlueXP 分層授權套用至具有特殊組態的叢集
 
-下列組態的叢集可使用雲端分層授權、但套用授權的方式必須不同於單節點叢集、HA組態叢集、分層鏡射組態叢集、以及使用「鏡射鏡射」進行的不一致組態：ONTAP MetroCluster FabricPool
+下列組態中的 ONTAP 叢集可以使用 BlueXP 分層授權、但必須以不同於單節點叢集、 HA 組態叢集、分層鏡射組態中的叢集、以及使用 FabricPool 鏡射的 MetroCluster 組態的方式來套用授權：
 
 * 分層至IBM Cloud Object Storage的叢集
-* 安裝在「暗點」中的叢集
+* 安裝在「暗網站」中的叢集
 
 
 
 
 === 現有叢集的程序FabricPool 、若叢集具有不含更新授權
 
-當您 link:task-managing-tiering.html#discovering-additional-clusters-from-cloud-tiering["在雲端分層中探索這些特殊的叢集類型"]、Cloud Tiering可辨識FabricPool 出此功能的不一致性、並將授權新增至Digital Wallet。這些叢集將繼續如常分層資料。當「不適用」授權到期時、您必須購買雲端分層授權。FabricPool
+當您 link:task-managing-tiering.html#discovering-additional-clusters-from-bluexp-tiering["在 BlueXP 分層中探索這些特殊叢集類型"]、 BlueXP 分層可辨識 FabricPool 授權、並將授權新增至 Digital Wallet 。這些叢集將繼續如常分層資料。當 FabricPool 授權過期時、您需要購買 BlueXP 分層授權。
 
 
 
 === 新建立叢集的程序
 
-當您在雲端分層中發現典型叢集時、就會使用雲端分層介面來設定分層。在這些情況下、會發生下列動作：
+當您發現 BlueXP 分層中的典型叢集時、您將使用 BlueXP 分層介面來設定分層。在這些情況下、會發生下列動作：
 
-. 「父」雲端分層授權會追蹤所有叢集用於分層的容量、以確保授權有足夠的容量。總授權容量和到期日會顯示在Digital Wallet中。
+. 「父」 BlueXP 分層授權會追蹤所有叢集用於分層的容量、以確保授權中有足夠的容量。總授權容量和到期日會顯示在Digital Wallet中。
 . 每個叢集都會自動安裝「子」分層授權、以便與「父」授權通訊。
 
 
 
-NOTE: 系統管理員或ONTAP CLI中顯示的「子」授權容量和到期日並非真實資訊、因此若資訊不相同、請勿擔心。這些價值是由Cloud Tiering軟體內部管理。實際資訊會在Digital Wallet中追蹤。
+NOTE: 系統管理員或ONTAP CLI中顯示的「子」授權容量和到期日並非真實資訊、因此若資訊不相同、請勿擔心。這些值由 BlueXP 分層軟體內部管理。實際資訊會在Digital Wallet中追蹤。
 
-對於上述兩種組態、您需要使用System Manager或ONTAP CLI（而非使用Cloud Tiering介面）來設定分層。因此在這些情況下、您必須從雲端分層介面手動將「子」授權推送至這些叢集。
+對於上述兩種組態、您需要使用系統管理員或 ONTAP CLI （而非使用 BlueXP 分層介面）來設定分層。因此、在這些情況下、您需要從 BlueXP 分層介面手動將「子」授權推送至這些叢集。
 
 請注意、由於資料已分層至兩個不同的物件儲存位置、以供分層鏡射組態使用、因此您必須購買具有足夠容量的授權、才能將資料分層至兩個位置。
 
@@ -268,9 +268,9 @@ NOTE: 系統管理員或ONTAP CLI中顯示的「子」授權容量和到期日�
 +
 此時請勿設定分層。
 
-. link:task-licensing-cloud-tiering.html#use-a-cloud-tiering-byol-license["購買雲端分層授權"] 以取得新叢集或叢集所需的容量。
-. 在BlueXP中、 link:task-licensing-cloud-tiering.html#add-cloud-tiering-byol-licenses-to-your-account["將授權新增至Digital Wallet"]。
-. 在雲端分層、 link:task-managing-tiering.html#discovering-additional-clusters-from-cloud-tiering["探索新叢集"]。
+. link:task-licensing-cloud-tiering.html#use-a-bluexp-tiering-byol-license["購買 BlueXP 分層授權"] 以取得新叢集或叢集所需的容量。
+. 在BlueXP中、 link:task-licensing-cloud-tiering.html#add-bluexp-tiering-byol-licenses-to-your-account["將授權新增至Digital Wallet"]。
+. 在 BlueXP 分層中、 link:task-managing-tiering.html#discovering-additional-clusters-from-bluexp-tiering["探索新叢集"]。
 . 在「叢集」頁面中、按一下 image:screenshot_horizontal_more_button.gif["更多圖示"] 針對叢集、選取*部署授權*。
 +
 image:screenshot_tiering_deploy_license.png["快照顯示如何將分層授權部署至ONTAP 某個叢集。"]

@@ -2,7 +2,7 @@
 sidebar: sidebar 
 permalink: reference-azure-support.html 
 keywords: microsoft azure, azure, hot, access tier, cold, regions 
-summary: 雲端分層可支援兩個存取層級和大部分地區。 
+summary: BlueXP 分層支援兩個存取層級和大多數區域。 
 ---
 = 支援的 Azure Blob 存取層級和地區
 :hardbreaks:
@@ -14,17 +14,17 @@ summary: 雲端分層可支援兩個存取層級和大部分地區。
 
 
 [role="lead"]
-雲端分層可支援兩個存取層級和大部分地區。
+BlueXP 分層支援兩個存取層級和大多數區域。
 
 
 
 == 支援的 Azure Blob 存取層
 
-當您設定資料分層至 Azure 時、 Cloud Tiering 會自動使用 _hot_ 存取層來處理您的非使用中資料。雲端分層可套用生命週期規則、讓資料在特定天數後從_hot_存取層移轉至_cool存取層。
+當您設定資料分層至 Azure 時、 BlueXP 分層會自動使用 _hot_ 存取層來處理您的非使用中資料。BlueXP 分層可套用生命週期規則、讓資料在一定天數後從 _hot_ 存取層切換至 _cool 存取層。
 
 如果您沒有選擇_coo__存取層、則資料會保留在_hot_存取層、而且不會套用任何規則。
 
-當您設定雲端分層生命週期規則時、在Azure帳戶中設定容器時、不得設定任何生命週期規則。
+當您設定 BlueXP 分層生命週期規則時、在 Azure 帳戶中設定容器時、不得設定任何生命週期規則。
 
 https://docs.microsoft.com/en-us/azure/storage/blobs/access-tiers-overview["瞭解Azure Blob存取層級"^]。
 
@@ -32,4 +32,4 @@ https://docs.microsoft.com/en-us/azure/storage/blobs/access-tiers-overview["瞭�
 
 == 支援的 Azure 地區
 
-雲端分層可支援分層至任何區域中任何可透過Connector存取的儲存帳戶。
+BlueXP 分層功能可支援分層連接至任何可透過 Connector 存取之區域的任何儲存帳戶。

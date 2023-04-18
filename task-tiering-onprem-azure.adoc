@@ -29,7 +29,7 @@ summary: 將非作用中資料分層存放至Azure Blob儲存設備、以釋放�
 [role="quick-margin-list"]
 * 內部ONTAP 使用的支援區叢集、執行ONTAP 的是2個9.4或更新版本、並有HTTPS連線至Azure Blob儲存設備。 https://docs.netapp.com/us-en/cloud-manager-ontap-onprem/task-discovering-ontap.html["瞭解如何探索叢集"^]。
 * 安裝在Azure vnet或內部部署環境中的Connector。
-* 連接器的網路功能、可將HTTPS連線傳出ONTAP 至資料中心內的物件叢集、Azure儲存設備、以及雲端分層服務。
+* 用於連接器的網路連線、可將 HTTPS 輸出連線至資料中心的 ONTAP 叢集、 Azure 儲存設備、以及 BlueXP 分層服務。
 
 
 .image:https://raw.githubusercontent.com/NetAppDocs/common/main/media/number-2.png["二"] 設定分層
@@ -38,11 +38,11 @@ summary: 將非作用中資料分層存放至Azure Blob儲存設備、以釋放�
 
 .image:https://raw.githubusercontent.com/NetAppDocs/common/main/media/number-3.png["三"] 設定授權
 [role="quick-margin-para"]
-免費試用結束後、請透過隨用隨付訂閱、ONTAP VMware Cloud Tiering BYOL授權或兩者的組合來支付雲端分層費用：
+免費試用結束後、請透過隨用隨付訂閱、 ONTAP BlueXP 分層 BYOL 授權、或兩者的組合、支付 BlueXP 分層分層的費用：
 
 [role="quick-margin-list"]
 * 若要從Azure Marketplace訂閱、 https://azuremarketplace.microsoft.com/en-us/marketplace/apps/netapp.cloud-manager?tab=Overview["前往BlueXP Marketplace產品"^]，單擊*訂購*，然後按照提示進行操作。
-* 若要使用Cloud Tiering BYOL授權付款、請寄送電子郵件至ng-cloud-tiering@netapp.com？Subject=Licensing[如果您需要購買、請聯絡我們]、然後再寄送 link:task-licensing-cloud-tiering.html#add-cloud-tiering-byol-licenses-to-your-account["從BlueXP Digital Wallet將其新增至您的帳戶"]。
+* 若要使用 BlueXP 分層 BYOL 授權付款、請寄送 mailto ： ng-cloud-tiering@netapp.com ？ subject=Licensing[ 如果您需要購買一項授權、請聯絡我們 ] 、然後寄送給我們 link:task-licensing-cloud-tiering.html#add-bluexp-tiering-byol-licenses-to-your-account["從BlueXP Digital Wallet將其新增至您的帳戶"]。
 
 
 
@@ -53,7 +53,7 @@ summary: 將非作用中資料分層存放至Azure Blob儲存設備、以釋放�
 
 下圖顯示每個元件及其之間需要準備的連線：
 
-image:diagram_cloud_tiering_azure.png["此架構影像顯示雲端分層服務、可連線至雲端供應商的 Connector 、連接 ONTAP 至您的叢集的 Connector 、 ONTAP 以及雲端供應商中的叢集與物件儲存設備之間的連線。作用中資料位於 ONTAP 資源中心叢集、而非作用中資料則位於物件儲存區。"]
+image:diagram_cloud_tiering_azure.png["顯示 BlueXP 分層服務的架構映像、其中會連線至雲端供應商的 Connector 、連線至 ONTAP 叢集的 Connector 、以及雲端供應商的 ONTAP 叢集與物件儲存設備之間的連線。作用中資料位於 ONTAP 資源中心叢集、而非作用中資料則位於物件儲存區。"]
 
 
 NOTE: Connector 與 Blob 儲存設備之間的通訊僅供物件儲存設定使用。連接器可位於內部部署環境、而非雲端。
@@ -86,20 +86,20 @@ NOTE: Connector 與 Blob 儲存設備之間的通訊僅供物件儲存設定使�
 
 * 連接器必須有傳入連線、連接器可位於Azure vnet或內部部署環境中。
 +
-叢集與雲端分層服務之間不需要連線。
+叢集與 BlueXP 分層服務之間不需要連線。
 
 * 每個裝載您要分層的磁碟區的節點都需要叢集間LIF ONTAP 。LIF 必須與 _IPspac__ 建立關聯、 ONTAP 以便連接物件儲存設備。
 +
-設定資料分層時、 Cloud Tiering 會提示您使用 IPspace 。您應該選擇每個 LIF 所關聯的 IPspace 。這可能是您建立的「預設」 IPspace 或自訂 IPspace 。深入瞭解 https://docs.netapp.com/us-en/ontap/networking/create_a_lif.html["生命"^] 和 https://docs.netapp.com/us-en/ontap/networking/standard_properties_of_ipspaces.html["IPspaces"^]。
+設定資料分層時、 BlueXP 分層會提示您使用 IPspace 。您應該選擇每個 LIF 所關聯的 IPspace 。這可能是您建立的「預設」 IPspace 或自訂 IPspace 。深入瞭解 https://docs.netapp.com/us-en/ontap/networking/create_a_lif.html["生命"^] 和 https://docs.netapp.com/us-en/ontap/networking/standard_properties_of_ipspaces.html["IPspaces"^]。
 
 
 
 --
-支援的磁碟區和集合體:: Cloud Tiering 可以分層的磁碟區總數可能低於 ONTAP 您的整套系統上的磁碟區數量。這是因為磁碟區無法從某些集合體分層。請參閱ONTAP 的《》文件 https://docs.netapp.com/us-en/ontap/fabricpool/requirements-concept.html#functionality-or-features-not-supported-by-fabricpool["功能或功能不受 FabricPool 支援"^]。
+支援的磁碟區和集合體:: BlueXP 分層可分層的磁碟區總數可能少於 ONTAP 系統上的磁碟區數量。這是因為磁碟區無法從某些集合體分層。請參閱ONTAP 的《》文件 https://docs.netapp.com/us-en/ontap/fabricpool/requirements-concept.html#functionality-or-features-not-supported-by-fabricpool["功能或功能不受 FabricPool 支援"^]。
 
 
 
-NOTE: Cloud Tiering 支援 FlexGroup 從 ONTAP 功能完善的 9.5 開始的各種功能。安裝程式的運作方式與任何其他 Volume 相同。
+NOTE: BlueXP 分層支援 FlexGroup 磁碟區、從 ONTAP 9.5 開始。安裝程式的運作方式與任何其他 Volume 相同。
 
 
 
@@ -124,7 +124,7 @@ https://docs.netapp.com/us-en/cloud-manager-ontap-onprem/task-discovering-ontap.
 
 === 確認您擁有必要的Connector權限
 
-如果您使用BlueXP 3.9.25版或更新版本建立Connector、就會設定好。預設會設定自訂角色、以提供Connector管理Azure網路中資源和程序所需的權限。請參閱 https://docs.netapp.com/us-en/cloud-manager-setup-admin/reference-permissions-azure.html#custom-role-permissions["必要的自訂角色權限"^] 和 https://docs.netapp.com/us-en/cloud-manager-setup-admin/reference-permissions-azure.html#cloud-tiering["雲端分層所需的特定權限"^]。
+如果您使用BlueXP 3.9.25版或更新版本建立Connector、就會設定好。預設會設定自訂角色、以提供Connector管理Azure網路中資源和程序所需的權限。請參閱 https://docs.netapp.com/us-en/cloud-manager-setup-admin/reference-permissions-azure.html#custom-role-permissions["必要的自訂角色權限"^] 和 https://docs.netapp.com/us-en/cloud-manager-setup-admin/reference-permissions-azure.html#cloud-tiering["BlueXP 分層所需的特定權限"^]。
 
 如果您使用舊版的BlueXP建立Connector、則必須編輯Azure帳戶的權限清單、才能新增任何遺失的權限。
 
@@ -137,7 +137,7 @@ https://docs.netapp.com/us-en/cloud-manager-ontap-onprem/task-discovering-ontap.
 .步驟
 . 確保安裝 Connector 的網路啟用下列連線：
 +
-** 透過連接埠 443 連接到 Cloud Tiering 服務和 Azure Blob 物件儲存設備的 HTTPS 連線 (https://docs.netapp.com/us-en/cloud-manager-setup-admin/task-set-up-networking-azure.html#endpoints-contacted-for-day-to-day-operations["請參閱端點清單"^]）
+** 透過連接埠 443 連接到 BlueXP 分層服務和 Azure Blob 物件儲存設備的 HTTPS 連線 (https://docs.netapp.com/us-en/cloud-manager-setup-admin/task-set-up-networking-azure.html#endpoints-contacted-for-day-to-day-operations["請參閱端點清單"^]）
 ** 透過連接埠443連線至ONTAP 您的SURF叢 集管理LIF的HTTPS連線
 
 
@@ -151,14 +151,14 @@ https://docs.netapp.com/us-en/cloud-manager-ontap-onprem/task-discovering-ontap.
 
 === 準備Azure Blob儲存設備
 
-設定分層時、您需要識別要使用的資源群組、以及屬於資源群組的儲存帳戶和Azure容器。儲存帳戶可讓雲端分層驗證及存取用於資料分層的Blob容器。
+設定分層時、您需要識別要使用的資源群組、以及屬於資源群組的儲存帳戶和Azure容器。儲存帳戶可讓 BlueXP 分層驗證及存取用於資料分層的 Blob 容器。
 
-雲端分層可支援分層至任何區域中任何可透過Connector存取的儲存帳戶。
+BlueXP 分層功能可支援分層連接至任何可透過 Connector 存取之區域的任何儲存帳戶。
 
-雲端分層僅支援通用v2和優質區塊Blob類型的儲存帳戶。
+BlueXP 分層僅支援通用 v2 和優質區塊 Blob 類型的儲存帳戶。
 
 
-NOTE: 如果您計畫將Cloud Tiering設定為使用較低成本的存取層、以便階層式資料在特定天數後轉換至該層、則在Azure帳戶中設定容器時、不得選擇任何生命週期規則。雲端分層可管理生命週期的轉換。
+NOTE: 如果您計畫設定 BlueXP 分層以使用較低成本的存取層、在特定天數之後、階層式資料將會轉換至該層級、則在 Azure 帳戶中設定容器時、不得選取任何生命週期規則。BlueXP 分層管理生命週期轉換。
 
 
 
@@ -190,7 +190,7 @@ image:screenshot_setup_tiering_onprem.png["螢幕擷取畫面顯示當您選取�
 +
 此步驟中顯示的儲存帳戶和容器屬於您在上一步中選取的資源群組。
 
-.. *存取層生命週期*：雲端分層可管理階層式資料的生命週期轉換。資料會從_hot_類別開始、但您可以建立規則、在特定天數後將資料移至_cool類別。
+.. * 存取層生命週期 * ： BlueXP 分層管理階層資料的生命週期轉換。資料會從_hot_類別開始、但您可以建立規則、在特定天數後將資料移至_cool類別。
 +
 選取您要將階層式資料移轉至的存取層、以及資料移動前的天數、然後按一下*繼續*。例如、以下螢幕快照顯示、階層式資料會在物件儲存設備的45天後、從_hot_類別移至_cle__類別。
 
@@ -205,7 +205,7 @@ image:screenshot_tiering_lifecycle_selection_azure.png["螢幕擷取畫面顯示
 
 .. *叢集網路*：選取ONTAP 要用於連接物件儲存設備的IPspace、然後按一下*繼續*。
 +
-選擇正確的 IPspace 、可確保 Cloud Tiering 能夠設定從 ONTAP 效益到雲端供應商物件儲存的連線。
+選擇正確的 IPspace 可確保 BlueXP 分層可設定從 ONTAP 到雲端供應商物件儲存設備的連線。
 
 
 
@@ -232,7 +232,7 @@ image:screenshot_tiering_policy_settings.png["顯示可設定分層原則設定�
 您已成功設定資料分層、從叢集上的磁碟區到 Azure Blob 物件儲存設備。
 
 .接下來呢？
-link:task-licensing-cloud-tiering.html["請務必訂閱雲端分層服務"]。
+link:task-licensing-cloud-tiering.html["請務必訂閱 BlueXP 分層服務"]。
 
 您可以檢閱叢集上作用中和非作用中資料的相關資訊。 link:task-managing-tiering.html["深入瞭解如何管理分層設定"]。
 

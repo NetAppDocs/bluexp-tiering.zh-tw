@@ -1,6 +1,6 @@
 ---
 settings:
-  name: Cloud Tiering
+  name: BlueXP tiering
   platform: cloud
   internal:
     pdf_enabled: true
@@ -11,13 +11,13 @@ settings:
   langs: zh-tw,us-en,ja-jp,ko-kr,zh-cn,de-de,es-es,fr-fr
 sidebar:
   entries:
-  - title: 雲端分層文件
+  - title: BlueXP 分層文件
     url: "/index.html"
   - title: 版本資訊
     url: "/whats-new.html"
   - title: 開始使用
     entries:
-    - title: 深入瞭解雲端分層
+    - title: 瞭解 BlueXP 分層
       url: "/concept-cloud-tiering.html"
     - title: 將內部部署資料分層至雲端
       entries:
@@ -35,7 +35,7 @@ sidebar:
       url: "/task-licensing-cloud-tiering.html"
     - title: 常見問題集
       url: "/faq-cloud-tiering.html"
-  - title: 使用雲端分層
+  - title: 使用 BlueXP 分層
     entries:
     - title: 管理資料分層
       url: "/task-managing-tiering.html"
@@ -65,7 +65,7 @@ homepage:
   tiles:
   - title: 開始使用
     links:
-    - title: 深入瞭解雲端分層
+    - title: 瞭解 BlueXP 分層
       url: concept-cloud-tiering.html
     - title: 新增功能
       url: whats-new.html
@@ -109,7 +109,7 @@ homepage:
     links:
     - title: NetApp社群
       url: https://community.netapp.com/t5/BlueXP-and-Services/ct-p/CDS
-    - title: 雲端分層部落格
+    - title: BlueXP 分層部落格
       url: https://bluexp.netapp.com/blog/topic/cloud-tiering
     - title: 雲端網路研討會
       url: https://bluexp.netapp.com/events

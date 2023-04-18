@@ -2,9 +2,9 @@
 sidebar: sidebar 
 permalink: concept-cloud-tiering.html 
 keywords: cloud tiering, overview, conceptual, value, features, cost, charging, tiering policies, cooling period, fabricpool 
-summary: NetApp 的雲端分層服務可自動將非作用中資料從內部部署 ONTAP 的物件叢集分層、以將資料中心延伸至雲端。如此一來、叢集上的寶貴空間就能釋出、以容納更多工作負載、而無需變更應用程式層。雲端分層可降低資料中心的成本、並可讓您從CAPEX模式切換至OPEX模式。 
+summary: NetApp 的 BlueXP 分層服務會自動將內部部署 ONTAP 叢集的非使用中資料分層、將資料中心延伸至雲端、進而將其移至物件儲存設備。如此一來、叢集上的寶貴空間就能釋出、以容納更多工作負載、而無需變更應用程式層。BlueXP 分層可降低資料中心的成本、並可讓您從 CAPEX 模式切換至 OPEX 模式。 
 ---
-= 深入瞭解雲端分層
+= 瞭解 BlueXP 分層
 :hardbreaks:
 :allow-uri-read: 
 :nofooter: 
@@ -14,21 +14,21 @@ summary: NetApp 的雲端分層服務可自動將非作用中資料從內部部�
 
 
 [role="lead"]
-NetApp 的雲端分層服務可自動將非作用中資料從內部部署 ONTAP 的物件叢集分層、以將資料中心延伸至雲端。如此一來、叢集上的寶貴空間就能釋出、以容納更多工作負載、而無需變更應用程式層。雲端分層可降低資料中心的成本、並可讓您從CAPEX模式切換至OPEX模式。
+NetApp 的 BlueXP 分層服務會自動將內部部署 ONTAP 叢集的非使用中資料分層、將資料中心延伸至雲端、進而將其移至物件儲存設備。如此一來、叢集上的寶貴空間就能釋出、以容納更多工作負載、而無需變更應用程式層。BlueXP 分層可降低資料中心的成本、並可讓您從 CAPEX 模式切換至 OPEX 模式。
 
-BlueXP中的雲端分層服務（前身為Cloud Manager）運用了_S__的功能FabricPool 。NetApp Data Fabric 技術可自動將資料分層至低成本的物件儲存設備。 FabricPool作用中（熱）資料會保留在本機層（內部部署ONTAP 的資訊集合體）、而非作用中（冷）資料則移至雲端層、同時維持ONTAP 資料效率不變。
+BlueXP 分層服務利用 FabricPool 的功能。NetApp Data Fabric 技術可自動將資料分層至低成本的物件儲存設備。 FabricPool作用中（熱）資料會保留在本機層（內部部署ONTAP 的資訊集合體）、而非作用中（冷）資料則移至雲端層、同時維持ONTAP 資料效率不變。
 
 原支援AFF 採用FAS All SSD集合體的支援功能、從ONTAP Select VMware 9.8開始ONTAP 、除了高效能SSD之外、您也可以從由HDD組成的集合體來分層資料。請參閱 https://docs.netapp.com/us-en/ontap/fabricpool/requirements-concept.html["使用過程中的考量與要求FabricPool"^] 以取得詳細資料。
 
-雲端分層可設定為單節點叢集、HA組態叢集、分層鏡射組態叢集、MetroCluster 以及使用FabricPool 「鏡射」的鏡射組態。雲端分層授權可在所有叢集之間共享。
+BlueXP 分層可設定為單節點叢集、 HA 設定的叢集、分層鏡像組態中的叢集、以及使用 FabricPool 鏡像的 MetroCluster 組態。BlueXP 分層授權會在所有叢集之間共用。
 
-https://bluexp.netapp.com/cloud-tiering-service-tco["使用雲端分層 TCO 計算機來查看您可以節省多少成本"^]。
+https://bluexp.netapp.com/cloud-tiering-service-tco["請使用 BlueXP 分層 TCO 計算機來查看您可以節省多少成本"^]。
 
 
 
 == 功能
 
-雲端分層提供自動化、監控、報告及通用管理介面：
+BlueXP 分層提供自動化、監控、報告及通用管理介面：
 
 * 自動化可讓您更輕鬆地設定及管理從內部 ONTAP 物件叢集到雲端的資料分層
 * 您可以選擇預設的雲端供應商儲存類別/存取層、或是使用生命週期管理、將舊的階層式資料移至更具成本效益的層級
@@ -40,10 +40,10 @@ https://bluexp.netapp.com/cloud-tiering-service-tco["使用雲端分層 TCO 計�
 * 如果您有 Cloud Volumes ONTAP 系統、您可以在「叢集」頁面中找到這些系統、以便完整檢視混合雲基礎架構中的資料分層
 
 
-如需雲端分層所提供價值的詳細資訊、 https://bluexp.netapp.com/cloud-tiering["請參閱BlueXP網站上的雲端分層頁面"^]。
+如需 BlueXP 分層所提供價值的詳細資訊、 https://bluexp.netapp.com/cloud-tiering["請參閱 BlueXP 網站上的 BlueXP 分層網頁"^]。
 
 
-TIP: 從 Cloud Tiering 讀取系統。 Cloud Volumes ONTAP https://docs.netapp.com/us-en/cloud-manager-cloud-volumes-ontap/task-tiering.html["您可以在 BlueXP 的工作環境中設定 Cloud Volumes ONTAP 系統的分層"^]。
+TIP: Cloud Volumes ONTAP 系統是 BlueXP 分層的唯讀系統。 https://docs.netapp.com/us-en/cloud-manager-cloud-volumes-ontap/task-tiering.html["您可以在 BlueXP 的工作環境中設定 Cloud Volumes ONTAP 系統的分層"^]。
 
 
 
@@ -58,7 +58,7 @@ TIP: 從 Cloud Tiering 讀取系統。 Cloud Volumes ONTAP https://docs.netapp.c
 * S3相容的物件儲存設備（例如MinIO）
 
 
-雲端分層授權也可與叢集共享、這些叢集會將資料分層儲存至IBM Cloud Object Storage。必須使用System Manager或CLI來設定此功能、FabricPool ONTAP 但是 https://docs.netapp.com/us-en/cloud-manager-tiering/task-licensing-cloud-tiering.html#apply-cloud-tiering-licenses-to-clusters-in-special-configurations["此類組態的授權是使用雲端分層完成。"]
+BlueXP 分層授權也可以與將資料分層至 IBM Cloud Object Storage 的叢集共用。必須使用System Manager或CLI來設定此功能、FabricPool ONTAP 但是 link:task-licensing-cloud-tiering.html#apply-bluexp-tiering-licenses-to-clusters-in-special-configurations["此類組態的授權是使用 BlueXP 分層完成的。"]
 
 
 NOTE: 您可以將資料從NAS磁碟區分層到公有雲或私有雲、例如StorageGRID ：在分層SAN傳輸協定存取的資料時、NetApp建議使用私有雲端、因為連線考量。
@@ -74,7 +74,7 @@ NOTE: 您可以將資料從NAS磁碟區分層到公有雲或私有雲、例如St
 * link:reference-google-support.html["深入瞭解支援的 Google Cloud 儲存課程"]
 
 
-雲端分層會使用雲端供應商的預設儲存類別/存取層來處理您的非使用中資料。不過、您可以套用生命週期規則、讓資料在特定天數後、自動從預設儲存類別轉換至另一個儲存類別。這可將非常冷的資料移至成本較低的儲存設備、有助於降低成本。
+BlueXP 分層使用雲端供應商的預設儲存類別 / 存取層來處理您的非使用中資料。不過、您可以套用生命週期規則、讓資料在特定天數後、自動從預設儲存類別轉換至另一個儲存類別。這可將非常冷的資料移至成本較低的儲存設備、有助於降低成本。
 
 
 NOTE: 您無法為階層式資料至StorageGRID 不支援支援功能或S3的儲存設備選擇生命週期規則。
@@ -83,19 +83,19 @@ NOTE: 您無法為階層式資料至StorageGRID 不支援支援功能或S3的儲
 
 == 定價與授權
 
-透過隨用隨付訂閱、一年訂閱、自帶雲端分層授權或組合來支付雲端分層費用。如果您沒有授權、第一個叢集可免費試用30天。
+透過隨用隨付訂閱、一年訂閱、自帶 BlueXP 分層授權或組合來支付 BlueXP 分層。如果您沒有授權、第一個叢集可免費試用30天。
 
 將資料分層至 StorageGRID 不徵收任何費用。不需要 BYOL 授權或 PAYGO 登錄。
 
 https://bluexp.netapp.com/pricing#tiering["檢視價格詳細資料"^]。
 
-由於Cloud Tiering保留了來源磁碟區的儲存效率、因此您需要支付雲端供應商的物件式儲存成本、以便在ONTAP 達到非效率（在套用重複資料刪除和壓縮之後、只需支付較少的資料量）之後、再用於階層式資料。
+由於 BlueXP 分層可保留來源磁碟區的儲存效率、因此您必須在 ONTAP 效率之後、為階層式資料支付雲端供應商物件儲存成本（在套用重複資料刪除和壓縮之後、為較少的資料量支付）。
 
 
 
 === 30 天免費試用
 
-如果您沒有Cloud Tiering授權、則在設定分層至第一個叢集時、即可免費試用30天的Cloud Tiering。30 天免費試用結束後、您必須透過隨用隨付訂閱、年度訂閱、 BYOL 授權或組合、支付雲端分層費用。
+如果您沒有 BlueXP 分層授權、則當您設定第一個叢集的分層時、就會開始 30 天的 BlueXP 分層免費試用。30 天免費試用結束後、您必須透過隨用隨付訂閱、年度訂閱、 BYOL 授權或組合、支付 BlueXP 分層費用。
 
 如果您的免費試用期結束、但您尚未訂閱或新增授權、則 ONTAP 將不再將冷資料分層至物件儲存設備。所有先前的階層式資料仍可存取、這表示您可以擷取及使用此資料。擷取後、此資料會從雲端移回效能層。
 
@@ -103,7 +103,7 @@ https://bluexp.netapp.com/pricing#tiering["檢視價格詳細資料"^]。
 
 === 隨用隨付訂閱
 
-雲端分層以隨用隨付模式提供消費型授權。透過雲端供應商的市場訂閱之後、您就能為分層資料支付每GB的費用、而且無需預付任何款項。您的雲端供應商會透過每月帳單向您收費。
+BlueXP 分層功能以隨用隨付模式提供消費型授權。透過雲端供應商的市場訂閱之後、您就能為分層資料支付每GB的費用、而且無需預付任何款項。您的雲端供應商會透過每月帳單向您收費。
 
 即使您有免費試用版或自帶授權（ BYOL ）、您仍應訂閱：
 
@@ -117,15 +117,15 @@ https://bluexp.netapp.com/pricing#tiering["檢視價格詳細資料"^]。
 
 
 
-您在免費試用期間或未超過Cloud Tiering BYOL授權時、不會從隨用隨付訂閱中收取費用。
+免費試用期間、您將不會從隨用隨付訂閱中收取費用、或如果您未超過 BlueXP 分層 BYOL 授權、也不會收取費用。
 
-link:task-licensing-cloud-tiering.html#use-a-cloud-tiering-paygo-subscription["瞭解如何設定隨用隨付訂閱"]。
+link:task-licensing-cloud-tiering.html#use-a-bluexp-tiering-paygo-subscription["瞭解如何設定隨用隨付訂閱"]。
 
 
 
 === 年度合約
 
-將非使用中資料分層至Amazon S3時、雲端分層提供年度合約。提供1年、2年或3年期限。
+BlueXP 分層提供一年一度的合約、將非使用中的資料分層到 Amazon S3 。提供1年、2年或3年期限。
 
 目前不支援將年度合約分層至Azure或GCP。
 
@@ -133,26 +133,26 @@ link:task-licensing-cloud-tiering.html#use-a-cloud-tiering-paygo-subscription["�
 
 === 請自帶授權
 
-向NetApp購買* Cloud Tiering *授權、即可自帶授權。您可以購買1、2或3年期授權、並指定任何數量的分層容量。BYOL Cloud分層授權是一個_浮 點型授權、可用於多ONTAP 個內部部署的物件叢集。您在雲端分層授權中定義的總分層容量、可用於所有內部部署叢集。
+請自帶授權、向 NetApp 購買 * BlueXP 分層 * 授權（先前稱為「雲端分層」授權）。您可以購買1、2或3年期授權、並指定任何數量的分層容量。BYOL BlueXP 分層授權是一個 _ 浮動 _ 授權、您可以在多個內部部署 ONTAP 叢集上使用。您在 BlueXP 分層授權中定義的總分層容量可由所有內部叢集使用。
 
-購買Cloud Tiering授權之後、您需要使用BlueXP中的Digital Wallet來新增授權。 link:task-licensing-cloud-tiering.html#use-a-cloud-tiering-byol-license["瞭解如何使用雲端分層BYOL授權"]。
+購買 BlueXP 分層授權後、您需要使用 BlueXP 中的 Digital wallet 來新增授權。 link:task-licensing-cloud-tiering.html#use-a-bluexp-tiering-byol-license["瞭解如何使用 BlueXP 分層 BYOL 授權"]。
 
 如上所述、建議您設定隨用隨付訂閱、即使您已購買BYOL授權亦然。
 
 
-NOTE: 自2021年8月起、舊* FabricPool 《*》的授權已被* Cloud Tiering *授權取代。 link:task-licensing-cloud-tiering.html#new-cloud-tiering-byol-licensing-starting-august-21-2021["深入瞭解Cloud Tiering授權與FabricPool 不含本功能的使用許可有何不同"]。
+NOTE: 自2021年8月起、舊* FabricPool 《*》的授權已被* Cloud Tiering *授權取代。 link:task-licensing-cloud-tiering.html#bluexp-tiering-byol-licensing-starting-in-2021["深入瞭解 BlueXP 分層授權與 FabricPool 授權的不同之處"]。
 
 
 
-== 雲端分層的運作方式
+== BlueXP 分層的運作方式
 
-Cloud Tiering 是 NetApp 管理的服務、使用 FabricPool 支援的功能是利用支援功能來自動將非使用中（冷）的資料從內部部署 ONTAP 的叢集分層、以物件形式儲存在公有雲或私有雲中。連接 ONTAP 至鏈接器的連接。
+BlueXP 分層是 NetApp 託管的服務、使用 FabricPool 技術將內部部署 ONTAP 叢集的非使用中（冷）資料自動分層、以在公有雲或私有雲中建立物件儲存。連接 ONTAP 至鏈接器的連接。
 
 下圖顯示每個元件之間的關係：
 
-image:diagram_cloud_tiering.png["此架構影像顯示雲端分層服務、可連線至雲端供應商的 Connector 、連接 ONTAP 至您的叢集的 Connector 、 ONTAP 以及雲端供應商中的叢集與物件儲存設備之間的連線。作用中資料位於 ONTAP 資源中心叢集中、而非作用中資料則位於物件儲存區。"]
+image:diagram_cloud_tiering.png["顯示 BlueXP 分層服務的架構映像、其中會連線至雲端供應商的 Connector 、連線至 ONTAP 叢集的 Connector 、以及雲端供應商的 ONTAP 叢集與物件儲存設備之間的連線。作用中資料位於 ONTAP 資源中心叢集中、而非作用中資料則位於物件儲存區。"]
 
-在高層級、雲端分層的運作方式如下：
+在高層級上、 BlueXP 分層的運作方式如下：
 
 . 您可以從BlueXP探索內部叢集。
 . 您可以提供物件儲存設備的詳細資料、包括儲存庫/容器、儲存類別或存取層、以及階層式資料的生命週期規則、藉此設定分層。
@@ -205,7 +205,7 @@ NOTE: 只有在有空間的情況下、才會將重新加熱的資料寫入效�
 +
 由於資料會立即分層、所以 SnapMirror 會從雲端層讀取資料、而非從效能層讀取資料。這將導致 SnapMirror 作業速度變慢（可能會拖慢稍後在佇列中的其他 SnapMirror 作業）、即使這些作業使用不同的分層原則也一樣。
 
-* 雲端備份也同樣受到使用分層原則設定的磁碟區影響。 https://docs.netapp.com/us-en/cloud-manager-backup-restore/concept-ontap-backup-to-cloud.html#fabricpool-tiering-policy-considerations["請參閱雲端備份的分層原則考量"^]。
+* 雲端備份也同樣受到使用分層原則設定的磁碟區影響。 https://docs.netapp.com/us-en/cloud-manager-backup-restore/concept-ontap-backup-to-cloud.html#fabricpool-tiering-policy-considerations["請參閱 BlueXP 備份與還原的分層原則考量"^]。
 
 
 --

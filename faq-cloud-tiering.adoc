@@ -4,7 +4,7 @@ permalink: faq-cloud-tiering.html
 keywords: faq, questions, requirements, service connector, object store, object storage, aws, azure, bucket, cluster, aggregate, s3, storage class, standard, inactive data reporting, auto, volume tiering policy, policy, tiering policy, snapshot, cold, inactive, infrequent 
 summary: 如果您只是想要快速回答問題、這個常見問題集就能幫上忙。 
 ---
-= 雲端分層技術常見問題集
+= BlueXP 分層技術常見問題集
 :hardbreaks:
 :allow-uri-read: 
 :nofooter: 
@@ -18,15 +18,15 @@ summary: 如果您只是想要快速回答問題、這個常見問題集就能�
 
 
 
-== 雲端分層服務
+== BlueXP 分層服務
 
-下列常見問題集與雲端分層的運作方式有關。
+下列常見問題集與 BlueXP 分層運作方式有關。
 
 
 
-=== 使用雲端分層服務有哪些好處？
+=== 使用 BlueXP 分層服務有哪些好處？
 
-雲端分層可解決資料快速成長所帶來的挑戰、為您提供下列優勢：
+BlueXP 分層解決資料快速成長所帶來的挑戰、提供您下列優點：
 
 * 輕鬆將資料中心延伸至雲端、提供最多50倍的空間
 * 儲存最佳化、平均節省70%的儲存空間
@@ -54,15 +54,15 @@ summary: 如果您只是想要快速回答問題、這個常見問題集就能�
 
 
 
-=== 雲端分層是否能在雲端層保留我的儲存效率節約效益？
+=== BlueXP 分層是否能保留我在雲端層節省的儲存效率？
 
 是的、ONTAP 將資料移至雲端層時、會保留諸如壓縮、重複資料刪除和壓縮等功能的不同步磁碟區層級儲存效率。
 
 
 
-=== 與眾不同的是、「不只是」「不一樣的FabricPool 「不一樣」和「雲端分層」？
+=== FabricPool 與 BlueXP 分層有何不同？
 
-支援的是可透過CLI和System Manager自我管理的功能、或是透過雲端分層管理的「即服務」技術ONTAP ONTAP FabricPool 。Cloud Tiering利用FabricPool 先進的自動化程序、在ONTAP 整個過程中、無論是在內部或雲端上、都能讓您更清楚地瞭解及控制混合雲和多雲端部署之間的分層作業。
+FabricPool 是 ONTAP 分層技術、可透過 ONTAP CLI 和系統管理員自我管理、或透過 BlueXP 分層管理、以服務形式管理。BlueXP 分層功能可在 ONTAP 和雲端上、透過進階的自動化程序、將 FabricPool 轉變成託管服務、提供更高的可見度、並可控制混合式和多雲端部署之間的分層。
 
 
 
@@ -70,31 +70,31 @@ summary: 如果您只是想要快速回答問題、這個常見問題集就能�
 
 不可以由於磁碟區的中繼資料永遠不會從效能層分層、因此無法直接存取儲存在物件儲存設備中的資料。
 
-不過、雲端分層可用於達成具成本效益的備份與災難恢復、方法是在二線系統和SnapMirror目的地磁碟區（DP磁碟區）上進行備份與災難恢復、以分層處理所有資料（不含中繼資料）、進而減少資料中心的佔用空間和TCO。
+不過、 BlueXP 分層功能可在次要系統和 SnapMirror 目的地磁碟區（ DP 磁碟區）上啟用、以達到具成本效益的備份和 DR 、進而分層排除所有資料（不含中繼資料）、進而減少資料中心佔用空間和 TCO 。
 
 
 
-=== 雲端分層是在磁碟區或集合層級套用嗎？
+=== BlueXP 分層是套用在磁碟區或集合體層級？
 
-將分層原則與每個Volume建立關聯、即可在磁碟區層級啟用雲端分層。冷資料識別是在區塊層級完成。
+將分層原則與每個磁碟區建立關聯、即可在磁碟區層級啟用 BlueXP 分層功能。冷資料識別是在區塊層級完成。
 
 
 
-=== 雲端分層如何決定哪些區塊要分層至雲端？
+=== BlueXP 分層如何判斷要分層到雲端的區塊？
 
 與磁碟區相關的分層原則、是控制哪些區塊分層及何時分層的機制。原則定義資料區塊類型（快照、使用者資料或兩者）和冷卻期間。請參閱 link:concept-cloud-tiering.html#volume-tiering-policies["Volume分層原則"] 以取得詳細資料。
 
 
 
-=== 雲端分層如何影響磁碟區容量？
+=== BlueXP 分層如何影響磁碟區容量？
 
-雲端分層不會影響磁碟區的容量、而是會影響到集合體的效能層使用量。
+BlueXP 分層對磁碟區的容量沒有影響、而是對彙總的效能層使用率有影響。
 
 
 
-=== 雲端分層是否能啟用非使用中資料報告？
+=== BlueXP 分層是否能啟用非使用中的資料報告？
 
-是的、雲端分層可在每個Aggregate上啟用非使用中資料報告（IDR)。此設定可讓我們識別可分層至低成本物件儲存的非使用中資料量。
+是的、 BlueXP 分層可在每個集合上啟用非使用中資料報告（ IDR ）。此設定可讓我們識別可分層至低成本物件儲存的非使用中資料量。
 
 
 
@@ -106,11 +106,11 @@ summary: 如果您只是想要快速回答問題、這個常見問題集就能�
 
 == 授權與成本
 
-下列常見問題集與使用雲端分層的授權和成本有關。
+下列常見問題集與使用 BlueXP 分層的授權和成本有關。
 
 
 
-=== 使用雲端分層的成本是多少？
+=== 使用 BlueXP 分層成本有多少？
 
 將冷資料分層至公有雲時：
 
@@ -126,7 +126,7 @@ https://bluexp.netapp.com/pricing["請參閱定價詳細資料"]。
 
 === 我是否能同時擁有相同ONTAP 的__LW_Y1_cluster的BYOL和PAYGO授權？
 
-是的。Cloud Tiering可讓您使用BYOL授權、PAYGO訂閱、或兩者的組合。
+是的。BlueXP 分層功能可讓您使用 BYOL 授權、 PAYGO 訂閱或兩者的組合。
 
 
 
@@ -138,7 +138,7 @@ https://bluexp.netapp.com/pricing["請參閱定價詳細資料"]。
 
 
 
-=== 雲端分層授權是否包含雲端供應商的出口費用？
+=== BlueXP 分層授權是否包含雲端供應商的出口費用？
 
 不、這不是。
 
@@ -150,7 +150,7 @@ https://bluexp.netapp.com/pricing["請參閱定價詳細資料"]。
 
 
 
-=== 我該如何預估雲端費用？雲端分層是否有「假設」模式？
+=== 我該如何預估雲端費用？BlueXP 分層是否有「假設」模式？
 
 估算雲端供應商託管資料的費用、最好的方法是使用計算機： https://calculator.aws/#/["AWS"]、 https://azure.microsoft.com/en-us/pricing/calculator/["Azure"] 和 https://cloud.google.com/products/calculator["Google Cloud"]。
 
@@ -162,9 +162,9 @@ https://bluexp.netapp.com/pricing["請參閱定價詳細資料"]。
 
 
 
-=== 如何在啟用雲端分層之前、預估磁碟區的節約效益並取得冷資料報告？
+=== 在啟用 BlueXP 分層之前、我要如何預估磁碟區的節約效益並取得冷資料報告？
 
-若要取得預估、只要將 ONTAP 叢集新增至 BlueXP 、然後透過「雲端分層叢集」頁面進行檢查即可。按一下 * 計算叢集的潛在分層節約 * 以啟動 https://bluexp.netapp.com/cloud-tiering-service-tco["雲端分層 TCO 計算機"^] 看看您可以省下多少錢。
+若要取得預估、只要將 ONTAP 叢集新增至 BlueXP 、然後透過 BlueXP 分層叢集頁面進行檢查即可。按一下 * 計算叢集的潛在分層節約 * 以啟動 https://bluexp.netapp.com/cloud-tiering-service-tco["BlueXP 分層 TCO 計算機"^] 看看您可以省下多少錢。
 
 
 
@@ -174,15 +174,15 @@ https://bluexp.netapp.com/pricing["請參閱定價詳細資料"]。
 
 
 
-=== 雲端分層支援哪些ONTAP 版本？
+=== BlueXP 分層支援哪些 ONTAP 版本？
 
-Cloud Tiering支援ONTAP 不支援版本9.2及更新版本。
+BlueXP 分層支援 ONTAP 9.2 版及更新版本。
 
 
 
 === 支援哪些類型的不完整系統？ONTAP
 
-單節點和高可用度AFF 的堆疊支援雲端分層功能、包括：FAS ONTAP Select也支援採用鏡射鏡射組態和不完整的叢集FabricPool 組態。MetroCluster
+單節點和高可用度 AFF 、 FAS 和 ONTAP Select 叢集均支援 BlueXP 分層。也支援採用鏡射鏡射組態和不完整的叢集FabricPool 組態。MetroCluster
 
 
 
@@ -194,13 +194,13 @@ Cloud Tiering支援ONTAP 不支援版本9.2及更新版本。
 
 === 我可以將AFF 資料從連接到叢集的不整合式資料分層FAS 、使其具有HDD的不整節點嗎？
 
-是的。雲端分層可設定為分層託管在任何集合體上的磁碟區。資料分層組態與所使用的控制器類型以及叢集是否為異質無關。
+是的。BlueXP 分層可設定為在任何集合上託管的階層式磁碟區。資料分層組態與所使用的控制器類型以及叢集是否為異質無關。
 
 
 
 === 關於此功能呢 Cloud Volumes ONTAP ？
 
-如果您有 Cloud Volumes ONTAP 系統、您可以在「雲端分層叢集」頁面找到這些系統、以便完整檢視混合雲基礎架構中的資料分層。不過Cloud Volumes ONTAP 、從Cloud Tiering讀取的是隻讀的系統。您無法從 Cloud Volumes ONTAP Cloud Tiering 設定資料分層功能。 https://docs.netapp.com/us-en/cloud-manager-cloud-volumes-ontap/task-tiering.html["您可以在 BlueXP 的工作環境中設定 Cloud Volumes ONTAP 系統的分層"^]。
+如果您有 Cloud Volumes ONTAP 系統、您可以在 BlueXP 分層叢集頁面中找到它們、以便您完整檢視混合雲基礎架構中的資料分層。不過、 Cloud Volumes ONTAP 系統是 BlueXP 分層的唯讀系統。您無法在 BlueXP 分層的 Cloud Volumes ONTAP 上設定資料分層。 https://docs.netapp.com/us-en/cloud-manager-cloud-volumes-ontap/task-tiering.html["您可以在 BlueXP 的工作環境中設定 Cloud Volumes ONTAP 系統的分層"^]。
 
 
 
@@ -225,7 +225,7 @@ Cloud Tiering支援ONTAP 不支援版本9.2及更新版本。
 
 === 支援哪些物件儲存供應商？
 
-雲端分層支援下列物件儲存供應商：
+BlueXP 分層支援下列物件儲存供應商：
 
 * Amazon S3
 * Microsoft Azure Blob
@@ -254,17 +254,17 @@ Cloud Tiering支援ONTAP 不支援版本9.2及更新版本。
 
 === 支援哪些 S3 儲存類別？
 
-雲端分層可支援資料分層至_Standard_、_Standard-in頻繁 存取_、_one Zone非常用存取_、_Intelligent Tiering _和_Glacier即時擷取_儲存類別。請參閱 link:reference-aws-support.html["支援的 S3 儲存類別"] 以取得更多詳細資料。
+BlueXP 分層支援資料分層至 _ 標準 _ 、 _ 標準不常用存取 _ 、 _ 單一區域不常用存取 _ 、 _ 智慧分層 _ 及 _ Glacier Instant Retriev_ 儲存類別。請參閱 link:reference-aws-support.html["支援的 S3 儲存類別"] 以取得更多詳細資料。
 
 
 
-=== 為什麼Cloud Tiering不支援Amazon S3 Glacier Flexible和S3 Glacier Deep歸檔？
+=== 為什麼 BlueXP 分層不支援 Amazon S3 Glacier Flexible 和 S3 Glacier Deep Archive ？
 
-Amazon S3 Glacier Flexible和S3 Glacier Deep歸檔不受支援的主要原因、在於Cloud Tiering是專為高效能分層解決方案所設計、因此資料必須持續可用且快速存取以供擷取。有了S3 Glacier Flexible和S3 Glacier Deep歸檔、資料擷取可在數分鐘到48小時之間的任何地方進行。
+Amazon S3 Glacier Flexible 和 S3 Glacier Deep Archive 不受支援的主要原因是 BlueXP 分層設計為高效能分層解決方案、因此資料必須持續可用、且可快速存取以供擷取。有了S3 Glacier Flexible和S3 Glacier Deep歸檔、資料擷取可在數分鐘到48小時之間的任何地方進行。
 
 
 
-=== 我可以使用其他S3相容的物件儲存服務、例如MinIO、搭配雲端分層嗎？
+=== 我可以使用其他相容 S3 的物件儲存服務、例如 MinIO 、搭配 BlueXP 分層功能嗎？
 
 是的、叢集使用ONTAP 的是支援透過分層UI設定S3相容的物件儲存設備、這些叢集使用的是更新版本的版本。 link:task-tiering-onprem-s3-compat.html["請參閱此處的詳細資料"]。
 
@@ -272,23 +272,23 @@ Amazon S3 Glacier Flexible和S3 Glacier Deep歸檔不受支援的主要原因、
 
 === 支援哪些 Azure Blob 存取層？
 
-雲端分層可將資料分層至_hot_或_cool _存取層、以供非使用中資料使用。請參閱 link:reference-azure-support.html["支援的 Azure Blob 存取層"] 以取得更多詳細資料。
+BlueXP 分層支援將資料分層至 _hot_ 或 _cool 存取層、以供您的非作用中資料使用。請參閱 link:reference-azure-support.html["支援的 Azure Blob 存取層"] 以取得更多詳細資料。
 
 
 
 === Google Cloud Storage 支援哪些儲存類別？
 
-雲端分層支援資料分層至_Standard_、_Nearlin__、_Coldlin__和_Archive_儲存類別。請參閱 link:reference-google-support.html["支援的Google Cloud儲存類別"] 以取得更多詳細資料。
+BlueXP 分層支援資料分層至 _Standard_ 、 _Nearlin_ 、 _Coldlinle_ 及 _Archive_ 儲存類別。請參閱 link:reference-google-support.html["支援的Google Cloud儲存類別"] 以取得更多詳細資料。
 
 
 
-=== 雲端分層是否支援使用生命週期管理原則？
+=== BlueXP 分層是否支援使用生命週期管理原則？
 
-是的。您可以啟用生命週期管理、以便在特定天數後、將資料從預設儲存類別/存取層移轉至更具成本效益的層級。生命週期規則會套用至Amazon S3和Google Cloud儲存設備所選儲存區中的所有物件、以及Azure Blob所選儲存帳戶中的所有容器。
+是的。您可以啟用生命週期管理、以便 BlueXP 分層將資料從預設的儲存類別 / 存取層、在一定天數之後、轉換到更具成本效益的層級。生命週期規則會套用至Amazon S3和Google Cloud儲存設備所選儲存區中的所有物件、以及Azure Blob所選儲存帳戶中的所有容器。
 
 
 
-=== 雲端分層會將一個物件存放區用於整個叢集、還是每個 Aggregate 使用一個物件存放區？
+=== BlueXP 分層會對整個叢集使用一個物件存放區、還是每個集合使用一個物件存放區？
 
 在典型組態中、整個叢集有一個物件存放區。自2022年8月起、您可以使用*進階設定*頁面新增叢集的其他物件存放區、然後將不同的物件存放區附加至不同的集合體、或將2個物件存放區附加至集合體以進行鏡射。
 
@@ -346,7 +346,7 @@ Amazon S3 Glacier Flexible和S3 Glacier Deep歸檔不受支援的主要原因、
 
 === 什麼是Connector？
 
-Connector是在雲端帳戶內或內部部署的運算執行個體上執行的軟體、可讓BlueXP安全地管理雲端資源。若要使用雲端分層服務、您必須部署連接器。
+Connector是在雲端帳戶內或內部部署的運算執行個體上執行的軟體、可讓BlueXP安全地管理雲端資源。若要使用 BlueXP 分層服務、您必須部署 Connector 。
 
 
 
@@ -366,7 +366,7 @@ Connector是在雲端帳戶內或內部部署的運算執行個體上執行的�
 
 
 
-=== 使用雲端分層之前、是否需要向雲端服務供應商提供帳戶？
+=== 在使用 BlueXP 分層之前、是否需要雲端服務供應商的帳戶？
 
 是的。您必須擁有帳戶、才能定義要使用的物件儲存設備。在VPC或vnet的雲端上設定Connector時、也需要使用雲端儲存設備供應商的帳戶。
 
@@ -463,7 +463,7 @@ Cold Snapshot原則的預設冷卻週期為2天、Cold User Data和Snapshot的�
 可在物件儲存設備中讀取及寫入資料。 ONTAP物件儲存設備從未啟動、只是回應而已。
 
 * 對於 StorageGRID 僅供使用的物件、 ONTAP 支援使用者指定的連接埠來啟動 HTTPS 連線 StorageGRID 至物件（連接埠可在分層設定期間設定）。
-* 連接器需要透過連接埠 443 連至 ONTAP 您的叢集、物件存放區和雲端分層服務的輸出 HTTPS 連線。
+* Connector 需要透過連接埠 443 的輸出 HTTPS 連線、才能連線至 ONTAP 叢集、物件存放區和 BlueXP 分層服務。
 
 
 如需詳細資料、請參閱：
@@ -479,7 +479,7 @@ Cold Snapshot原則的預設冷卻週期為2天、Cold User Data和Snapshot的�
 
 === 我可以使用哪些工具來監控和報告、以便管理儲存在雲端的冷資料？
 
-除了雲端分層、 https://docs.netapp.com/us-en/active-iq-unified-manager/["Active IQ Unified Manager"^] 和 https://docs.netapp.com/us-en/active-iq/index.html["《數位顧問》 Active IQ"^] 可用於監控和報告。
+除了 BlueXP 分層、 https://docs.netapp.com/us-en/active-iq-unified-manager/["Active IQ Unified Manager"^] 和 https://docs.netapp.com/us-en/active-iq/index.html["《數位顧問》 Active IQ"^] 可用於監控和報告。
 
 
 
@@ -497,7 +497,7 @@ Cold Snapshot原則的預設冷卻週期為2天、Cold User Data和Snapshot的�
 
 === 使用者嘗試存取階層式資料時、是否有任何延遲？
 
-是的。雲端層無法提供與本機層相同的延遲、因為延遲取決於連線能力。為了預估物件存放區的延遲和處理量、Cloud Tiering提供雲端效能測試（以ONTAP 物件存放區檔案工具為基礎）、可在附加物件存放區之後、以及在建立分層之前使用。
+是的。雲端層無法提供與本機層相同的延遲、因為延遲取決於連線能力。為了估計物件存放區的延遲和處理量、 BlueXP 分層提供雲端效能測試（根據 ONTAP 物件存放區檔案器）、可在附加物件存放區之後和設定分層之前使用。
 
 
 

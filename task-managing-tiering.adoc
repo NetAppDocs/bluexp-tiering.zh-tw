@@ -80,7 +80,7 @@ image:screenshot_tiering_policy_settings.png["顯示可設定分層原則設定�
 
 == 下載適用於您磁碟區的分層報告
 
-您可以下載「層級磁碟區」頁面的報告、以便檢閱所管理叢集上所有磁碟區的分層狀態。只要按一下即可 image:button_download.png["下載"] 按鈕。雲端分層會產生.CSV檔案、您可以視需要檢閱並傳送給其他群組。CSV檔案最多包含10、000列資料。
+您可以下載「層級磁碟區」頁面的報告、以便檢閱所管理叢集上所有磁碟區的分層狀態。只要按一下即可 image:button_download.png["下載"] 按鈕。BlueXP 分層會產生 .CSV 檔案、您可以視需要檢閱並傳送給其他群組。CSV檔案最多包含10、000列資料。
 
 image:screenshot_tiering_report_download.png["顯示如何產生CSV檔案的快照、列出所有磁碟區的分層狀態。"]
 
@@ -162,7 +162,7 @@ image:screenshot_tiering_modify_aggregate.png["螢幕快照顯示滑桿、可用
 
 == 檢閱叢集的分層資訊
 
-您可能想要查看雲端層中有多少資料、以及磁碟上有多少資料。或者、您可能想要查看叢集磁碟上的熱和冷資料量。雲端分層可為每個叢集提供此資訊。
+您可能想要查看雲端層中有多少資料、以及磁碟上有多少資料。或者、您可能想要查看叢集磁碟上的熱和冷資料量。BlueXP 分層會為每個叢集提供此資訊。
 
 .步驟
 . 從左側導覽功能表中、選取*行動性>分層*。
@@ -184,7 +184,7 @@ image:screenshot_tiering_aiq_fabricpool_info.png["顯示FabricPool 叢集的資�
 
 == 修復作業健全狀況
 
-可能會發生故障。當他們執行此作業時、 Cloud Tiering 會在叢集儀表板上顯示「失敗」的作業健全狀況狀態。健全狀況反映ONTAP 出功能不全系統和藍圖的狀態。
+可能會發生故障。執行時、 BlueXP 分層會在叢集儀表板上顯示「故障」操作健全狀況狀態。健全狀況反映ONTAP 出功能不全系統和藍圖的狀態。
 
 .步驟
 . 識別任何運作健全狀況為「故障」的叢集。
@@ -192,21 +192,21 @@ image:screenshot_tiering_aiq_fabricpool_info.png["顯示FabricPool 叢集的資�
 . 修正問題：
 +
 .. 驗證 ONTAP 該叢集是否正常運作、以及是否有連至物件儲存供應商的傳入和傳出連線。
-.. 驗證BlueXP是否有連至雲端分層服務、物件存放區及ONTAP 其發現的物件叢集的傳出連線。
+.. 驗證 BlueXP 是否有連往 BlueXP 分層服務、物件存放區及其探索到的 ONTAP 叢集的輸出連線。
 
 
 
 
 
 
-== 從雲端分層探索其他叢集
+== 探索 BlueXP 分層的其他叢集
 
 您可以從「分層 _ 叢集 _ 」頁面將未探索到的內部部署 ONTAP 叢集新增至 BlueXP 、以便啟用叢集的分層功能。
 
 請注意、按鈕也會出現在 Tiering _on-Prem 儀表板頁面上、供您探索其他叢集。
 
 .步驟
-. 從 Cloud Tiering 按一下 * Clusters* 標籤。
+. 在 BlueXP 分層中、按一下 * 叢集 * 索引標籤。
 . 若要查看任何未探索到的叢集、請按一下 * 顯示未探索到的叢集 * 。
 +
 image:screenshot_tiering_show_undiscovered_cluster.png["顯示分層儀表板上「顯示未探索到的叢集」按鈕的快照。"]

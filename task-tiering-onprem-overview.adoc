@@ -2,7 +2,7 @@
 sidebar: sidebar 
 permalink: task-tiering-onprem-overview.html 
 keywords: overview, tiering overview, tiered clusters, clusters enabled for tiering, data tiering overview, cold data, hot data, tiered data, savings, savings opportunities, saving opportunity, policies, cold snapshots, all dp user data, cold user data & snapshots, cold user data and snapshots, all user data, no policy, marketplace subscriptions, clusters associated 
-summary: 雲端分層提供從每個內部部署叢集進行資料分層的彙總檢視。本總覽提供清楚的環境概況、並可讓您採取適當行動。 
+summary: BlueXP 分層功能可從每個內部部署叢集提供資料分層的彙總檢視。本總覽提供清楚的環境概況、並可讓您採取適當行動。 
 ---
 = 從叢集取得資料分層的總覽
 :toc: macro
@@ -17,9 +17,9 @@ summary: 雲端分層提供從每個內部部署叢集進行資料分層的彙�
 
 
 [role="lead"]
-雲端分層提供從每個內部部署叢集進行資料分層的彙總檢視。本總覽提供清楚的環境概況、並可讓您採取適當行動。
+BlueXP 分層功能可從每個內部部署叢集提供資料分層的彙總檢視。本總覽提供清楚的環境概況、並可讓您採取適當行動。
 
-只要按一下 * 階層 > 內部管理儀表板 * 即可。雲端分層提供下列環境詳細資料。
+只要按一下 * 階層 > 內部管理儀表板 * 即可。BlueXP 分層提供有關您環境的下列詳細資料。
 
 image:screenshot_tiering_onprem_dashboard.png["內部儀表板頁面的螢幕擷取畫面。"]
 
