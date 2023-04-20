@@ -479,7 +479,7 @@ Cold Snapshot原則的預設冷卻週期為2天、Cold User Data和Snapshot的�
 
 === 我可以使用哪些工具來監控和報告、以便管理儲存在雲端的冷資料？
 
-除了 BlueXP 分層、 https://docs.netapp.com/us-en/active-iq-unified-manager/["Active IQ Unified Manager"^] 和 https://docs.netapp.com/us-en/active-iq/index.html["《數位顧問》 Active IQ"^] 可用於監控和報告。
+除了 BlueXP 分層、 https://docs.netapp.com/us-en/active-iq-unified-manager/["Active IQ Unified Manager"^] 和 https://docs.netapp.com/us-en/active-iq/index.html["BlueXP 數位顧問"^] 可用於監控和報告。
 
 
 

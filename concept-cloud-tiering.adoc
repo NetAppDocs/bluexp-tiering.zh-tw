@@ -135,7 +135,7 @@ BlueXP 分層提供一年一度的合約、將非使用中的資料分層到 Ama
 
 請自帶授權、向 NetApp 購買 * BlueXP 分層 * 授權（先前稱為「雲端分層」授權）。您可以購買1、2或3年期授權、並指定任何數量的分層容量。BYOL BlueXP 分層授權是一個 _ 浮動 _ 授權、您可以在多個內部部署 ONTAP 叢集上使用。您在 BlueXP 分層授權中定義的總分層容量可由所有內部叢集使用。
 
-購買 BlueXP 分層授權後、您需要使用 BlueXP 中的 Digital wallet 來新增授權。 link:task-licensing-cloud-tiering.html#use-a-bluexp-tiering-byol-license["瞭解如何使用 BlueXP 分層 BYOL 授權"]。
+購買 BlueXP 分層授權後、您需要使用 BlueXP 中的 BlueXP 數位錢包來新增授權。 link:task-licensing-cloud-tiering.html#use-a-bluexp-tiering-byol-license["瞭解如何使用 BlueXP 分層 BYOL 授權"]。
 
 如上所述、建議您設定隨用隨付訂閱、即使您已購買BYOL授權亦然。
 
@@ -205,7 +205,7 @@ NOTE: 只有在有空間的情況下、才會將重新加熱的資料寫入效�
 +
 由於資料會立即分層、所以 SnapMirror 會從雲端層讀取資料、而非從效能層讀取資料。這將導致 SnapMirror 作業速度變慢（可能會拖慢稍後在佇列中的其他 SnapMirror 作業）、即使這些作業使用不同的分層原則也一樣。
 
-* 雲端備份也同樣受到使用分層原則設定的磁碟區影響。 https://docs.netapp.com/us-en/cloud-manager-backup-restore/concept-ontap-backup-to-cloud.html#fabricpool-tiering-policy-considerations["請參閱 BlueXP 備份與還原的分層原則考量"^]。
+* BlueXP 備份與還原也同樣受到使用分層原則設定的磁碟區所影響。 https://docs.netapp.com/us-en/cloud-manager-backup-restore/concept-ontap-backup-to-cloud.html#fabricpool-tiering-policy-considerations["請參閱 BlueXP 備份與還原的分層原則考量"^]。
 
 
 --

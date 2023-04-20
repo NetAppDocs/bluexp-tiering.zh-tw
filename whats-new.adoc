@@ -24,7 +24,7 @@ summary: 瞭解 BlueXP 分層的新功能。
 
 === 授權標籤已移除
 
-授權標籤已從 BlueXP 分層介面中移除。所有隨用隨付（ PAYGO ）訂閱授權都可從 BlueXP 內部部署儀表板存取。您也可以從該頁面連結至 Digital Wallet 、以便檢視和管理任何 BlueXP 分層自帶授權（ BYOL ）。
+授權標籤已從 BlueXP 分層介面中移除。所有隨用隨付（ PAYGO ）訂閱授權都可從 BlueXP 內部部署儀表板存取。您也可以從該頁面連結至 BlueXP 數位錢包、以便檢視和管理任何 BlueXP 分層自帶授權（ BYOL ）。
 
 
 
