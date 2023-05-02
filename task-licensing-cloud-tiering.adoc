@@ -101,7 +101,7 @@ video::video_subscribing_gcp_tiering.mp4[width=848,height=480]
 
 == 使用 BlueXP 分層 BYOL 授權
 
-NetApp自帶授權、提供1年、2年或3年期限。BYOL * BlueXP 分層 * 授權（先前稱為「雲端分層」授權）是一個 _ 浮動 _ 授權、您可以在 BlueXP 帳戶中的多個內部部署 ONTAP 叢集上使用。BlueXP 分層授權中定義的總分層容量會在 * 全部 * 的內部叢集之間共用、讓初始授權和續約變得更簡單。
+NetApp自帶授權、提供1年、2年或3年期限。BYOL * BlueXP 分層 * 授權（先前稱為「雲端分層」授權）是一個 _ 浮動 _ 授權、您可以在 BlueXP 帳戶中的多個內部部署 ONTAP 叢集上使用。BlueXP 分層授權中定義的總分層容量會在 * 全部 * 的內部叢集之間共用、讓初始授權和續約變得更簡單。分層 BYOL 授權的最低容量從 10 TiB 開始。
 
 如果您沒有 BlueXP 分層授權、請聯絡我們購買：
 

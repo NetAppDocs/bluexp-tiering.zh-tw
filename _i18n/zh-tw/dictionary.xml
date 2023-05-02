@@ -677,9 +677,6 @@
   <block id="271790724aaa38f93a773b0039eb982e" category="list-text">將此新物件存放區作為鏡射附加至現有的Aggregate。</block>
   <block id="482e7ac23805e20ce06fe8da5f067a40" category="list-text">交換主要和鏡射物件存放區。</block>
   <block id="35f98bf089ff4cd3deaed43fb8a4c900" category="list-text">取消鏡射Amazon S3物件存放區。</block>
-  <block id="096dcd3788cecb603666aeab1323e016" category="list-text">必要的應用程式存取參數</block>
-  <block id="5a5be55d6d19108a5a53e94d4b8bca13" category="inline-link">如需詳細資訊、請參閱「安全登入」命令</block>
-  <block id="fcccb04322797151b1c63a24fdbe8596" category="list-text">叢集管理使用者必須擁有「主控台」應用程式存取權。您可以使用ONTAP 指令「安全登入show」來驗證這一點。「admin」使用者的「_Application_」欄應顯示「Console」。如有必要、請使用「安全登入create」命令來新增主控台應用程式存取。<block ref="c49e76a401ad77700c5ead0ea46ac66a" category="inline-link-rx"></block>。</block>
   <block id="303b6b375dcceef17b9d24c15d95c29b" category="list-text">*選擇供應商*：選取* Amazon Web Services*、然後按一下*繼續*。</block>
   <block id="c22f32bc9795fa45c61320309de1c56e" category="list-text">* S3 Bucket *：新增S3儲存區或選取以前置字元_Fabric集區_開頭的現有S3儲存區、選取儲存區區域、然後按一下*繼續*。</block>
   <block id="7de06bb2b943b6fd5754912e3f1d4ceb" category="paragraph"><block ref="7de06bb2b943b6fd5754912e3f1d4ceb" category="inline-image-macro-rx" type="image"></block></block>
@@ -1162,7 +1159,6 @@
   <block id="793e8e21e4c6d6e9102d21e5ceeb9ef6" category="paragraph">免費試用期間、您將不會從隨用隨付訂閱中收取費用、或如果您未超過 BlueXP 分層 BYOL 授權、也不會收取費用。</block>
   <block id="a48331bea4b593b755f99fa927d65638" category="paragraph"><block ref="4a6532d8b81197880664db7ef07b3202" category="inline-link-macro-rx"></block>。</block>
   <block id="a05ea6f9f4f0a8968aa8c0288bad4b53" category="paragraph">BlueXP 分層提供一年一度的合約、將非使用中的資料分層到 Amazon S3 。提供1年、2年或3年期限。</block>
-  <block id="26913edc94f523c2a2b1416655f6ceb5" category="paragraph">請自帶授權、向 NetApp 購買 * BlueXP 分層 * 授權（先前稱為「雲端分層」授權）。您可以購買1、2或3年期授權、並指定任何數量的分層容量。BYOL BlueXP 分層授權是一個 _ 浮動 _ 授權、您可以在多個內部部署 ONTAP 叢集上使用。您在 BlueXP 分層授權中定義的總分層容量可由所有內部叢集使用。</block>
   <block id="49de8995cf3b9508af67fbbd5e085640" category="inline-link-macro">瞭解如何使用 BlueXP 分層 BYOL 授權</block>
   <block id="a42e9abff9358e2d7f140d2a5cca181b" category="inline-link-macro">深入瞭解 BlueXP 分層授權與 FabricPool 授權的不同之處</block>
   <block id="73bd12c72df2f49e3c020653025ff48b" category="admonition">自2021年8月起、舊* FabricPool 《*》的授權已被* Cloud Tiering *授權取代。 <block ref="e6f9c79a0a8d34aafe89d9b302bb60e6" category="inline-link-macro-rx"></block>。</block>
@@ -1231,7 +1227,6 @@
   <block id="de1cdae44076062eb7f546c81cfb6990" category="paragraph">從 GCP Marketplace 訂閱 BlueXP 分層功能、設定從 ONTAP 叢集到 Google Cloud 儲存設備的隨用隨付資料分層訂閱。</block>
   <block id="67731652b48fdb7846ca466471556450" category="paragraph">購買年度合約、每年支付 BlueXP 分層費用。</block>
   <block id="93f26f7b1e47a3f6bebd49a7fa7dd4b6" category="section-title">使用 BlueXP 分層 BYOL 授權</block>
-  <block id="30a3bb6537e5a17883dc40863aa0ea3e" category="paragraph">NetApp自帶授權、提供1年、2年或3年期限。BYOL * BlueXP 分層 * 授權（先前稱為「雲端分層」授權）是一個 _ 浮動 _ 授權、您可以在 BlueXP 帳戶中的多個內部部署 ONTAP 叢集上使用。BlueXP 分層授權中定義的總分層容量會在 * 全部 * 的內部叢集之間共用、讓初始授權和續約變得更簡單。</block>
   <block id="c2319a35daf2868e6d5793e8fa613108" category="paragraph">如果您沒有 BlueXP 分層授權、請聯絡我們購買：</block>
   <block id="d24c279c3d050f8132eeb782120e60fe" category="paragraph">或者、如果您沒有使用未指派的 Cloud Volumes ONTAP 節點型授權、您可以將其轉換為具有相同美元等效和相同到期日的 BlueXP 分層授權。<block ref="c110e5a4a66d7429a8ced7dc2264a8f5" category="inline-link-rx"></block>。</block>
   <block id="feace567e2626d7786ec5e18354a5177" category="section-title">BlueXP 分層 BYOL 授權從 2021 開始</block>
@@ -1372,4 +1367,6 @@
   <block id="f4c3107fb758c7edea8576312dff63ac" category="inline-link-macro">將授權新增至 BlueXP 數位錢包</block>
   <block id="1953cb0b13a811a9fb3db1b69c5f0a2d" category="list-text">在BlueXP中、 <block ref="fb3a1da5f1072aaa3d6f4c9eaa7cccb2" category="inline-link-macro-rx"></block>。</block>
   <block id="a109e3cb0dd9ad8fb1c83a4902e1c322" category="paragraph">授權標籤已從 BlueXP 分層介面中移除。所有隨用隨付（ PAYGO ）訂閱授權都可從 BlueXP 內部部署儀表板存取。您也可以從該頁面連結至 BlueXP 數位錢包、以便檢視和管理任何 BlueXP 分層自帶授權（ BYOL ）。</block>
+  <block id="891ca3a65a7ff1025eab9d895f17f04a" category="paragraph">請自帶授權、向 NetApp 購買 * BlueXP 分層 * 授權（先前稱為「雲端分層」授權）。您可以購買 1 年、 2 年或 3 年期授權、並指定任何數量的分層容量（從至少 10 TiB 開始）。BYOL BlueXP 分層授權是一個 _ 浮動 _ 授權、您可以在多個內部部署 ONTAP 叢集上使用。您在 BlueXP 分層授權中定義的總分層容量可由所有內部叢集使用。</block>
+  <block id="2105bccac1837aa99c46baf38ee1c998" category="paragraph">NetApp自帶授權、提供1年、2年或3年期限。BYOL * BlueXP 分層 * 授權（先前稱為「雲端分層」授權）是一個 _ 浮動 _ 授權、您可以在 BlueXP 帳戶中的多個內部部署 ONTAP 叢集上使用。BlueXP 分層授權中定義的總分層容量會在 * 全部 * 的內部叢集之間共用、讓初始授權和續約變得更簡單。分層 BYOL 授權的最低容量從 10 TiB 開始。</block>
 </blocks>
