@@ -278,8 +278,6 @@
   <block id="6d954756dedc1d7d245aee367353a05f" category="list-text">按一下 * 繼續 * 以選取您要分層的磁碟區。</block>
   <block id="635253659dacfccaf41ba250260189aa" category="paragraph">您已成功設定從叢集上的磁碟區到 Google Cloud 物件儲存區的資料分層。</block>
   <block id="8fa2690e71ce0c54acb839630146cadd" category="doc">從叢集取得資料分層的總覽</block>
-  <block id="ca7efa87a2dfa1e448ef01cfdaa54489" category="list-text">目前正在將資料分層至雲端的叢集數目、未將資料分層至雲端的叢集數目、以及不支援資料分層的叢集數目。</block>
-  <block id="5198ebed4bb19dd4a54ec09aefa9b18a" category="list-text">分層至雲端的資料量、以及叢集上的熱和冷資料量。</block>
   <block id="9e476387322a5c250893cf9c5c4ce78c" category="list-text">原則</block>
   <block id="4be1b347cffb3177e749a7dea6f54978" category="list-text">每個分層原則套用至磁碟區的次數。</block>
   <block id="28c123c8cd56ba4e4b9a732aa779fbc1" category="list-text">與每種 Marketplace 訂購類型相關聯的叢集數目、以及您的訂購狀態指示。</block>
@@ -1085,12 +1083,9 @@
   <block id="b14d512a3c64fb5df16f6721b0603c63" category="paragraph">使用此選項會提示您重新登入。請注意、這些帳戶的權杖會在90天後過期。系統會張貼通知、提醒您注意此點。</block>
   <block id="ad8e06edf5256a509aa4b626821aded3" category="list-text">S3相容的物件儲存設備（例如MinIO）</block>
   <block id="ad54fbabce5f384433a02d947362a539" category="paragraph">目前、MinIO物件儲存設備已符合資格。</block>
-  <block id="75ae3190ee97d211e630e0c0f1b5ddeb" category="inline-image-macro">內部儀表板頁面的螢幕擷取畫面。</block>
-  <block id="59b117edc0d3d63aaf2729e082c38261" category="paragraph"><block ref="59b117edc0d3d63aaf2729e082c38261" category="inline-image-macro-rx" type="image"></block></block>
   <block id="7a7553c4b7ed244f088a49d323385c57" category="list-text">探索到的叢集</block>
   <block id="82de8cfbf4bbb2c6acea13e93599b85d" category="list-text">資料總覽</block>
   <block id="8ee0131ead01994f7bd95933f4e9a923" category="list-text">分層概述</block>
-  <block id="4e03a2d38322e40af6a6e79c953fef0e" category="list-text">目前正在分層的資料量、以及可能分層的資料量。</block>
   <block id="f9600e20b044515122327f9895faca66" category="list-text">市場訂閱</block>
   <block id="14cbdefab43f51a65021d80ce80980c0" category="list-text">在 * 叢集 * 頁面中、按一下叢集的功能表圖示、然後選取 * 叢集資訊 * 。</block>
   <block id="bff5f986b8f0d22acffc0010e8d56dde" category="paragraph">您可以從「分層 _ 叢集 _ 」頁面將未探索到的內部部署 ONTAP 叢集新增至 BlueXP 、以便啟用叢集的分層功能。</block>
@@ -1101,7 +1096,6 @@
   <block id="102787ed6297b34a7504b527e91d01d3" category="section-title">2023年4月3日</block>
   <block id="2e79231a13ecf62585403e20da2dea4a" category="section-title">授權標籤已移除</block>
   <block id="66a0b4752150538292b81c073ca0b83b" category="section-title">分層索引標籤已重新命名、並已更新內容</block>
-  <block id="10d9a166ad36cdda1e0585914ac18d5f" category="paragraph">「叢集儀表板」索引標籤已重新命名為「叢集」、「內部管理概觀」索引標籤已重新命名為「內部管理儀表板」。這些頁面新增了一些資訊、可協助您評估是否能利用額外的分層組態來最佳化儲存空間。</block>
   <block id="c7f5c1a75acc58c6f004efc0ce1eba09" category="list-text">* 附件（選填） * ：上傳最多五個附件、一次上傳一個。</block>
   <block id="bfa80e7aaad6da353b431bff3a0e12d6" category="paragraph">每個檔案的附件上限為 25 MB 。支援下列副檔名： txt 、 log 、 pdf 、 jpg/jpeg 、 rtf 、 doc/dox 、 xls/xlsx 和 csv 。</block>
   <block id="8e6b52a532a4fbbfc98dca3ebfa5f1e6" category="list-text">* 更新案例附註 * ：提供問題的其他詳細資料、或選擇 * 上傳檔案 * 最多附加五個檔案。</block>
@@ -1126,7 +1120,6 @@
   <block id="23382689bb5023b2975968f57d098105" category="list-text">從「進階設定」頁面、將您要使用的物件存放區拖曳到鏡射物件存放區的位置。</block>
   <block id="ebfa7c7e62c629e534a590d9c5bd48ac" category="list-text">在「進階設定」頁面中、按一下Aggregate的功能表圖示、然後選取「* Swap Destinations*」。</block>
   <block id="85c797dc141e0eb32826e3caf502008c" category="list-text">在「進階設定」頁面中、按一下Aggregate的功能表圖示、然後選取「*取消鏡射物件存放區*」。</block>
-  <block id="48266b46c49dd5c5afbe71046b3b1261" category="list-text">在 BlueXP 中、按一下 * 行動性 &gt; 階層 &gt; 內部儀表板 * 。</block>
   <block id="e44d709d5fa4c3c47b7380bfc09d83fa" category="inline-link">請參閱定價詳細資料</block>
   <block id="874323801a4fa98c0f05aaa80c3c1d82" category="paragraph"><block ref="f7ce611d89d41a39c0cd111c48bbba76" category="inline-link-rx"></block>。</block>
   <block id="2b36f8b3b2cccdc6807233a79e1b8d1d" category="paragraph">如果您達到 BYOL 容量上限、新冷資料的分層作業就會停止。所有先前的階層式資料仍可存取、這表示您可以擷取及使用此資料。擷取後、此資料會從雲端移回效能層。</block>
@@ -1138,7 +1131,6 @@
   <block id="c395006d6063b66336be768382280c9e" category="paragraph">請參閱的完整端點清單<block ref="684a3f4234dd7d8f8b7d90e00da95138" category="inline-link-rx"></block>、<block ref="fd66fc554da543d0f7f94dcde36b2a2f" category="inline-link-rx"></block>或<block ref="2484264a704a749bc992bec76f43f13d" category="inline-link-rx"></block> 雲端環境：</block>
   <block id="90d333fba347612ff8ecc43a29a3eed9" category="inline-link">您可以在 BlueXP 的工作環境中設定 Cloud Volumes ONTAP 系統的分層</block>
   <block id="a36dfacc56a130ed7ae9dd3590426d64" category="summary">BlueXP 分層功能可從每個內部部署叢集提供資料分層的彙總檢視。本總覽提供清楚的環境概況、並可讓您採取適當行動。</block>
-  <block id="89de184d96dfdc1dd515cfe64321c1c5" category="paragraph">只要按一下 * 階層 &gt; 內部管理儀表板 * 即可。BlueXP 分層提供有關您環境的下列詳細資料。</block>
   <block id="55f9ae56b6fac196eddd4055167857aa" category="summary">NetApp 的 BlueXP 分層服務會自動將內部部署 ONTAP 叢集的非使用中資料分層、將資料中心延伸至雲端、進而將其移至物件儲存設備。如此一來、叢集上的寶貴空間就能釋出、以容納更多工作負載、而無需變更應用程式層。BlueXP 分層可降低資料中心的成本、並可讓您從 CAPEX 模式切換至 OPEX 模式。</block>
   <block id="e920ef862d77b3f54bb7bf3e535062a3" category="doc">瞭解 BlueXP 分層</block>
   <block id="1f5bb8e27fe9e5bc5db4e7d70b757a81" category="paragraph">BlueXP 分層服務利用 FabricPool 的功能。NetApp Data Fabric 技術可自動將資料分層至低成本的物件儲存設備。 FabricPool作用中（熱）資料會保留在本機層（內部部署ONTAP 的資訊集合體）、而非作用中（冷）資料則移至雲端層、同時維持ONTAP 資料效率不變。</block>
@@ -1216,7 +1208,6 @@
   <block id="78e084a8e123f468bdc8292351608ac4" category="paragraph">是的。雲端層無法提供與本機層相同的延遲、因為延遲取決於連線能力。為了估計物件存放區的延遲和處理量、 BlueXP 分層提供雲端效能測試（根據 ONTAP 物件存放區檔案器）、可在附加物件存放區之後和設定分層之前使用。</block>
   <block id="588536d1b6de932fbea2c2b22f963d72" category="summary">當您從第一個叢集設定分層時、將會開始 30 天的 BlueXP 分層免費試用。免費試用結束後、您必須透過雲端供應商市場的隨用隨付或年度訂閱、 NetApp 的 BYOL 授權、或兩者的組合、支付 BlueXP 分層費用。</block>
   <block id="8202299929ccdfe388049a03c2c36d60" category="doc">設定 BlueXP 分層授權</block>
-  <block id="89bbec154619ad89d4ce9c542dabf604" category="list-text">如果您已在雲端供應商的市場中訂閱 BlueXP 訂閱（ PAYGO ）、則您也會自動訂閱 BlueXP 內部部署 ONTAP 系統分層功能。您會在 BlueXP 分層 * 內部部署儀表板 * 索引標籤中看到有效的訂閱。您不需要再次訂閱。您會在Digital Wallet中看到使用中的訂閱內容。</block>
   <block id="f6013530929ce5c8125f05448da6c33e" category="list-text">BYOL BlueXP 分層授權（先前稱為「雲端分層」授權）是一個 _ 浮動 _ 授權、您可以在 BlueXP 帳戶中的多個內部部署 ONTAP 叢集上使用。這與您過去為每個叢集購買 FabricPool 授權的地方不同（而且更容易）。</block>
   <block id="4f38e9048319fde605a07b6a4c99d8f5" category="inline-link-macro">深入瞭解 BlueXP 分層授權的運作方式</block>
   <block id="917e8711906a1b676db9798fcc2be9a1" category="paragraph"><block ref="4edd15551f6199902649e3b2955f6f1d" category="inline-link-macro-rx"></block>。</block>
@@ -1366,7 +1357,24 @@
   <block id="4acb8884a848c4db6d41852f96aa4ef6" category="admonition">系統管理員或ONTAP CLI中顯示的「子」授權容量和到期日並非真實資訊、因此若資訊不相同、請勿擔心。這些值由 BlueXP 分層軟體內部管理。BlueXP 數位錢包會追蹤真實資訊。</block>
   <block id="f4c3107fb758c7edea8576312dff63ac" category="inline-link-macro">將授權新增至 BlueXP 數位錢包</block>
   <block id="1953cb0b13a811a9fb3db1b69c5f0a2d" category="list-text">在BlueXP中、 <block ref="fb3a1da5f1072aaa3d6f4c9eaa7cccb2" category="inline-link-macro-rx"></block>。</block>
-  <block id="a109e3cb0dd9ad8fb1c83a4902e1c322" category="paragraph">授權標籤已從 BlueXP 分層介面中移除。所有隨用隨付（ PAYGO ）訂閱授權都可從 BlueXP 內部部署儀表板存取。您也可以從該頁面連結至 BlueXP 數位錢包、以便檢視和管理任何 BlueXP 分層自帶授權（ BYOL ）。</block>
   <block id="891ca3a65a7ff1025eab9d895f17f04a" category="paragraph">請自帶授權、向 NetApp 購買 * BlueXP 分層 * 授權（先前稱為「雲端分層」授權）。您可以購買 1 年、 2 年或 3 年期授權、並指定任何數量的分層容量（從至少 10 TiB 開始）。BYOL BlueXP 分層授權是一個 _ 浮動 _ 授權、您可以在多個內部部署 ONTAP 叢集上使用。您在 BlueXP 分層授權中定義的總分層容量可由所有內部叢集使用。</block>
   <block id="2105bccac1837aa99c46baf38ee1c998" category="paragraph">NetApp自帶授權、提供1年、2年或3年期限。BYOL * BlueXP 分層 * 授權（先前稱為「雲端分層」授權）是一個 _ 浮動 _ 授權、您可以在 BlueXP 帳戶中的多個內部部署 ONTAP 叢集上使用。BlueXP 分層授權中定義的總分層容量會在 * 全部 * 的內部叢集之間共用、讓初始授權和續約變得更簡單。分層 BYOL 授權的最低容量從 10 TiB 開始。</block>
+  <block id="76e73aa82e342d9c46acf62eef4dcfc4" category="paragraph">只要按一下 * 階層 &gt; 內部部署儀表板 * 即可。BlueXP 分層提供有關您環境的下列詳細資料。</block>
+  <block id="73363ef02ce267ee93816a7a9661efbb" category="inline-image-macro">內部部署儀表板頁面的螢幕擷取畫面。</block>
+  <block id="d8dd920a9088057867f1c70674cd6044" category="paragraph"><block ref="d8dd920a9088057867f1c70674cd6044" category="inline-image-macro-rx" type="image"></block></block>
+  <block id="74a744bb842841bca60d2354efc47e63" category="list-text">BlueXP 分層發現的內部部署叢集數量。此圖表概述這些叢集的分層狀態。</block>
+  <block id="961fae3a3bd92168bb4311abe3732555" category="list-text">高分層：分層處理超過 20% 冷資料的叢集</block>
+  <block id="2f099d69366214f0a621dbd6f670d432" category="list-text">低分層：分層式資料少於 20% 的叢集</block>
+  <block id="94a0f35b6512d82decab6d0169b0d82a" category="list-text">無分層 - 不會分層任何資料的叢集</block>
+  <block id="74d8fc4a0af61d770b56d0d4511ca8d8" category="list-text">不適用：不支援資料分層的叢集</block>
+  <block id="c5754d852beb82302ca98976ea71cbbc" category="list-text">所有探索到的叢集所使用的資料量。此圖表指出這些叢集正在分層的資料量、以及其他資料量。</block>
+  <block id="591210acc9067056ff44d0a3207f9f77" category="list-text">階層式資料：將整體冷資料分層至雲端</block>
+  <block id="6cff198ca76939ad9cc090e625ff3510" category="list-text">Cold 資料：未分層的冷資料總計</block>
+  <block id="35fc384bebd7724a70565ab7ef5ba5f2" category="list-text">熱資料 - 使用中的熱資料總計</block>
+  <block id="c98782bb630b00f1e0db7b7c6d173e63" category="list-text">不符合資格：由於叢集或磁碟區不支援資料分層、因此未分層的資料總數</block>
+  <block id="8e7506d0839acfb6f7efb77f1903df0d" category="list-text">目前正在分層的資料量、以及可能分層的冷資料量。</block>
+  <block id="6e3d9df489c437a2601f627a5b8935c9" category="paragraph">授權標籤已從 BlueXP 分層介面中移除。所有隨用隨付（ PAYGO ）訂閱授權都可立即從 BlueXP 內部部署分層儀表板存取。您也可以從該頁面連結至 BlueXP 數位錢包、以便檢視和管理任何 BlueXP 分層自帶授權（ BYOL ）。</block>
+  <block id="f6e3b39522072e9cb3b0ffb8cecf9b0b" category="paragraph">「叢集儀表板」索引標籤已重新命名為「叢集」、「內部部署儀表板」索引標籤已重新命名為「內部部署儀表板」。這些頁面新增了一些資訊、可協助您評估是否能利用額外的分層組態來最佳化儲存空間。</block>
+  <block id="cb75eb32a44d8c6565fd938d48a9e7af" category="list-text">如果您已在雲端供應商的市場中訂閱 BlueXP 訂閱（ PAYGO ）、則您也會自動訂閱 BlueXP 內部部署 ONTAP 系統分層功能。您會在 BlueXP 分層 * 內部部署儀表板 * 索引標籤中看到有效的訂閱。您不需要再次訂閱。您會在Digital Wallet中看到使用中的訂閱內容。</block>
+  <block id="7703863e061bca8dc56bfd0084619b09" category="list-text">在 BlueXP 中、按一下 * 行動性 &gt; 階層 &gt; 內部部署儀表板 * 。</block>
 </blocks>

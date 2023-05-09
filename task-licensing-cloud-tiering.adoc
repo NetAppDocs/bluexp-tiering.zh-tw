@@ -39,7 +39,7 @@ link:concept-cloud-tiering.html#pricing-and-licenses["深入瞭解 BlueXP 分層
 
 [[subscribe-aws]]
 .步驟
-. 在 BlueXP 中、按一下 * 行動性 > 階層 > 內部儀表板 * 。
+. 在 BlueXP 中、按一下 * 行動性 > 階層 > 內部部署儀表板 * 。
 . 在「 _Marketplace 訂閱 _ 」區段中、按一下 Amazon Web Services 下的 * 訂閱 * 、然後按一下 * 繼續 * 。
 . 從訂閱 https://aws.amazon.com/marketplace/pp/prodview-oorxakq6lq7m4?sr=0-8&ref_=beagle&applicationId=AWSMPContessa["AWS Marketplace"^]，然後重新登入BlueXP網站以完成註冊。
 +
@@ -57,7 +57,7 @@ video::video_subscribing_aws_tiering.mp4[width=848,height=480]
 
 [[subscribe-azure]]
 .步驟
-. 在 BlueXP 中、按一下 * 行動性 > 階層 > 內部儀表板 * 。
+. 在 BlueXP 中、按一下 * 行動性 > 階層 > 內部部署儀表板 * 。
 . 在「 _Marketplace 訂閱 _ 」區段中、按一下 Microsoft Azure 下的 * 訂閱 * 、然後按一下 * 繼續 * 。
 . 從訂閱 https://azuremarketplace.microsoft.com/en-us/marketplace/apps/netapp.cloud-manager?tab=Overview["Azure Marketplace"^]，然後重新登入BlueXP網站以完成註冊。
 +
@@ -75,7 +75,7 @@ video::video_subscribing_azure_tiering.mp4[width=848,height=480]
 
 [[subscribe-gcp]]
 .步驟
-. 在 BlueXP 中、按一下 * 行動性 > 階層 > 內部儀表板 * 。
+. 在 BlueXP 中、按一下 * 行動性 > 階層 > 內部部署儀表板 * 。
 . 在 _Marketplace 訂閱 _ 區段中、按一下 Google Cloud 下的 * 訂閱 * 、然後按一下 * 繼續 * 。
 . 從訂閱 https://console.cloud.google.com/marketplace/details/netapp-cloudmanager/cloud-manager?supportedpurview=project&rif_reserved["GCP 市場"^]，然後重新登入BlueXP網站以完成註冊。
 +
