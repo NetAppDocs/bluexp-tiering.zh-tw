@@ -40,7 +40,7 @@ summary: 瞭解 BlueXP 分層的新功能。
 
 === 現在您可以為磁碟區產生分層報告
 
-您可以從「層級磁碟區」頁面下載報告、以便檢閱所管理叢集上所有磁碟區的分層狀態。BlueXP 分層會產生 .CSV 檔案、您可以視需要檢閱並傳送給公司中的其他人。 https://docs.netapp.com/us-en/cloud-manager-tiering/task-managing-tiering.html#download-a-tiering-report-for-your-volumes["瞭解如何下載分層報告"]。
+您可以從「層級磁碟區」頁面下載報告、以便檢閱所管理叢集上所有磁碟區的分層狀態。BlueXP 分層會產生 .CSV 檔案、您可以視需要檢閱並傳送給公司中的其他人。 https://docs.netapp.com/us-en/bluexp-tiering/task-managing-tiering.html#download-a-tiering-report-for-your-volumes["瞭解如何下載分層報告"]。
 
 
 
@@ -62,7 +62,7 @@ summary: 瞭解 BlueXP 分層的新功能。
 
 | \https://*.cloudmanager.cloud.netapp.com | \https://*.api.bluexp.netapp.com 
 |===
-請參閱的完整端點清單 https://docs.netapp.com/us-en/cloud-manager-setup-admin/task-set-up-networking-aws.html#outbound-internet-access["AWS"^]、 https://docs.netapp.com/us-en/cloud-manager-setup-admin/task-set-up-networking-google.html#outbound-internet-access["Google Cloud"^]或 https://docs.netapp.com/us-en/cloud-manager-setup-admin/task-set-up-networking-azure.html#outbound-internet-access["Azure"^] 雲端環境：
+請參閱的完整端點清單 https://docs.netapp.com/us-en/bluexp-setup-admin/task-set-up-networking-aws.html#outbound-internet-access["AWS"^]、 https://docs.netapp.com/us-en/bluexp-setup-admin/task-set-up-networking-google.html#outbound-internet-access["Google Cloud"^]或 https://docs.netapp.com/us-en/bluexp-setup-admin/task-set-up-networking-azure.html#outbound-internet-access["Azure"^] 雲端環境：
 
 
 
@@ -82,9 +82,9 @@ summary: 瞭解 BlueXP 分層的新功能。
 
 === 分層精靈可讓您在分層至S3儲存設備時、設定AWS Private Link
 
-在先前的版本中、透過VPC端點提供這種將叢集連接至S3儲存區的安全方法、非常耗時。現在您可以依照必要步驟執行至 https://docs.netapp.com/us-en/cloud-manager-tiering/task-tiering-onprem-aws.html#configure-your-system-for-a-private-connection-using-a-vpc-endpoint-interface["使用VPC端點介面設定系統的私有連線"]然後您可以在「網路」頁面中的分層設定精靈期間選取Private Link。
+在先前的版本中、透過VPC端點提供這種將叢集連接至S3儲存區的安全方法、非常耗時。現在您可以依照必要步驟執行至 https://docs.netapp.com/us-en/bluexp-tiering/task-tiering-onprem-aws.html#configure-your-system-for-a-private-connection-using-a-vpc-endpoint-interface["使用VPC端點介面設定系統的私有連線"]然後您可以在「網路」頁面中的分層設定精靈期間選取Private Link。
 
-https://docs.netapp.com/us-en/cloud-manager-tiering/task-tiering-onprem-aws.html["檢閱將非使用中資料分層至Amazon S3的要求和步驟"]。
+https://docs.netapp.com/us-en/bluexp-tiering/task-tiering-onprem-aws.html["檢閱將非使用中資料分層至Amazon S3的要求和步驟"]。
 
 
 
@@ -106,13 +106,13 @@ https://docs.netapp.com/us-en/cloud-manager-tiering/task-tiering-onprem-aws.html
 
 === 能夠為叢集中的其他Aggregate設定其他物件存放區
 
-Cloud Tiering UI已新增一組物件儲存組態頁面。您可以新增物件存放區、將多個物件存放區連線至Aggregate以進行FabricPool 物件鏡射、交換主要物件存放區和鏡射物件存放區、刪除物件存放區連線至集合體等。 https://docs.netapp.com/us-en/cloud-manager-tiering/task-managing-object-storage.html["深入瞭解新的物件儲存功能。"]
+Cloud Tiering UI已新增一組物件儲存組態頁面。您可以新增物件存放區、將多個物件存放區連線至Aggregate以進行FabricPool 物件鏡射、交換主要物件存放區和鏡射物件存放區、刪除物件存放區連線至集合體等。 https://docs.netapp.com/us-en/bluexp-tiering/task-managing-object-storage.html["深入瞭解新的物件儲存功能。"]
 
 
 
 === 支援MetroCluster 以雲端分層的授權進行支援、以利執行各種組態
 
-雲端分層授權現在可與MetroCluster 採用各種組態的叢集共享。您不再需要在FabricPool 這些情況下使用過時的不再使用的功能介紹授權。如此一來、您就能更輕鬆地在更多叢集上使用「浮動」雲端分層授權。 https://docs.netapp.com/us-en/cloud-manager-tiering/task-licensing-cloud-tiering.html#apply-bluexp-tiering-licenses-to-clusters-in-special-configurations["瞭解如何授權及設定這些類型的叢集。"]
+雲端分層授權現在可與MetroCluster 採用各種組態的叢集共享。您不再需要在FabricPool 這些情況下使用過時的不再使用的功能介紹授權。如此一來、您就能更輕鬆地在更多叢集上使用「浮動」雲端分層授權。 https://docs.netapp.com/us-en/bluexp-tiering/task-licensing-cloud-tiering.html#apply-bluexp-tiering-licenses-to-clusters-in-special-configurations["瞭解如何授權及設定這些類型的叢集。"]
 
 
 
@@ -122,7 +122,7 @@ Cloud Tiering UI已新增一組物件儲存組態頁面。您可以新增物件�
 
 === 雲端分層授權支援、可用於其他叢集組態
 
-雲端分層授權現在可與分層鏡射組態（不含MetroCluster 非功能組態）的叢集、以及分層至IBM Cloud Object Storage的叢集共享。您不再需要在FabricPool 這些情況下使用過時的不再使用的功能介紹授權。如此一來、您就能更輕鬆地在更多叢集上使用「浮動」雲端分層授權。 https://docs.netapp.com/us-en/cloud-manager-tiering/task-licensing-cloud-tiering.html#apply-bluexp-tiering-licenses-to-clusters-in-special-configurations["瞭解如何授權及設定這些類型的叢集。"]
+雲端分層授權現在可與分層鏡射組態（不含MetroCluster 非功能組態）的叢集、以及分層至IBM Cloud Object Storage的叢集共享。您不再需要在FabricPool 這些情況下使用過時的不再使用的功能介紹授權。如此一來、您就能更輕鬆地在更多叢集上使用「浮動」雲端分層授權。 https://docs.netapp.com/us-en/bluexp-tiering/task-licensing-cloud-tiering.html#apply-bluexp-tiering-licenses-to-clusters-in-special-configurations["瞭解如何授權及設定這些類型的叢集。"]
 
 
 
@@ -132,7 +132,7 @@ Cloud Tiering UI已新增一組物件儲存組態頁面。您可以新增物件�
 
 === Amazon S3 Glacier立即擷取儲存類別現已推出
 
-設定雲端分層時、現在您可以設定生命週期規則、讓非使用中的資料在特定天數後從_Standard_儲存類別轉換為_Glacier即時擷取。這將有助於降低AWS基礎架構成本。 https://docs.netapp.com/us-en/cloud-manager-tiering/reference-aws-support.html["請參閱支援的S3儲存類別。"]
+設定雲端分層時、現在您可以設定生命週期規則、讓非使用中的資料在特定天數後從_Standard_儲存類別轉換為_Glacier即時擷取。這將有助於降低AWS基礎架構成本。 https://docs.netapp.com/us-en/bluexp-tiering/reference-aws-support.html["請參閱支援的S3儲存類別。"]
 
 
 

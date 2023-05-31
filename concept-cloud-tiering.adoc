@@ -43,7 +43,7 @@ BlueXP 分層提供自動化、監控、報告及通用管理介面：
 如需 BlueXP 分層所提供價值的詳細資訊、 https://bluexp.netapp.com/cloud-tiering["請參閱 BlueXP 網站上的 BlueXP 分層網頁"^]。
 
 
-TIP: Cloud Volumes ONTAP 系統是 BlueXP 分層的唯讀系統。 https://docs.netapp.com/us-en/cloud-manager-cloud-volumes-ontap/task-tiering.html["您可以在 BlueXP 的工作環境中設定 Cloud Volumes ONTAP 系統的分層"^]。
+TIP: Cloud Volumes ONTAP 系統是 BlueXP 分層的唯讀系統。 https://docs.netapp.com/us-en/bluexp-cloud-volumes-ontap/task-tiering.html["您可以在 BlueXP 的工作環境中設定 Cloud Volumes ONTAP 系統的分層"^]。
 
 
 
@@ -205,7 +205,7 @@ NOTE: 只有在有空間的情況下、才會將重新加熱的資料寫入效�
 +
 由於資料會立即分層、所以 SnapMirror 會從雲端層讀取資料、而非從效能層讀取資料。這將導致 SnapMirror 作業速度變慢（可能會拖慢稍後在佇列中的其他 SnapMirror 作業）、即使這些作業使用不同的分層原則也一樣。
 
-* BlueXP 備份與還原也同樣受到使用分層原則設定的磁碟區所影響。 https://docs.netapp.com/us-en/cloud-manager-backup-restore/concept-ontap-backup-to-cloud.html#fabricpool-tiering-policy-considerations["請參閱 BlueXP 備份與還原的分層原則考量"^]。
+* BlueXP 備份與還原也同樣受到使用分層原則設定的磁碟區所影響。 https://docs.netapp.com/us-en/bluexp-backup-recovery/concept-ontap-backup-to-cloud.html#fabricpool-tiering-policy-considerations["請參閱 BlueXP 備份與還原的分層原則考量"^]。
 
 
 --

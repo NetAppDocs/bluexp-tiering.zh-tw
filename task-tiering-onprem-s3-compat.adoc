@@ -36,7 +36,7 @@ summary: 將非作用中的資料分層至任何使用簡易儲存服務（S3）
 您需要下列項目：
 
 [role="quick-margin-list"]
-* 執行不支援更新版本的來源內部ONTAP 資源叢集ONTAP 、以及透過使用者指定連接埠連線至目的地S3相容物件儲存設備。 https://docs.netapp.com/us-en/cloud-manager-ontap-onprem/task-discovering-ontap.html["瞭解如何探索叢集"^]。
+* 執行不支援更新版本的來源內部ONTAP 資源叢集ONTAP 、以及透過使用者指定連接埠連線至目的地S3相容物件儲存設備。 https://docs.netapp.com/us-en/bluexp-ontap-onprem/task-discovering-ontap.html["瞭解如何探索叢集"^]。
 * 物件儲存伺服器的FQDN、存取金鑰和秘密金鑰、讓ONTAP 整個叢集能夠存取儲存區。
 * 安裝在內部部署上的 Connector 。
 * 用於連接器的網路、可讓輸出 HTTPS 連線至來源 ONTAP 叢集、 S3 相容物件儲存設備、以及 BlueXP 分層服務。
@@ -52,7 +52,7 @@ summary: 將非作用中的資料分層至任何使用簡易儲存服務（S3）
 
 [role="quick-margin-list"]
 * 訂閱的BlueXP PAYGO產品 https://aws.amazon.com/marketplace/pp/prodview-oorxakq6lq7m4?sr=0-8&ref_=beagle&applicationId=AWSMPContessa["AWS Marketplace"^]、 https://azuremarketplace.microsoft.com/en-us/marketplace/apps/netapp.cloud-manager?tab=Overview["Azure Marketplace"^]或 https://console.cloud.google.com/marketplace/details/netapp-cloudmanager/cloud-manager?supportedpurview=project&rif_reserved["GCP 市場"^]，單擊*訂購*並按照提示進行操作。
-* 若要使用 BlueXP 分層 BYOL 授權付款、請寄送 mailto ： ng-cloud-tiering@netapp.com ？ subject=Licensing[ 如果您需要購買一項授權、請聯絡我們 ] 、然後寄送給我們 link:task-licensing-cloud-tiering.html#add-bluexp-tiering-byol-licenses-to-your-account["從BlueXP Digital Wallet將其新增至您的帳戶"]。
+* 若要使用 BlueXP 分層 BYOL 授權付款、請寄送 mailto ： ng-cloud-tiering@netapp.com ？ subject=Licensing[ 如果您需要購買一項授權、請聯絡我們 ] 、然後寄送給我們 link:task-licensing-cloud-tiering.html#add-bluexp-tiering-byol-licenses-to-your-account["將其從 BlueXP 數位錢包新增至您的帳戶"]。
 
 
 
@@ -106,7 +106,7 @@ TIP: BlueXP 分層支援 FlexVol 和 FlexGroup 磁碟區。
 
 您必須先在ONTAP BlueXP畫版中建立內部的功能環境、才能開始分層處理冷資料。
 
-https://docs.netapp.com/us-en/cloud-manager-ontap-onprem/task-discovering-ontap.html["瞭解如何探索叢集"^]。
+https://docs.netapp.com/us-en/bluexp-ontap-onprem/task-discovering-ontap.html["瞭解如何探索叢集"^]。
 
 
 
@@ -137,9 +137,9 @@ S3 認證:: 當您設定與S3相容的物件儲存區分層時、系統會提示
 
 需要連接器才能將資料分層至雲端。將資料分層至S3相容的物件儲存設備時、內部環境中必須有連接器。您可能需要安裝新的 Connector 、或確定目前選取的 Connector 位於內部部署。
 
-* https://docs.netapp.com/us-en/cloud-manager-setup-admin/concept-connectors.html["深入瞭解連接器"^]
-* https://docs.netapp.com/us-en/cloud-manager-setup-admin/task-quick-start-connector-on-prem.html["在 Linux 主機上安裝 Connector"^]
-* https://docs.netapp.com/us-en/cloud-manager-setup-admin/task-managing-connectors.html["在連接器之間切換"^]
+* https://docs.netapp.com/us-en/bluexp-setup-admin/concept-connectors.html["深入瞭解連接器"^]
+* https://docs.netapp.com/us-en/bluexp-setup-admin/task-quick-start-connector-on-prem.html["在 Linux 主機上安裝 Connector"^]
+* https://docs.netapp.com/us-en/bluexp-setup-admin/task-managing-connectors.html["在連接器之間切換"^]
 
 
 
@@ -151,7 +151,7 @@ S3 認證:: 當您設定與S3相容的物件儲存區分層時、系統會提示
 .步驟
 . 確保安裝 Connector 的網路啟用下列連線：
 +
-** 透過連接埠 443 與 BlueXP 分層服務的 HTTPS 連線 (https://docs.netapp.com/us-en/cloud-manager-setup-admin/task-set-up-networking-on-prem.html#endpoints-contacted-for-day-to-day-operations["請參閱端點清單"^]）
+** 透過連接埠 443 與 BlueXP 分層服務的 HTTPS 連線 (https://docs.netapp.com/us-en/bluexp-setup-admin/task-set-up-networking-on-prem.html#endpoints-contacted-for-day-to-day-operations["請參閱端點清單"^]）
 ** 透過連接埠443連線至S3相容物件儲存設備的HTTPS連線
 ** 透過連接埠443連線至ONTAP 您的SURF叢 集管理LIF的HTTPS連線
 
@@ -165,7 +165,7 @@ S3 認證:: 當您設定與S3相容的物件儲存區分層時、系統會提示
 準備好環境之後、請從第一個叢集開始分層處理非作用中資料。
 
 .您需要的產品
-* https://docs.netapp.com/us-en/cloud-manager-ontap-onprem/task-discovering-ontap.html["內部部署工作環境"^]。
+* https://docs.netapp.com/us-en/bluexp-ontap-onprem/task-discovering-ontap.html["內部部署工作環境"^]。
 * S3相容物件儲存伺服器的FQDN、以及用於HTTPS通訊的連接埠。
 * 具有所需S3權限的存取金鑰和秘密金鑰。
 

@@ -27,7 +27,7 @@ summary: 將非作用中的資料分層到物件上、以釋放內部ONTAP 物�
 您需要下列項目：
 
 [role="quick-margin-list"]
-* 內部ONTAP 執行ONTAP 的內部版本的叢集執行的是更新版本的版本、並透過使用者指定的連接埠連線StorageGRID 至更新版本。 https://docs.netapp.com/us-en/cloud-manager-ontap-onprem/task-discovering-ontap.html["瞭解如何探索叢集"^]。
+* 內部ONTAP 執行ONTAP 的內部版本的叢集執行的是更新版本的版本、並透過使用者指定的連接埠連線StorageGRID 至更新版本。 https://docs.netapp.com/us-en/bluexp-ontap-onprem/task-discovering-ontap.html["瞭解如何探索叢集"^]。
 * 支援 AWS 存取金鑰的 S3 權限、可支援支援支援支援的版本。 StorageGRID
 * 安裝在內部部署上的 Connector 。
 * 用於連接器的網路、可讓 ONTAP 叢集的輸出 HTTPS 連線、 StorageGRID 連線、以及 BlueXP 分層服務。
@@ -96,7 +96,7 @@ NOTE: BlueXP 分層支援 FlexGroup 磁碟區、從 ONTAP 9.5 開始。安裝程
 
 您必須先在ONTAP BlueXP畫版中建立內部的功能環境、才能開始分層處理冷資料。
 
-https://docs.netapp.com/us-en/cloud-manager-ontap-onprem/task-discovering-ontap.html["瞭解如何探索叢集"^]。
+https://docs.netapp.com/us-en/bluexp-ontap-onprem/task-discovering-ontap.html["瞭解如何探索叢集"^]。
 
 
 
@@ -129,9 +129,9 @@ S3 認證:: 當您設定 StorageGRID 分層時、您需要提供 BlueXP 分層�
 
 需要連接器才能將資料分層至雲端。將資料分層至 StorageGRID 無法使用時、內部環境中必須有連接器可供使用。您可能需要安裝新的 Connector 、或確定目前選取的 Connector 位於內部部署。
 
-* https://docs.netapp.com/us-en/cloud-manager-setup-admin/concept-connectors.html["深入瞭解連接器"^]
-* https://docs.netapp.com/us-en/cloud-manager-setup-admin/task-quick-start-connector-on-prem.html["在 Linux 主機上安裝 Connector"^]
-* https://docs.netapp.com/us-en/cloud-manager-setup-admin/task-managing-connectors.html["在連接器之間切換"^]
+* https://docs.netapp.com/us-en/bluexp-setup-admin/concept-connectors.html["深入瞭解連接器"^]
+* https://docs.netapp.com/us-en/bluexp-setup-admin/task-quick-start-connector-on-prem.html["在 Linux 主機上安裝 Connector"^]
+* https://docs.netapp.com/us-en/bluexp-setup-admin/task-managing-connectors.html["在連接器之間切換"^]
 
 
 
@@ -143,7 +143,7 @@ S3 認證:: 當您設定 StorageGRID 分層時、您需要提供 BlueXP 分層�
 .步驟
 . 確保安裝 Connector 的網路啟用下列連線：
 +
-** 透過連接埠 443 與 BlueXP 分層服務的 HTTPS 連線 (https://docs.netapp.com/us-en/cloud-manager-setup-admin/task-set-up-networking-on-prem.html#endpoints-contacted-for-day-to-day-operations["請參閱端點清單"^]）
+** 透過連接埠 443 與 BlueXP 分層服務的 HTTPS 連線 (https://docs.netapp.com/us-en/bluexp-setup-admin/task-set-up-networking-on-prem.html#endpoints-contacted-for-day-to-day-operations["請參閱端點清單"^]）
 ** 透過連接埠 443 與 StorageGRID 系統的 HTTPS 連線
 ** 透過連接埠443連線至ONTAP 您的SURF叢 集管理LIF的HTTPS連線
 
@@ -157,7 +157,7 @@ S3 認證:: 當您設定 StorageGRID 分層時、您需要提供 BlueXP 分層�
 準備好環境之後、請從第一個叢集開始分層處理非作用中資料。
 
 .您需要的產品
-* https://docs.netapp.com/us-en/cloud-manager-ontap-onprem/task-discovering-ontap.html["內部部署工作環境"^]。
+* https://docs.netapp.com/us-en/bluexp-ontap-onprem/task-discovering-ontap.html["內部部署工作環境"^]。
 * 用來進行HTTPS通訊的FQDN、以及連接埠。StorageGRID
 * 具備所需 S3 權限的 AWS 存取金鑰。
 

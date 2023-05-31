@@ -200,7 +200,7 @@ BlueXP 分層支援 ONTAP 9.2 版及更新版本。
 
 === 關於此功能呢 Cloud Volumes ONTAP ？
 
-如果您有 Cloud Volumes ONTAP 系統、您可以在 BlueXP 分層叢集頁面中找到它們、以便您完整檢視混合雲基礎架構中的資料分層。不過、 Cloud Volumes ONTAP 系統是 BlueXP 分層的唯讀系統。您無法在 BlueXP 分層的 Cloud Volumes ONTAP 上設定資料分層。 https://docs.netapp.com/us-en/cloud-manager-cloud-volumes-ontap/task-tiering.html["您可以在 BlueXP 的工作環境中設定 Cloud Volumes ONTAP 系統的分層"^]。
+如果您有 Cloud Volumes ONTAP 系統、您可以在 BlueXP 分層叢集頁面中找到它們、以便您完整檢視混合雲基礎架構中的資料分層。不過、 Cloud Volumes ONTAP 系統是 BlueXP 分層的唯讀系統。您無法在 BlueXP 分層的 Cloud Volumes ONTAP 上設定資料分層。 https://docs.netapp.com/us-en/bluexp-cloud-volumes-ontap/task-tiering.html["您可以在 BlueXP 的工作環境中設定 Cloud Volumes ONTAP 系統的分層"^]。
 
 
 
@@ -362,7 +362,7 @@ Connector是在雲端帳戶內或內部部署的運算執行個體上執行的�
 
 === 我可以在內部部署連接器嗎？
 
-是的。Connector軟體可下載並手動安裝在網路中的Linux主機上。 https://docs.netapp.com/us-en/cloud-manager-setup-admin/task-install-connector-on-prem.html["瞭解如何在內部環境中安裝Connector"]。
+是的。Connector軟體可下載並手動安裝在網路中的Linux主機上。 https://docs.netapp.com/us-en/bluexp-setup-admin/task-install-connector-on-prem.html["瞭解如何在內部環境中安裝Connector"]。
 
 
 

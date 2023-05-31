@@ -27,7 +27,7 @@ summary: 將非作用中資料分層存放至Azure Blob儲存設備、以釋放�
 您需要下列項目：
 
 [role="quick-margin-list"]
-* 內部ONTAP 使用的支援區叢集、執行ONTAP 的是2個9.4或更新版本、並有HTTPS連線至Azure Blob儲存設備。 https://docs.netapp.com/us-en/cloud-manager-ontap-onprem/task-discovering-ontap.html["瞭解如何探索叢集"^]。
+* 內部ONTAP 使用的支援區叢集、執行ONTAP 的是2個9.4或更新版本、並有HTTPS連線至Azure Blob儲存設備。 https://docs.netapp.com/us-en/bluexp-ontap-onprem/task-discovering-ontap.html["瞭解如何探索叢集"^]。
 * 安裝在Azure vnet或內部部署環境中的Connector。
 * 用於連接器的網路連線、可將 HTTPS 輸出連線至資料中心的 ONTAP 叢集、 Azure 儲存設備、以及 BlueXP 分層服務。
 
@@ -42,7 +42,7 @@ summary: 將非作用中資料分層存放至Azure Blob儲存設備、以釋放�
 
 [role="quick-margin-list"]
 * 若要從Azure Marketplace訂閱、 https://azuremarketplace.microsoft.com/en-us/marketplace/apps/netapp.cloud-manager?tab=Overview["前往BlueXP Marketplace產品"^]，單擊*訂購*，然後按照提示進行操作。
-* 若要使用 BlueXP 分層 BYOL 授權付款、請寄送 mailto ： ng-cloud-tiering@netapp.com ？ subject=Licensing[ 如果您需要購買一項授權、請聯絡我們 ] 、然後寄送給我們 link:task-licensing-cloud-tiering.html#add-bluexp-tiering-byol-licenses-to-your-account["從BlueXP Digital Wallet將其新增至您的帳戶"]。
+* 若要使用 BlueXP 分層 BYOL 授權付款、請寄送 mailto ： ng-cloud-tiering@netapp.com ？ subject=Licensing[ 如果您需要購買一項授權、請聯絡我們 ] 、然後寄送給我們 link:task-licensing-cloud-tiering.html#add-bluexp-tiering-byol-licenses-to-your-account["將其從 BlueXP 數位錢包新增至您的帳戶"]。
 
 
 
@@ -106,7 +106,7 @@ NOTE: BlueXP 分層支援 FlexGroup 磁碟區、從 ONTAP 9.5 開始。安裝程
 
 您必須先在ONTAP BlueXP中建立內部的功能性環境、才能開始分層處理冷資料。
 
-https://docs.netapp.com/us-en/cloud-manager-ontap-onprem/task-discovering-ontap.html["瞭解如何探索叢集"^]。
+https://docs.netapp.com/us-en/bluexp-ontap-onprem/task-discovering-ontap.html["瞭解如何探索叢集"^]。
 
 
 
@@ -114,16 +114,16 @@ https://docs.netapp.com/us-en/cloud-manager-ontap-onprem/task-discovering-ontap.
 
 需要連接器才能將資料分層至雲端。將資料分層至Azure Blob儲存設備時、您可以使用Azure vnet或內部部署中的Connector。您需要建立新的連接器、或確定目前選取的連接器位於Azure或內部部署。
 
-* https://docs.netapp.com/us-en/cloud-manager-setup-admin/concept-connectors.html["深入瞭解連接器"^]
-* https://docs.netapp.com/us-en/cloud-manager-setup-admin/task-quick-start-connector-azure.html["在Azure中部署Connector"^]
-* https://docs.netapp.com/us-en/cloud-manager-setup-admin/task-quick-start-connector-on-prem.html["在 Linux 主機上安裝 Connector"^]
+* https://docs.netapp.com/us-en/bluexp-setup-admin/concept-connectors.html["深入瞭解連接器"^]
+* https://docs.netapp.com/us-en/bluexp-setup-admin/task-quick-start-connector-azure.html["在Azure中部署Connector"^]
+* https://docs.netapp.com/us-en/bluexp-setup-admin/task-quick-start-connector-on-prem.html["在 Linux 主機上安裝 Connector"^]
 
 
 
 
 === 確認您擁有必要的Connector權限
 
-如果您使用BlueXP 3.9.25版或更新版本建立Connector、就會設定好。預設會設定自訂角色、以提供Connector管理Azure網路中資源和程序所需的權限。請參閱 https://docs.netapp.com/us-en/cloud-manager-setup-admin/reference-permissions-azure.html#custom-role-permissions["必要的自訂角色權限"^] 和 https://docs.netapp.com/us-en/cloud-manager-setup-admin/reference-permissions-azure.html#cloud-tiering["BlueXP 分層所需的特定權限"^]。
+如果您使用BlueXP 3.9.25版或更新版本建立Connector、就會設定好。預設會設定自訂角色、以提供Connector管理Azure網路中資源和程序所需的權限。請參閱 https://docs.netapp.com/us-en/bluexp-setup-admin/reference-permissions-azure.html#custom-role-permissions["必要的自訂角色權限"^] 和 https://docs.netapp.com/us-en/bluexp-setup-admin/reference-permissions-azure.html#cloud-tiering["BlueXP 分層所需的特定權限"^]。
 
 如果您使用舊版的BlueXP建立Connector、則必須編輯Azure帳戶的權限清單、才能新增任何遺失的權限。
 
@@ -136,7 +136,7 @@ https://docs.netapp.com/us-en/cloud-manager-ontap-onprem/task-discovering-ontap.
 .步驟
 . 確保安裝 Connector 的網路啟用下列連線：
 +
-** 透過連接埠 443 連接到 BlueXP 分層服務和 Azure Blob 物件儲存設備的 HTTPS 連線 (https://docs.netapp.com/us-en/cloud-manager-setup-admin/task-set-up-networking-azure.html#endpoints-contacted-for-day-to-day-operations["請參閱端點清單"^]）
+** 透過連接埠 443 連接到 BlueXP 分層服務和 Azure Blob 物件儲存設備的 HTTPS 連線 (https://docs.netapp.com/us-en/bluexp-setup-admin/task-set-up-networking-azure.html#endpoints-contacted-for-day-to-day-operations["請參閱端點清單"^]）
 ** 透過連接埠443連線至ONTAP 您的SURF叢 集管理LIF的HTTPS連線
 
 
@@ -166,7 +166,7 @@ NOTE: 如果您計畫設定 BlueXP 分層以使用較低成本的存取層、在
 準備好 Azure 環境之後、請從第一個叢集開始分層處理非作用中資料。
 
 .您需要的產品
-https://docs.netapp.com/us-en/cloud-manager-ontap-onprem/task-discovering-ontap.html["內部部署工作環境"^]。
+https://docs.netapp.com/us-en/bluexp-ontap-onprem/task-discovering-ontap.html["內部部署工作環境"^]。
 
 .步驟
 . 選擇內部ONTAP 環境的不正常運作環境。

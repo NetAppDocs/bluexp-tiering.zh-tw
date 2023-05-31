@@ -119,5 +119,5 @@ homepage:
       url: https://bluexp.netapp.com/cloud-tiering
 product-family:
   name: BlueXP
-  repo: cloud-manager-family
+  repo: bluexp-family
   sidebar_label: 所有BlueXP文件

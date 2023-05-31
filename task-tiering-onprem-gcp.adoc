@@ -27,7 +27,7 @@ summary: 將非作用中的資料分層儲存至Google Cloud Storage、以釋放
 您需要下列項目：
 
 [role="quick-margin-list"]
-* 內部ONTAP 使用的支援功能、執行ONTAP 不支援功能的叢集9.6或更新版本、並可透過HTTPS連線至Google Cloud Storage。 https://docs.netapp.com/us-en/cloud-manager-ontap-onprem/task-discovering-ontap.html["瞭解如何探索叢集"^]。
+* 內部ONTAP 使用的支援功能、執行ONTAP 不支援功能的叢集9.6或更新版本、並可透過HTTPS連線至Google Cloud Storage。 https://docs.netapp.com/us-en/bluexp-ontap-onprem/task-discovering-ontap.html["瞭解如何探索叢集"^]。
 * 具有預先定義儲存管理角色和儲存存取金鑰的服務帳戶。
 * 安裝在 Google Cloud Platform VPC 上的 Connector 。
 * Connector 的網路連線功能、可讓您將 HTTPS 輸出連線至資料中心的 ONTAP 叢集、 Google Cloud Storage 、以及 BlueXP 分層服務。
@@ -43,7 +43,7 @@ summary: 將非作用中的資料分層儲存至Google Cloud Storage、以釋放
 
 [role="quick-margin-list"]
 * 若要從GCP Marketplace訂閱、 https://console.cloud.google.com/marketplace/details/netapp-cloudmanager/cloud-manager?supportedpurview=project&rif_reserved["前往BlueXP Marketplace產品"^]，單擊*訂購*，然後按照提示進行操作。
-* 若要使用 BlueXP 分層 BYOL 授權付款、請寄送 mailto ： ng-cloud-tiering@netapp.com ？ subject=Licensing[ 如果您需要購買一項授權、請聯絡我們 ] 、然後寄送給我們 link:task-licensing-cloud-tiering.html#add-bluexp-tiering-byol-licenses-to-your-account["從BlueXP Digital Wallet將其新增至您的帳戶"]。
+* 若要使用 BlueXP 分層 BYOL 授權付款、請寄送 mailto ： ng-cloud-tiering@netapp.com ？ subject=Licensing[ 如果您需要購買一項授權、請聯絡我們 ] 、然後寄送給我們 link:task-licensing-cloud-tiering.html#add-bluexp-tiering-byol-licenses-to-your-account["將其從 BlueXP 數位錢包新增至您的帳戶"]。
 
 
 
@@ -107,7 +107,7 @@ NOTE: BlueXP 分層支援 FlexGroup 磁碟區。安裝程式的運作方式與�
 
 您必須先在ONTAP BlueXP中建立內部的功能性環境、才能開始分層處理冷資料。
 
-https://docs.netapp.com/us-en/cloud-manager-ontap-onprem/task-discovering-ontap.html["瞭解如何探索叢集"^]。
+https://docs.netapp.com/us-en/bluexp-ontap-onprem/task-discovering-ontap.html["瞭解如何探索叢集"^]。
 
 
 
@@ -115,8 +115,8 @@ https://docs.netapp.com/us-en/cloud-manager-ontap-onprem/task-discovering-ontap.
 
 需要連接器才能將資料分層至雲端。將資料分層至 Google Cloud Storage 時、 Google Cloud Platform VPC 必須提供 Connector 。您需要建立新的連接器、或確定目前選取的連接器位於 GCP 中。
 
-* https://docs.netapp.com/us-en/cloud-manager-setup-admin/concept-connectors.html["深入瞭解連接器"^]
-* https://docs.netapp.com/us-en/cloud-manager-setup-admin/task-quick-start-connector-google.html["在GCP中部署Connector"^]
+* https://docs.netapp.com/us-en/bluexp-setup-admin/concept-connectors.html["深入瞭解連接器"^]
+* https://docs.netapp.com/us-en/bluexp-setup-admin/task-quick-start-connector-google.html["在GCP中部署Connector"^]
 
 
 
@@ -128,7 +128,7 @@ https://docs.netapp.com/us-en/cloud-manager-ontap-onprem/task-discovering-ontap.
 .步驟
 . 確認安裝連接器的 VPC 啟用下列連線：
 +
-** 透過連接埠 443 連接到 BlueXP 分層服務和 Google Cloud Storage 的 HTTPS 連線 (https://docs.netapp.com/us-en/cloud-manager-setup-admin/task-set-up-networking-google.html#endpoints-contacted-for-day-to-day-operations["請參閱端點清單"^]）
+** 透過連接埠 443 連接到 BlueXP 分層服務和 Google Cloud Storage 的 HTTPS 連線 (https://docs.netapp.com/us-en/bluexp-setup-admin/task-set-up-networking-google.html#endpoints-contacted-for-day-to-day-operations["請參閱端點清單"^]）
 ** 透過連接埠443連線至ONTAP 您的SURF叢 集管理LIF的HTTPS連線
 
 
@@ -169,7 +169,7 @@ NOTE: 如果您計畫設定 BlueXP 分層以使用低成本的儲存類別、讓
 在您準備好 Google Cloud 環境之後、請從第一個叢集開始分層處理非作用中資料。
 
 .您需要的產品
-* https://docs.netapp.com/us-en/cloud-manager-ontap-onprem/task-discovering-ontap.html["內部部署工作環境"^]。
+* https://docs.netapp.com/us-en/bluexp-ontap-onprem/task-discovering-ontap.html["內部部署工作環境"^]。
 * 具有 Storage Admin 角色之服務帳戶的儲存存取金鑰。
 
 

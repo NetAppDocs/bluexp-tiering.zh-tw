@@ -63,7 +63,7 @@ summary: 將非作用中的資料分層至Amazon S3、以釋放內部ONTAP 資�
 
 [role="quick-margin-list"]
 * 若要從AWS Marketplace訂閱、 https://aws.amazon.com/marketplace/pp/prodview-oorxakq6lq7m4?sr=0-8&ref_=beagle&applicationId=AWSMPContessa["前往BlueXP Marketplace產品"^]，單擊*訂購*，然後按照提示進行操作。
-* 若要使用 BlueXP 分層 BYOL 授權付款、請寄送 mailto ： ng-cloud-tiering@netapp.com ？ subject=Licensing[ 如果您需要購買一項授權、請聯絡我們 ] 、然後寄送給我們 link:task-licensing-cloud-tiering.html#add-bluexp-tiering-byol-licenses-to-your-account["從BlueXP Digital Wallet將其新增至您的帳戶"]。
+* 若要使用 BlueXP 分層 BYOL 授權付款、請寄送 mailto ： ng-cloud-tiering@netapp.com ？ subject=Licensing[ 如果您需要購買一項授權、請聯絡我們 ] 、然後寄送給我們 link:task-licensing-cloud-tiering.html#add-bluexp-tiering-byol-licenses-to-your-account["將其從 BlueXP 數位錢包新增至您的帳戶"]。
 
 
 
@@ -99,9 +99,9 @@ BlueXP Connector是用於BlueXP功能的主要軟體。需要連接器來分層�
 
 如果您已在AWS VPC或內部部署部署了Connector、您就能輕鬆完成所有設定。如果沒有、您需要在上述任一位置建立連接器、以便將ONTAP 資訊分層保存至AWS S3儲存設備。您無法使用部署於其他雲端供應商的Connector。
 
-* https://docs.netapp.com/us-en/cloud-manager-setup-admin/concept-connectors.html["深入瞭解連接器"^]
-* https://docs.netapp.com/us-en/cloud-manager-setup-admin/task-quick-start-connector-aws.html["在AWS中部署Connector"^]
-* https://docs.netapp.com/us-en/cloud-manager-setup-admin/task-quick-start-connector-on-prem.html["在 Linux 主機上安裝 Connector"^]
+* https://docs.netapp.com/us-en/bluexp-setup-admin/concept-connectors.html["深入瞭解連接器"^]
+* https://docs.netapp.com/us-en/bluexp-setup-admin/task-quick-start-connector-aws.html["在AWS中部署Connector"^]
+* https://docs.netapp.com/us-en/bluexp-setup-admin/task-quick-start-connector-on-prem.html["在 Linux 主機上安裝 Connector"^]
 
 
 
@@ -110,11 +110,11 @@ BlueXP Connector是用於BlueXP功能的主要軟體。需要連接器來分層�
 
 * 確保安裝 Connector 的網路啟用下列連線：
 +
-** 透過連接埠 443 連接到 BlueXP 分層服務和 S3 物件儲存設備的 HTTPS 連線 (https://docs.netapp.com/us-en/cloud-manager-setup-admin/task-set-up-networking-aws.html#endpoints-contacted-for-day-to-day-operations["請參閱端點清單"^]）
+** 透過連接埠 443 連接到 BlueXP 分層服務和 S3 物件儲存設備的 HTTPS 連線 (https://docs.netapp.com/us-en/bluexp-setup-admin/task-set-up-networking-aws.html#endpoints-contacted-for-day-to-day-operations["請參閱端點清單"^]）
 ** 透過連接埠443連線至ONTAP 您的SURF叢 集管理LIF的HTTPS連線
 
 
-* https://docs.netapp.com/us-en/cloud-manager-setup-admin/reference-permissions-aws.html#cloud-tiering["確認Connector具有管理S3儲存區的權限"^]
+* https://docs.netapp.com/us-en/bluexp-setup-admin/reference-permissions-aws.html#cloud-tiering["確認Connector具有管理S3儲存區的權限"^]
 * 如果ONTAP 您有從您的叢集到VPC的直接連線或VPN連線、而且您想要連接器和S3之間的通訊保持在AWS內部網路（*私有*連線）中、您就必須啟用連接到S3的VPC端點介面。 <<使用VPC端點介面設定系統的私有連線,瞭解如何設定VPC端點介面。>>
 
 
@@ -182,7 +182,7 @@ IPspace內的所有叢集間生命體都必須擁有物件存放區的存取權�
 
 您必須先在ONTAP BlueXP中探索內部部署的叢集、才能開始將冷資料分層儲存至物件儲存設備。您必須知道叢集管理IP位址和管理使用者帳戶的密碼、才能新增叢集。
 
-https://docs.netapp.com/us-en/cloud-manager-ontap-onprem/task-discovering-ontap.html["瞭解如何探索叢集"^]。
+https://docs.netapp.com/us-en/bluexp-ontap-onprem/task-discovering-ontap.html["瞭解如何探索叢集"^]。
 
 
 
@@ -206,7 +206,7 @@ NOTE: 如果您計畫設定 BlueXP 分層以使用較低成本的儲存類別、
 
 
 .步驟
-. 請確認 https://docs.netapp.com/us-en/cloud-manager-setup-admin/reference-permissions-aws.html#cloud-tiering["這些S3權限"^] 是為Connector提供權限的IAM角色的一部分。在您第一次部署Connector時、預設會包含這些連接器。如果沒有、您需要新增遺失的權限。請參閱 https://docs.aws.amazon.com/IAM/latest/UserGuide/access_policies_manage-edit.html["AWS文件：編輯IAM原則"^]。
+. 請確認 https://docs.netapp.com/us-en/bluexp-setup-admin/reference-permissions-aws.html#cloud-tiering["這些S3權限"^] 是為Connector提供權限的IAM角色的一部分。在您第一次部署Connector時、預設會包含這些連接器。如果沒有、您需要新增遺失的權限。請參閱 https://docs.aws.amazon.com/IAM/latest/UserGuide/access_policies_manage-edit.html["AWS文件：編輯IAM原則"^]。
 . 啟動服務時、分層精靈會提示您輸入存取金鑰和秘密金鑰。這些認證資料會傳遞ONTAP 到S庫 叢集、ONTAP 以便讓S庫 將資料分層傳送到S3儲存庫。因此、您需要建立具有下列權限的IAM使用者：
 +
 [source, json]
@@ -253,7 +253,7 @@ image:screenshot_tiering_aws_sec_group.png["與Connector相關聯的AWS安全性
 +
 image:screenshot_endpoint_dns_aws_console.png["AWS主控台VPC端點的DNS名稱快照。"]
 
-. 從VPC S3端點取得憑證。您的做法是 https://docs.netapp.com/us-en/cloud-manager-setup-admin/task-managing-connectors.html#connect-to-the-linux-vm["登入裝載BlueXP Connector的VM"^] 並執行下列命令。輸入端點的DNS名稱時、請在開頭加入「pucket」、取代「*」：
+. 從VPC S3端點取得憑證。您的做法是 https://docs.netapp.com/us-en/bluexp-setup-admin/task-managing-connectors.html#connect-to-the-linux-vm["登入裝載BlueXP Connector的VM"^] 並執行下列命令。輸入端點的DNS名稱時、請在開頭加入「pucket」、取代「*」：
 +
 [source, text]
 ----
@@ -289,7 +289,7 @@ Please enter Certificate: Press <Enter> when done
 準備好 AWS 環境之後、請從第一個叢集開始分層處理非作用中資料。
 
 .您需要的產品
-* https://docs.netapp.com/us-en/cloud-manager-ontap-onprem/task-discovering-ontap.html["內部部署工作環境"^]。
+* https://docs.netapp.com/us-en/bluexp-ontap-onprem/task-discovering-ontap.html["內部部署工作環境"^]。
 * 具備所需 S3 權限的 IAM 使用者的 AWS 存取金鑰。
 
 

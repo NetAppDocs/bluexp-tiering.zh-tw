@@ -18,7 +18,7 @@ summary: 當您從第一個叢集設定分層時、將會開始 30 天的 BlueXP
 
 在閱讀更多內容之前、請先提供幾個附註：
 
-* 如果您已在雲端供應商的市場中訂閱 BlueXP 訂閱（ PAYGO ）、則您也會自動訂閱 BlueXP 內部部署 ONTAP 系統分層功能。您會在 BlueXP 分層 * 內部部署儀表板 * 索引標籤中看到有效的訂閱。您不需要再次訂閱。您會在Digital Wallet中看到使用中的訂閱內容。
+* 如果您已在雲端供應商的市場中訂閱 BlueXP 訂閱（ PAYGO ）、則您也會自動訂閱 BlueXP 內部部署 ONTAP 系統分層功能。您會在 BlueXP 分層 * 內部部署儀表板 * 索引標籤中看到有效的訂閱。您不需要再次訂閱。BlueXP 數位電子錢包中有有效的訂閱。
 * BYOL BlueXP 分層授權（先前稱為「雲端分層」授權）是一個 _ 浮動 _ 授權、您可以在 BlueXP 帳戶中的多個內部部署 ONTAP 叢集上使用。這與您過去為每個叢集購買 FabricPool 授權的地方不同（而且更容易）。
 * 將資料分層至StorageGRID 不收費、因此不需要BYOL授權或PAYGO登錄。此階層式資料不會計入您授權中所購買的容量。
 
@@ -93,7 +93,7 @@ video::video_subscribing_gcp_tiering.mp4[width=848,height=480]
 
 將非作用中資料分層至AWS時、您可以訂閱一年一度的合約、該合約可從取得 https://aws.amazon.com/marketplace/pp/B086PDWSS8["AWS Marketplace頁面"^]。提供1年、2年或3年期限。
 
-如果您要使用此選項、請從「市場」頁面設定您的訂閱、然後再進行設定 https://docs.netapp.com/us-en/cloud-manager-setup-admin/task-adding-aws-accounts.html#associate-an-aws-subscription["將訂閱與AWS認證資料建立關聯"^]。
+如果您要使用此選項、請從「市場」頁面設定您的訂閱、然後再進行設定 https://docs.netapp.com/us-en/bluexp-setup-admin/task-adding-aws-accounts.html#associate-an-aws-subscription["將訂閱與AWS認證資料建立關聯"^]。
 
 目前不支援將年度合約分層至Azure或GCP。
 
@@ -109,7 +109,7 @@ NetApp自帶授權、提供1年、2年或3年期限。BYOL * BlueXP 分層 * 授
 * 按一下BlueXP右下角的聊天圖示、申請授權。
 
 
-或者、如果您沒有使用未指派的 Cloud Volumes ONTAP 節點型授權、您可以將其轉換為具有相同美元等效和相同到期日的 BlueXP 分層授權。 https://docs.netapp.com/us-en/cloud-manager-cloud-volumes-ontap/task-manage-node-licenses.html#exchange-unassigned-node-based-licenses["如需詳細資料、請前往此處"^]。
+或者、如果您沒有使用未指派的 Cloud Volumes ONTAP 節點型授權、您可以將其轉換為具有相同美元等效和相同到期日的 BlueXP 分層授權。 https://docs.netapp.com/us-en/bluexp-cloud-volumes-ontap/task-manage-node-licenses.html#exchange-unassigned-node-based-licenses["如需詳細資料、請前往此處"^]。
 
 您可以使用 BlueXP 數位錢包頁面來管理 BlueXP 分層 BYOL 授權。您可以新增授權並更新現有授權。
 
@@ -183,7 +183,7 @@ image:screenshot_cloud_tiering_license_step2.gif["螢幕擷取畫面會顯示「
 +
 ** 如果您有分層授權序號、而且知道您的nss-Account、請選取* Enter Serial Number*（輸入序號*）選項、然後輸入該資訊。
 +
-如果下拉式清單中沒有您的 NetApp 支援網站帳戶， https://docs.netapp.com/us-en/cloud-manager-setup-admin/task-adding-nss-accounts.html["將新增至BlueXP的NSS帳戶"^]。
+如果下拉式清單中沒有您的 NetApp 支援網站帳戶， https://docs.netapp.com/us-en/bluexp-setup-admin/task-adding-nss-accounts.html["將新增至BlueXP的NSS帳戶"^]。
 
 ** 如果您有分層授權檔案、請選取*上傳授權檔案*選項、然後依照提示附加檔案。
 +
