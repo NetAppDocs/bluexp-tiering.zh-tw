@@ -18,6 +18,24 @@ summary: 瞭解 BlueXP 分層的新功能。
 
 
 
+== 2023 年 7 月 4 日
+
+
+
+=== 現在您可以調整用於將非使用中資料上傳至物件儲存的頻寬
+
+當您啟動 BlueXP 分層時、 ONTAP 可以使用無限量的網路頻寬、將非作用中的資料從叢集中的磁碟區傳輸到物件儲存區。如果您注意到分層流量會影響一般使用者工作負載、您可以限制傳輸期間可使用的頻寬量。 https://docs.netapp.com/us-en/bluexp-tiering/task-managing-tiering.html#changing-the-network-bandwidth-available-to-upload-inactive-data-to-object-storage["深入瞭解"]。
+
+
+
+=== 「低分層」的分層事件會顯示在通知中心中
+
+現在當叢集分層處理少於 20% 的冷資料（包括無資料分層的叢集）時、會出現分層事件「將額外資料從叢集 <name> 分層到物件儲存設備以提高儲存效率」、以作為通知。
+
+此通知是一項「建議」、可協助您提高系統效率、並節省儲存成本。它提供的連結 https://bluexp.netapp.com/cloud-tiering-service-tco["BlueXP 分層總擁有成本和節約計算機"^] 協助您計算成本節約效益。
+
+
+
 == 2023年4月3日
 
 
@@ -123,19 +141,3 @@ Cloud Tiering UI已新增一組物件儲存組態頁面。您可以新增物件�
 === 雲端分層授權支援、可用於其他叢集組態
 
 雲端分層授權現在可與分層鏡射組態（不含MetroCluster 非功能組態）的叢集、以及分層至IBM Cloud Object Storage的叢集共享。您不再需要在FabricPool 這些情況下使用過時的不再使用的功能介紹授權。如此一來、您就能更輕鬆地在更多叢集上使用「浮動」雲端分層授權。 https://docs.netapp.com/us-en/bluexp-tiering/task-licensing-cloud-tiering.html#apply-bluexp-tiering-licenses-to-clusters-in-special-configurations["瞭解如何授權及設定這些類型的叢集。"]
-
-
-
-== 2022年4月4日
-
-
-
-=== Amazon S3 Glacier立即擷取儲存類別現已推出
-
-設定雲端分層時、現在您可以設定生命週期規則、讓非使用中的資料在特定天數後從_Standard_儲存類別轉換為_Glacier即時擷取。這將有助於降低AWS基礎架構成本。 https://docs.netapp.com/us-en/bluexp-tiering/reference-aws-support.html["請參閱支援的S3儲存類別。"]
-
-
-
-=== Cloud Tiering已完全符合ONTAP Select 資格、可在不同步系統上執行
-
-除了將資料從AFF 您的功能區和FAS 功能區系統分層、現在您可以將非作用中的資料從ONTAP Select 您的功能區系統分層處理至雲端儲存設備。

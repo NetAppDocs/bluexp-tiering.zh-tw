@@ -45,6 +45,8 @@ sidebar:
       url: "/task-tiering-test.html"
     - title: 檢視所有叢集的分層概述
       url: "/task-tiering-onprem-overview.html"
+    - title: 監控分層警示的狀態
+      url: "/task-monitor-tiering-alerts.html"
   - title: 參考資料
     entries:
     - title: 支援的 Amazon S3 儲存類別和地區
@@ -91,6 +93,8 @@ homepage:
       url: task-managing-tiering.html#reviewing-tiering-info-for-a-cluster
     - title: 從其他磁碟區分層資料
       url: task-managing-tiering.html#tiering-data-from-additional-volumes
+    - title: 變更頻寬、將非使用中資料上傳至物件儲存設備
+      url: task-managing-tiering.html#changing-the-network-bandwidth-available-to-upload-inactive-data-to-object-storage
     - title: 將資料從雲端移回效能層
       url: task-managing-tiering.html#migrating-data-from-the-cloud-tier-back-to-the-performance-tier
     - title: 管理Aggregate上的分層設定

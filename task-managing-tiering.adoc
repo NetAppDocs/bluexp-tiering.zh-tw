@@ -4,7 +4,7 @@ permalink: task-managing-tiering.html
 keywords: discover, volumes, report, hot, cold, inactive, active, capacity, used capacity, savings, health, failed 
 summary: 現在您已經從內部ONTAP 的物件叢集設定資料分層、您可以從其他磁碟區分層資料、變更磁碟區的分層原則、探索其他叢集等。 
 ---
-= 從叢集管理資料分層
+= 管理叢集的資料分層
 :hardbreaks:
 :allow-uri-read: 
 :nofooter: 
@@ -15,6 +15,33 @@ summary: 現在您已經從內部ONTAP 的物件叢集設定資料分層、您�
 
 [role="lead"]
 現在您已經從內部ONTAP 的物件叢集設定資料分層、您可以從其他磁碟區分層資料、變更磁碟區的分層原則、探索其他叢集等。
+
+
+
+== 檢閱叢集的分層資訊
+
+您可能想要查看雲端層中有多少資料、以及磁碟上有多少資料。或者、您可能想要查看叢集磁碟上的熱和冷資料量。BlueXP 分層會為每個叢集提供此資訊。
+
+.步驟
+. 從左側導覽功能表中、選取*行動性>分層*。
+. 在 * 叢集 * 頁面上、按一下功能表圖示 image:icon-action.png["動作圖示"] 對於叢集、請選取 * 叢集資訊 * 。
++
+image:screenshot_tiering_cluster_info_button.png["從「叢集」頁面選取「叢集資訊」按鈕的螢幕擷取畫面。"]
+
+. 檢閱叢集的詳細資料。
++
+範例如下：
+
++
+image:screenshot_tiering_cluster_info.png["螢幕擷取畫面顯示叢集總使用資料容量、叢集使用容量和叢集資訊。"]
+
+
+
+請注意、 Cloud Volumes ONTAP 系統的顯示畫面不同。雖然 Cloud Volumes ONTAP 磁碟區可以將資料分層到雲端、但它們並未使用 BlueXP 分層服務。 https://docs.netapp.com/us-en/bluexp-cloud-volumes-ontap/task-tiering.html["瞭解如何將非使用中資料從 Cloud Volumes ONTAP 系統分層到低成本物件儲存設備"^]。
+
+您也可以 https://docs.netapp.com/us-en/active-iq/task-informed-decisions-based-on-cloud-recommendations.html#tiering["從Digital Advisor檢視叢集的分層資訊"^] 如果您熟悉此NetApp產品、只要從左側導覽窗格中選取*雲端建議*即可。
+
+image:screenshot_tiering_aiq_fabricpool_info.png["顯示FabricPool 叢集的資訊的快照、使用FabricPool Digital Advisor提供的「資訊顧問」。"]
 
 
 
@@ -75,6 +102,25 @@ image:screenshot_tiering_policy_settings.png["顯示可設定分層原則設定�
 
 .結果
 分層原則隨即變更、資料也會開始根據新原則進行階層。
+
+
+
+== 變更可用的網路頻寬、將非使用中資料上傳至物件儲存設備
+
+當您為叢集啟動 BlueXP 分層時、根據預設、 ONTAP 可以使用無限量的頻寬、將非作用中資料從工作環境中的磁碟區傳輸到物件儲存區。如果您注意到分層流量會影響一般使用者工作負載、您可以限制傳輸期間使用的網路頻寬量。您可以選擇 1 到 10 、 000 Mbps 之間的值作為最大傳輸速率。
+
+. 從左側導覽功能表中、選取*行動性>分層*。
+. 在 * 叢集 * 頁面上、按一下功能表圖示 image:icon-action.png["動作圖示"] 對於叢集、請選取 * 最大傳輸率 * 。
++
+image:screenshot_tiering_transfer_rate_button.png["從「叢集」頁面選取「最大傳輸率」按鈕的螢幕擷取畫面。"]
+
+. 在「最大傳輸率 _ 」頁面中、選取「 * 限制 * 」選項按鈕並輸入可使用的最大頻寬、或選取「 * 無限 * 」以表示沒有限制。然後按一下 * 套用 * 。
++
+image:screenshot_tiering_transfer_rate.png["叢集「傳輸率上限」對話方塊的螢幕擷取畫面。"]
+
+
+
+此設定不會影響分配給正在分層資料的任何其他叢集的頻寬。
 
 
 
@@ -157,28 +203,6 @@ image:screenshot_tiering_modify_aggregate.png["螢幕快照顯示滑桿、可用
 
 . 按一下「 * 套用 * 」。
 
-
-
-
-== 檢閱叢集的分層資訊
-
-您可能想要查看雲端層中有多少資料、以及磁碟上有多少資料。或者、您可能想要查看叢集磁碟上的熱和冷資料量。BlueXP 分層會為每個叢集提供此資訊。
-
-.步驟
-. 從左側導覽功能表中、選取*行動性>分層*。
-. 在 * 叢集 * 頁面中、按一下叢集的功能表圖示、然後選取 * 叢集資訊 * 。
-. 檢閱叢集的詳細資料。
-+
-範例如下：
-
-+
-image:screenshot_tiering_cluster_info.png["顯示叢集報告的快照、其中詳細說明已使用容量總計、叢集已使用容量、叢集資訊及物件儲存資訊。"]
-
-
-
-您也可以 https://docs.netapp.com/us-en/active-iq/task-informed-decisions-based-on-cloud-recommendations.html#tiering["從Digital Advisor檢視叢集的分層資訊"^] 如果您熟悉此NetApp產品、只要從左側導覽窗格中選取*雲端建議*即可。
-
-image:screenshot_tiering_aiq_fabricpool_info.png["顯示FabricPool 叢集的資訊的快照、使用FabricPool Digital Advisor提供的「資訊顧問」。"]
 
 
 
