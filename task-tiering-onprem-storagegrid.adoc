@@ -195,7 +195,7 @@ image:screenshot_setup_tiering_onprem.png["螢幕擷取畫面顯示選取內部 
 ** 若要選取多個磁碟區、請勾選每個磁碟區的方塊（image:button_backup_1_volume.png[""]），然後單擊* Configure Volume*（配置卷*）。
 ** 若要選取單一Volume、請按一下該列（或 image:screenshot_edit_icon.gif["編輯鉛筆圖示"] 圖示）。
 +
-image:screenshot_tiering_tier_volumes.png["螢幕擷取畫面顯示如何選取單一Volume、多個Volume或所有Volume、以及「修改選取的Volume」按鈕。"]
+image:screenshot_tiering_initial_volumes.png["螢幕擷取畫面顯示如何選取單一Volume、多個Volume或所有Volume、以及「修改選取的Volume」按鈕。"]
 
 
 
@@ -204,7 +204,7 @@ image:screenshot_tiering_tier_volumes.png["螢幕擷取畫面顯示如何選取�
 link:concept-cloud-tiering.html#volume-tiering-policies["深入瞭解磁碟區分層原則和冷卻天數"]。
 
 +
-image:screenshot_tiering_policy_settings.png["顯示可設定分層原則設定的快照。"]
+image:screenshot_tiering_initial_policy_settings.png["顯示可設定分層原則設定的快照。"]
 
 
 

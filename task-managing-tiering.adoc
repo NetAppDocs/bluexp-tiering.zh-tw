@@ -256,3 +256,21 @@ image:screenshot_tiering_discover_cluster.png["快照顯示如何探索要新增
 BlueXP會使用叢集名稱做為工作環境名稱、探索叢集並將其新增至Canvas中的工作環境。
 
 您可以在右側面板中啟用此叢集的分層服務或其他服務。
+
+
+
+== 在所有 BlueXP Connector 上搜尋叢集
+
+如果您使用多個 Connectors 來管理環境中的所有儲存設備、則您要實作分層的某些叢集可能位於另一個 Connector 中。如果您不確定哪個 Connector 正在管理特定叢集、您可以使用 BlueXP 分層功能在所有 Connector 之間搜尋。
+
+.步驟
+. 在 BlueXP 分層功能表列中、按一下動作功能表、然後選取 * 在所有 Connectors * 中搜尋叢集。
++
+image:screenshot_tiering_search for_cluster.png["螢幕擷取畫面顯示如何搜尋可能位於任何 BlueXP Connector 中的叢集。"]
+
+. 在顯示的搜尋對話方塊中、輸入叢集名稱、然後按一下 * 搜尋 * 。
++
+BlueXP 分層會顯示 Connector 的名稱（如果它能找到叢集）。
+
+. https://docs.netapp.com/us-en/bluexp-setup-admin/task-managing-connectors.html#switch-between-connectors["切換至 Connector 並設定叢集的分層"^]。
+

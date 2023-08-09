@@ -154,19 +154,29 @@ TIP: 請注意、分層至 StorageGRID 不需要 FabricPool 或 BlueXP 分層授
 
 購買 BlueXP 分層授權後、您可以在 BlueXP 中輸入 BlueXP 分層序號和 NSS 帳戶、或上傳 NLF 授權檔案來啟動授權。下列步驟說明如果您打算使用NLF授權檔案、該如何取得該檔案。
 
+.開始之前
+開始之前、您必須先取得下列資訊：
+
+* BlueXP 分層序號
++
+請從您的銷售訂單中找出此號碼、或聯絡客戶團隊以取得此資訊。
+
+* BlueXP 帳戶 ID
++
+您可以從BlueXP頂端選取「*帳戶*」下拉式清單、然後按一下帳戶旁的「*管理帳戶*」、即可找到您的BlueXP帳戶ID。您的帳戶ID位於「總覽」索引標籤。
+
+
+
 .步驟
 . 登入 https://mysupport.netapp.com["NetApp 支援網站"^] 然後按一下*系統>軟體授權*。
 . 輸入 BlueXP 分層授權序號。
 +
 image:screenshot_cloud_tiering_license_step1.gif["顯示依序號搜尋後授權表格的快照。"]
 
-. 在*授權金鑰*下、按一下*取得NetApp授權檔案*。
+. 在*授權金鑰*欄中、按一下*取得NetApp授權檔案*。
 . 輸入您的BlueXP帳戶ID（在支援網站上稱為「租戶ID」）、然後按一下*提交*下載授權檔案。
 +
 image:screenshot_cloud_tiering_license_step2.gif["螢幕擷取畫面會顯示「Get license（取得授權）」對話方塊、您可在此輸入租戶ID、然後按一下「Submit（提交）」下載授權檔案。"]
-
-+
-您可以從BlueXP頂端選取「*帳戶*」下拉式清單、然後按一下帳戶旁的「*管理帳戶*」、即可找到您的BlueXP帳戶ID。您的帳戶ID位於「總覽」索引標籤。
 
 
 

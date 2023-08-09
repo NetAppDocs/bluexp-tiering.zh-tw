@@ -188,9 +188,9 @@ https://docs.netapp.com/us-en/bluexp-ontap-onprem/task-discovering-ontap.html["�
 
 == 準備AWS環境
 
-當您設定資料分層至新叢集時、系統會提示您建立 S3 儲存區、或在設定 Connector 的 AWS 帳戶中選取現有的 S3 儲存區。AWS 帳戶必須具有權限和存取金鑰、才能在 BlueXP 分層中輸入。這個支援功能叢集使用存取金鑰來將資料分層進出 S3 。 ONTAP
+當您為新叢集設定資料分層時、系統會提示您是要服務建立 S3 儲存區、還是要在設定 Connector 的 AWS 帳戶中選取現有的 S3 儲存區。AWS 帳戶必須具有權限和存取金鑰、才能在 BlueXP 分層中輸入。這個支援功能叢集使用存取金鑰來將資料分層進出 S3 。 ONTAP
 
-S3儲存區必須位於 link:reference-aws-support.html#supported-aws-regions["支援 BlueXP 分層的區域"]。
+根據預設、分層服務會為您建立貯體。如果您想要使用自己的貯體、可以在啟動分層啟動精靈之前先建立一個貯體、然後在精靈中選取該貯體。 https://docs.netapp.com/us-en/bluexp-s3-storage/task-add-s3-bucket.html["瞭解如何從 BlueXP 建立 S3 儲存區"^]。貯體必須專門用於儲存來自您 Volume 的非使用中資料、不得用於任何其他用途。S3儲存區必須位於 link:reference-aws-support.html#supported-aws-regions["支援 BlueXP 分層的區域"]。
 
 
 NOTE: 如果您計畫設定 BlueXP 分層以使用較低成本的儲存類別、讓階層式資料在一定天數後轉換至、則在 AWS 帳戶中設定儲存區時、您不得選擇任何生命週期規則。BlueXP 分層管理生命週期轉換。
@@ -201,13 +201,30 @@ NOTE: 如果您計畫設定 BlueXP 分層以使用較低成本的儲存類別、
 
 您需要設定兩組權限：
 
-* 連接器建立及管理S3儲存區的權限。
+* 連接器的權限、以便建立和管理 S3 儲存區。
 * 內部部署ONTAP 的內部資源集區的權限、讓IT能夠讀取資料並將資料寫入S3儲存區。
 
 
 .步驟
-. 請確認 https://docs.netapp.com/us-en/bluexp-setup-admin/reference-permissions-aws.html#iam-policies["這些S3權限"^] 是為Connector提供權限的IAM角色的一部分。在您第一次部署Connector時、預設會包含這些連接器。如果沒有、您需要新增遺失的權限。請參閱 https://docs.aws.amazon.com/IAM/latest/UserGuide/access_policies_manage-edit.html["AWS文件：編輯IAM原則"^]。
-. 啟動服務時、分層精靈會提示您輸入存取金鑰和秘密金鑰。這些認證資料會傳遞ONTAP 到S庫 叢集、ONTAP 以便讓S庫 將資料分層傳送到S3儲存庫。因此、您需要建立具有下列權限的IAM使用者：
+. * 連接器權限 * ：
++
+** 請確認 https://docs.netapp.com/us-en/bluexp-setup-admin/reference-permissions-aws.html#iam-policies["這些S3權限"^] 是為Connector提供權限的IAM角色的一部分。在您第一次部署Connector時、預設會包含這些連接器。否則、您將需要新增任何遺失的權限。請參閱 https://docs.aws.amazon.com/IAM/latest/UserGuide/access_policies_manage-edit.html["AWS文件：編輯IAM原則"^] 以取得相關指示。
+** BlueXP 分層建立的預設貯體具有「 Fabric Pool 」的前置詞。如果您想要為貯體使用不同的前置詞、則必須使用您要使用的名稱自訂權限。在 S3 權限中、您會看到一行 `"Resource": ["arn:aws:s3:::fabric-pool*"]`。您需要將「 Fabric Pool 」變更為您要使用的首碼。例如、如果您想要使用「分層 1 」做為貯體的首碼、請將此行變更為 `"Resource": ["arn:aws:s3:::tiering-1*"]`。
++
+如果您想在這個相同 BlueXP 帳戶中使用其他叢集的貯體使用不同的前置詞、您可以為其他貯體新增另一行前置詞。例如：
+
++
+`"Resource": ["arn:aws:s3:::tiering-1*"]`
+`"Resource": ["arn:aws:s3:::tiering-2*"]`
+
++
+如果您要建立自己的貯體、但不使用標準首碼、則應將此行變更為 `"Resource": ["arn:aws:s3:::*"]` 因此任何貯體都能被辨識。不過、這可能會揭露您所有的儲存區、而非您設計用來儲存來自磁碟區的非使用中資料的儲存區。
+
+
+
+. * 叢集權限 * ：
++
+** 啟動服務時、分層精靈會提示您輸入存取金鑰和秘密金鑰。這些認證資料會傳遞ONTAP 到S庫 叢集、ONTAP 以便讓S庫 將資料分層傳送到S3儲存庫。因此、您需要建立具有下列權限的IAM使用者：
 +
 [source, json]
 ----
@@ -220,6 +237,8 @@ NOTE: 如果您計畫設定 BlueXP 分層以使用較低成本的儲存類別、
 ----
 +
 請參閱 https://docs.aws.amazon.com/IAM/latest/UserGuide/id_roles_create_for-user.html["AWS 文件：建立角色、將權限委派給 IAM 使用者"^] 以取得詳細資料。
+
+
 
 . 建立或找出存取金鑰。
 +
@@ -309,12 +328,12 @@ image:screenshot_tiering_aws_s3_bucket.png["螢幕快照顯示必須提供的資
 
 . 完成 * 階層設定 * 頁面中的各節：
 +
-.. * S3 Bucket * ：新增 S3 儲存貯體、或選擇以定義前置詞「 Fabric Pool 」開頭的現有 S3 儲存貯體、選取儲存貯體區域、然後按一下 * 繼續 * 。
+.. * S3 Bucket * ：新增 S3 儲存貯體或選取現有的 S3 儲存貯體、選取儲存貯體區域、然後按一下 * 繼續 * 。
 +
 使用內部連接器時、您必須輸入AWS帳戶ID、以便存取現有的S3儲存區或將要建立的新S3儲存區。
 
 +
-根據預設、會使用 _Fabric Pool 前置詞、因為 Connector 的 IAM 原則可讓執行個體對使用該確切前置詞命名的貯體執行 S3 動作。例如、您可以命名S3儲存區_Fabric集區-AFF1_、其中AFF1是叢集的名稱。
+根據預設、會使用 _Fabric Pool 前置詞、因為 Connector 的 IAM 原則可讓執行個體對使用該確切前置詞命名的貯體執行 S3 動作。例如、您可以命名S3儲存區_Fabric集區-AFF1_、其中AFF1是叢集的名稱。您也可以為用於分層的貯體定義前置詞。請參閱 <<設定S3權限,設定 S3 權限>> 確保您擁有 AWS 權限、能夠辨識您打算使用的任何自訂首碼。
 
 .. * 儲存類別 * ： BlueXP 分層管理階層資料的生命週期轉換。資料是從_Standard_類別開始、但您可以建立規則、在特定天數後將資料移至其他類別。
 +
@@ -351,7 +370,7 @@ IAM 使用者必須與您在「 * S3 Bucket * 」頁面上選取或建立的儲�
 ** 若要選取多個磁碟區、請勾選每個磁碟區的方塊（image:button_backup_1_volume.png[""]），然後單擊* Configure Volume*（配置卷*）。
 ** 若要選取單一Volume、請按一下該列（或 image:screenshot_edit_icon.gif["編輯鉛筆圖示"] 圖示）。
 +
-image:screenshot_tiering_tier_volumes.png["螢幕擷取畫面顯示如何選取單一Volume、多個Volume或所有Volume、以及「修改選取的Volume」按鈕。"]
+image:screenshot_tiering_initial_volumes.png["螢幕擷取畫面顯示如何選取單一Volume、多個Volume或所有Volume、以及「修改選取的Volume」按鈕。"]
 
 
 
@@ -360,7 +379,7 @@ image:screenshot_tiering_tier_volumes.png["螢幕擷取畫面顯示如何選取�
 link:concept-cloud-tiering.html#volume-tiering-policies["深入瞭解磁碟區分層原則和冷卻天數"]。
 
 +
-image:screenshot_tiering_policy_settings.png["顯示可設定分層原則設定的快照。"]
+image:screenshot_tiering_initial_policy_settings.png["顯示可設定分層原則設定的快照。"]
 
 
 

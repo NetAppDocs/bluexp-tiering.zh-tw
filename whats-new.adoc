@@ -18,6 +18,22 @@ summary: 瞭解 BlueXP 分層的新功能。
 
 
 
+== 2023 年 8 月 9 日
+
+
+
+=== 在儲存階層資料的儲存區名稱中使用自訂字首
+
+在過去、您需要在定義貯體名稱時使用預設的「 Fabric Pool 」前置詞、例如 _Fabric Pool Bucket1_ 。現在、您可以在命名貯體時使用自訂首碼。只有在將資料分層至 Amazon S3 時、才能使用此功能。 https://docs.netapp.com/us-en/bluexp-tiering/task-tiering-onprem-aws.html#prepare-your-aws-environment["深入瞭解"]。
+
+
+
+=== 在所有 BlueXP Connector 上搜尋叢集
+
+如果您使用多個 Connectors 來管理環境中的所有儲存系統、則您要實作分層的某些叢集可能位於不同的 Connectors 。如果您不確定哪個 Connector 正在管理特定叢集、您可以使用 BlueXP 分層功能在所有 Connector 之間搜尋。 https://docs.netapp.com/us-en/bluexp-tiering/task-managing-tiering.html#search-for-a-cluster-across-all-bluexp-connectors["深入瞭解"]。
+
+
+
 == 2023 年 7 月 4 日
 
 
@@ -131,13 +147,3 @@ Cloud Tiering UI已新增一組物件儲存組態頁面。您可以新增物件�
 === 支援MetroCluster 以雲端分層的授權進行支援、以利執行各種組態
 
 雲端分層授權現在可與MetroCluster 採用各種組態的叢集共享。您不再需要在FabricPool 這些情況下使用過時的不再使用的功能介紹授權。如此一來、您就能更輕鬆地在更多叢集上使用「浮動」雲端分層授權。 https://docs.netapp.com/us-en/bluexp-tiering/task-licensing-cloud-tiering.html#apply-bluexp-tiering-licenses-to-clusters-in-special-configurations["瞭解如何授權及設定這些類型的叢集。"]
-
-
-
-== 2022年5月3日
-
-
-
-=== 雲端分層授權支援、可用於其他叢集組態
-
-雲端分層授權現在可與分層鏡射組態（不含MetroCluster 非功能組態）的叢集、以及分層至IBM Cloud Object Storage的叢集共享。您不再需要在FabricPool 這些情況下使用過時的不再使用的功能介紹授權。如此一來、您就能更輕鬆地在更多叢集上使用「浮動」雲端分層授權。 https://docs.netapp.com/us-en/bluexp-tiering/task-licensing-cloud-tiering.html#apply-bluexp-tiering-licenses-to-clusters-in-special-configurations["瞭解如何授權及設定這些類型的叢集。"]
