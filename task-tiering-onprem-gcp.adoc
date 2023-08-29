@@ -147,7 +147,7 @@ https://cloud.google.com/vpc/docs/configure-private-google-access["私有 Google
 雲端儲存桶必須位於 link:reference-google-support.html#supported-google-cloud-regions["支援 BlueXP 分層的區域"]。
 
 
-NOTE: 如果您計畫設定 BlueXP 分層以使用低成本的儲存類別、讓階層式資料在一定天數後轉換至、則在 GCP 帳戶中設定儲存區時、您不得選擇任何生命週期規則。BlueXP 分層管理生命週期轉換。
+NOTE: 如果您計畫設定 BlueXP 分層以使用成本較低的儲存類別、而階層式資料會在一定天數後轉換至、則在 GCP 帳戶中設定儲存區時、您不得選擇任何生命週期規則。BlueXP 分層管理生命週期轉換。
 
 .步驟
 . https://cloud.google.com/iam/docs/creating-managing-service-accounts#creating_a_service_account["建立具有預先定義儲存管理角色的服務帳戶"^]。
@@ -187,18 +187,18 @@ image:screenshot_setup_tiering_onprem.png["螢幕擷取畫面顯示當您選取�
 . 完成「*建立物件儲存*」頁面上的步驟：
 +
 .. * Bucket *：新增Google Cloud Storage儲存庫或選擇現有儲存庫。
-.. * 儲存類別生命週期 * ： BlueXP 分層管理階層資料的生命週期轉換。資料是從_Standard_類別開始、但您可以建立規則、以便在特定天數後將資料移至其他類別。
+.. * 儲存等級生命週期 * ： BlueXP 分層管理階層資料的生命週期轉換。資料從 _Standard_ 類別開始、但您可以建立規則、在特定天數後套用不同的儲存類別。
 +
-選取您要將階層式資料移轉至的Google Cloud儲存類別、以及資料移動前的天數、然後按一下*繼續*。例如、以下螢幕快照顯示、階層式資料會在物件儲存設備的30天後、從_Standard_類別移至_Nearlin__類別、然後在物件儲存設備的60天後移至_Coldlin__類別。
+選取您要將階層式資料移轉至的 Google Cloud 儲存類別、以及將資料指派給該類別之前的天數、然後按一下 * 繼續 * 。例如、下方的螢幕擷取畫面顯示、物件儲存空間 30 天後、階層式資料會從 _Standard_ 類別指派給 _Nearlin_ 類別、然後在物件儲存空間 60 天後指派給 _Coldlin_ 類別。
 
 +
 如果您選擇*保留此儲存類別中的資料*、則資料會保留在該儲存類別中。 link:reference-google-support.html["請參閱支援的儲存類別"^]。
 
 +
-image:screenshot_tiering_lifecycle_selection_gcp.png["螢幕擷取畫面顯示如何選擇在特定天數後移動資料的其他儲存類別。"]
+image:screenshot_tiering_lifecycle_selection_gcp.png["螢幕擷取畫面顯示如何選取特定天數後指派給資料的其他儲存類別。"]
 
 +
-請注意、生命週期規則會套用至所選儲存區中的所有物件。
+請注意、生命週期規則會套用至所選貯體中的所有物件。
 
 .. * 認證 * ：輸入具有儲存管理角色之服務帳戶的儲存存取金鑰和秘密金鑰。
 .. *叢集網路*：選取ONTAP 要用於連接物件儲存設備的IPspace。

@@ -130,7 +130,7 @@ https://docs.netapp.com/us-en/bluexp-tiering/task-tiering-onprem-aws.html["檢�
 
 === 在MetroCluster 刪除鏡射物件儲存區時、請選擇分層行為
 
-從MetroCluster 物件庫中移除鏡射物件存放區時、系統會提示您是否也要移除主要物件存放區。您可以選擇將主要物件存放區附加至集合體、或是移除它。
+從 MetroCluster 組態移除鏡射物件存放區時、系統會提示您是否也要移除主要物件存放區。您可以選擇將主要物件存放區附加至集合體、或是移除它。
 
 
 

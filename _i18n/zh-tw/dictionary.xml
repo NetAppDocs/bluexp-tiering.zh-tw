@@ -41,12 +41,8 @@
   <block id="b7507ffc73507c1071aa3369e64f9b02" category="paragraph"><block ref="b7507ffc73507c1071aa3369e64f9b02" category="inline-image-macro-rx" type="image"></block></block>
   <block id="9dcb4338cde0614db53499ea9fe7fe74" category="paragraph">使用內部連接器時、您必須輸入AWS帳戶ID、以便存取現有的S3儲存區或將要建立的新S3儲存區。</block>
   <block id="c58cf9282f95328fc92b4502fbef9f23" category="paragraph">因為連接器的 IAM 原則可讓執行個體在以該確切字首命名的儲存區上執行 S3 動作、所以需要使用 _Fabric 資源池 _ 字首。例如、您可以命名S3儲存區_Fabric集區-AFF1_、其中AFF1是叢集的名稱。</block>
-  <block id="3ef4bb9a8277742de6597e9937678503" category="paragraph">選取您要將階層式資料移轉至的S3儲存類別、以及資料移動前的天數、然後按一下*繼續*。例如、以下螢幕快照顯示、階層式資料會在物件儲存的45天後、從_Standard_類別移至_Standard-IA_類別。</block>
   <block id="c171e8fa2a3cb53de525ce805c3883dc" category="inline-link-macro">請參閱支援的儲存類別</block>
   <block id="6fb9dd2d432abbfd2e290dea633d688c" category="paragraph">如果您選擇*保留此儲存類別中的資料*、則資料會保留在_Standard_儲存類別中、而且不會套用任何規則。 <block ref="aa3328f427a38479d06747ebf1a05fc3" category="inline-link-macro-rx"></block>。</block>
-  <block id="8ae6032dc43b667771c8605a20954b09" category="inline-image-macro">螢幕擷取畫面顯示如何選擇在特定天數後移動資料的另一個儲存類別。</block>
-  <block id="fadcc9c239b21cc5038ad590074bcf33" category="paragraph"><block ref="fadcc9c239b21cc5038ad590074bcf33" category="inline-image-macro-rx" type="image"></block></block>
-  <block id="ea09ff0f2c6993eddf0252bc7fcbd724" category="paragraph">請注意、生命週期規則會套用至所選儲存區中的所有物件。</block>
   <block id="c6d7cecaf22190d03dd1883702c04c49" category="list-text">*認證*：輸入具有所需S3權限之IAM使用者的存取金鑰ID和秘密金鑰、然後按一下*繼續*。</block>
   <block id="3be503b52a53c50161649d2d51182eba" category="paragraph">IAM 使用者必須與您在「 * S3 Bucket * 」頁面上選取或建立的儲存區位於相同的 AWS 帳戶中。</block>
   <block id="edb5302d21562d6e6d64d3bbe03d94b4" category="list-text">*叢集網路*：選取ONTAP 要用於連接物件儲存設備的IPspace、然後按一下*繼續*。</block>
@@ -76,12 +72,8 @@
   <block id="256fb1d2776e7f3b364ce4414a65b2cd" category="section-title">準備Azure Blob儲存設備</block>
   <block id="0cff75f8a1ea859d852b43f30a5a65c5" category="section-title">將第一個叢集的非作用中資料分層至 Azure Blob 儲存設備</block>
   <block id="eeee7c2206f30d34992557feb0d7900f" category="paragraph">準備好 Azure 環境之後、請從第一個叢集開始分層處理非作用中資料。</block>
-  <block id="f9ec0a0e3f7751a980419c9235987d65" category="paragraph">選取您要將階層式資料移轉至的存取層、以及資料移動前的天數、然後按一下*繼續*。例如、以下螢幕快照顯示、階層式資料會在物件儲存設備的45天後、從_hot_類別移至_cle__類別。</block>
   <block id="a6de011c08144280abbea085810f3465" category="inline-link-macro">請參閱支援的存取層</block>
   <block id="4f79964148c7f12ce0e111c7b8d932a5" category="paragraph">如果您選擇*將資料保留在此存取層*中、則資料會保留在_hot_存取層中、而且不會套用任何規則。 <block ref="462d8509e8137fe02ca002d803caf321" category="inline-link-macro-rx"></block>。</block>
-  <block id="68a83a6344da48ff48b7dfe970c4f766" category="inline-image-macro">螢幕擷取畫面顯示如何選擇在特定天數後移動資料的另一個存取層。</block>
-  <block id="76ebfce4c2c67a5c80f5e3389cadd984" category="paragraph"><block ref="76ebfce4c2c67a5c80f5e3389cadd984" category="inline-image-macro-rx" type="image"></block></block>
-  <block id="d2f15cc1f6b52e91b3fa0f67c5683cc7" category="paragraph">請注意、生命週期規則會套用至所選儲存帳戶中的所有blob容器。</block>
   <block id="16c1b13c5edce68f96a3166081c6dd73" category="inline-image-macro">螢幕擷取畫面顯示如何選取單一Volume、多個Volume或所有Volume、以及「修改選取的Volume」按鈕。</block>
   <block id="ade7907875a5b3e50997036947f13251" category="paragraph">您已成功設定資料分層、從叢集上的磁碟區到 Azure Blob 物件儲存設備。</block>
   <block id="fabfc25ef8996fd90836e58a4c0b26b6" category="doc">取得協助</block>
@@ -94,7 +86,6 @@
   <block id="ec0515a8a06c1c0cf10efc6cbb1bfab9" category="inline-link">使用過程中的考量與要求FabricPool</block>
   <block id="98f770b0af18ca763421bac22b4b6805" category="section-title">功能</block>
   <block id="e06e7e77771ffb8d53ca2e5570304aa3" category="list-text">自動化可讓您更輕鬆地設定及管理從內部 ONTAP 物件叢集到雲端的資料分層</block>
-  <block id="6541954d76e96f1b8ac31c72f38d4cf5" category="list-text">您可以選擇預設的雲端供應商儲存類別/存取層、或是使用生命週期管理、將舊的階層式資料移至更具成本效益的層級</block>
   <block id="63df1b7fcfa29df67a9798d7767e4c54" category="list-text">單一窗口可讓您不再需要在 FabricPool 多個叢集之間獨立管理各種功能</block>
   <block id="c1ad703a668852b216aa10032b7c0cda" category="list-text">報告會顯示每個叢集上的作用中和非作用中資料量</block>
   <block id="50ce53d55b005f76b356132a3901cfcf" category="list-text">分層健全狀況狀態可協助您識別並修正發生的問題</block>
@@ -128,7 +119,6 @@
   <block id="ee32623ddfba76c17a3869197764085b" category="list-text">您可以提供物件儲存設備的詳細資料、包括儲存庫/容器、儲存類別或存取層、以及階層式資料的生命週期規則、藉此設定分層。</block>
   <block id="f0fbe063f098b4fb5463ff8919a9c737" category="list-text">您可以選擇要分層的磁碟區、以及要套用至這些磁碟區的分層原則。</block>
   <block id="7cff4595565023a72889d0ae1bf58e66" category="list-text">一旦資料達到臨界值時、系統即會將非作用中的資料分層至物件存放區（請參閱ONTAP <block ref="3ab88d3ba20857380b0d484a33d90bf5" category="inline-xref-macro-rx"></block>）。</block>
-  <block id="0976a1e155055359baa0c396e75dc0c4" category="list-text">如果您已將生命週期規則套用至階層式資料（僅適用於部分供應商）、則較舊的階層式資料會在一定天數後移至更具成本效益的階層。</block>
   <block id="837170b3ba6314929f53008e61dfc57b" category="section-title">Volume 分層原則</block>
   <block id="de16c6002cab30d2b476bb8b41b8a8bc" category="paragraph">當您選取要分層的磁碟區時、會選擇要套用至每個磁碟區的 _ 磁碟區分層原則 _ 。分層原則可決定何時或是否將磁碟區的使用者資料區塊移至雲端。</block>
   <block id="8b637101caf758f4d80e51a84eb98902" category="paragraph">您也可以調整*冷卻週期*。這是磁碟區中的使用者資料在被視為「冷」並移至物件儲存之前、必須保持非作用中狀態的天數。對於允許您調整冷卻期間的分層原則、有效值為2至183天（使用ONTAP 版本號為12、9.8及更新版本）、2至63天（使用舊ONTAP 版的）；2至63天為建議的最佳實務做法。</block>
@@ -251,10 +241,7 @@
   <block id="2577ad1c0f2232095ff146a7a2495193" category="paragraph">在您準備好 Google Cloud 環境之後、請從第一個叢集開始分層處理非作用中資料。</block>
   <block id="79acb6eba535e7721e5fb3655d5ceb55" category="list-text">具有 Storage Admin 角色之服務帳戶的儲存存取金鑰。</block>
   <block id="fc8c5ebf28401d27b54c3e6e00e7652b" category="list-text">* Bucket *：新增Google Cloud Storage儲存庫或選擇現有儲存庫。</block>
-  <block id="4d37a0bea5cd5e6af86422bf6e5f582c" category="paragraph">選取您要將階層式資料移轉至的Google Cloud儲存類別、以及資料移動前的天數、然後按一下*繼續*。例如、以下螢幕快照顯示、階層式資料會在物件儲存設備的30天後、從_Standard_類別移至_Nearlin__類別、然後在物件儲存設備的60天後移至_Coldlin__類別。</block>
   <block id="7332d2c8833268f79cdb767402899334" category="paragraph">如果您選擇*保留此儲存類別中的資料*、則資料會保留在該儲存類別中。 <block ref="e76bf2468a23f23815e0d228a823b0f2" category="inline-link-macro-rx"></block>。</block>
-  <block id="02f2e04342c521beba4c0e40c63a54c6" category="inline-image-macro">螢幕擷取畫面顯示如何選擇在特定天數後移動資料的其他儲存類別。</block>
-  <block id="82944aceb2b2f9b8317c2c75d8459d31" category="paragraph"><block ref="82944aceb2b2f9b8317c2c75d8459d31" category="inline-image-macro-rx" type="image"></block></block>
   <block id="a29ca8aa6cf5a1c81887b82cc0bd9606" category="list-text">* 認證 * ：輸入具有儲存管理角色之服務帳戶的儲存存取金鑰和秘密金鑰。</block>
   <block id="494e659680f3920311106585f89fc251" category="list-text">*叢集網路*：選取ONTAP 要用於連接物件儲存設備的IPspace。</block>
   <block id="6d954756dedc1d7d245aee367353a05f" category="list-text">按一下 * 繼續 * 以選取您要分層的磁碟區。</block>
@@ -387,7 +374,6 @@
   <block id="bec6ef790b888208733b1195a4c79a9d" category="cell">只擷取雲端中階層式的作用中檔案系統資料、並將其提升至效能層（Snapshot複本仍保留在雲端）。</block>
   <block id="b45317b449074be01eb535dc51134b25" category="cell">分層原則會變更為「冷快照」。</block>
   <block id="4462bf0f5ca8a6a2218e38c86b45446e" category="admonition">您的雲端供應商可能會根據從雲端傳輸的資料量向您收取費用。</block>
-  <block id="518c45bb71686bd34cfd0dd7adfb3ce0" category="paragraph">確保效能層有足夠的空間容納從雲端移出的所有資料。</block>
   <block id="39ccd40812695aaa7bc077a0fc353a0e" category="paragraph"><block ref="39ccd40812695aaa7bc077a0fc353a0e" category="inline-image-macro-rx" type="image"></block></block>
   <block id="56687950ee1692c1c4b88c4fd8cd206f" category="paragraph">分層原則隨即變更、階層式資料也會開始移轉回效能層。視雲端資料量而定、傳輸程序可能需要一些時間。</block>
   <block id="176eb530d68328d73cd752bcf53ad2be" category="section-title">管理 Aggregate 上的分層設定</block>
@@ -789,7 +775,6 @@
   <block id="0da0639ab808878f568f3c4f06c02689" category="inline-link">如需MetroCluster 更多關於功能需求的資訊、請參閱ONTAP 《產品介紹》文件</block>
   <block id="c3d7ada1f42d9b916dd8624c5b5661c1" category="section-title">分層精靈可讓您在分層至S3儲存設備時、設定AWS Private Link</block>
   <block id="bf482155aab691ba59a0313f5628cbba" category="section-title">在MetroCluster 刪除鏡射物件儲存區時、請選擇分層行為</block>
-  <block id="cd71992689f7bdbde4a7c9f0653f44f3" category="paragraph">從MetroCluster 物件庫中移除鏡射物件存放區時、系統會提示您是否也要移除主要物件存放區。您可以選擇將主要物件存放區附加至集合體、或是移除它。</block>
   <block id="c80805cd1b291fd4590a3c0b82caa095" category="inline-link">深入瞭FabricPool 解鏡面</block>
   <block id="4a6b2da2ae625dffc7d1a103b7579d57" category="paragraph">您可以將第二個物件存放區附加至集合體、以建立FabricPool 一個鏡射鏡射、將資料同步分層至兩個物件存放區。您必須有一個物件存放區已附加至Aggregate。<block ref="8af213a751b87119e23e85f52fbc72d6" category="inline-link-rx"></block>。</block>
   <block id="2dc183e0073f3c1e0402cafe50273750" category="paragraph">使用MetroCluster 靜態組態時、最佳實務做法是在不同可用度區域的公有雲中使用物件存放區。<block ref="8cdfadb67efe7ac0be1266ed1d493d6d" category="inline-link-rx"></block>。</block>
@@ -1095,8 +1080,6 @@
   <block id="2635a2c2a5875da466928f37a3656f92" category="section-title">我可以使用其他相容 S3 的物件儲存服務、例如 MinIO 、搭配 BlueXP 分層功能嗎？</block>
   <block id="5ca7b325f239c40dfe97803e13e73bda" category="paragraph">BlueXP 分層支援將資料分層至 _hot_ 或 _cool 存取層、以供您的非作用中資料使用。請參閱 <block ref="db7ac7f0446977850e1dd33ce55fa427" category="inline-link-macro-rx"></block> 以取得更多詳細資料。</block>
   <block id="cc0e38735d6a6d5c6f8a983629bc6d70" category="paragraph">BlueXP 分層支援資料分層至 _Standard_ 、 _Nearlin_ 、 _Coldlinle_ 及 _Archive_ 儲存類別。請參閱 <block ref="7bf35a231ca3eab0ba1eb206f6515726" category="inline-link-macro-rx"></block> 以取得更多詳細資料。</block>
-  <block id="d32cf30eb64db80be23b1b7adb2c4750" category="section-title">BlueXP 分層是否支援使用生命週期管理原則？</block>
-  <block id="747606dd3b03b035bd7ea8403e06f4c9" category="paragraph">是的。您可以啟用生命週期管理、以便 BlueXP 分層將資料從預設的儲存類別 / 存取層、在一定天數之後、轉換到更具成本效益的層級。生命週期規則會套用至Amazon S3和Google Cloud儲存設備所選儲存區中的所有物件、以及Azure Blob所選儲存帳戶中的所有容器。</block>
   <block id="ef3c70877c9673810777cd54ae91e823" category="section-title">BlueXP 分層會對整個叢集使用一個物件存放區、還是每個集合使用一個物件存放區？</block>
   <block id="f106af130ecd68cee50ea019090595af" category="paragraph">Connector是在雲端帳戶內或內部部署的運算執行個體上執行的軟體、可讓BlueXP安全地管理雲端資源。若要使用 BlueXP 分層服務、您必須部署 Connector 。</block>
   <block id="371daca43d3f216ec028adfb6f08791a" category="section-title">在使用 BlueXP 分層之前、是否需要雲端服務供應商的帳戶？</block>
@@ -1159,9 +1142,7 @@
   <block id="248ebf3fea7fa59de6d7580ff3a058b7" category="paragraph">當您設定分層時、需要為具有 Storage Admin 權限的服務帳戶提供儲存存取金鑰。服務帳戶可讓 BlueXP 分層驗證及存取用於資料分層的雲端儲存貯體。這些金鑰是必要的、以便 Google Cloud Storage 知道誰在提出要求。</block>
   <block id="ad1fd6589603bba39741a6cc32304074" category="inline-link-macro">支援 BlueXP 分層的區域</block>
   <block id="0b2b1a0ccf60fa341c50d50e1f497ce4" category="paragraph">雲端儲存桶必須位於 <block ref="4755ef6fff73d10da41c28fa47a87906" category="inline-link-macro-rx"></block>。</block>
-  <block id="68389982c548f7484e3faf74d303b156" category="admonition">如果您計畫設定 BlueXP 分層以使用低成本的儲存類別、讓階層式資料在一定天數後轉換至、則在 GCP 帳戶中設定儲存區時、您不得選擇任何生命週期規則。BlueXP 分層管理生命週期轉換。</block>
   <block id="9055cc03b08218d8d0a85e5c61679917" category="paragraph">設定 BlueXP 分層時、您需要在稍後輸入金鑰。</block>
-  <block id="22dddafd825c6ae8af45fc69b0ce9131" category="list-text">* 儲存類別生命週期 * ： BlueXP 分層管理階層資料的生命週期轉換。資料是從_Standard_類別開始、但您可以建立規則、以便在特定天數後將資料移至其他類別。</block>
   <block id="935caa2f5bbffc2ed896d78ac41238ca" category="paragraph">選擇正確的 IPspace 可確保 BlueXP 分層可設定從 ONTAP 到雲端供應商物件儲存設備的連線。</block>
   <block id="11111dd67c502101799d49112cfd9b02" category="inline-link-macro">請務必訂閱 BlueXP 分層服務</block>
   <block id="6247f58abd669c41c23382cbaf049807" category="paragraph"><block ref="7cf71f55c0a5cf9e0968e64e4bace22e" category="inline-link-macro-rx"></block>。</block>
@@ -1194,19 +1175,14 @@
   <block id="416d6b305415c1b651308d03bee7d8bf" category="paragraph"><block ref="416d6b305415c1b651308d03bee7d8bf" category="inline-image-macro-rx" type="image"></block></block>
   <block id="0db73897f94acf452b2b14679c1dbda3" category="admonition">BlueXP 分層支援從 ONTAP 9.5 開始的 FlexGroup 磁碟區。安裝程式的運作方式與任何其他 Volume 相同。</block>
   <block id="0ad14aaf7eff30985750c0d80c7e4786" category="paragraph">當您設定 BlueXP 分層時、系統會提示您輸入要使用的 IPspace 。您應該選擇這些生命區相關的IPspace。這可能是您建立的「預設」 IPspace 或自訂 IPspace 。</block>
-  <block id="e12d69112c676a34f24fe32d8c78054b" category="admonition">如果您計畫設定 BlueXP 分層以使用較低成本的儲存類別、讓階層式資料在一定天數後轉換至、則在 AWS 帳戶中設定儲存區時、您不得選擇任何生命週期規則。BlueXP 分層管理生命週期轉換。</block>
   <block id="6f7815856002a1331164afcaf80de883" category="paragraph">BlueXP 分層會將存取金鑰傳給 ONTAP 叢集。這些認證不會儲存在 BlueXP 分層服務中。</block>
   <block id="0faf47b6f5732c018e12a7f9c05b2120" category="paragraph">如果您使用連接埠80（HTTP）來與私有端點通訊、您就能輕鬆完成所有設定。您現在可以在叢集上啟用 BlueXP 分層功能。</block>
-  <block id="b3365c3e2694749c32c06ef38b69f279" category="list-text">* 儲存類別 * ： BlueXP 分層管理階層資料的生命週期轉換。資料是從_Standard_類別開始、但您可以建立規則、在特定天數後將資料移至其他類別。</block>
   <block id="8c191e41bb84293885ce2b93e583e6d9" category="list-text">用於連接器的網路連線、可將 HTTPS 輸出連線至資料中心的 ONTAP 叢集、 Azure 儲存設備、以及 BlueXP 分層服務。</block>
   <block id="77c987b6edf7f890ea169d4d845303d7" category="paragraph"><block ref="77c987b6edf7f890ea169d4d845303d7" category="inline-image-macro-rx" type="image"></block></block>
   <block id="7e90ca09e19c98a8ada0376d5e199bcf" category="inline-link">BlueXP 分層所需的特定權限</block>
   <block id="177e3ee34a2fa4785a88af8672139305" category="paragraph">設定分層時、您需要識別要使用的資源群組、以及屬於資源群組的儲存帳戶和Azure容器。儲存帳戶可讓 BlueXP 分層驗證及存取用於資料分層的 Blob 容器。</block>
   <block id="3e9a3a79f6ff4a231c1c1039e1b70f99" category="paragraph">BlueXP 分層僅支援通用 v2 和優質區塊 Blob 類型的儲存帳戶。</block>
-  <block id="2d02ad0532e0a744a757daa60c3afcf3" category="admonition">如果您計畫設定 BlueXP 分層以使用較低成本的存取層、在特定天數之後、階層式資料將會轉換至該層級、則在 Azure 帳戶中設定容器時、不得選取任何生命週期規則。BlueXP 分層管理生命週期轉換。</block>
-  <block id="9d69a47ee84474f4e4a5eddf2f92fce9" category="list-text">* 存取層生命週期 * ： BlueXP 分層管理階層資料的生命週期轉換。資料會從_hot_類別開始、但您可以建立規則、在特定天數後將資料移至_cool類別。</block>
   <block id="8395a887269d6d32807663d5b146b004" category="paragraph">您可能想要查看已針對叢集設定的所有物件存放區、以及它們所附加的集合體。BlueXP 分層會為每個叢集提供此資訊。</block>
-  <block id="af29bc41d01e6d915afeefec98082d55" category="list-text">* 儲存類別生命週期 * ： BlueXP 分層管理階層資料的生命週期轉換。資料是從_Standard_類別開始、但您可以建立規則、在特定天數後將資料移至其他類別。</block>
   <block id="a7534748b05a4e2cd2cc98557d80265f" category="paragraph">BlueXP 分層功能可讓您輕鬆將分層資料移轉至不同的雲端供應商。例如、如果您想要從Amazon S3移至Azure Blob、請依照下列順序執行上述步驟：</block>
   <block id="3ba3b9c66dc287b5cb13e6a63f117260" category="inline-link-macro">BlueXP 分層注意事項</block>
   <block id="072ac4eafcf075811201623eddbc2488" category="list-text"><block ref="072ac4eafcf075811201623eddbc2488" category="inline-link-macro-rx"></block></block>
@@ -1435,4 +1411,28 @@
   <block id="b839d32c555694a5245fa2fa33d17d88" category="section-title">在儲存階層資料的儲存區名稱中使用自訂字首</block>
   <block id="6eb4429639db75cb3b56cc38a3fb8785" category="paragraph">在過去、您需要在定義貯體名稱時使用預設的「 Fabric Pool 」前置詞、例如 _Fabric Pool Bucket1_ 。現在、您可以在命名貯體時使用自訂首碼。只有在將資料分層至 Amazon S3 時、才能使用此功能。<block ref="3e8270d3bc816ce30c7c11fe6d073535" category="inline-link-rx"></block>。</block>
   <block id="6a3a27c0cd9c23985f6e8260846d58bc" category="paragraph">如果您使用多個 Connectors 來管理環境中的所有儲存系統、則您要實作分層的某些叢集可能位於不同的 Connectors 。如果您不確定哪個 Connector 正在管理特定叢集、您可以使用 BlueXP 分層功能在所有 Connector 之間搜尋。<block ref="017b0207cc8469b6ea246adade89f8e1" category="inline-link-rx"></block>。</block>
+  <block id="d441270e2d66b6759e1bbe07190e3d30" category="admonition">如果您計畫設定 BlueXP 分層以使用較低成本的存取層、在特定天數之後、階層式資料將會轉換至該層級、則在 Azure 帳戶中設定容器時、不得選取任何生命週期規則。BlueXP 分層管理生命週期轉換。</block>
+  <block id="03d332289b553799480f6108ffeafb87" category="list-text">* 存取層生命週期 * ： BlueXP 分層管理階層資料的生命週期轉換。資料從 _hot_ 類別開始、但您可以建立規則、在一定天數後將 _Cool 類別套用至資料。</block>
+  <block id="8e3bd47632d430bddfe95f785eeac535" category="paragraph">選取您要將階層式資料轉換至的存取層級、以及資料指派至該層級之前的天數、然後按一下 * 繼續 * 。例如、以下螢幕擷取畫面顯示、在物件儲存區中 45 天之後、階層式資料會從 _hot_ 類別指派給 _Cool 類別。</block>
+  <block id="edb46c71cd537834a31acba5c8bb3324" category="inline-image-macro">螢幕擷取畫面顯示如何選取在特定天數後指派給您資料的其他存取層。</block>
+  <block id="971e98c37b530be649080f29af3f0b98" category="paragraph"><block ref="971e98c37b530be649080f29af3f0b98" category="inline-image-macro-rx" type="image"></block></block>
+  <block id="7f6ab23305817b45bc45d181186c25e8" category="paragraph">請注意、生命週期規則會套用至所選儲存帳戶中的所有 BLOB 容器。</block>
+  <block id="a8118667904ce7570dde8558058e5227" category="list-text">您可以選擇預設的雲端供應商儲存類別 / 存取層、或使用生命週期管理、將更具成本效益的層級指派給較舊的階層式資料</block>
+  <block id="1951a5c5d1665bf8eab527dfe7f2ae39" category="list-text">如果您已將生命週期規則套用至階層式資料（僅適用於部分供應商）、則較舊的階層式資料會在特定天數後指派給更具成本效益的階層。</block>
+  <block id="ca664e90b4edf01d3d768fd83c5887e5" category="section-title">BlueXP 分層是否支援生命週期管理原則的使用？</block>
+  <block id="5b957b9367139438dee313dd29a9705d" category="paragraph">是的。您可以啟用生命週期管理、讓 BlueXP 分層將資料從預設的儲存類別 / 存取層移轉到特定天數後更具成本效益的層級。生命週期規則適用於 Amazon S3 和 Google Cloud 儲存設備所選儲存區中的所有物件、以及 Azure Blob 所選儲存帳戶中的所有容器。</block>
+  <block id="4ddb3e74d9bc198503357d68911e693a" category="admonition">如果您計畫設定 BlueXP 分層以使用成本較低的儲存類別、而階層式資料會在一定天數後轉換至、則在 GCP 帳戶中設定儲存區時、您不得選擇任何生命週期規則。BlueXP 分層管理生命週期轉換。</block>
+  <block id="62395102d7e1f3d3f1a74e04e3954c6b" category="list-text">* 儲存等級生命週期 * ： BlueXP 分層管理階層資料的生命週期轉換。資料從 _Standard_ 類別開始、但您可以建立規則、在特定天數後套用不同的儲存類別。</block>
+  <block id="33b44815b500b88c5109f80b9d682999" category="paragraph">選取您要將階層式資料移轉至的 Google Cloud 儲存類別、以及將資料指派給該類別之前的天數、然後按一下 * 繼續 * 。例如、下方的螢幕擷取畫面顯示、物件儲存空間 30 天後、階層式資料會從 _Standard_ 類別指派給 _Nearlin_ 類別、然後在物件儲存空間 60 天後指派給 _Coldlin_ 類別。</block>
+  <block id="9ca91908fe96ca20c6a4b4e97d2f509d" category="inline-image-macro">螢幕擷取畫面顯示如何選取特定天數後指派給資料的其他儲存類別。</block>
+  <block id="2fed6515a6445979e275cfaa6232f5b6" category="paragraph"><block ref="2fed6515a6445979e275cfaa6232f5b6" category="inline-image-macro-rx" type="image"></block></block>
+  <block id="7b099b08bcdba808b8417a43925b14ad" category="paragraph">請注意、生命週期規則會套用至所選貯體中的所有物件。</block>
+  <block id="d95059d33fe41ec441d7f8845f71b3db" category="admonition">如果您計畫設定 BlueXP 分層以使用較低成本的儲存類別、讓階層式資料在一定天數後轉換至、則在 AWS 帳戶中設定儲存區時、您不得選擇任何生命週期規則。BlueXP 分層管理生命週期轉換。</block>
+  <block id="76fef9bde23c0cdb9c92abd0340843f1" category="list-text">* 儲存類別 * ： BlueXP 分層管理階層資料的生命週期轉換。資料從 _Standard_ 類別開始、但您可以建立規則、在特定天數後將不同的儲存類別套用至資料。</block>
+  <block id="55ce04104758d742493f1c9d59b8c760" category="paragraph">選取您要將階層式資料轉換至的 S3 儲存類別、以及資料指派至該類別之前的天數、然後按一下 * 繼續 * 。例如、下方的螢幕擷取畫面顯示、在物件儲存設備中 45 天之後、階層式資料會從 _Standard_ 類別指派給 _Standard-IA_ 類別。</block>
+  <block id="99ee3b4b2d66299d325269e75fc1ecf2" category="inline-image-macro">螢幕擷取畫面顯示如何選取在特定天數後指派給資料的另一個儲存類別。</block>
+  <block id="825036f84bd328348dcc5f9cc4dcfac8" category="paragraph"><block ref="825036f84bd328348dcc5f9cc4dcfac8" category="inline-image-macro-rx" type="image"></block></block>
+  <block id="15b2d2644c0eb82c219365b9d3ed6f75" category="paragraph">請確定效能層中有足夠的空間、可容納從雲端移回的所有資料。</block>
+  <block id="18711602a05157009e1d81446d484cb4" category="list-text">* 儲存等級生命週期 * ： BlueXP 分層管理階層資料的生命週期轉換。資料從 _Standard_ 類別開始、但您可以建立規則、在特定天數後將不同的儲存類別套用至資料。</block>
+  <block id="8ca0007104a6880fedaff25fc59dc8ad" category="paragraph">從 MetroCluster 組態移除鏡射物件存放區時、系統會提示您是否也要移除主要物件存放區。您可以選擇將主要物件存放區附加至集合體、或是移除它。</block>
 </blocks>
