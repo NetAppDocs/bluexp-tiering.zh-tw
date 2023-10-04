@@ -848,7 +848,6 @@
   <block id="667b744af05e085368d150edc4b8a344" category="inline-link">登入裝載BlueXP Connector的VM</block>
   <block id="c95623cd0395d5a6bb6105b9d32f197b" category="inline-link">藍圖XP注意事項</block>
   <block id="e4f8a35ee8df8b5c247f6e3286e42891" category="sidebar">BlueXP使用案例</block>
-  <block id="7a45e6298bb69116e2c6db653fb88884" category="sidebar">所有BlueXP文件</block>
   <block id="39cff02cd4c2bfac12f446d78e59e3ca" category="paragraph">如果Azure Blob分層目的地是以工作環境形式存在於Canvas上、您可以將叢集拖曳至Azure Blob工作環境、以啟動設定精靈。</block>
   <block id="0e8a08e502abe437efca593eced30efb" category="paragraph">如果Google Cloud Storage分層目的地在畫版上作為工作環境存在、您可以將叢集拖曳至Google Cloud Storage工作環境、以啟動設定精靈。</block>
   <block id="bb9a67152dc7c7f6ad99d55da23a9b5c" category="paragraph">如果StorageGRID 在畫版上存在可作為工作環境的資料點、您可以將叢集拖曳到StorageGRID 可運作的環境中、以啟動設定精靈。</block>
@@ -912,7 +911,6 @@
   <block id="b151844c81732b344718260aa69943af" category="list-text">將游標移到資訊性的「i」圖示上、即可看到故障原因。</block>
   <block id="b2b5aa0c45edd9f1055e515a5bfde8eb" category="list-text">選擇內部ONTAP 環境的不正常運作環境。</block>
   <block id="57c0e1741966187a33a00eea2622a5ec" category="list-text">從右側面板按一下「*啟用*」以取得分層服務。</block>
-  <block id="0375f4855be072c7d856a0233cc21de9" category="section-title">支援雲端供應商解決方案</block>
   <block id="18cf072964a583150dd247485ba75b92" category="inline-link-macro">Amazon FSX for ONTAP Sf</block>
   <block id="7450cfde7058dc5e1f7909d0280fd7ae" category="inline-link-macro">Azure NetApp Files</block>
   <block id="b0cee72642f5457a71ddd0b49efb6d93" category="inline-link-macro">適用於 Google Cloud Cloud Volumes Service</block>
@@ -1286,9 +1284,7 @@
   <block id="e1d2e1a634647fd631081bc4f6f8e523" category="list-text">若要使用 * 建立案例 * 功能、您必須先將 NetApp 支援網站 認證與 BlueXP 登入建立關聯。<block ref="2a0d8b66ca9e99d023b48cf25f40fb12" category="inline-link-rx"></block>。</block>
   <block id="e49aa971c20ec071f1b5bbc3c7266769" category="list-text">如果您要為具有序號的 ONTAP 系統開啟案例、則您的 NSS 帳戶必須與該系統的序號相關聯。</block>
   <block id="c7b7a5ae9f37fd7d24e4d641b9186fe9" category="paragraph">此錯誤可能表示、與該帳戶相關聯的NSS帳戶及記錄公司與BlueXP帳戶序號的記錄公司不同（例如960xxxx)或工作環境序號。您可以使用下列其中一個選項尋求協助：</block>
-  <block id="0c7db2bd63c891adb2c0fa4527805d72" category="paragraph">您的 BlueXP 帳戶和個別 Cloud Volumes ONTAP 系統都需要註冊支援。</block>
   <block id="28164bf9e881ddc9e7ff74744bfce180" category="paragraph">註冊這兩種類型的序號、即可開啟支援服務單和自動建立個案。如下列所述、將 NetApp 支援網站 （ NSS ）帳戶新增至 BlueXP 即可完成登錄。</block>
-  <block id="e922b9aa0836a1d93e11cac0fe4c9004" category="paragraph">如需下列雲端供應商解決方案的技術支援、請參閱該產品 BlueXP 文件中的「取得說明」。</block>
   <block id="5a19febf1dcb23c10e8dcfde64ba764c" category="section-title">註冊您的 BlueXP 帳戶以取得 NetApp 支援</block>
   <block id="6bbc2ba432f59ab65ee3d8ac5a58336e" category="paragraph">若要註冊以取得支援並啟動支援授權、 BlueXP 帳戶中的一位使用者必須將 NetApp 支援網站 帳戶與其 BlueXP 登入建立關聯。您如何註冊NetApp支援取決於您是否已擁有NetApp 支援網站 一個NetApp（NSS）帳戶。</block>
   <block id="0c788a722f31f8f0cf36539ee04615cf" category="list-text">選取 * 新增 NSS 認證 * 、然後遵循 NetApp 支援網站 （ NSS ）驗證提示。</block>
@@ -1435,4 +1431,9 @@
   <block id="15b2d2644c0eb82c219365b9d3ed6f75" category="paragraph">請確定效能層中有足夠的空間、可容納從雲端移回的所有資料。</block>
   <block id="18711602a05157009e1d81446d484cb4" category="list-text">* 儲存等級生命週期 * ： BlueXP 分層管理階層資料的生命週期轉換。資料從 _Standard_ 類別開始、但您可以建立規則、在特定天數後將不同的儲存類別套用至資料。</block>
   <block id="8ca0007104a6880fedaff25fc59dc8ad" category="paragraph">從 MetroCluster 組態移除鏡射物件存放區時、系統會提示您是否也要移除主要物件存放區。您可以選擇將主要物件存放區附加至集合體、或是移除它。</block>
+  <block id="ece19bab46695021f109a5e50f08bebe" category="paragraph">需要註冊支援、才能獲得 BlueXP 及其儲存解決方案與服務專屬的技術支援。也需要註冊支援、才能啟用 Cloud Volumes ONTAP 系統的重要工作流程。</block>
+  <block id="8a3d807608e632d188a288fc5f4aa7eb" category="paragraph">註冊支援並不會啟用雲端供應商檔案服務的 NetApp 支援。如需雲端供應商檔案服務、其基礎架構或任何使用服務的解決方案的相關技術支援、請參閱該產品的 BlueXP 文件中的「取得說明」。</block>
+  <block id="522cbb900314aeb84eb5a961c5f94672" category="section-title">取得雲端供應商檔案服務的支援</block>
+  <block id="f6185bb12f5e53c800be8cda7fbca65b" category="paragraph">如需雲端供應商檔案服務、其基礎架構或任何使用服務的解決方案的相關技術支援、請參閱該產品的 BlueXP 文件中的「取得說明」。</block>
+  <block id="3880ae5df9fdc4d0fc4a6d00a2239530" category="paragraph">若要獲得 BlueXP 及其儲存解決方案與服務的專屬技術支援、請使用下列支援選項。</block>
 </blocks>
