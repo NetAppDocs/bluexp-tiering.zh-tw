@@ -125,9 +125,9 @@ link:task-licensing-cloud-tiering.html#use-a-bluexp-tiering-paygo-subscription["
 
 === 年度合約
 
-BlueXP 分層提供一年一度的合約、將非使用中的資料分層到 Amazon S3 。提供1年、2年或3年期限。
+BlueXP 分層提供一年一度的合約、將非使用中的資料分層到 Amazon S3 或 Azure 。提供1年、2年或3年期限。
 
-目前不支援將年度合約分層至Azure或GCP。
+目前不支援年度合約、因為這些合約會分層到 Google 雲端。
 
 
 
