@@ -5,15 +5,12 @@ keywords: overview, tiering overview, tiered clusters, clusters enabled for tier
 summary: BlueXP 分層功能可從每個內部部署叢集提供資料分層的彙總檢視。本總覽提供清楚的環境概況、並可讓您採取適當行動。 
 ---
 = 從叢集取得資料分層的總覽
-:toc: macro
 :hardbreaks:
 :allow-uri-read: 
-:toc: 
 :nofooter: 
 :icons: font
 :linkattrs: 
 :imagesdir: ./media/
-:toc-position: content
 
 
 [role="lead"]
