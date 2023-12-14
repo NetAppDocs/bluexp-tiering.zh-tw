@@ -1119,7 +1119,6 @@
   <block id="5b68fac5f1ce77d65201586ce9a60468" category="list-text"><block ref="1f8cdb76c7bd9ccb2f67a5fe3a108324" category="inline-link-macro-rx"></block> 以取得新叢集或叢集所需的容量。</block>
   <block id="35871aa5a51169ec1ce0c1aa1e2550f0" category="list-text">在 BlueXP 分層中、 <block ref="210b64e2207c15c9773eb7d42739f7fc" category="inline-link-macro-rx"></block>。</block>
   <block id="5853c8a054007c0c99bbc9662a53c4fb" category="summary">BlueXP 分層支援兩個存取層級和大多數區域。</block>
-  <block id="e8823c938290b3df1d69b5821a4bbbb8" category="paragraph">當您設定資料分層至 Azure 時、 BlueXP 分層會自動使用 _hot_ 存取層來處理您的非使用中資料。BlueXP 分層可套用生命週期規則、讓資料在一定天數後從 _hot_ 存取層切換至 _cool 存取層。</block>
   <block id="95d5445b66336b61fe8c176426e3cb6b" category="paragraph">當您設定 BlueXP 分層生命週期規則時、在 Azure 帳戶中設定容器時、不得設定任何生命週期規則。</block>
   <block id="4a744a6786776cc5df25ca40dc57cb36" category="paragraph">BlueXP 分層功能可支援分層連接至任何可透過 Connector 存取之區域的任何儲存帳戶。</block>
   <block id="07702d7eda621b95dd9a2353b7d4e568" category="list-text">Connector 的網路連線功能、可讓您將 HTTPS 輸出連線至資料中心的 ONTAP 叢集、 Google Cloud Storage 、以及 BlueXP 分層服務。</block>
@@ -1155,7 +1154,6 @@
   <block id="3afb7cae2b7c3e96c6a4e1df765d3dce" category="section-title">拖放即可啟用 BlueXP 分層功能、將其分層至 Azure Blob 、 Google Cloud Storage 和 StorageGRID</block>
   <block id="18cd1c130656412d8089667948bc48a2" category="section-title">拖放以啟用 BlueXP 分層至 Amazon S3</block>
   <block id="a0396859c016deff163331729e87c6cf" category="summary">BlueXP 分層支援數個 Google Cloud 儲存類別和大多數地區。</block>
-  <block id="e9885ff472161e4c48f508f106c6ad36" category="paragraph">當您將資料分層設定為 GCP 時、 BlueXP 分層會自動將 _Standard_ 儲存類別用於非作用中資料。BlueXP 分層可套用生命週期規則、讓資料在一定天數後從 _Standard_ 儲存類別轉換為其他儲存類別。您可以從下列儲存類別中選擇：</block>
   <block id="58edb41c3cfab45408029ad69032402a" category="paragraph">當您設定 BlueXP 分層生命週期規則時、在 Google 帳戶中設定儲存庫時、不得設定任何生命週期規則。</block>
   <block id="2d5551329360393b3ea83aeec84cf519" category="paragraph">BlueXP 分層支援下列區域。</block>
   <block id="85fc382665546ae4cc771b24663b67ce" category="paragraph-title"><block ref="99e8b2f00e172bfcff96afdce69907bc" category="inline-image-macro-rx" type="image"></block> 在系統上啟用 BlueXP 分層</block>
@@ -1177,7 +1175,6 @@
   <block id="3ba3b9c66dc287b5cb13e6a63f117260" category="inline-link-macro">BlueXP 分層注意事項</block>
   <block id="072ac4eafcf075811201623eddbc2488" category="list-text"><block ref="072ac4eafcf075811201623eddbc2488" category="inline-link-macro-rx"></block></block>
   <block id="be097470e9ac90369332a05c045a9742" category="summary">BlueXP 分層支援多個 S3 儲存類別和大多數地區。</block>
-  <block id="9febe911a8cef93d7919b4e705d2af96" category="paragraph">當您將資料分層設定為 AWS 時、 BlueXP 分層會自動使用 _Standard_ 儲存類別來處理非作用中的資料。BlueXP 分層可套用生命週期規則、讓資料在一定天數後從 _Standard_ 儲存類別轉換至另一個儲存類別。您可以從下列儲存類別中選擇：</block>
   <block id="b48e3a08ac6bdb2960ebbf7583060d5c" category="paragraph">當您設定 BlueXP 分層生命週期規則時、在 AWS 帳戶中設定貯體時、不得設定任何生命週期規則。</block>
   <block id="35e385e351037991047fc3503ac66ea0" category="paragraph">BlueXP 分層支援下列 AWS 區域。</block>
   <block id="2af8ca26b1bcf00d88a15b8f1992fa35" category="list-text">用於連接器的網路、可讓輸出 HTTPS 連線至來源 ONTAP 叢集、 S3 相容物件儲存設備、以及 BlueXP 分層服務。</block>
@@ -1440,4 +1437,7 @@
   <block id="77d720d97cc99bdd67ce50e58655dc3f" category="paragraph">目前不支援將年度合約分層至 Google Cloud 。</block>
   <block id="74369b8ae005333b4dd61fb93f495946" category="paragraph">BlueXP 分層提供一年一度的合約、將非使用中的資料分層到 Amazon S3 或 Azure 。提供1年、2年或3年期限。</block>
   <block id="8a2304319d2e68c914c95280f8d1b529" category="paragraph">目前不支援年度合約、因為這些合約會分層到 Google 雲端。</block>
+  <block id="a6946f1b4a14c4860d7cb9b918379334" category="paragraph">當您從內部部署的 ONTAP 系統設定資料分層至 GCP 時、 BlueXP 分層會自動使用 _Standard_ 儲存類別來處理您的非使用中資料。BlueXP 分層可套用生命週期規則、讓資料在一定天數後從 _Standard_ 儲存類別轉換為其他儲存類別。您可以從下列儲存類別中選擇：</block>
+  <block id="90fd6199eed378ef0bf6c4f8d3ed5ebc" category="paragraph">當您從內部部署的 ONTAP 系統設定資料分層至 Azure 時、 BlueXP 分層會自動使用 _hot_ 存取層來處理您的非使用中資料。BlueXP 分層可套用生命週期規則、讓資料在一定天數後從 _hot_ 存取層切換至 _cool 存取層。</block>
+  <block id="17c353c0dd208c819d731350ef2b1300" category="paragraph">當您從內部部署的 ONTAP 系統設定資料分層至 AWS 時、 BlueXP 分層會自動使用 _Standard_ 儲存類別來處理您的非使用中資料。BlueXP 分層可套用生命週期規則、讓資料在一定天數後從 _Standard_ 儲存類別轉換至另一個儲存類別。您可以從下列儲存類別中選擇：</block>
 </blocks>
