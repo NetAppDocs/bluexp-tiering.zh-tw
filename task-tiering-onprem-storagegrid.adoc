@@ -130,8 +130,8 @@ S3 認證:: 當您設定 StorageGRID 分層時、您需要提供 BlueXP 分層�
 需要連接器才能將資料分層至雲端。將資料分層至 StorageGRID 無法使用時、內部環境中必須有連接器可供使用。您可能需要安裝新的 Connector 、或確定目前選取的 Connector 位於內部部署。
 
 * https://docs.netapp.com/us-en/bluexp-setup-admin/concept-connectors.html["深入瞭解連接器"^]
-* https://docs.netapp.com/us-en/bluexp-setup-admin/task-quick-start-connector-on-prem.html["在 Linux 主機上安裝 Connector"^]
-* https://docs.netapp.com/us-en/bluexp-setup-admin/task-managing-connectors.html["在連接器之間切換"^]
+* https://docs.netapp.com/us-en/bluexp-setup-admin/task-install-connector-on-prem.html["在內部部署安裝並設定 Connector"^]
+* https://docs.netapp.com/us-en/bluexp-setup-admin/task-manage-multiple-connectors.html#switch-between-connectors["在連接器之間切換"^]
 
 
 

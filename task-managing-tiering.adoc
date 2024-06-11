@@ -272,5 +272,5 @@ image:screenshot_tiering_search for_cluster.png["螢幕擷取畫面顯示如何�
 +
 BlueXP 分層會顯示 Connector 的名稱（如果它能找到叢集）。
 
-. https://docs.netapp.com/us-en/bluexp-setup-admin/task-managing-connectors.html#switch-between-connectors["切換至 Connector 並設定叢集的分層"^]。
+. https://docs.netapp.com/us-en/bluexp-setup-admin/task-manage-multiple-connectors.html#switch-between-connectors["切換至 Connector 並設定叢集的分層"^]。
 

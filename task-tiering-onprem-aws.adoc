@@ -272,7 +272,7 @@ image:screenshot_tiering_aws_sec_group.png["與Connector相關聯的AWS安全性
 +
 image:screenshot_endpoint_dns_aws_console.png["AWS主控台VPC端點的DNS名稱快照。"]
 
-. 從VPC S3端點取得憑證。您的做法是 https://docs.netapp.com/us-en/bluexp-setup-admin/task-managing-connectors.html#connect-to-the-linux-vm["登入裝載BlueXP Connector的VM"^] 並執行下列命令。輸入端點的DNS名稱時、請在開頭加入「pucket」、取代「*」：
+. 從VPC S3端點取得憑證。您的做法是 https://docs.netapp.com/us-en/bluexp-setup-admin/task-maintain-connectors.html#connect-to-the-linux-vm["登入裝載BlueXP Connector的VM"^] 並執行下列命令。輸入端點的DNS名稱時、請在開頭加入「pucket」、取代「*」：
 +
 [source, text]
 ----
