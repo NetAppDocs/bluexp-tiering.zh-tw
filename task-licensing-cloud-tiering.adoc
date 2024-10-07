@@ -19,7 +19,7 @@ summary: 當您從第一個叢集設定分層時、將會開始 30 天的 BlueXP
 在閱讀更多內容之前、請先提供幾個附註：
 
 * 如果您已在雲端供應商的市場中訂閱 BlueXP 訂閱（ PAYGO ）、則您也會自動訂閱 BlueXP 內部部署 ONTAP 系統分層功能。您會在 BlueXP 分層 * 內部部署儀表板 * 索引標籤中看到有效的訂閱。您不需要再次訂閱。BlueXP 數位電子錢包中有有效的訂閱。
-* BYOL BlueXP 分層授權（先前稱為「雲端分層」授權）是一個 _ 浮動 _ 授權、您可以在 BlueXP 帳戶中的多個內部部署 ONTAP 叢集上使用。這與您過去為每個叢集購買 FabricPool 授權的地方不同（而且更容易）。
+* BYOL BlueXP  分層授權（先前稱為「雲端分層」授權）是一種 _ 浮動 _ 授權、您可以在 BlueXP  組織的多個內部部署 ONTAP 叢集上使用。這與您過去為每個叢集購買 FabricPool 授權的地方不同（而且更容易）。
 * 將資料分層至StorageGRID 不收費、因此不需要BYOL授權或PAYGO登錄。此階層式資料不會計入您授權中所購買的容量。
 
 
@@ -109,7 +109,7 @@ video::video_subscribing_gcp_tiering.mp4[width=848,height=480]
 
 == 使用 BlueXP 分層 BYOL 授權
 
-NetApp自帶授權、提供1年、2年或3年期限。BYOL * BlueXP 分層 * 授權（先前稱為「雲端分層」授權）是一個 _ 浮動 _ 授權、您可以在 BlueXP 帳戶中的多個內部部署 ONTAP 叢集上使用。BlueXP 分層授權中定義的總分層容量會在 * 全部 * 的內部叢集之間共用、讓初始授權和續約變得更簡單。分層 BYOL 授權的最低容量從 10 TiB 開始。
+NetApp自帶授權、提供1年、2年或3年期限。BYOL * BlueXP  分層 * 授權（先前稱為「雲端分層」授權）是一個 _ 浮動 _ 授權、您可以在 BlueXP  組織的多個內部部署 ONTAP 叢集上使用。BlueXP 分層授權中定義的總分層容量會在 * 全部 * 的內部叢集之間共用、讓初始授權和續約變得更簡單。分層 BYOL 授權的最低容量從 10 TiB 開始。
 
 如果您沒有 BlueXP 分層授權、請聯絡我們購買：
 
@@ -163,26 +163,37 @@ TIP: 請注意、分層至 StorageGRID 不需要 FabricPool 或 BlueXP 分層授
 購買 BlueXP 分層授權後、您可以在 BlueXP 中輸入 BlueXP 分層序號和 NSS 帳戶、或上傳 NLF 授權檔案來啟動授權。下列步驟說明如果您打算使用NLF授權檔案、該如何取得該檔案。
 
 .開始之前
-開始之前、您必須先取得下列資訊：
-
-* BlueXP 分層序號
-+
-請從您的銷售訂單中找出此號碼、或聯絡客戶團隊以取得此資訊。
-
-* BlueXP 帳戶 ID
-+
-您可以從BlueXP頂端選取「*帳戶*」下拉式清單、然後按一下帳戶旁的「*管理帳戶*」、即可找到您的BlueXP帳戶ID。您的帳戶ID位於「總覽」索引標籤。
-
-
+您需要 BlueXP  分層序號。請從您的銷售訂單中找出此號碼、或聯絡客戶團隊以取得此資訊。
 
 .步驟
+. 尋找您的 BlueXP  帳戶 ID ：
++
+.. 在 BlueXP  主控台右上角、選取 image:icon-settings-option.png["設定圖示會顯示在 BlueXP  網路主控台的右上角。"] > * 身分識別與存取管理 * 。
+.. 在「組織」頁面上、尋找您的帳戶 ID 並加以複製。
++
+如果沒有列出帳戶 ID 、而且您只有組織 ID 、則需要複製組織 ID 的前八個字元、並將其附加至 _account__
+
++
+例如、假設這是您的組織 ID ：
+
++
+ea10e1c6-80cc-4219-8e99-3c3e6b161ba5
+
++
+您的帳戶 ID 如下：
+
++
+account-ea10e1c6
+
+
+
 . 登入 https://mysupport.netapp.com["NetApp 支援網站"^] 然後按一下*系統>軟體授權*。
 . 輸入 BlueXP 分層授權序號。
 +
 image:screenshot_cloud_tiering_license_step1.gif["顯示依序號搜尋後授權表格的快照。"]
 
 . 在*授權金鑰*欄中、按一下*取得NetApp授權檔案*。
-. 輸入您的BlueXP帳戶ID（在支援網站上稱為「租戶ID」）、然後按一下*提交*下載授權檔案。
+. 輸入您的 BlueXP  帳戶 ID （在支援網站上稱為租戶 ID ）、然後按一下 * 提交 * 以下載授權檔案。
 +
 image:screenshot_cloud_tiering_license_step2.gif["螢幕擷取畫面會顯示「Get license（取得授權）」對話方塊、您可在此輸入租戶ID、然後按一下「Submit（提交）」下載授權檔案。"]
 
@@ -192,7 +203,7 @@ image:screenshot_cloud_tiering_license_step2.gif["螢幕擷取畫面會顯示「
 
 === 將 BlueXP 分層 BYOL 授權新增至您的帳戶
 
-購買 BlueXP 帳戶的 BlueXP 分層授權後、您必須將授權新增至 BlueXP 、才能使用 BlueXP 分層服務。
+購買 BlueXP  分層授權後、您必須將授權新增至 BlueXP  、才能使用 BlueXP  分層服務。
 
 .步驟
 . 按一下 * 治理 > 數位錢包 > 資料服務授權 * 。

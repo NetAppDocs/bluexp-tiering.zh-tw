@@ -211,7 +211,7 @@ NOTE: 如果您計畫設定 BlueXP 分層以使用較低成本的儲存類別、
 ** 請確認 https://docs.netapp.com/us-en/bluexp-setup-admin/reference-permissions-aws.html#iam-policies["這些S3權限"^] 是為Connector提供權限的IAM角色的一部分。在您第一次部署Connector時、預設會包含這些連接器。否則、您將需要新增任何遺失的權限。請參閱 https://docs.aws.amazon.com/IAM/latest/UserGuide/access_policies_manage-edit.html["AWS文件：編輯IAM原則"^] 以取得相關指示。
 ** BlueXP 分層建立的預設貯體具有「 Fabric Pool 」的前置詞。如果您想要為貯體使用不同的前置詞、則必須使用您要使用的名稱自訂權限。在 S3 權限中、您會看到一行 `"Resource": ["arn:aws:s3:::fabric-pool*"]`。您需要將「 Fabric Pool 」變更為您要使用的首碼。例如、如果您想要使用「分層 1 」做為貯體的首碼、請將此行變更為 `"Resource": ["arn:aws:s3:::tiering-1*"]`。
 +
-如果您想在這個相同 BlueXP 帳戶中使用其他叢集的貯體使用不同的前置詞、您可以為其他貯體新增另一行前置詞。例如：
+如果您想要為此同一個 BlueXP  組織中的其他叢集使用不同的貯體前置詞、您可以新增另一行、其前置詞為其他貯體的前置詞。例如：
 
 +
 `"Resource": ["arn:aws:s3:::tiering-1*"]`
