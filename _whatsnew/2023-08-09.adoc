@@ -1,0 +1,15 @@
+= 使用自訂字首作為貯體名稱
+:allow-uri-read: 
+
+
+
+
+=== 使用自訂字首作為貯體名稱
+
+在過去、您需要在定義貯體名稱時使用預設的「 Fabric Pool 」前置詞、例如 _Fabric Pool Bucket1_ 。現在、您可以在命名貯體時使用自訂首碼。只有在將資料分層至 Amazon S3 時、才能使用此功能。 https://docs.netapp.com/us-en/bluexp-tiering/task-tiering-onprem-aws.html#prepare-your-aws-environment["深入瞭解"]。
+
+
+
+=== 在所有 BlueXP Connector 上搜尋叢集
+
+如果您使用多個 Connectors 來管理環境中的所有儲存系統、則您要實作分層的某些叢集可能位於不同的 Connectors 。如果您不確定哪個 Connector 正在管理特定叢集、您可以使用 BlueXP 分層功能在所有 Connector 之間搜尋。 https://docs.netapp.com/us-en/bluexp-tiering/task-managing-tiering.html#search-for-a-cluster-across-all-bluexp-connectors["深入瞭解"]。

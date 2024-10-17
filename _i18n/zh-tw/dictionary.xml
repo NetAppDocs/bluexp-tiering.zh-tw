@@ -641,9 +641,7 @@
   <block id="ba34121e3527a1918b936c79899e68fa" category="paragraph">為了鏡射、每個集合最多可附加兩個儲存區、其中冷資料會同步分層至兩個儲存區。這些庫位可以來自不同的供應商和不同的位置。自2022年8月起、您可以使用*進階設定*頁面、將兩個物件存放區附加至單一Aggregate。</block>
   <block id="6c66decef59a00987dd2d537b80e9092" category="paragraph">是的。一般最佳實務做法是將單一儲存區附加至多個集合體。不過、使用公有雲時、物件儲存服務的IOPS限制最大、因此必須考量多個儲存區。</block>
   <block id="1f6fd3301ab6ce127efad422dec03d61" category="section-title">2022年8月3日</block>
-  <block id="059c9f6829260507f53186d7191b058c" category="section-title">能夠為叢集中的其他Aggregate設定其他物件存放區</block>
   <block id="aa18b7b04ae6143c1d2f56b72718403e" category="inline-link">深入瞭解新的物件儲存功能。</block>
-  <block id="5c10257d843c1a8aa9e46f55d2064835" category="section-title">支援MetroCluster 以雲端分層的授權進行支援、以利執行各種組態</block>
   <block id="4f05e87f380a81f7a23601ecba757570" category="sidebar">管理物件儲存</block>
   <block id="5c37edf1ec718afd1ab9a5a51043e0ce" category="paragraph">請依照下列步驟快速入門。每個步驟的詳細資料請參閱本主題的下列各節。</block>
   <block id="e41af01898aa01f20e528d19fdda2ec8" category="paragraph">您可以選擇將內部部署ONTAP 的更新叢集直接連接至AWS S3（透過公用網際網路）、或是使用VPN或AWS Direct Connect、然後透過私有VPC端點介面將流量路由傳送至AWS S3。</block>
@@ -750,8 +748,6 @@
   <block id="e01df0b4dfd95eba2c59333419e4fac6" category="list-text">使用產品內對談</block>
   <block id="639be990cfca56ab4b63685d8bacd437" category="list-text">請至提交非技術案例<block ref="2298f47e4dad19a3156da7ce6116d9b1" category="inline-link-rx"></block></block>
   <block id="0da0639ab808878f568f3c4f06c02689" category="inline-link">如需MetroCluster 更多關於功能需求的資訊、請參閱ONTAP 《產品介紹》文件</block>
-  <block id="c3d7ada1f42d9b916dd8624c5b5661c1" category="section-title">分層精靈可讓您在分層至S3儲存設備時、設定AWS Private Link</block>
-  <block id="bf482155aab691ba59a0313f5628cbba" category="section-title">在MetroCluster 刪除鏡射物件儲存區時、請選擇分層行為</block>
   <block id="c80805cd1b291fd4590a3c0b82caa095" category="inline-link">深入瞭FabricPool 解鏡面</block>
   <block id="4a6b2da2ae625dffc7d1a103b7579d57" category="paragraph">您可以將第二個物件存放區附加至集合體、以建立FabricPool 一個鏡射鏡射、將資料同步分層至兩個物件存放區。您必須有一個物件存放區已附加至Aggregate。<block ref="8af213a751b87119e23e85f52fbc72d6" category="inline-link-rx"></block>。</block>
   <block id="2dc183e0073f3c1e0402cafe50273750" category="paragraph">使用MetroCluster 靜態組態時、最佳實務做法是在不同可用度區域的公有雲中使用物件存放區。<block ref="8cdfadb67efe7ac0be1266ed1d493d6d" category="inline-link-rx"></block>。</block>
@@ -906,7 +902,6 @@
   <block id="d88bacf2a9fdcbbc844edcba97c34e30" category="section-title">利用NetApp支援建立案例</block>
   <block id="08d96fdd1a845d80db99e6e1dffb8bc7" category="list-text">在「*資源*」頁面上、選擇「技術支援」下的其中一個可用選項：</block>
   <block id="d0693e7bf28b7bbc94287cee0e4b0768" category="section-title">2023年3月5日</block>
-  <block id="b92f2131d3d225c3c3327daaa8862624" category="section-title">現在您可以為磁碟區產生分層報告</block>
   <block id="f86857f0a51fde5819da3a17258b5448" category="inline-link">瞭解如何下載分層報告</block>
   <block id="898e35e1a4bf4b025c3edec879439b08" category="section-title">管理支援案例（預覽）</block>
   <block id="8b74b053fbeeff5c3b6f4991cb1d028d" category="paragraph">您可以直接從BlueXP檢視及管理作用中和已解決的支援案例。您可以管理與您的NSS帳戶和貴公司相關的個案。</block>
@@ -948,7 +943,6 @@
   <block id="78663d9137e3cc2c3049532938b4c70f" category="list-text">在「 _ 詳細資料與認證 _ 」頁面中、叢集名稱會新增為工作環境名稱、所以只要按一下「 * 執行 * 」即可。</block>
   <block id="102787ed6297b34a7504b527e91d01d3" category="section-title">2023年4月3日</block>
   <block id="2e79231a13ecf62585403e20da2dea4a" category="section-title">授權標籤已移除</block>
-  <block id="66a0b4752150538292b81c073ca0b83b" category="section-title">分層索引標籤已重新命名、並已更新內容</block>
   <block id="c7f5c1a75acc58c6f004efc0ce1eba09" category="list-text">* 附件（選填） * ：上傳最多五個附件、一次上傳一個。</block>
   <block id="bfa80e7aaad6da353b431bff3a0e12d6" category="paragraph">每個檔案的附件上限為 25 MB 。支援下列副檔名： txt 、 log 、 pdf 、 jpg/jpeg 、 rtf 、 doc/dox 、 xls/xlsx 和 csv 。</block>
   <block id="8e6b52a532a4fbbfc98dca3ebfa5f1e6" category="list-text">* 更新案例附註 * ：提供問題的其他詳細資料、或選擇 * 上傳檔案 * 最多附加五個檔案。</block>
@@ -1118,8 +1112,6 @@
   <block id="56273c1cb08574200c49973b9bc5c615" category="summary">瞭解 BlueXP 分層的新功能。</block>
   <block id="d423420066ca2ec630afe096f14eae4b" category="doc">BlueXP 分層的新功能</block>
   <block id="8c14896b1d1fc37f02aa2e6dfc06354a" category="paragraph">由於 BlueXP 分層的變更、您必須變更下列 Connector 端點、才能成功執行 BlueXP 分層作業：</block>
-  <block id="3afb7cae2b7c3e96c6a4e1df765d3dce" category="section-title">拖放即可啟用 BlueXP 分層功能、將其分層至 Azure Blob 、 Google Cloud Storage 和 StorageGRID</block>
-  <block id="18cd1c130656412d8089667948bc48a2" category="section-title">拖放以啟用 BlueXP 分層至 Amazon S3</block>
   <block id="a0396859c016deff163331729e87c6cf" category="summary">BlueXP 分層支援數個 Google Cloud 儲存類別和大多數地區。</block>
   <block id="58edb41c3cfab45408029ad69032402a" category="paragraph">當您設定 BlueXP 分層生命週期規則時、在 Google 帳戶中設定儲存庫時、不得設定任何生命週期規則。</block>
   <block id="2d5551329360393b3ea83aeec84cf519" category="paragraph">BlueXP 分層支援下列區域。</block>
@@ -1249,10 +1241,8 @@
   <block id="2ebfeabed40c2270d9fa8325080a4b3e" category="paragraph">您必須提供您的NSS帳戶、才能讓BlueXP上傳授權金鑰、並啟用您所購買期間的訂閱。這包括定期續約的自動更新。</block>
   <block id="f5135b68b75a8404803a1eb438e40c5e" category="list-text">升級Cloud Volumes ONTAP 更新版的更新版</block>
   <block id="28acda3f8bdb20220a5658f1cd81f226" category="section-title">2023 年 7 月 4 日</block>
-  <block id="f955a076eeae4df4466469593ff635ca" category="section-title">現在您可以調整用於將非使用中資料上傳至物件儲存的頻寬</block>
   <block id="d59048f21fd887ad520398ce677be586" category="inline-link">深入瞭解</block>
   <block id="1d59c82c13288b53f26d652175016f90" category="paragraph">當您啟動 BlueXP 分層時、 ONTAP 可以使用無限量的網路頻寬、將非作用中的資料從叢集中的磁碟區傳輸到物件儲存區。如果您注意到分層流量會影響一般使用者工作負載、您可以限制傳輸期間可使用的頻寬量。<block ref="bd661c8ba5ce12ee5a1adc1010618597" category="inline-link-rx"></block>。</block>
-  <block id="eb516d1f8f028dbd0333948ae6fc06a5" category="section-title">「低分層」的分層事件會顯示在通知中心中</block>
   <block id="250f0923d20814211c14c5a6cd0e2643" category="paragraph">現在當叢集分層處理少於 20% 的冷資料（包括無資料分層的叢集）時、會出現分層事件「將額外資料從叢集 &lt;name&gt; 分層到物件儲存設備以提高儲存效率」、以作為通知。</block>
   <block id="3c23988fbf7c203a2c811a5ce84251c0" category="inline-link">BlueXP 分層總擁有成本和節約計算機</block>
   <block id="57f9b94b395c8e293b7f892fe5995ac7" category="paragraph">此通知是一項「建議」、可協助您提高系統效率、並節省儲存成本。它提供的連結<block ref="c9d262883689ef94201e8739cb50c7f6" category="inline-link-rx"></block> 協助您計算成本節約效益。</block>
@@ -1341,7 +1331,6 @@
   <block id="c0e0b7ff0de9558404e9b77ece42948a" category="list-text">選取 *NSS Management &gt; Add NSS Account* 。</block>
   <block id="85b9386ed443776127e099931d73448a" category="list-text">系統提示時、請選取 * 繼續 * 以重新導向至 Microsoft 登入頁面。</block>
   <block id="4bca0fdcdafed1e5f31435f4b19c8738" category="section-title">2023 年 8 月 9 日</block>
-  <block id="b839d32c555694a5245fa2fa33d17d88" category="section-title">在儲存階層資料的儲存區名稱中使用自訂字首</block>
   <block id="6eb4429639db75cb3b56cc38a3fb8785" category="paragraph">在過去、您需要在定義貯體名稱時使用預設的「 Fabric Pool 」前置詞、例如 _Fabric Pool Bucket1_ 。現在、您可以在命名貯體時使用自訂首碼。只有在將資料分層至 Amazon S3 時、才能使用此功能。<block ref="3e8270d3bc816ce30c7c11fe6d073535" category="inline-link-rx"></block>。</block>
   <block id="6a3a27c0cd9c23985f6e8260846d58bc" category="paragraph">如果您使用多個 Connectors 來管理環境中的所有儲存系統、則您要實作分層的某些叢集可能位於不同的 Connectors 。如果您不確定哪個 Connector 正在管理特定叢集、您可以使用 BlueXP 分層功能在所有 Connector 之間搜尋。<block ref="017b0207cc8469b6ea246adade89f8e1" category="inline-link-rx"></block>。</block>
   <block id="d441270e2d66b6759e1bbe07190e3d30" category="admonition">如果您計畫設定 BlueXP 分層以使用較低成本的存取層、在特定天數之後、階層式資料將會轉換至該層級、則在 Azure 帳戶中設定容器時、不得選取任何生命週期規則。BlueXP 分層管理生命週期轉換。</block>
@@ -1446,4 +1435,15 @@
   <block id="7134f9d87483badec2f2028b49510a11" category="list-text"><block ref="7134f9d87483badec2f2028b49510a11" category="inline-link-rx"></block></block>
   <block id="e611f8473aa031238f45b544d113b51c" category="list-text">您的 BlueXP  組織不需要 BlueXP  分層授權、也不需要在 ONTAP 叢集上將資料分層至 StorageGRID 時取得 FabricPool 授權。</block>
   <block id="aca1d9b834f4ef7d5cdec1dd3d882bd0" category="paragraph">BlueXP  不會傳送此通知的電子郵件。</block>
+  <block id="344a2fbdf46c3a4ef07e7c73566f42f3" category="section-title">分層索引標籤已重新命名及更新</block>
+  <block id="a4e53922ceec159164a3765ff05e1458" category="doc">調整頻寬以傳輸非使用中資料</block>
+  <block id="904ea3c3aba6edae61ba696b01808a11" category="section-title">通知中心中顯示的分層事件</block>
+  <block id="101e8e97885c05702335faecd0fb3f50" category="doc">使用自訂字首作為貯體名稱</block>
+  <block id="5f659aa043041b7c7bd07335ac62ca55" category="section-title">產生磁碟區的分層報告</block>
+  <block id="02a02728987c939621edc3e2dc71d234" category="section-title">拖放以啟用分層至其他目的地的功能</block>
+  <block id="dc7d0bd65a1626d3b5577529e98dab87" category="section-title">分層連結至 Amazon S3 時、請設定 AWS Private Link</block>
+  <block id="5b509c72bc50acb8c10c2952b7982420" category="section-title">拖放以啟用分層至 Amazon S3 的功能</block>
+  <block id="e183a98351b41fa6323d79a2f03c328c" category="section-title">選擇移除鏡射物件存放區時的分層行為</block>
+  <block id="847d8c6cf21c261bf367fb1c3c41bf62" category="section-title">為其他集合體設定其他物件存放區</block>
+  <block id="ed16268923e9fecfd07bdd809ee9d213" category="section-title">MetroCluster 組態的授權支援</block>
 </blocks>

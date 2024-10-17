@@ -22,7 +22,7 @@ summary: 瞭解 BlueXP 分層的新功能。
 
 
 
-=== 在儲存階層資料的儲存區名稱中使用自訂字首
+=== 使用自訂字首作為貯體名稱
 
 在過去、您需要在定義貯體名稱時使用預設的「 Fabric Pool 」前置詞、例如 _Fabric Pool Bucket1_ 。現在、您可以在命名貯體時使用自訂首碼。只有在將資料分層至 Amazon S3 時、才能使用此功能。 https://docs.netapp.com/us-en/bluexp-tiering/task-tiering-onprem-aws.html#prepare-your-aws-environment["深入瞭解"]。
 
@@ -38,13 +38,13 @@ summary: 瞭解 BlueXP 分層的新功能。
 
 
 
-=== 現在您可以調整用於將非使用中資料上傳至物件儲存的頻寬
+=== 調整頻寬以傳輸非使用中資料
 
 當您啟動 BlueXP 分層時、 ONTAP 可以使用無限量的網路頻寬、將非作用中的資料從叢集中的磁碟區傳輸到物件儲存區。如果您注意到分層流量會影響一般使用者工作負載、您可以限制傳輸期間可使用的頻寬量。 https://docs.netapp.com/us-en/bluexp-tiering/task-managing-tiering.html#changing-the-network-bandwidth-available-to-upload-inactive-data-to-object-storage["深入瞭解"]。
 
 
 
-=== 「低分層」的分層事件會顯示在通知中心中
+=== 通知中心中顯示的分層事件
 
 現在當叢集分層處理少於 20% 的冷資料（包括無資料分層的叢集）時、會出現分層事件「將額外資料從叢集 <name> 分層到物件儲存設備以提高儲存效率」、以作為通知。
 
@@ -62,7 +62,7 @@ summary: 瞭解 BlueXP 分層的新功能。
 
 
 
-=== 分層索引標籤已重新命名、並已更新內容
+=== 分層索引標籤已重新命名及更新
 
 「叢集儀表板」索引標籤已重新命名為「叢集」、「內部部署儀表板」索引標籤已重新命名為「內部部署儀表板」。這些頁面新增了一些資訊、可協助您評估是否能利用額外的分層組態來最佳化儲存空間。
 
@@ -72,7 +72,7 @@ summary: 瞭解 BlueXP 分層的新功能。
 
 
 
-=== 現在您可以為磁碟區產生分層報告
+=== 產生磁碟區的分層報告
 
 您可以從「層級磁碟區」頁面下載報告、以便檢閱所管理叢集上所有磁碟區的分層狀態。BlueXP 分層會產生 .CSV 檔案、您可以視需要檢閱並傳送給公司中的其他人。 https://docs.netapp.com/us-en/bluexp-tiering/task-managing-tiering.html#download-a-tiering-report-for-your-volumes["瞭解如何下載分層報告"]。
 
@@ -104,7 +104,7 @@ summary: 瞭解 BlueXP 分層的新功能。
 
 
 
-=== 拖放即可啟用 BlueXP 分層功能、將其分層至 Azure Blob 、 Google Cloud Storage 和 StorageGRID
+=== 拖放以啟用分層至其他目的地的功能
 
 如果Azure Blob、Google Cloud Storage或StorageGRID Setiering目的地是在CanvasTM上的工作環境、您可以將內部ONTAP 環境拖曳至目的地、以啟動分層設定精靈。
 
@@ -114,7 +114,7 @@ summary: 瞭解 BlueXP 分層的新功能。
 
 
 
-=== 分層精靈可讓您在分層至S3儲存設備時、設定AWS Private Link
+=== 分層連結至 Amazon S3 時、請設定 AWS Private Link
 
 在先前的版本中、透過VPC端點提供這種將叢集連接至S3儲存區的安全方法、非常耗時。現在您可以依照必要步驟執行至 https://docs.netapp.com/us-en/bluexp-tiering/task-tiering-onprem-aws.html#configure-your-system-for-a-private-connection-using-a-vpc-endpoint-interface["使用VPC端點介面設定系統的私有連線"]然後您可以在「網路」頁面中的分層設定精靈期間選取Private Link。
 
@@ -122,13 +122,13 @@ https://docs.netapp.com/us-en/bluexp-tiering/task-tiering-onprem-aws.html["檢�
 
 
 
-=== 拖放以啟用 BlueXP 分層至 Amazon S3
+=== 拖放以啟用分層至 Amazon S3 的功能
 
 如果Amazon S3分層目的地是在Canvas上的工作環境、您可以將內部ONTAP 的支援環境拖曳到目的地、以啟動分層設定精靈。
 
 
 
-=== 在MetroCluster 刪除鏡射物件儲存區時、請選擇分層行為
+=== 選擇移除鏡射物件存放區時的分層行為
 
 從 MetroCluster 組態移除鏡射物件存放區時、系統會提示您是否也要移除主要物件存放區。您可以選擇將主要物件存放區附加至集合體、或是移除它。
 
@@ -138,12 +138,12 @@ https://docs.netapp.com/us-en/bluexp-tiering/task-tiering-onprem-aws.html["檢�
 
 
 
-=== 能夠為叢集中的其他Aggregate設定其他物件存放區
+=== 為其他集合體設定其他物件存放區
 
 Cloud Tiering UI已新增一組物件儲存組態頁面。您可以新增物件存放區、將多個物件存放區連線至Aggregate以進行FabricPool 物件鏡射、交換主要物件存放區和鏡射物件存放區、刪除物件存放區連線至集合體等。 https://docs.netapp.com/us-en/bluexp-tiering/task-managing-object-storage.html["深入瞭解新的物件儲存功能。"]
 
 
 
-=== 支援MetroCluster 以雲端分層的授權進行支援、以利執行各種組態
+=== MetroCluster 組態的授權支援
 
 雲端分層授權現在可與MetroCluster 採用各種組態的叢集共享。您不再需要在FabricPool 這些情況下使用過時的不再使用的功能介紹授權。如此一來、您就能更輕鬆地在更多叢集上使用「浮動」雲端分層授權。 https://docs.netapp.com/us-en/bluexp-tiering/task-licensing-cloud-tiering.html#apply-bluexp-tiering-licenses-to-clusters-in-special-configurations["瞭解如何授權及設定這些類型的叢集。"]
