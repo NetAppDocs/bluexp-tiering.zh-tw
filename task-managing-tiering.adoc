@@ -39,7 +39,7 @@ image:screenshot_tiering_cluster_info.png["螢幕擷取畫面顯示叢集總使�
 
 請注意、 Cloud Volumes ONTAP 系統的顯示畫面不同。雖然 Cloud Volumes ONTAP 磁碟區可以將資料分層到雲端、但它們並未使用 BlueXP 分層服務。 https://docs.netapp.com/us-en/bluexp-cloud-volumes-ontap/task-tiering.html["瞭解如何將非使用中資料從 Cloud Volumes ONTAP 系統分層到低成本物件儲存設備"^]。
 
-您也可以 https://docs.netapp.com/us-en/active-iq/task-informed-decisions-based-on-cloud-recommendations.html#tiering["從Digital Advisor檢視叢集的分層資訊"^] 如果您熟悉此NetApp產品、只要從左側導覽窗格中選取*雲端建議*即可。
+您也可以 https://docs.netapp.com/us-en/active-iq/task-informed-decisions-based-on-cloud-recommendations.html#tiering["從 Active IQ 數位顧問（也稱為數位顧問）檢視叢集的分層資訊"^]熟悉此 NetApp 產品。只要從左側導覽窗格中選取*雲端建議*即可。
 
 image:screenshot_tiering_aiq_fabricpool_info.png["顯示FabricPool 叢集的資訊的快照、使用FabricPool Digital Advisor提供的「資訊顧問」。"]
 

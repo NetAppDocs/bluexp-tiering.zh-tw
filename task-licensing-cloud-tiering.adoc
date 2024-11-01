@@ -54,7 +54,8 @@ link:concept-cloud-tiering.html#pricing-and-licenses["深入瞭解 BlueXP 分層
 下列影片顯示此程序：
 
 +
-video::video_subscribing_aws_tiering.mp4[width=848,height=480]
+.從 AWS Marketplace 訂閱 BlueXP
+video::096e1740-d115-44cf-8c27-b051011611eb[panopto]
 
 
 
@@ -72,7 +73,8 @@ video::video_subscribing_aws_tiering.mp4[width=848,height=480]
 下列影片顯示此程序：
 
 +
-video::video_subscribing_azure_tiering.mp4[width=848,height=480]
+.從 Azure Marketplace 訂閱 BlueXP
+video::b7e97509-2ecf-4fa0-b39b-b0510109a318[panopto]
 
 
 
@@ -90,7 +92,8 @@ video::video_subscribing_azure_tiering.mp4[width=848,height=480]
 下列影片顯示此程序：
 
 +
-video::video_subscribing_gcp_tiering.mp4[width=848,height=480]
+.從 Google Cloud Marketplace 訂閱 BlueXP
+video::373b96de-3691-4d84-b3f3-b05101161638[panopto]
 
 
 

@@ -818,8 +818,6 @@
   <block id="bb9a67152dc7c7f6ad99d55da23a9b5c" category="paragraph">如果StorageGRID 在畫版上存在可作為工作環境的資料點、您可以將叢集拖曳到StorageGRID 可運作的環境中、以啟動設定精靈。</block>
   <block id="5a4346a01828d72104a6540080377b25" category="section-title">2022年11月6日</block>
   <block id="6586247c64ea3f20421ae518b26fc973" category="paragraph">如果Azure Blob、Google Cloud Storage或StorageGRID Setiering目的地是在CanvasTM上的工作環境、您可以將內部ONTAP 環境拖曳至目的地、以啟動分層設定精靈。</block>
-  <block id="29fdfd7eb2f0e4bc1264e61841c1e15c" category="inline-link">從Digital Advisor檢視叢集的分層資訊</block>
-  <block id="4beb855fa991422619d33c99b74d1365" category="paragraph">您也可以<block ref="ba21940cc7b1756c6b93b4daf8cfd4fb" category="inline-link-rx"></block> 如果您熟悉此NetApp產品、只要從左側導覽窗格中選取*雲端建議*即可。</block>
   <block id="d80d78ee61a9d0887caddafbd12776c6" category="inline-image-macro">顯示FabricPool 叢集的資訊的快照、使用FabricPool Digital Advisor提供的「資訊顧問」。</block>
   <block id="dc0605b8b2de4441cff5b013be511267" category="paragraph"><block ref="dc0605b8b2de4441cff5b013be511267" category="inline-image-macro-rx" type="image"></block></block>
   <block id="154756f3451aa7d3c9c0ff18e7159503" category="inline-link">前往BlueXP Marketplace產品</block>
@@ -1446,4 +1444,9 @@
   <block id="e183a98351b41fa6323d79a2f03c328c" category="section-title">選擇移除鏡射物件存放區時的分層行為</block>
   <block id="847d8c6cf21c261bf367fb1c3c41bf62" category="section-title">為其他集合體設定其他物件存放區</block>
   <block id="ed16268923e9fecfd07bdd809ee9d213" category="section-title">MetroCluster 組態的授權支援</block>
+  <block id="8ddd07f4c199accad92d619cc396eaef" category="video-title">從 AWS Marketplace 訂閱 BlueXP</block>
+  <block id="040832c90148c5bba767901a4a55ebe4" category="video-title">從 Azure Marketplace 訂閱 BlueXP</block>
+  <block id="c6e17aa071476599f5e5fc5b8bc42431" category="video-title">從 Google Cloud Marketplace 訂閱 BlueXP</block>
+  <block id="2e02ef063e4f9a11ed835693daa2e7d1" category="inline-link">從 Active IQ 數位顧問（也稱為數位顧問）檢視叢集的分層資訊</block>
+  <block id="aac4751e2e50c3f9d64afc60244ec854" category="paragraph">您也可以<block ref="ab766f8aad1f1b4bf567a28cf12cabcb" category="inline-link-rx"></block>熟悉此 NetApp 產品。只要從左側導覽窗格中選取*雲端建議*即可。</block>
 </blocks>
