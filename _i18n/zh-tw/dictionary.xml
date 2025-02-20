@@ -326,21 +326,7 @@
   <block id="a7bd9725f68ab51f56b292638f876d9b" category="cell">分層組態與管理是透過System Manager或ONTAP CLI來完成。</block>
   <block id="84d29247572532708a78dd9938063ac5" category="cell">設定完成後、您可以使用免費試用版、在30天內不需授權的情況下使用分層服務。</block>
   <block id="0f54a92e132940776f23febb26ca8ceb" category="cell">設定完成後、即可免費分層前10 TB的資料。</block>
-  <block id="9d2169c1c2855b78a7aeaa4f42d27dc7" category="inline-link">NetApp 支援網站</block>
-  <block id="80c4b6e3dfa1d4f33033585b7c74e7e9" category="list-text">登入<block ref="fcc52edac3ce57829c48ee35d97a295d" category="inline-link-rx"></block> 然後按一下*系統&gt;軟體授權*。</block>
-  <block id="5190e9ec018f5e661ec4b31ff1b34423" category="inline-image-macro">顯示依序號搜尋後授權表格的快照。</block>
-  <block id="d15379b9f839ac6523d1b06ad8763875" category="paragraph"><block ref="d15379b9f839ac6523d1b06ad8763875" category="inline-image-macro-rx" type="image"></block></block>
-  <block id="56273f3344c87fabbf5196fba9816fff" category="inline-image-macro">螢幕擷取畫面會顯示「Get license（取得授權）」對話方塊、您可在此輸入租戶ID、然後按一下「Submit（提交）」下載授權檔案。</block>
-  <block id="212f5a95c637538f9375d966345ca9f7" category="paragraph"><block ref="212f5a95c637538f9375d966345ca9f7" category="inline-image-macro-rx" type="image"></block></block>
-  <block id="ea9a2b9ac34c9aab133f21aa5b67976e" category="list-text">按一下「 * 新增授權 * 」。</block>
-  <block id="c1b2dc0798d3960e25b8a12c751f53ec" category="list-text">在_新增授權_對話方塊中、輸入授權資訊、然後按一下*新增授權*：</block>
-  <block id="80b8da08efcb9500667b0fc290bbe1f6" category="list-text">如果您有分層授權序號、而且知道您的nss-Account、請選取* Enter Serial Number*（輸入序號*）選項、然後輸入該資訊。</block>
-  <block id="4488cc251929ad2c43c07191375ca26e" category="list-text">如果您有分層授權檔案、請選取*上傳授權檔案*選項、然後依照提示附加檔案。</block>
-  <block id="b2b168bd64a341a85c749cb61bba40cb" category="inline-xref">從NetApp支援網站取得授權檔案</block>
   <block id="8f0a75d2d5a82f31f2cf069c3b0ee684" category="inline-image-macro">更多圖示</block>
-  <block id="3ce750f001c2369e23b68f3210d9f100" category="inline-image-macro">選取特定服務的「更新授權」按鈕的快照。</block>
-  <block id="2bdb7af2b6613fafdba930fb09034d3f" category="paragraph"><block ref="2bdb7af2b6613fafdba930fb09034d3f" category="inline-image-macro-rx" type="image"></block></block>
-  <block id="41e921305ae1b027e5d364af4a2a9df2" category="list-text">在「更新授權」頁面上傳授權檔案、然後按一下「*更新授權*」。</block>
   <block id="42748df9eaa0be17ddc5cc1593cf57ab" category="doc">註冊以取得支援</block>
   <block id="b50f0a46135bcb7083b1f2f82032fc26" category="inline-image-macro">「說明」功能表的快照、其中「支援」是第一個列出的選項</block>
   <block id="465ec6d5eafa3524c948c99d8bfcd306" category="list-text">在登入頁面上、提供您的NetApp支援網站註冊電子郵件地址和密碼、以執行驗證程序。</block>
@@ -801,7 +787,6 @@
   <block id="0c664d98088fac0e3d869a21cac0c6c4" category="list-text">從訂閱<block ref="41a6e7dc73b2f1e43bd8c26c6ce83782" category="inline-link-rx"></block>，然後重新登入BlueXP網站以完成註冊。</block>
   <block id="6193e62acb4a86204633b2d093e49546" category="list-text">按一下BlueXP右下角的聊天圖示、申請授權。</block>
   <block id="e031d1891af14066db39ea9bc5a67edb" category="list-text">如果您使用的組態不受BlueXP支援、則您將繼續使用FabricPool 此版的支援。<block ref="f4b8492105dcaca906c2ce90b9ccab9e" category="inline-link-rx"></block>。</block>
-  <block id="bae190eec3db4a0dd635ae72756acde8" category="inline-link">將新增至BlueXP的NSS帳戶</block>
   <block id="8816958eed360786a943983e0bd031fd" category="paragraph">在BlueXP中、選取內部作業環境、按一下「*啟用*」以使用分層服務、然後依照提示將資料分層至Google Cloud Storage。</block>
   <block id="955a264d46a1f0536f93bcb5a3e454f1" category="list-text">您可以從BlueXP探索內部叢集。</block>
   <block id="92d46e494e7ad2aeddc2f61967fd1763" category="list-text">BlueXP可設定ONTAP 使用物件儲存供應商、並探索叢集上的作用中和非作用中資料量。</block>
@@ -891,7 +876,6 @@
   <block id="05278fe4264fa7714f2deb1dc83a1f0f" category="paragraph">不可以建構並分層至雲端的物件不包含單一檔案、但最多可包含1、024個4 KB區塊、可與多個檔案區塊相同。磁碟區的中繼資料永遠保留在本機層上。</block>
   <block id="d8de974cae25c190e1656a12aae05ac0" category="paragraph">由於資料分層是在區塊層級執行、因此在一段時間內未存取資料區塊、資料區塊就會被視為冷的、這是由分層原則的minimum冷卻天數屬性所定義。適用範圍為ONTAP 2至63天（含更新版本）、更新版本為2至9.7、更新版本則為2至183天（從ONTAP 更新版本9.8開始）。</block>
   <block id="538632f98286e11da7898a8dd8c5940a" category="list-text">將資料分層至StorageGRID 不收費、因此不需要BYOL授權或PAYGO登錄。此階層式資料不會計入您授權中所購買的容量。</block>
-  <block id="822f69d2e49d7da6f8c764e0680f2f75" category="list-text">如果BlueXP無法自動更新授權、則您需要手動上傳授權檔案。</block>
   <block id="1c573cd95f6407add05436f6ac05d6ec" category="section-title">下載適用於您磁碟區的分層報告</block>
   <block id="801ab24683a4a8c433c6eb40c48bcd9d" category="inline-image-macro">下載</block>
   <block id="fe8e7e0f08b18c3c012d94d74e8386ce" category="inline-image-macro">顯示如何產生CSV檔案的快照、列出所有磁碟區的分層狀態。</block>
@@ -1054,21 +1038,6 @@
   <block id="219f576e0419ffa72026ee6b3730b581" category="admonition">請注意、分層至 StorageGRID 不需要 FabricPool 或 BlueXP 分層授權。</block>
   <block id="7a75abe8763b34e741fcabf5e89398eb" category="cell">BlueXP 分層授權</block>
   <block id="534497403860589544cd9e470d2d110b" category="cell">分層組態與管理是透過 BlueXP 中的 BlueXP 分層服務來完成。</block>
-  <block id="316a7aed758eb7b043492e848b931117" category="section-title">取得 BlueXP 分層授權檔案</block>
-  <block id="9b1441120e66cf63798ba27aa3531664" category="list-text">輸入 BlueXP 分層授權序號。</block>
-  <block id="1a8eb6c0b4ba023742d25f05dbe5273d" category="section-title">將 BlueXP 分層 BYOL 授權新增至您的帳戶</block>
-  <block id="58db88b7cd0054a3b13ce2930a48dad9" category="list-text">按一下 * 治理 &gt; 數位錢包 &gt; 資料服務授權 * 。</block>
-  <block id="6b4dd8f152b00922385ef0e152554720" category="inline-image-macro">螢幕擷取畫面顯示新增 BlueXP 分層 BYOL 授權的頁面。</block>
-  <block id="0a54431ad29a96ceb71a9ab3f197983c" category="paragraph"><block ref="0a54431ad29a96ceb71a9ab3f197983c" category="inline-image-macro-rx" type="image"></block></block>
-  <block id="6b151ce754bba307afbfbdfbdb41717b" category="paragraph">BlueXP 新增授權、讓 BlueXP 分層服務處於作用中狀態。</block>
-  <block id="28b875681d54f556230ca5c52173e3df" category="section-title">更新 BlueXP 分層 BYOL 授權</block>
-  <block id="85884cbcf3bef3a960250a4bea4d78c9" category="paragraph">如果您的授權期限即將到期、或是您的授權容量已達到上限、您將會在 BlueXP 分層中收到通知。</block>
-  <block id="a257270f45c3400d010c6b64e1918bbc" category="inline-image-macro">在 BlueXP 分層頁面中顯示過期授權的螢幕擷取畫面。</block>
-  <block id="823ff9e6c8c5bae175b237dc370d0f90" category="paragraph"><block ref="823ff9e6c8c5bae175b237dc370d0f90" category="inline-image-macro-rx" type="image"></block></block>
-  <block id="0404c6f4bcf79c09ea3f68a74aa284df" category="paragraph">您可以在 BlueXP 分層授權過期前更新、讓您將資料分層至雲端的能力不會中斷。</block>
-  <block id="0df47d96ab99d3765b297d66af42219e" category="list-text">按一下 BlueXP 右下角的聊天圖示、以申請延長您的期限、或申請特定序號的 BlueXP 分層授權額外容量。</block>
-  <block id="d7f004a77faee56e8076bcfdfa7b0560" category="list-text">您可以 <block ref="025fb98ec9c8a155e5ac365eabb828dc" category="inline-xref-macro-rx"></block>。</block>
-  <block id="89e28d16ae270dfde9199b600dc87aa5" category="paragraph">BlueXP 會更新授權、讓 BlueXP 分層服務持續作用。</block>
   <block id="9af45e6d474a73f991c4a2515264ca3c" category="section-title">將 BlueXP 分層授權套用至具有特殊組態的叢集</block>
   <block id="ba4742e3fc97f92aee8dd17337d92765" category="paragraph">下列組態中的 ONTAP 叢集可以使用 BlueXP 分層授權、但必須以不同於單節點叢集、 HA 組態叢集、分層鏡射組態中的叢集、以及使用 FabricPool 鏡射的 MetroCluster 組態的方式來套用授權：</block>
   <block id="788e22af5bb5495bee686a619fa97145" category="list-text">安裝在「暗網站」中的叢集</block>
@@ -1148,11 +1117,6 @@
   <block id="bb987c734075abca5676f20a90739886" category="paragraph">您可以使用 BlueXP 數位錢包頁面來管理 BlueXP 分層 BYOL 授權。您可以新增授權並更新現有授權。</block>
   <block id="3fafe7ba610db00ca5147d2e5246692c" category="list-text">如果您使用 BlueXP 支援的組態、您的 FabricPool 授權將會轉換成 BlueXP 分層授權、並顯示在 BlueXP 數位錢包中。當這些初始授權過期時、您需要更新 BlueXP 分層授權。</block>
   <block id="c02dda54728a1d7496d2f0b0f6025e92" category="cell">已在 BlueXP 數位錢包中註冊。</block>
-  <block id="01b47f7bb171f9330df8674ddf7b5762" category="paragraph">此狀態也會顯示在 BlueXP 數位電子錢包頁面中。</block>
-  <block id="0553876f11122be0920f9fa9c803d152" category="inline-image-macro">BlueXP 數位錢包頁面中顯示過期授權的螢幕擷取畫面。</block>
-  <block id="be95aaa9ff9dad75f49bfadf917b8f70" category="paragraph"><block ref="be95aaa9ff9dad75f49bfadf917b8f70" category="inline-image-macro-rx" type="image"></block></block>
-  <block id="b23b97d3c26b0f7e2265329756cea9ca" category="paragraph">在您支付授權費用並向 NetApp 支援網站 註冊之後、 BlueXP 會自動更新 BlueXP 數位錢包中的授權、而「資料服務授權」頁面則會在 5 到 10 分鐘內反映變更。</block>
-  <block id="70196feeb01dc8dfdb5276a2398e60f9" category="list-text">在 BlueXP 數位電子錢包頁面上的 _Data Services Licenses_ 標籤中、按一下 <block ref="50acd719b1954eb4890c002b3b5e71a6" category="inline-image-macro-rx" type="image"></block> 如需您要更新的服務序號、請按一下*更新授權*。</block>
   <block id="f06c1d2da57ae64b66baec3eaec4f2fb" category="paragraph">當您 <block ref="2383fd55f46b5a2b7b7779e64af3b388" category="inline-link-macro-rx"></block>BlueXP 分層可識別 FabricPool 授權、並將授權新增至 BlueXP 數位錢包。這些叢集將繼續如常分層資料。當 FabricPool 授權過期時、您需要購買 BlueXP 分層授權。</block>
   <block id="5ac06364a2cad0af68f73e54f03c4205" category="list-text">「父」 BlueXP 分層授權會追蹤所有叢集用於分層的容量、以確保授權中有足夠的容量。BlueXP 數位錢包中會顯示總授權容量和到期日。</block>
   <block id="4acb8884a848c4db6d41852f96aa4ef6" category="admonition">系統管理員或ONTAP CLI中顯示的「子」授權容量和到期日並非真實資訊、因此若資訊不相同、請勿擔心。這些值由 BlueXP 分層軟體內部管理。BlueXP 數位錢包會追蹤真實資訊。</block>
@@ -1208,7 +1172,6 @@
   <block id="994f1fa9f6b6f6276b10a9c8a8f18a8c" category="list-text">BlueXP 備份與還原也同樣受到使用分層原則設定的磁碟區所影響。<block ref="2db919f88216e9376af16eec91019e18" category="inline-link-rx"></block>。</block>
   <block id="5f6fdb8f4b29baeb552fcdad9078be66" category="list-text">如果您已在雲端供應商的市場中訂閱 BlueXP 訂閱（ PAYGO ）、則您也會自動訂閱 BlueXP 內部部署 ONTAP 系統分層功能。您會在 BlueXP 分層 * 內部部署儀表板 * 索引標籤中看到有效的訂閱。您不需要再次訂閱。BlueXP 數位電子錢包中有有效的訂閱。</block>
   <block id="1ba2cc4758ef6d9270d73cfc36a18caa" category="paragraph">或者、如果您沒有使用未指派的 Cloud Volumes ONTAP 節點型授權、您可以將其轉換為具有相同美元等效和相同到期日的 BlueXP 分層授權。<block ref="f4c32a82791cf9fc58c736c0aed05092" category="inline-link-rx"></block>。</block>
-  <block id="30fc689a9c3cd4222329fe3a4c818a33" category="paragraph">如果下拉式清單中沒有您的 NetApp 支援網站帳戶，<block ref="06a3bc9d474b5d4e44d1a2733cac785a" category="inline-link-rx"></block>。</block>
   <block id="509259be6d5e15d8959f705cbe0cbcc1" category="paragraph"><block ref="509259be6d5e15d8959f705cbe0cbcc1" category="inline-image-macro-rx" type="image"></block></block>
   <block id="0972db30d942fdb65d1732e6e84bde99" category="paragraph"><block ref="0972db30d942fdb65d1732e6e84bde99" category="inline-image-macro-rx" type="image"></block></block>
   <block id="cb6a777dd3c6e43b0dc441d38519d219" category="paragraph"><block ref="cb6a777dd3c6e43b0dc441d38519d219" category="inline-image-macro-rx" type="image"></block></block>
@@ -1275,9 +1238,6 @@
   <block id="b6d7a1ad9440cb7fff09db239b1313d7" category="paragraph">此設定不會影響分配給正在分層資料的任何其他叢集的頻寬。</block>
   <block id="7911cbd17bf94032db18ecf08e4fe5c8" category="list-text">完成 * 階層設定 * 頁面中的各節：</block>
   <block id="fe35e262c448d76aba8db40105f10ae6" category="paragraph">您也可以選擇是否要使用先前設定的AWS Private Link。 <block ref="e6b15c4e63006b05802c430924113019" category="inline-xref-macro-rx"></block> 此時會顯示一個對話方塊、協助您完成端點組態。</block>
-  <block id="c52a9d7f6355ad24bacb2c5f23c0e863" category="paragraph">購買 BlueXP 分層授權後、您可以在 BlueXP 中輸入 BlueXP 分層序號和 NSS 帳戶、或上傳 NLF 授權檔案來啟動授權。下列步驟說明如果您打算使用NLF授權檔案、該如何取得該檔案。</block>
-  <block id="135b308ed83c53f1516b7c754566d1c4" category="paragraph-title">開始之前</block>
-  <block id="a6cfac773f21906007a8ddf407596067" category="list-text">在*授權金鑰*欄中、按一下*取得NetApp授權檔案*。</block>
   <block id="7fe6981833e8fe7fd89e0a99a55573da" category="list-text">在 BlueXP 中、選取 * 說明 &gt; 支援 * 。</block>
   <block id="6a1b74969231967ed071d465206b15c7" category="list-text">如果您想與電話上的某人通話、請選取 * 致電 * 。您將會被導向netapp.com上的頁面、其中列出您可以撥打的電話號碼。</block>
   <block id="d65a2a6fc9caad1867728d4382eeb989" category="list-text">選擇 * 建立案例 * 、與 NetApp 支援專家一起開啟 Ticket ：</block>
@@ -1407,18 +1367,6 @@
   <block id="98d90e398fc56688ddc647e5f49075ec" category="paragraph">工作環境清單位於您在服務頂端橫幅中選取的 BlueXP  組織（或帳戶）、專案（或工作區）和 Connector 範圍內。</block>
   <block id="0aac35c69d56f468c7891da9594e68be" category="list-text">BYOL BlueXP  分層授權（先前稱為「雲端分層」授權）是一種 _ 浮動 _ 授權、您可以在 BlueXP  組織的多個內部部署 ONTAP 叢集上使用。這與您過去為每個叢集購買 FabricPool 授權的地方不同（而且更容易）。</block>
   <block id="7f58c7f218a280f56c54c444e1bb8411" category="paragraph">NetApp自帶授權、提供1年、2年或3年期限。BYOL * BlueXP  分層 * 授權（先前稱為「雲端分層」授權）是一個 _ 浮動 _ 授權、您可以在 BlueXP  組織的多個內部部署 ONTAP 叢集上使用。BlueXP 分層授權中定義的總分層容量會在 * 全部 * 的內部叢集之間共用、讓初始授權和續約變得更簡單。分層 BYOL 授權的最低容量從 10 TiB 開始。</block>
-  <block id="0e48ab0bd412e2c6d662a3a4540397a0" category="paragraph">您需要 BlueXP  分層序號。請從您的銷售訂單中找出此號碼、或聯絡客戶團隊以取得此資訊。</block>
-  <block id="e53331a3231a958d20a4871d8efc35d8" category="list-text">尋找您的 BlueXP  帳戶 ID ：</block>
-  <block id="e0e8a7d90375792efecad34c0c923e32" category="inline-image-macro">設定圖示會顯示在 BlueXP  網路主控台的右上角。</block>
-  <block id="cd42e1c1af0a908f68d68ae6103b5c30" category="list-text">在 BlueXP  主控台右上角、選取 <block ref="32173ab85f1c68a28384d1a40cf387db" category="inline-image-macro-rx" type="image"></block> &gt; * 身分識別與存取管理 * 。</block>
-  <block id="3bcef3f6238058ae825d608e1557c538" category="list-text">在「組織」頁面上、尋找您的帳戶 ID 並加以複製。</block>
-  <block id="2bd8c9344d3768dd44b910db169ef1fa" category="paragraph">如果沒有列出帳戶 ID 、而且您只有組織 ID 、則需要複製組織 ID 的前八個字元、並將其附加至 _account__</block>
-  <block id="14da2ef10b9e4cc4d0981b05fff98072" category="paragraph">例如、假設這是您的組織 ID ：</block>
-  <block id="2740d3013330ec13ae7693ee76bc6509" category="paragraph">ea10e1c6-80cc-4219-8e99-3c3e6b161ba5</block>
-  <block id="6ffe1a2d88424dc37ba43bdf5999183e" category="paragraph">您的帳戶 ID 如下：</block>
-  <block id="c0b58edc6437b03c81d24f7ded6f3648" category="paragraph">account-ea10e1c6</block>
-  <block id="d4393f7d35eb6fcb480572ab5d418710" category="list-text">輸入您的 BlueXP  帳戶 ID （在支援網站上稱為租戶 ID ）、然後按一下 * 提交 * 以下載授權檔案。</block>
-  <block id="921d59a1a10f4e2423dfe3d60997086a" category="paragraph">購買 BlueXP  分層授權後、您必須將授權新增至 BlueXP  、才能使用 BlueXP  分層服務。</block>
   <block id="29360bfcdbc91d3f1514c372b4585965" category="list-text">註冊您的 BlueXP  帳戶序號（您的 20 位數 960xxxxxxxxx 序號位於 BlueXP  的「支援資源」頁面）。</block>
   <block id="444b74bc81e823cc1c4c704219ad8ed3" category="section-title">註冊 BlueXP  以獲得 NetApp 支援</block>
   <block id="b3bf31f8a918c712f26cdf493a908825" category="paragraph">若要註冊取得支援並啟動支援授權、您 BlueXP  組織（或帳戶）中的一位使用者必須將 NetApp 支援網站帳戶與其 BlueXP  登入建立關聯。您如何註冊NetApp支援取決於您是否已擁有NetApp 支援網站 一個NetApp（NSS）帳戶。</block>
@@ -1449,4 +1397,8 @@
   <block id="c6e17aa071476599f5e5fc5b8bc42431" category="video-title">從 Google Cloud Marketplace 訂閱 BlueXP</block>
   <block id="2e02ef063e4f9a11ed835693daa2e7d1" category="inline-link">從 Active IQ 數位顧問（也稱為數位顧問）檢視叢集的分層資訊</block>
   <block id="aac4751e2e50c3f9d64afc60244ec854" category="paragraph">您也可以<block ref="ab766f8aad1f1b4bf567a28cf12cabcb" category="inline-link-rx"></block>熟悉此 NetApp 產品。只要從左側導覽窗格中選取*雲端建議*即可。</block>
+  <block id="936ae05f91caeb56b08682cd274bed64" category="section-title">管理 BlueXP  分層授權</block>
+  <block id="1430b68e61364b237636f6f0ce8e282a" category="paragraph">如果您的授權期限即將到期，或是您的授權容量已達到上限，您將會收到 BlueXP  分層通知及數位錢包通知。</block>
+  <block id="f59ab7df4b9fd3526a4fbed390f7fa9a" category="inline-link">瞭解如何在數位錢包中管理授權</block>
+  <block id="bdfa472a184585b4fa4633165dc44d15" category="paragraph">您可以透過 BlueXP  數位錢包更新現有授權，檢視授權狀態，以及新增授權。<block ref="eb38d0c8186bca45da4435026f76609b" category="inline-link-rx"></block>。</block>
 </blocks>
