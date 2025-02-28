@@ -52,7 +52,7 @@ summary: 將非作用中的資料分層至任何使用簡易儲存服務（S3）
 
 [role="quick-margin-list"]
 * 訂閱的BlueXP PAYGO產品 https://aws.amazon.com/marketplace/pp/prodview-oorxakq6lq7m4?sr=0-8&ref_=beagle&applicationId=AWSMPContessa["AWS Marketplace"^]、 https://azuremarketplace.microsoft.com/en-us/marketplace/apps/netapp.cloud-manager?tab=Overview["Azure Marketplace"^]或 https://console.cloud.google.com/marketplace/details/netapp-cloudmanager/cloud-manager?supportedpurview=project&rif_reserved["GCP 市場"^]，單擊*訂購*並按照提示進行操作。
-* 若要使用 BlueXP 分層 BYOL 授權付款、請寄送 mailto ： ng-cloud-tiering@netapp.com ？ subject=Licensing[ 如果您需要購買一項授權、請聯絡我們 ] 、然後寄送給我們 link:task-licensing-cloud-tiering.html#add-bluexp-tiering-byol-licenses-to-your-account["將其從 BlueXP 數位錢包新增至您的帳戶"]。
+* 若要使用 BlueXP  分層 BYOL 授權付款，請寄送 mailto ： ng-cloud-tiering@netapp.com ？ subject=Licensing[ 如果您需要購買授權link:https://docs.netapp.com/us-en/bluexp-digital-wallet/task-manage-data-services-licenses.html["將其從 BlueXP 數位錢包新增至您的帳戶"^]，請聯絡我們 ] ，然後按。。
 
 
 

@@ -458,7 +458,6 @@
   <block id="d70dcca5b166b4d601318556ff7b9c0b" category="list-text">每年（BYOL）的定期訂閱：每月每GB $0.033起。</block>
   <block id="2d8a56626e9ef86924e67836a8d5c8da" category="paragraph">將冷資料分層至NetApp StorageGRID 的整個系統（私有雲端）、完全不需花費任何成本。</block>
   <block id="a901d6a825e66cb01eb47cc7f8078f70" category="section-title">我是否能同時擁有相同ONTAP 的__LW_Y1_cluster的BYOL和PAYGO授權？</block>
-  <block id="df633ebdc2836fc65b2b5c8df3071fad" category="section-title">如果我達到BYOL容量上限、會發生什麼事？</block>
   <block id="9dad9dd39241a9273189835c0c05bca9" category="paragraph">不、這不是。</block>
   <block id="4db80c7f4174dd6b7d23b536c737df16" category="section-title">內部部署系統的重組是否會受到雲端供應商的外出成本影響？</block>
   <block id="9c84419d8ba3386b34c3566885dd6724" category="paragraph">是的。所有從公有雲讀取的內容均需支付出口費用。</block>
@@ -948,7 +947,6 @@
   <block id="85c797dc141e0eb32826e3caf502008c" category="list-text">在「進階設定」頁面中、按一下Aggregate的功能表圖示、然後選取「*取消鏡射物件存放區*」。</block>
   <block id="e44d709d5fa4c3c47b7380bfc09d83fa" category="inline-link">請參閱定價詳細資料</block>
   <block id="874323801a4fa98c0f05aaa80c3c1d82" category="paragraph"><block ref="f7ce611d89d41a39c0cd111c48bbba76" category="inline-link-rx"></block>。</block>
-  <block id="2b36f8b3b2cccdc6807233a79e1b8d1d" category="paragraph">如果您達到 BYOL 容量上限、新冷資料的分層作業就會停止。所有先前的階層式資料仍可存取、這表示您可以擷取及使用此資料。擷取後、此資料會從雲端移回效能層。</block>
   <block id="91c0c3f0911cf0aa7791e2815ecf2507" category="paragraph">不過、如果您訂閱了 PAYGO 市場訂閱的 _BlueXP - 部署與管理雲端資料服務 _ 、新的 Cold 資料將會繼續分層至物件儲存、您將會根據每次使用的情況支付這些費用。</block>
   <block id="942c9249796cf6b78c981ebf15195809" category="list-text"><block ref="942c9249796cf6b78c981ebf15195809" category="inline-link-rx"></block></block>
   <block id="5bfe7676a3f4e4197bf9f895c6b2fcb4" category="list-text">透過連接埠 443 與 StorageGRID 系統的 HTTPS 連線</block>
@@ -1114,7 +1112,6 @@
   <block id="368170efaa08caf814d05ad25b8849fe" category="paragraph">購買 BlueXP 分層授權後、您需要使用 BlueXP 中的 BlueXP 數位錢包來新增授權。 <block ref="18ff855f2755df77b673603c1159f8d7" category="inline-link-macro-rx"></block>。</block>
   <block id="046d76eda0c1ca3ef0dc85e15394ce90" category="inline-link">BlueXP 數位顧問</block>
   <block id="3ee9290056c3e6ae9cd8482931c1f104" category="paragraph">除了 BlueXP 分層、<block ref="5ed6ecd932db92d4be0f0df08b269167" category="inline-link-rx"></block> 和<block ref="bced2809c175fbbacaa63c811a554606" category="inline-link-rx"></block> 可用於監控和報告。</block>
-  <block id="bb987c734075abca5676f20a90739886" category="paragraph">您可以使用 BlueXP 數位錢包頁面來管理 BlueXP 分層 BYOL 授權。您可以新增授權並更新現有授權。</block>
   <block id="3fafe7ba610db00ca5147d2e5246692c" category="list-text">如果您使用 BlueXP 支援的組態、您的 FabricPool 授權將會轉換成 BlueXP 分層授權、並顯示在 BlueXP 數位錢包中。當這些初始授權過期時、您需要更新 BlueXP 分層授權。</block>
   <block id="c02dda54728a1d7496d2f0b0f6025e92" category="cell">已在 BlueXP 數位錢包中註冊。</block>
   <block id="f06c1d2da57ae64b66baec3eaec4f2fb" category="paragraph">當您 <block ref="2383fd55f46b5a2b7b7779e64af3b388" category="inline-link-macro-rx"></block>BlueXP 分層可識別 FabricPool 授權、並將授權新增至 BlueXP 數位錢包。這些叢集將繼續如常分層資料。當 FabricPool 授權過期時、您需要購買 BlueXP 分層授權。</block>
@@ -1157,7 +1154,6 @@
   <block id="e02dbf2c003ebdce76fe8d8f23c8cd81" category="list-text">透過連接埠 443 與 BlueXP 分層服務的 HTTPS 連線 <block ref="391228c0fd8ae5f276f519fba0168635" category="inline-link-rx"></block>）</block>
   <block id="1c98944c12ba85ed964bb170facc908b" category="list-text"><block ref="d2c059274b0f8c8c22488502fa71ff00" category="inline-link-rx"></block>。</block>
   <block id="14995f4b9e52d1c9842620dd299a9491" category="inline-link-macro">將其從 BlueXP 數位錢包新增至您的帳戶</block>
-  <block id="e3f4f14b998671c888f456a0ad08183b" category="list-text">若要使用 BlueXP 分層 BYOL 授權付款、請寄送 mailto ： ng-cloud-tiering@netapp.com ？ subject=Licensing[ 如果您需要購買一項授權、請聯絡我們 ] 、然後寄送給我們 <block ref="c9b41d67bb59cbbda05a3d1ddac8d600" category="inline-link-macro-rx"></block>。</block>
   <block id="7f197277fe853547357eb08c4f5f1cd0" category="list-text"><block ref="7f197277fe853547357eb08c4f5f1cd0" category="inline-link-rx"></block></block>
   <block id="906825ff52dd59d45d29306547f559a5" category="list-text">透過連接埠 443 連接到 BlueXP 分層服務和 S3 物件儲存設備的 HTTPS 連線 <block ref="63b337bf4559a585c3373707ecfcc413" category="inline-link-rx"></block>）</block>
   <block id="736e7ce42afd814f93d6a6f0d3b53286" category="list-text"><block ref="736e7ce42afd814f93d6a6f0d3b53286" category="inline-link-rx"></block></block>
@@ -1401,4 +1397,12 @@
   <block id="1430b68e61364b237636f6f0ce8e282a" category="paragraph">如果您的授權期限即將到期，或是您的授權容量已達到上限，您將會收到 BlueXP  分層通知及數位錢包通知。</block>
   <block id="f59ab7df4b9fd3526a4fbed390f7fa9a" category="inline-link">瞭解如何在數位錢包中管理授權</block>
   <block id="bdfa472a184585b4fa4633165dc44d15" category="paragraph">您可以透過 BlueXP  數位錢包更新現有授權，檢視授權狀態，以及新增授權。<block ref="eb38d0c8186bca45da4435026f76609b" category="inline-link-rx"></block>。</block>
+  <block id="b9f5b01b4774bcb7362c0c3c8c045c8f" category="section-title">如果我達到 BYOL 容量上限，或是 BYOL 授權過期，會發生什麼事？</block>
+  <block id="3bd6904fad56f42c6c8fca6339e68a52" category="paragraph">如果您達到 BYOL 容量上限，或是 BYOL 授權過期，新冷資料的分層就會停止，新冷資料的分層也會停止。所有先前的階層式資料仍可存取、這表示您可以擷取及使用此資料。擷取後、此資料會從雲端移回效能層。</block>
+  <block id="b5e80cebccc83c069af38aa776874590" category="inline-link-macro">瞭解如何使用數位錢包。</block>
+  <block id="d89bd65e8fd665e3441fc89af7b8df3e" category="paragraph">訂閱 BlueXP  分層之後，您可以管理數位錢包的訂閱。<block ref="d49cdac2c2a5c8f3e20a0ee99c2a8fbf" category="inline-link-macro-rx"></block></block>
+  <block id="7faad33154e76f2b2fea71169ab995eb" category="paragraph">您可以使用 BlueXP 數位錢包頁面來管理 BlueXP 分層 BYOL 授權。您可以新增授權並更新現有授權。<block ref="fa373c8dfe7c61e1552bf068cc551756" category="inline-link-macro-rx"></block></block>
+  <block id="b5f6f9235ede8b6d89d84e0a91d1d416" category="list-text">若要使用 BlueXP  分層 BYOL 授權付款，請寄送 mailto ： ng-cloud-tiering@netapp.com ？ subject=Licensing[ 如果您需要購買授權<block ref="7514748750b360406b2849d4de48dd88" category="inline-link-macro-rx"></block>，請聯絡我們 ] ，然後按。</block>
+  <block id="f5b439eae5ededef7363a59554dfd116" category="list-text">若要使用 BlueXP  分層 BYOL 授權付款，請寄送 mailto ： ng-cloud-tiering@netapp.com ？ subject=Licensing[ 如果您需要購買授權<block ref="9c02282928f3218db393c9c2756eb321" category="inline-link-macro-rx"></block>，請聯絡我們 ] ，然後按。</block>
+  <block id="1f7ed36d878143cac28b03439d01a547" category="list-text">若要使用 BlueXP  分層 BYOL 授權付款，請寄送 mailto ： ng-cloud-tiering@netapp.com ？ subject=Licensing[ 如果您需要購買授權<block ref="9c02282928f3218db393c9c2756eb321" category="inline-link-macro-rx"></block>，請聯絡我們 ] ，然後按。。</block>
 </blocks>
