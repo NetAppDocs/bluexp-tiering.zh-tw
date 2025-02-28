@@ -1397,7 +1397,6 @@
   <block id="1430b68e61364b237636f6f0ce8e282a" category="paragraph">如果您的授權期限即將到期，或是您的授權容量已達到上限，您將會收到 BlueXP  分層通知及數位錢包通知。</block>
   <block id="f59ab7df4b9fd3526a4fbed390f7fa9a" category="inline-link">瞭解如何在數位錢包中管理授權</block>
   <block id="bdfa472a184585b4fa4633165dc44d15" category="paragraph">您可以透過 BlueXP  數位錢包更新現有授權，檢視授權狀態，以及新增授權。<block ref="eb38d0c8186bca45da4435026f76609b" category="inline-link-rx"></block>。</block>
-  <block id="b9f5b01b4774bcb7362c0c3c8c045c8f" category="section-title">如果我達到 BYOL 容量上限，或是 BYOL 授權過期，會發生什麼事？</block>
   <block id="3bd6904fad56f42c6c8fca6339e68a52" category="paragraph">如果您達到 BYOL 容量上限，或是 BYOL 授權過期，新冷資料的分層就會停止，新冷資料的分層也會停止。所有先前的階層式資料仍可存取、這表示您可以擷取及使用此資料。擷取後、此資料會從雲端移回效能層。</block>
   <block id="b5e80cebccc83c069af38aa776874590" category="inline-link-macro">瞭解如何使用數位錢包。</block>
   <block id="d89bd65e8fd665e3441fc89af7b8df3e" category="paragraph">訂閱 BlueXP  分層之後，您可以管理數位錢包的訂閱。<block ref="d49cdac2c2a5c8f3e20a0ee99c2a8fbf" category="inline-link-macro-rx"></block></block>
@@ -1405,4 +1404,5 @@
   <block id="b5f6f9235ede8b6d89d84e0a91d1d416" category="list-text">若要使用 BlueXP  分層 BYOL 授權付款，請寄送 mailto ： ng-cloud-tiering@netapp.com ？ subject=Licensing[ 如果您需要購買授權<block ref="7514748750b360406b2849d4de48dd88" category="inline-link-macro-rx"></block>，請聯絡我們 ] ，然後按。</block>
   <block id="f5b439eae5ededef7363a59554dfd116" category="list-text">若要使用 BlueXP  分層 BYOL 授權付款，請寄送 mailto ： ng-cloud-tiering@netapp.com ？ subject=Licensing[ 如果您需要購買授權<block ref="9c02282928f3218db393c9c2756eb321" category="inline-link-macro-rx"></block>，請聯絡我們 ] ，然後按。</block>
   <block id="1f7ed36d878143cac28b03439d01a547" category="list-text">若要使用 BlueXP  分層 BYOL 授權付款，請寄送 mailto ： ng-cloud-tiering@netapp.com ？ subject=Licensing[ 如果您需要購買授權<block ref="9c02282928f3218db393c9c2756eb321" category="inline-link-macro-rx"></block>，請聯絡我們 ] ，然後按。。</block>
+  <block id="18edf950b6f18ca0e897a7237c2d214e" category="section-title">如果我達到 BYOL 容量上限，或是 BYOL 授權過期，會發生什麼事？</block>
 </blocks>
