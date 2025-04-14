@@ -1,7 +1,7 @@
 ---
 sidebar: sidebar 
 permalink: task-managing-object-storage.html 
-keywords: object storage, mirror object storage, create object storage, remove object storage, swap object storage, display object storage 
+keywords: object storage, mirror object storage, create object storage, remove object storage, swap object storage, display object storage, license 
 summary: 將內部ONTAP 的物件叢集設定為將資料分層至特定物件儲存之後、您就可以執行其他物件儲存工作。您可以新增物件儲存設備、將階層式資料鏡射至次要物件儲存設備、交換主要和鏡射物件儲存設備、從集合體移除鏡射物件儲存區等。 
 ---
 = 管理用於資料分層的物件儲存設備
@@ -91,9 +91,9 @@ IAM 使用者必須與您在「 * S3 Bucket * 」頁面上選取或建立的儲�
 
 您可以將第二個物件存放區附加至集合體、以建立FabricPool 一個鏡射鏡射、將資料同步分層至兩個物件存放區。您必須有一個物件存放區已附加至Aggregate。 https://docs.netapp.com/us-en/ontap/fabricpool/create-mirror-task.html["深入瞭FabricPool 解鏡面"^]。
 
-使用MetroCluster 靜態組態時、最佳實務做法是在不同可用度區域的公有雲中使用物件存放區。 https://docs.netapp.com/us-en/ontap/fabricpool/setup-object-stores-mcc-task.html["如需MetroCluster 更多關於功能需求的資訊、請參閱ONTAP 《產品介紹》文件"^]。
+使用 MetroCluster 組態時，最佳做法是使用位於不同可用性區域的公有雲中的物件存放區。 https://docs.netapp.com/us-en/ontap/fabricpool/setup-object-stores-mcc-task.html["如需MetroCluster 更多關於功能需求的資訊、請參閱ONTAP 《產品介紹》文件"^]。在 MetroCluster 中，不建議使用無鏡射的集合體，否則會出現錯誤訊息。
 
-請注意、當使用StorageGRID 支援MetroCluster 物件儲存的功能時、ONTAP 兩個支援的系統都可以FabricPool 執行將物件儲存在單StorageGRID 一的不支援系統上的功能。每ONTAP 個資料系統都必須將資料分層至不同的儲存區。
+在 MetroCluster 組態中使用 StorageGRID 做為物件存放區時，兩個 ONTAP 系統都可以執行 FabricPool 分層至單一 StorageGRID 系統。每ONTAP 個資料系統都必須將資料分層至不同的儲存區。
 
 .步驟
 . 在 * 叢集 * 頁面中、按一下所選叢集的 * 進階設定 * 。

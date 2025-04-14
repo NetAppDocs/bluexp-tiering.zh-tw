@@ -168,6 +168,12 @@ https://bluexp.netapp.com/pricing["請參閱定價詳細資料"]。
 
 
 
+=== 我使用 ONTAP MetroCluster 時，如何收取分層費用？
+
+在 MetroCluster 環境中使用時，分層授權容量會平均套用至鏡射儲存區。例如，如果您擁有 100TiB 分層的授權，則兩個貯體最多可分層至 100 TiB 。鏡射貯體不需額外付費。從 MetroCluster 環境中的無鏡射集合體分層時， BlueXP  分層授權會正常套用，並使用分層至兩個貯體的總容量。例如，如果您擁有 100TiB 分層的授權，則兩個貯體最多可分層至 50TB 。
+
+
+
 == ONTAP
 
 下列問題 ONTAP 與不相關。

@@ -208,7 +208,7 @@ NOTE: 系統管理員或ONTAP CLI中顯示的「子」授權容量和到期日�
 此時請勿設定分層。
 
 . link:task-licensing-cloud-tiering.html#use-a-bluexp-tiering-byol-license["購買 BlueXP 分層授權"] 以取得新叢集或叢集所需的容量。
-. 在BlueXP中、 link:task-licensing-cloud-tiering.html#add-bluexp-tiering-byol-licenses-to-your-account["將授權新增至 BlueXP 數位錢包"]。
+. 在 BlueXP  中， <<licenses,將授權新增至 BlueXP 數位錢包>>[ 將授權新增至 BlueXP  數位錢包 ] 。
 . 在 BlueXP 分層中、 link:task-managing-tiering.html#discovering-additional-clusters-from-bluexp-tiering["探索新叢集"]。
 . 在「叢集」頁面中、按一下 image:screenshot_horizontal_more_button.gif["更多圖示"] 針對叢集、選取*部署授權*。
 +

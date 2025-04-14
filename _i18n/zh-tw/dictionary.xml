@@ -735,8 +735,6 @@
   <block id="0da0639ab808878f568f3c4f06c02689" category="inline-link">如需MetroCluster 更多關於功能需求的資訊、請參閱ONTAP 《產品介紹》文件</block>
   <block id="c80805cd1b291fd4590a3c0b82caa095" category="inline-link">深入瞭FabricPool 解鏡面</block>
   <block id="4a6b2da2ae625dffc7d1a103b7579d57" category="paragraph">您可以將第二個物件存放區附加至集合體、以建立FabricPool 一個鏡射鏡射、將資料同步分層至兩個物件存放區。您必須有一個物件存放區已附加至Aggregate。<block ref="8af213a751b87119e23e85f52fbc72d6" category="inline-link-rx"></block>。</block>
-  <block id="2dc183e0073f3c1e0402cafe50273750" category="paragraph">使用MetroCluster 靜態組態時、最佳實務做法是在不同可用度區域的公有雲中使用物件存放區。<block ref="8cdfadb67efe7ac0be1266ed1d493d6d" category="inline-link-rx"></block>。</block>
-  <block id="6b483bd3d7c70c49e8ad823d9d4bbf64" category="paragraph">請注意、當使用StorageGRID 支援MetroCluster 物件儲存的功能時、ONTAP 兩個支援的系統都可以FabricPool 執行將物件儲存在單StorageGRID 一的不支援系統上的功能。每ONTAP 個資料系統都必須將資料分層至不同的儲存區。</block>
   <block id="64430472f9b760efd0fff8a56c3dfe2d" category="paragraph">當兩個物件存放區正在同步時、鏡射狀態會顯示為「同步處理中」。同步完成時、狀態會變更為「Synchronized」（同步）。</block>
   <block id="243263104c829e77835d632f591230d5" category="summary">在您透過NetApp技術支援開啟支援案例之前、您必須先在NetApp 支援網站 BlueXP中新增一個支援帳戶、然後註冊以取得支援。</block>
   <block id="0b0e252af8897fbe981ec6682d2aa33b" category="section-title">支援登錄總覽</block>
@@ -1118,7 +1116,6 @@
   <block id="5ac06364a2cad0af68f73e54f03c4205" category="list-text">「父」 BlueXP 分層授權會追蹤所有叢集用於分層的容量、以確保授權中有足夠的容量。BlueXP 數位錢包中會顯示總授權容量和到期日。</block>
   <block id="4acb8884a848c4db6d41852f96aa4ef6" category="admonition">系統管理員或ONTAP CLI中顯示的「子」授權容量和到期日並非真實資訊、因此若資訊不相同、請勿擔心。這些值由 BlueXP 分層軟體內部管理。BlueXP 數位錢包會追蹤真實資訊。</block>
   <block id="f4c3107fb758c7edea8576312dff63ac" category="inline-link-macro">將授權新增至 BlueXP 數位錢包</block>
-  <block id="1953cb0b13a811a9fb3db1b69c5f0a2d" category="list-text">在BlueXP中、 <block ref="fb3a1da5f1072aaa3d6f4c9eaa7cccb2" category="inline-link-macro-rx"></block>。</block>
   <block id="891ca3a65a7ff1025eab9d895f17f04a" category="paragraph">請自帶授權、向 NetApp 購買 * BlueXP 分層 * 授權（先前稱為「雲端分層」授權）。您可以購買 1 年、 2 年或 3 年期授權、並指定任何數量的分層容量（從至少 10 TiB 開始）。BYOL BlueXP 分層授權是一個 _ 浮動 _ 授權、您可以在多個內部部署 ONTAP 叢集上使用。您在 BlueXP 分層授權中定義的總分層容量可由所有內部叢集使用。</block>
   <block id="76e73aa82e342d9c46acf62eef4dcfc4" category="paragraph">只要按一下 * 階層 &gt; 內部部署儀表板 * 即可。BlueXP 分層提供有關您環境的下列詳細資料。</block>
   <block id="73363ef02ce267ee93816a7a9661efbb" category="inline-image-macro">內部部署儀表板頁面的螢幕擷取畫面。</block>
@@ -1405,4 +1402,9 @@
   <block id="f5b439eae5ededef7363a59554dfd116" category="list-text">若要使用 BlueXP  分層 BYOL 授權付款，請寄送 mailto ： ng-cloud-tiering@netapp.com ？ subject=Licensing[ 如果您需要購買授權<block ref="9c02282928f3218db393c9c2756eb321" category="inline-link-macro-rx"></block>，請聯絡我們 ] ，然後按。</block>
   <block id="1f7ed36d878143cac28b03439d01a547" category="list-text">若要使用 BlueXP  分層 BYOL 授權付款，請寄送 mailto ： ng-cloud-tiering@netapp.com ？ subject=Licensing[ 如果您需要購買授權<block ref="9c02282928f3218db393c9c2756eb321" category="inline-link-macro-rx"></block>，請聯絡我們 ] ，然後按。。</block>
   <block id="18edf950b6f18ca0e897a7237c2d214e" category="section-title">如果我達到 BYOL 容量上限，或是 BYOL 授權過期，會發生什麼事？</block>
+  <block id="fa248eca9d251b0d2d1865958f765b99" category="section-title">我使用 ONTAP MetroCluster 時，如何收取分層費用？</block>
+  <block id="78157c877460c2ee87bd63f45fc9a5d4" category="paragraph">在 MetroCluster 環境中使用時，分層授權容量會平均套用至鏡射儲存區。例如，如果您擁有 100TiB 分層的授權，則兩個貯體最多可分層至 100 TiB 。鏡射貯體不需額外付費。從 MetroCluster 環境中的無鏡射集合體分層時， BlueXP  分層授權會正常套用，並使用分層至兩個貯體的總容量。例如，如果您擁有 100TiB 分層的授權，則兩個貯體最多可分層至 50TB 。</block>
+  <block id="d3a48b6792b79f1932baa44071945c80" category="list-text">在 BlueXP  中， <block ref="e5625abf9d60b2626bb47dbb5c12864c" category="inline-xref-macro-rx"></block>[ 將授權新增至 BlueXP  數位錢包 ] 。</block>
+  <block id="af35d47e77f1b287fca9c2a638c644aa" category="paragraph">使用 MetroCluster 組態時，最佳做法是使用位於不同可用性區域的公有雲中的物件存放區。<block ref="8cdfadb67efe7ac0be1266ed1d493d6d" category="inline-link-rx"></block>。在 MetroCluster 中，不建議使用無鏡射的集合體，否則會出現錯誤訊息。</block>
+  <block id="437a34485fe2ce742e7d58f52bb6c1e5" category="paragraph">在 MetroCluster 組態中使用 StorageGRID 做為物件存放區時，兩個 ONTAP 系統都可以執行 FabricPool 分層至單一 StorageGRID 系統。每ONTAP 個資料系統都必須將資料分層至不同的儲存區。</block>
 </blocks>
