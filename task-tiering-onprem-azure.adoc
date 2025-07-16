@@ -2,7 +2,7 @@
 sidebar: sidebar 
 permalink: task-tiering-onprem-azure.html 
 keywords: data tiering, fabricpool, cloud tiering, tiering cold data, tiering inactive data, tiering aff, tiering fas, tiering ontap, tiering volumes, tier data, tier cold data, tier fas, tier aff, tier ontap, azure, blob, azure blob 
-summary: 將非作用中資料分層存放至Azure Blob儲存設備、以釋放內部ONTAP 環境中的閒置空間。 
+summary: 透過將非活動資料分層到 Azure Blob 儲存體來釋放本機ONTAP叢集上的空間。 
 ---
 = 將內部部署 ONTAP 的資料叢集分層至 Azure Blob 儲存設備
 :hardbreaks:
@@ -14,7 +14,7 @@ summary: 將非作用中資料分層存放至Azure Blob儲存設備、以釋放�
 
 
 [role="lead"]
-將非作用中資料分層存放至Azure Blob儲存設備、以釋放內部ONTAP 環境中的閒置空間。
+透過將非活動資料分層到 Azure Blob 儲存體來釋放本機ONTAP叢集上的空間。
 
 
 
@@ -27,21 +27,21 @@ summary: 將非作用中資料分層存放至Azure Blob儲存設備、以釋放�
 您需要下列項目：
 
 [role="quick-margin-list"]
-* 內部ONTAP 使用的支援區叢集、執行ONTAP 的是2個9.4或更新版本、並有HTTPS連線至Azure Blob儲存設備。 https://docs.netapp.com/us-en/bluexp-ontap-onprem/task-discovering-ontap.html["瞭解如何探索叢集"^]。
+* 執行ONTAP 9.4 或更高版本並與 Azure Blob 儲存體建立 HTTPS 連線的本機ONTAP叢集。  https://docs.netapp.com/us-en/bluexp-ontap-onprem/task-discovering-ontap.html["瞭解如何探索叢集"^] 。
 * 安裝在Azure vnet或內部部署環境中的Connector。
 * 用於連接器的網路連線、可將 HTTPS 輸出連線至資料中心的 ONTAP 叢集、 Azure 儲存設備、以及 BlueXP 分層服務。
 
 
 .image:https://raw.githubusercontent.com/NetAppDocs/common/main/media/number-2.png["二"] 設定分層
 [role="quick-margin-para"]
-在BluXP中、選取內部ONTAP 環境的支援環境、按一下「*啟用*」以使用分層服務、然後依照提示將資料分層至Azure Blob儲存設備。
+在BlueXP中，選擇本機ONTAP工作環境，為分層服務選擇 *啟用*，然後依照指示將資料分層到 Azure Blob 儲存體。
 
 .image:https://raw.githubusercontent.com/NetAppDocs/common/main/media/number-3.png["三"] 設定授權
 [role="quick-margin-para"]
 免費試用結束後、請透過隨用隨付訂閱、 ONTAP BlueXP 分層 BYOL 授權、或兩者的組合、支付 BlueXP 分層分層的費用：
 
 [role="quick-margin-list"]
-* 若要從Azure Marketplace訂閱、 https://azuremarketplace.microsoft.com/en-us/marketplace/apps/netapp.cloud-manager?tab=Overview["前往BlueXP Marketplace產品"^]，單擊*訂購*，然後按照提示進行操作。
+* 要從 Azure 市場訂閱，  https://azuremarketplace.microsoft.com/en-us/marketplace/apps/netapp.cloud-manager?tab=Overview["前往BlueXP Marketplace產品"^] ，選擇*訂閱*，然後按照提示進行操作。
 * 若要使用 BlueXP  分層 BYOL 授權付款，請寄送 mailto ： ng-cloud-tiering@netapp.com ？ subject=Licensing[ 如果您需要購買授權link:https://docs.netapp.com/us-en/bluexp-digital-wallet/task-manage-data-services-licenses.html["將其從 BlueXP 數位錢包新增至您的帳戶"]，請聯絡我們 ] ，然後按。
 
 
@@ -104,7 +104,7 @@ NOTE: BlueXP 分層支援 FlexGroup 磁碟區、從 ONTAP 9.5 開始。安裝程
 
 === 探索ONTAP 一個叢集
 
-您必須先在ONTAP BlueXP中建立內部的功能性環境、才能開始分層處理冷資料。
+您需要在BlueXP中建立一個本機ONTAP工作環境，然後才能開始分層冷資料。
 
 https://docs.netapp.com/us-en/bluexp-ontap-onprem/task-discovering-ontap.html["瞭解如何探索叢集"^]。
 
@@ -131,7 +131,7 @@ https://docs.netapp.com/us-en/bluexp-ontap-onprem/task-discovering-ontap.html["�
 
 === 為連接器準備網路
 
-確認連接器具備所需的網路連線。連接器可安裝在內部部署或Azure上。
+確認連接器具備所需的網路連線。連接器可以安裝在本機或 Azure 中。
 
 .步驟
 . 確保安裝 Connector 的網路啟用下列連線：
@@ -169,29 +169,29 @@ NOTE: 如果您計畫設定 BlueXP 分層以使用較低成本的存取層、在
 https://docs.netapp.com/us-en/bluexp-ontap-onprem/task-discovering-ontap.html["內部部署工作環境"^]。
 
 .步驟
-. 選擇內部ONTAP 環境的不正常運作環境。
+. 選擇本地ONTAP工作環境。
 . 從右側面板按一下「*啟用*」以取得分層服務。
 +
 如果Azure Blob分層目的地是以工作環境形式存在於Canvas上、您可以將叢集拖曳至Azure Blob工作環境、以啟動設定精靈。
 
 +
-image:screenshot_setup_tiering_onprem.png["螢幕擷取畫面顯示當您選取內部ONTAP 環境時、畫面右側會出現「Enable（啟用）」選項。"]
+image:screenshot_setup_tiering_onprem.png["螢幕截圖顯示了選擇本機ONTAP工作環境後螢幕右側出現的「啟用」選項。"]
 
 . *定義物件儲存名稱*：輸入此物件儲存設備的名稱。它必須與此叢集上的Aggregate所使用的任何其他物件儲存設備都是獨一無二的。
-. *選擇供應商*：選擇* Microsoft Azure *、然後按一下*繼續*。
+. *選擇提供者*：選擇*Microsoft Azure*並選擇*繼續*。
 . 完成「*建立物件儲存*」頁面上的步驟：
 +
-.. *資源群組*：選取管理現有容器的資源群組、或是您要在其中建立階層式資料的新容器、然後按一下*繼續*。
+.. *資源群組*：選擇管理現有容器的資源群組，或選擇您想要為分層資料建立新容器的資源群組，然後選擇*繼續*。
 +
-使用內部部署連接器時、您必須輸入可存取資源群組的Azure訂閱。
+使用本機連接器時，必須輸入提供資源群組的存取權限的 Azure 訂閱。
 
-.. * Azure Container *：選取選項按鈕、即可將新的Blob容器新增至儲存帳戶或使用現有的容器。然後選取儲存帳戶並選擇現有的容器、或輸入新容器的名稱。然後按一下 * 繼續 * 。
+.. * Azure Container *：選取選項按鈕、即可將新的Blob容器新增至儲存帳戶或使用現有的容器。然後選取儲存帳戶並選擇現有的容器、或輸入新容器的名稱。然後選擇*繼續*。
 +
 此步驟中顯示的儲存帳戶和容器屬於您在上一步中選取的資源群組。
 
 .. * 存取層生命週期 * ： BlueXP 分層管理階層資料的生命週期轉換。資料從 _hot_ 類別開始、但您可以建立規則、在一定天數後將 _Cool 類別套用至資料。
 +
-選取您要將階層式資料轉換至的存取層級、以及資料指派至該層級之前的天數、然後按一下 * 繼續 * 。例如、以下螢幕擷取畫面顯示、在物件儲存區中 45 天之後、階層式資料會從 _hot_ 類別指派給 _Cool 類別。
+選擇要將分層資料轉換到的存取層以及將資料分配到該層之前的天數，然後選擇*繼續*。例如、以下螢幕擷取畫面顯示、在物件儲存區中 45 天之後、階層式資料會從 _hot_ 類別指派給 _Cool 類別。
 
 +
 如果您選擇*將資料保留在此存取層*中、則資料會保留在_hot_存取層中、而且不會套用任何規則。 link:reference-azure-support.html["請參閱支援的存取層"^]。
@@ -202,7 +202,7 @@ image:screenshot_tiering_lifecycle_selection_azure.png["螢幕擷取畫面顯示
 +
 請注意、生命週期規則會套用至所選儲存帳戶中的所有 BLOB 容器。
 
-.. *叢集網路*：選取ONTAP 要用於連接物件儲存設備的IPspace、然後按一下*繼續*。
+.. *叢集網路*：選擇ONTAP套用於連接物件儲存的 IP 空間，然後選擇*繼續*。
 +
 選擇正確的 IPspace 可確保 BlueXP 分層可設定從 ONTAP 到雲端供應商物件儲存設備的連線。
 
@@ -213,15 +213,15 @@ image:screenshot_tiering_lifecycle_selection_azure.png["螢幕擷取畫面顯示
 
 . 在「_層級磁碟區_」頁面上、選取您要設定分層的磁碟區、然後啟動「層級原則」頁面：
 +
-** 若要選取所有Volume、請勾選標題列中的方塊（image:button_backup_all_volumes.png[""]），然後單擊* Configure Volume*（配置卷*）。
-** 若要選取多個磁碟區、請勾選每個磁碟區的方塊（image:button_backup_1_volume.png[""]），然後單擊* Configure Volume*（配置卷*）。
-** 若要選取單一Volume、請按一下該列（或 image:screenshot_edit_icon.gif["編輯鉛筆圖示"] 圖示）。
+** 若要選取所有捲，請選取標題行中的方塊 ( image:button_backup_all_volumes.png[""] ) 並選擇 *配置磁碟區*。
+** 若要選擇多個卷，請選取每個卷對應的複選框 ( image:button_backup_1_volume.png[""] ) 並選擇 *配置磁碟區*。
+** 若要選擇單一卷，請選擇行（或image:screenshot_edit_icon.gif["編輯鉛筆圖示"]圖示）來表示音量。
 +
 image:screenshot_tiering_initial_volumes.png["螢幕擷取畫面顯示如何選取單一Volume、多個Volume或所有Volume、以及「修改選取的Volume」按鈕。"]
 
 
 
-. 在_分層原則_對話方塊中、選取分層原則、選擇性地調整所選磁碟區的冷卻天數、然後按一下*套用*。
+. 在「分層策略」對話方塊中，選擇分層策略，可選擇調整所選卷的冷卻天數，然後選擇「應用」。
 +
 link:concept-cloud-tiering.html#volume-tiering-policies["深入瞭解磁碟區分層原則和冷卻天數"]。
 

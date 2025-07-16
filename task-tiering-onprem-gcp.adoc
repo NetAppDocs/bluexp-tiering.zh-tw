@@ -2,7 +2,7 @@
 sidebar: sidebar 
 permalink: task-tiering-onprem-gcp.html 
 keywords: data tiering, fabricpool, cloud tiering, tiering cold data, tiering inactive data, tiering aff, tiering fas, tiering ontap, tiering volumes, tier data, tier cold data, tier fas, tier aff, tier ontap, google, gcp, google cloud storage 
-summary: 將非作用中的資料分層儲存至Google Cloud Storage、以釋放內部ONTAP 資源的功能。 
+summary: 透過將非活動資料分層到 Google Cloud Storage，釋放本地ONTAP叢集上的空間。 
 ---
 = 將內部部署 ONTAP 的資料叢集分層至 Google Cloud Storage
 :hardbreaks:
@@ -14,7 +14,7 @@ summary: 將非作用中的資料分層儲存至Google Cloud Storage、以釋放
 
 
 [role="lead"]
-將非作用中的資料分層儲存至Google Cloud Storage、以釋放內部ONTAP 資源的功能。
+透過將非活動資料分層到 Google Cloud Storage，釋放本地ONTAP叢集上的空間。
 
 
 
@@ -27,7 +27,7 @@ summary: 將非作用中的資料分層儲存至Google Cloud Storage、以釋放
 您需要下列項目：
 
 [role="quick-margin-list"]
-* 內部ONTAP 使用的支援功能、執行ONTAP 不支援功能的叢集9.6或更新版本、並可透過HTTPS連線至Google Cloud Storage。 https://docs.netapp.com/us-en/bluexp-ontap-onprem/task-discovering-ontap.html["瞭解如何探索叢集"^]。
+* 執行ONTAP 9.6 或更高版本並與 Google Cloud Storage 建立 HTTPS 連線的本機ONTAP叢集。  https://docs.netapp.com/us-en/bluexp-ontap-onprem/task-discovering-ontap.html["瞭解如何探索叢集"^] 。
 * 具有預先定義儲存管理角色和儲存存取金鑰的服務帳戶。
 * 安裝在 Google Cloud Platform VPC 上的 Connector 。
 * Connector 的網路連線功能、可讓您將 HTTPS 輸出連線至資料中心的 ONTAP 叢集、 Google Cloud Storage 、以及 BlueXP 分層服務。
@@ -35,14 +35,14 @@ summary: 將非作用中的資料分層儲存至Google Cloud Storage、以釋放
 
 .image:https://raw.githubusercontent.com/NetAppDocs/common/main/media/number-2.png["二"] 設定分層
 [role="quick-margin-para"]
-在BlueXP中、選取內部作業環境、按一下「*啟用*」以使用分層服務、然後依照提示將資料分層至Google Cloud Storage。
+在BlueXP中，選擇一個本機工作環境，為分層服務選擇 *啟用*，然後依照指示將資料分層到 Google Cloud Storage。
 
 .image:https://raw.githubusercontent.com/NetAppDocs/common/main/media/number-3.png["三"] 設定授權
 [role="quick-margin-para"]
 免費試用結束後、請透過隨用隨付訂閱、 ONTAP BlueXP 分層 BYOL 授權、或兩者的組合、支付 BlueXP 分層分層的費用：
 
 [role="quick-margin-list"]
-* 若要從GCP Marketplace訂閱、 https://console.cloud.google.com/marketplace/details/netapp-cloudmanager/cloud-manager?supportedpurview=project&rif_reserved["前往BlueXP Marketplace產品"^]，單擊*訂購*，然後按照提示進行操作。
+* 要從 GCP Marketplace 訂閱，  https://console.cloud.google.com/marketplace/details/netapp-cloudmanager/cloud-manager?supportedpurview=project&rif_reserved["前往BlueXP Marketplace產品"^] ，選擇*訂閱*，然後按照提示進行操作。
 * 若要使用 BlueXP  分層 BYOL 授權付款，請寄送 mailto ： ng-cloud-tiering@netapp.com ？ subject=Licensing[ 如果您需要購買授權link:https://docs.netapp.com/us-en/bluexp-digital-wallet/task-manage-data-services-licenses.html["將其從 BlueXP 數位錢包新增至您的帳戶"^]，請聯絡我們 ] ，然後按。
 
 
@@ -105,7 +105,7 @@ NOTE: BlueXP 分層支援 FlexGroup 磁碟區。安裝程式的運作方式與�
 
 === 探索ONTAP 一個叢集
 
-您必須先在ONTAP BlueXP中建立內部的功能性環境、才能開始分層處理冷資料。
+您需要在BlueXP中建立一個本機ONTAP工作環境，然後才能開始分層冷資料。
 
 https://docs.netapp.com/us-en/bluexp-ontap-onprem/task-discovering-ontap.html["瞭解如何探索叢集"^]。
 
@@ -153,8 +153,8 @@ NOTE: 如果您計畫設定 BlueXP 分層以使用成本較低的儲存類別、
 . https://cloud.google.com/iam/docs/creating-managing-service-accounts#creating_a_service_account["建立具有預先定義儲存管理角色的服務帳戶"^]。
 . 前往 https://console.cloud.google.com/storage/settings["GCP 儲存設定"^] 並建立服務帳戶的存取金鑰：
 +
-.. 選取專案、然後按一下 * 互通性 * 。如果您尚未啟用、請按一下 * 「啟用互通性存取」 * 。
-.. 在 * 服務帳戶的存取金鑰 * 下、按一下 * 建立服務帳戶的金鑰 * 、選取您剛建立的服務帳戶、然後按一下 * 建立金鑰 * 。
+.. 選取專案、然後選取 * 互通性 * 。如果您尚未啟用互通性存取 * 、請選取 * 啟用互通性存取 * 。
+.. 在*服務帳戶的存取金鑰*下，選擇*為服務帳戶建立金鑰*，選擇剛剛建立的服務帳戶，然後選擇*建立金鑰*。
 +
 設定 BlueXP 分層時、您需要在稍後輸入金鑰。
 
@@ -174,22 +174,22 @@ NOTE: 如果您計畫設定 BlueXP 分層以使用成本較低的儲存類別、
 
 
 .步驟
-. 選擇內部ONTAP 環境的不正常運作環境。
+. 選擇本地ONTAP工作環境。
 . 從右側面板按一下「*啟用*」以取得分層服務。
 +
 如果Google Cloud Storage分層目的地在畫版上作為工作環境存在、您可以將叢集拖曳至Google Cloud Storage工作環境、以啟動設定精靈。
 
 +
-image:screenshot_setup_tiering_onprem.png["螢幕擷取畫面顯示當您選取內部ONTAP 環境時、畫面右側會出現「Enable（啟用）」選項。"]
+image:screenshot_setup_tiering_onprem.png["螢幕截圖顯示了選擇本機ONTAP工作環境後螢幕右側出現的「啟用」選項。"]
 
 . *定義物件儲存名稱*：輸入此物件儲存設備的名稱。它必須與此叢集上的Aggregate所使用的任何其他物件儲存設備都是獨一無二的。
-. *選擇供應商*：選擇* Google Cloud *、然後按一下*繼續*。
+. *選擇提供者*：選擇*Google Cloud*並選擇*繼續*。
 . 完成「*建立物件儲存*」頁面上的步驟：
 +
 .. * Bucket *：新增Google Cloud Storage儲存庫或選擇現有儲存庫。
 .. * 儲存等級生命週期 * ： BlueXP 分層管理階層資料的生命週期轉換。資料從 _Standard_ 類別開始、但您可以建立規則、在特定天數後套用不同的儲存類別。
 +
-選取您要將階層式資料移轉至的 Google Cloud 儲存類別、以及將資料指派給該類別之前的天數、然後按一下 * 繼續 * 。例如、下方的螢幕擷取畫面顯示、物件儲存空間 30 天後、階層式資料會從 _Standard_ 類別指派給 _Nearlin_ 類別、然後在物件儲存空間 60 天後指派給 _Coldlin_ 類別。
+選擇要將分層資料轉換到的 Google Cloud 儲存類別以及將資料分配到該類別之前的天數，然後選擇*繼續*。例如、下方的螢幕擷取畫面顯示、物件儲存空間 30 天後、階層式資料會從 _Standard_ 類別指派給 _Nearlin_ 類別、然後在物件儲存空間 60 天後指派給 _Coldlin_ 類別。
 
 +
 如果您選擇*保留此儲存類別中的資料*、則資料會保留在該儲存類別中。 link:reference-google-support.html["請參閱支援的儲存類別"^]。
@@ -213,15 +213,15 @@ image:screenshot_tiering_lifecycle_selection_gcp.png["螢幕擷取畫面顯示�
 . 按一下 * 繼續 * 以選取您要分層的磁碟區。
 . 在「_層級磁碟區_」頁面上、選取您要設定分層的磁碟區、然後啟動「層級原則」頁面：
 +
-** 若要選取所有Volume、請勾選標題列中的方塊（image:button_backup_all_volumes.png[""]），然後單擊* Configure Volume*（配置卷*）。
-** 若要選取多個磁碟區、請勾選每個磁碟區的方塊（image:button_backup_1_volume.png[""]），然後單擊* Configure Volume*（配置卷*）。
-** 若要選取單一Volume、請按一下該列（或 image:screenshot_edit_icon.gif["編輯鉛筆圖示"] 圖示）。
+** 若要選取所有捲，請選取標題行中的方塊 ( image:button_backup_all_volumes.png[""] ) 並選擇 *配置磁碟區*。
+** 若要選擇多個卷，請選取每個卷對應的複選框 ( image:button_backup_1_volume.png[""] ) 並選擇 *配置磁碟區*。
+** 若要選擇單一卷，請選擇行（或image:screenshot_edit_icon.gif["編輯鉛筆圖示"]圖示）來表示音量。
 +
 image:screenshot_tiering_initial_volumes.png["螢幕擷取畫面顯示如何選取單一Volume、多個Volume或所有Volume、以及「修改選取的Volume」按鈕。"]
 
 
 
-. 在_分層原則_對話方塊中、選取分層原則、選擇性地調整所選磁碟區的冷卻天數、然後按一下*套用*。
+. 在「分層策略」對話方塊中，選擇分層策略，可選擇調整所選卷的冷卻天數，然後選擇「應用」。
 +
 link:concept-cloud-tiering.html#volume-tiering-policies["深入瞭解磁碟區分層原則和冷卻天數"]。
 

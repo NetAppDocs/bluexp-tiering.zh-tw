@@ -16,7 +16,9 @@ summary: NetApp 的 BlueXP 分層服務會自動將內部部署 ONTAP 叢集的�
 [role="lead"]
 NetApp 的 BlueXP 分層服務會自動將內部部署 ONTAP 叢集的非使用中資料分層、將資料中心延伸至雲端、進而將其移至物件儲存設備。如此一來、叢集上的寶貴空間就能釋出、以容納更多工作負載、而無需變更應用程式層。BlueXP 分層可降低資料中心的成本、並可讓您從 CAPEX 模式切換至 OPEX 模式。
 
-BlueXP 分層服務利用 FabricPool 的功能。NetApp Data Fabric 技術可自動將資料分層至低成本的物件儲存設備。 FabricPool作用中（熱）資料會保留在本機層（內部部署ONTAP 的資訊集合體）、而非作用中（冷）資料則移至雲端層、同時維持ONTAP 資料效率不變。
+BlueXP tiering服務使用_FabricPool_。NetApp Data Fabric 技術可自動將資料分層至低成本的物件儲存設備。 FabricPool作用中（熱）資料會保留在本機層（內部部署ONTAP 的資訊集合體）、而非作用中（冷）資料則移至雲端層、同時維持ONTAP 資料效率不變。
+
+建議：活動（熱）資料保留在本地層（內部ONTAP聚合），而非活動（冷）資料則移動到雲層 - 以保持ONTAP資料的高效率。
 
 原支援AFF 採用FAS All SSD集合體的支援功能、從ONTAP Select VMware 9.8開始ONTAP 、除了高效能SSD之外、您也可以從由HDD組成的集合體來分層資料。請參閱 https://docs.netapp.com/us-en/ontap/fabricpool/requirements-concept.html["使用過程中的考量與要求FabricPool"^] 以取得詳細資料。
 
@@ -30,7 +32,7 @@ https://bluexp.netapp.com/cloud-tiering-service-tco["請使用 BlueXP 分層 TCO
 
 BlueXP 分層提供自動化、監控、報告及通用管理介面：
 
-* 自動化可讓您更輕鬆地設定及管理從內部 ONTAP 物件叢集到雲端的資料分層
+* 自動化使從本地ONTAP叢集到雲端的資料分層設定和管理變得更加容易
 * 您可以選擇預設的雲端供應商儲存類別 / 存取層、或使用生命週期管理、將更具成本效益的層級指派給較舊的階層式資料
 * 您可以建立連線至其他物件存放區、以便用於叢集中的其他集合體
 * 您可以使用UI將物件存放區拖曳至集合體、以便分層和FabricPool 進行鏡射
@@ -133,7 +135,7 @@ BlueXP 分層提供一年一度的合約、將非使用中的資料分層到 Ama
 
 === 請自帶授權
 
-請自帶授權、向 NetApp 購買 * BlueXP 分層 * 授權（先前稱為「雲端分層」授權）。您可以購買 1 年、 2 年或 3 年期授權、並指定任何數量的分層容量（從至少 10 TiB 開始）。BYOL BlueXP 分層授權是一個 _ 浮動 _ 授權、您可以在多個內部部署 ONTAP 叢集上使用。您在 BlueXP 分層授權中定義的總分層容量可由所有內部叢集使用。
+請自帶授權、向 NetApp 購買 * BlueXP 分層 * 授權（先前稱為「雲端分層」授權）。您可以購買 1 年、 2 年或 3 年期授權、並指定任何數量的分層容量（從至少 10 TiB 開始）。BYOL BlueXP 分層授權是一個 _ 浮動 _ 授權、您可以在多個內部部署 ONTAP 叢集上使用。您在BlueXP tiering授權中定義的總分層容量可供所有本機叢集使用。
 
 購買 BlueXP 分層授權後、您需要使用 BlueXP 中的 BlueXP 數位錢包來新增授權。 link:task-licensing-cloud-tiering.html#use-a-bluexp-tiering-byol-license["瞭解如何使用 BlueXP 分層 BYOL 授權"]。
 
@@ -154,7 +156,7 @@ image:diagram_cloud_tiering.png["顯示 BlueXP 分層服務的架構映像、其
 
 在高層級上、 BlueXP 分層的運作方式如下：
 
-. 您可以從BlueXP探索內部叢集。
+. 您從BlueXP發現您的內部部署叢集。
 . 您可以提供物件儲存設備的詳細資料、包括儲存庫/容器、儲存類別或存取層、以及階層式資料的生命週期規則、藉此設定分層。
 . BlueXP可設定ONTAP 使用物件儲存供應商、並探索叢集上的作用中和非作用中資料量。
 . 您可以選擇要分層的磁碟區、以及要套用至這些磁碟區的分層原則。

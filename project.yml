@@ -19,7 +19,7 @@ sidebar:
     entries:
     - title: 瞭解 BlueXP 分層
       url: "/concept-cloud-tiering.html"
-    - title: 將內部部署資料分層至雲端
+    - title: 將本地資料分層到雲端
       entries:
       - title: 層級至Amazon S3
         url: "/task-tiering-onprem-aws.html"

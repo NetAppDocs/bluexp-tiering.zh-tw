@@ -20,7 +20,7 @@ BlueXP 分層支援數個 Google Cloud 儲存類別和大多數地區。
 
 == 支援的GCP儲存類別
 
-當您從內部部署的 ONTAP 系統設定資料分層至 GCP 時、 BlueXP 分層會自動使用 _Standard_ 儲存類別來處理您的非使用中資料。BlueXP 分層可套用生命週期規則、讓資料在一定天數後從 _Standard_ 儲存類別轉換為其他儲存類別。您可以從下列儲存類別中選擇：
+當您設定從本機ONTAP系統到 Google Cloud 儲存的資料分層時，分層功能會自動使用「標準」儲存類別來儲存您的非活動資料。分層功能可以應用生命週期規則，以便資料在一定天數後從「標準」儲存類別轉換為其他儲存類別。您可以從下列儲存類別中選擇：
 
 * 近線
 * 冷線
@@ -29,7 +29,7 @@ BlueXP 分層支援數個 Google Cloud 儲存類別和大多數地區。
 
 如果您沒有選擇其他儲存類別、則資料會保留在_Standard_儲存類別中、而且不會套用任何規則。
 
-當您設定 BlueXP 分層生命週期規則時、在 Google 帳戶中設定儲存庫時、不得設定任何生命週期規則。
+當您設定分層生命週期規則時，您在 Google 帳戶中設定儲存桶時不得設定任何生命週期規則。
 
 https://cloud.google.com/storage/docs/storage-classes["深入瞭解Google Cloud Storage課程"^]。
 
@@ -37,7 +37,7 @@ https://cloud.google.com/storage/docs/storage-classes["深入瞭解Google Cloud 
 
 == 支援的 Google Cloud 地區
 
-BlueXP 分層支援下列區域。
+分層支援以下區域。
 
 
 

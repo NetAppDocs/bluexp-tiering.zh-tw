@@ -144,7 +144,7 @@ https://bluexp.netapp.com/pricing["請參閱定價詳細資料"]。
 
 
 
-=== 內部部署系統的重組是否會受到雲端供應商的外出成本影響？
+=== 本地系統的補水是否需要支付雲端供應商收取的出口費用？
 
 是的。所有從公有雲讀取的內容均需支付出口費用。
 
@@ -156,7 +156,7 @@ https://bluexp.netapp.com/pricing["請參閱定價詳細資料"]。
 
 
 
-=== 雲端供應商是否會額外收取從物件儲存設備讀取/擷取資料到內部儲存設備的費用？
+=== 雲端提供者是否會對從物件儲存讀取/檢索資料到本地儲存收取額外費用？
 
 是的。檢查 https://aws.amazon.com/s3/pricing/["Amazon S3定價"]、 https://azure.microsoft.com/en-us/pricing/details/storage/blobs/["區塊Blob定價"]和 https://cloud.google.com/storage/pricing["雲端儲存設備定價"] 以取得資料讀取/擷取所產生的額外價格。
 
@@ -170,7 +170,7 @@ https://bluexp.netapp.com/pricing["請參閱定價詳細資料"]。
 
 === 我使用 ONTAP MetroCluster 時，如何收取分層費用？
 
-在 MetroCluster 環境中使用時，分層授權容量會平均套用至鏡射儲存區。例如，如果您擁有 100TiB 分層的授權，則兩個貯體最多可分層至 100 TiB 。鏡射貯體不需額外付費。從 MetroCluster 環境中的無鏡射集合體分層時， BlueXP  分層授權會正常套用，並使用分層至兩個貯體的總容量。例如，如果您擁有 100TiB 分層的授權，則兩個貯體最多可分層至 50TB 。
+在MetroCluster環境中使用時，總分層許可證將應用於兩個叢集的使用情況。例如，如果您擁有 100 TiB 的分層許可證，則每個叢集使用的分層容量將計入 100 TiB 的總容量。
 
 
 
@@ -326,7 +326,7 @@ BlueXP 分層支援資料分層至 _Standard_ 、 _Nearlin_ 、 _Coldlinle_ 及 
 
 
 
-=== 如何將階層式資料重新放回內部部署的效能層級？
+=== 如何將分層資料帶回本地性能層？
 
 回寫通常是針對讀取執行、視分層原則類型而定。在使用完SUR9.8之前ONTAP 、您可以使用_volume mov移動_作業來寫回整個Volume。從ONTAP SFlash 9.8開始、分層使用者介面有選項可以*恢復所有資料*或*恢復作用中的檔案系統*。 link:task-managing-tiering.html#migrating-data-from-the-cloud-tier-back-to-the-performance-tier["瞭解如何將資料移回效能層"]。
 

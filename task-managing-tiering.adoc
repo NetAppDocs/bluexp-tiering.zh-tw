@@ -2,7 +2,7 @@
 sidebar: sidebar 
 permalink: task-managing-tiering.html 
 keywords: discover, volumes, report, hot, cold, inactive, active, capacity, used capacity, savings, health, failed 
-summary: 現在您已經從內部ONTAP 的物件叢集設定資料分層、您可以從其他磁碟區分層資料、變更磁碟區的分層原則、探索其他叢集等。 
+summary: 現在您已經從本機ONTAP叢集設定了資料分層，您可以從其他磁碟區分層資料、變更磁碟區的分層策略、發現其他叢集等等。 
 ---
 = 管理叢集的資料分層
 :hardbreaks:
@@ -14,17 +14,17 @@ summary: 現在您已經從內部ONTAP 的物件叢集設定資料分層、您�
 
 
 [role="lead"]
-現在您已經從內部ONTAP 的物件叢集設定資料分層、您可以從其他磁碟區分層資料、變更磁碟區的分層原則、探索其他叢集等。
+現在您已經從本機ONTAP叢集設定了資料分層，您可以從其他磁碟區分層資料、變更磁碟區的分層策略、發現其他叢集等等。
 
 
 
 == 檢閱叢集的分層資訊
 
-您可能想要查看雲端層中有多少資料、以及磁碟上有多少資料。或者、您可能想要查看叢集磁碟上的熱和冷資料量。BlueXP 分層會為每個叢集提供此資訊。
+您可以查看雲層中的資料量以及磁碟上的資料量。您也可以查看使用BlueXP tiering管理的每個叢集的磁碟上熱資料量和冷資料量。這些資訊可在「集群」頁面上查看。
 
 .步驟
 . 從左側導覽功能表中、選取*行動性>分層*。
-. 在 * 叢集 * 頁面上、按一下功能表圖示 image:icon-action.png["動作圖示"] 對於叢集、請選取 * 叢集資訊 * 。
+. 在「集群」頁面中，選擇選單圖標image:icon-action.png["動作圖示"]對於集群並選擇*集群資訊*。
 +
 image:screenshot_tiering_cluster_info_button.png["從「叢集」頁面選取「叢集資訊」按鈕的螢幕擷取畫面。"]
 
@@ -54,21 +54,21 @@ TIP: 您不需要設定物件儲存設備、因為它已在最初設定叢集分
 
 .步驟
 . 從左側導覽功能表中、選取*行動性>分層*。
-. 在 * 叢集 * 頁面中、按一下 * 階層磁碟區 * 以取得叢集。
+. 從「*集群*」頁面中，為集群選擇「*層卷*」。
 +
 image:screenshot_tiering_tier_volumes_button.png["顯示如何為叢集選取「階層磁碟區」按鈕的快照。"]
 
 . 在「_層級磁碟區_」頁面上、選取您要設定分層的磁碟區、然後啟動「層級原則」頁面：
 +
-** 若要選取所有Volume、請勾選標題列中的方塊（image:button_backup_all_volumes.png[""]），然後單擊* Configure Volume*（配置卷*）。
-** 若要選取多個磁碟區、請勾選每個磁碟區的方塊（image:button_backup_1_volume.png[""]），然後單擊* Configure Volume*（配置卷*）。
-** 若要選取單一Volume、請按一下該列（或 image:screenshot_edit_icon.gif["編輯鉛筆圖示"] 圖示）。
+** 若要選取所有捲，請選取標題行中的方塊 ( image:button_backup_all_volumes.png[""] ) 並選擇 *配置磁碟區*。
+** 若要選擇多個卷，請選取每個卷對應的複選框 ( image:button_backup_1_volume.png[""] ) 並選擇 *配置磁碟區*。
+** 若要選擇單一卷，請選擇行（或image:screenshot_edit_icon.gif["編輯鉛筆圖示"]圖示）來表示音量。
 +
 image:screenshot_tiering_tier_volumes.png["螢幕擷取畫面顯示如何選取單一Volume、多個Volume或所有Volume、以及「修改選取的Volume」按鈕。"]
 
 
 
-. 在_分層原則_對話方塊中、選取分層原則、選擇性地調整所選磁碟區的冷卻天數、然後按一下*套用*。
+. 在「分層策略」對話方塊中，選擇分層策略，可選擇調整所選卷的冷卻天數，然後選擇「應用」。
 +
 link:concept-cloud-tiering.html#volume-tiering-policies["深入瞭解磁碟區分層原則和冷卻天數"]。
 
@@ -88,8 +88,8 @@ image:screenshot_tiering_policy_settings.png["顯示可設定分層原則設定�
 
 .步驟
 . 從左側導覽功能表中、選取*行動性>分層*。
-. 在 * 叢集 * 頁面中、按一下 * 階層磁碟區 * 以取得叢集。
-. 按一下某個磁碟區的列、選取分層原則、或是調整冷卻天數、然後按一下「*套用*」。
+. 從「*集群*」頁面中，為集群選擇「*層卷*」。
+. 按一下磁碟區的行，選擇分層策略，選擇性地調整冷卻天數，然後選擇*應用*。
 +
 link:concept-cloud-tiering.html#volume-tiering-policies["深入瞭解磁碟區分層原則和冷卻天數"]。
 
@@ -107,14 +107,14 @@ image:screenshot_tiering_policy_settings.png["顯示可設定分層原則設定�
 
 == 變更可用的網路頻寬、將非使用中資料上傳至物件儲存設備
 
-當您為叢集啟動 BlueXP 分層時、根據預設、 ONTAP 可以使用無限量的頻寬、將非作用中資料從工作環境中的磁碟區傳輸到物件儲存區。如果您注意到分層流量會影響一般使用者工作負載、您可以限制傳輸期間使用的網路頻寬量。您可以選擇 1 到 10 、 000 Mbps 之間的值作為最大傳輸速率。
+當您啟動叢集的分層時，預設情況下， ONTAP會使用無限量的頻寬將非活動資料從工作環境中的磁碟區傳輸到物件儲存。如果您注意到分層流量會影響一般使用者工作負載、您可以限制傳輸期間使用的網路頻寬量。您可以選擇 1 到 10 、 000 Mbps 之間的值作為最大傳輸速率。
 
 . 從左側導覽功能表中、選取*行動性>分層*。
-. 在 * 叢集 * 頁面上、按一下功能表圖示 image:icon-action.png["動作圖示"] 對於叢集、請選取 * 最大傳輸率 * 。
+. 在「集群」頁面中，選擇選單圖標image:icon-action.png["動作圖示"]對於集群並選擇*最大傳輸速率*。
 +
 image:screenshot_tiering_transfer_rate_button.png["從「叢集」頁面選取「最大傳輸率」按鈕的螢幕擷取畫面。"]
 
-. 在「最大傳輸率 _ 」頁面中、選取「 * 限制 * 」選項按鈕並輸入可使用的最大頻寬、或選取「 * 無限 * 」以表示沒有限制。然後按一下 * 套用 * 。
+. 在「最大傳輸率 _ 」頁面中、選取「 * 限制 * 」選項按鈕並輸入可使用的最大頻寬、或選取「 * 無限 * 」以表示沒有限制。然後選擇*應用*。
 +
 image:screenshot_tiering_transfer_rate.png["叢集「傳輸率上限」對話方塊的螢幕擷取畫面。"]
 
@@ -126,7 +126,7 @@ image:screenshot_tiering_transfer_rate.png["叢集「傳輸率上限」對話方
 
 == 下載適用於您磁碟區的分層報告
 
-您可以下載「層級磁碟區」頁面的報告、以便檢閱所管理叢集上所有磁碟區的分層狀態。只要按一下即可 image:button_download.png["下載"] 按鈕。BlueXP 分層會產生 .CSV 檔案、您可以視需要檢閱並傳送給其他群組。CSV檔案最多包含10、000列資料。
+您可以下載「層級磁碟區」頁面的報告、以便檢閱所管理叢集上所有磁碟區的分層狀態。只需選擇image:button_download.png["下載"]按鈕下載 .CSV 文件，您可以根據需要查看並發送給其他群組。CSV檔案最多包含10、000列資料。
 
 image:screenshot_tiering_report_download.png["顯示如何產生CSV檔案的快照、列出所有磁碟區的分層狀態。"]
 
@@ -136,7 +136,7 @@ image:screenshot_tiering_report_download.png["顯示如何產生CSV檔案的快�
 
 從雲端存取的階層式資料可能會「重新加熱」、並移回效能層級。不過、如果您想要從雲端層主動將資料提升至效能層、您可以在_分層原則_對話方塊中執行此動作。此功能可在使用ONTAP 更新版本的資訊時使用。
 
-如果您想要停止在磁碟區上使用分層功能、或是決定將所有使用者資料保留在效能層上、但將Snapshot複本保留在雲端層上、則可以這麼做。
+如果您想停止在磁碟區上使用分層，或決定將所有使用者資料保留在效能層，但將 Snapshot 副本保留在雲層，則可以執行此操作。
 
 有兩種選擇：
 
@@ -157,8 +157,8 @@ NOTE: 您的雲端供應商可能會根據從雲端傳輸的資料量向您收�
 請確定效能層中有足夠的空間、可容納從雲端移回的所有資料。
 
 . 從左側導覽功能表中、選取*行動性>分層*。
-. 在 * 叢集 * 頁面中、按一下 * 階層磁碟區 * 以取得叢集。
-. 按一下 image:screenshot_edit_icon.gif["表格中每一列結尾的編輯圖示、用於分層磁碟區"] 圖示、選擇您要使用的擷取選項、然後按一下*套用*。
+. 從「*集群*」頁面中，為集群選擇「*層卷*」。
+. 點選image:screenshot_edit_icon.gif["表格中每一列結尾的編輯圖示、用於分層磁碟區"]卷的圖標，選擇要使用的檢索選項，然後選擇*套用*。
 +
 image:screenshot_tiering_policy_settings_with_retrieve.png["顯示可設定分層原則設定的快照。"]
 
@@ -171,7 +171,7 @@ image:screenshot_tiering_policy_settings_with_retrieve.png["顯示可設定分�
 
 == 管理 Aggregate 上的分層設定
 
-內部ONTAP 系統的每個Aggregate都有兩個可調整的設定：分層完整度臨界值、以及是否啟用非作用中資料報告。
+您的本機ONTAP系統中的每個聚合都有兩個可調整的設定：分層完整性閾值以及是否啟用非活動資料報告。
 
 分層完整度臨界值:: 將臨界值設為較低的數值、可減少在分層之前儲存在效能層上所需的資料量。這對於包含少量作用中資料的大型 Aggregate 可能很有用。
 +
@@ -189,11 +189,11 @@ TIP: 最好保持啟用印尼盾、因為它有助於識別您的非使用中資
 
 
 .步驟
-. 在 * 叢集 * 頁面中、按一下所選叢集的 * 進階設定 * 。
+. 從「*集群*」頁面中，為所選集群選擇「*進階設定*」。
 +
 image:screenshot_tiering_advanced_setup_button.png["顯示叢集「進階設定」按鈕的快照。"]
 
-. 在「進階設定」頁面中、按一下Aggregate的功能表圖示、然後選取*修改Aggregate *。
+. 在進階設定頁面中，選擇聚合的選單圖示並選擇*修改聚合*。
 +
 image:screenshot_tiering_modify_aggr.png["顯示Aggregate修改Aggregate選項的快照。"]
 
@@ -208,7 +208,7 @@ image:screenshot_tiering_modify_aggregate.png["螢幕快照顯示滑桿、可用
 
 == 修復作業健全狀況
 
-可能會發生故障。執行時、 BlueXP 分層會在叢集儀表板上顯示「故障」操作健全狀況狀態。健全狀況反映ONTAP 出功能不全系統和藍圖的狀態。
+可能會發生故障。當他們這樣做時，分層會在叢集儀表板上顯示「失敗」的運作健康狀態。健全狀況反映ONTAP 出功能不全系統和藍圖的狀態。
 
 .步驟
 . 識別任何運作健全狀況為「故障」的叢集。
@@ -225,13 +225,13 @@ image:screenshot_tiering_modify_aggregate.png["螢幕快照顯示滑桿、可用
 
 == 探索 BlueXP 分層的其他叢集
 
-您可以從「分層 _ 叢集 _ 」頁面將未探索到的內部部署 ONTAP 叢集新增至 BlueXP 、以便啟用叢集的分層功能。
+您可以從 Tiering _Cluster_ 頁面將未發現的內部部署ONTAP叢集新增至BlueXP ，以便為叢集啟用分層。
 
 請注意、按鈕也會出現在 Tiering _on-Prem 儀表板頁面上、供您探索其他叢集。
 
 .步驟
-. 在 BlueXP 分層中、按一下 * 叢集 * 索引標籤。
-. 若要查看任何未探索到的叢集、請按一下 * 顯示未探索到的叢集 * 。
+. 選擇“*Clusters*”選項卡。
+. 若要查看任何未發現的集群，請選擇「顯示未發現的集群」。
 +
 image:screenshot_tiering_show_undiscovered_cluster.png["顯示分層儀表板上「顯示未探索到的叢集」按鈕的快照。"]
 
@@ -244,16 +244,16 @@ image:screenshot_tiering_show_undiscovered_cluster.png["顯示分層儀表板上
 +
 image:screenshot_tiering_discover_cluster.png["快照顯示如何探索要新增至BlueXP和分層儀表板的現有叢集。"]
 
-. 按一下「*探索叢集*」以瞭解您要透過BlueXP管理的叢集、並實作資料分層。
-. 在 _ 叢集詳細資料 _ 頁面中、輸入管理使用者帳戶的密碼、然後按一下 * 探索 * 。
+. 選擇您想要管理的集群的*發現集群*並實施資料分層。
+. 在「叢集詳情」頁面中，輸入管理員使用者帳戶的密碼並選擇「發現」。
 +
 請注意、叢集管理IP位址會根據您的NSS帳戶資訊填入。
 
-. 在「 _ 詳細資料與認證 _ 」頁面中、叢集名稱會新增為工作環境名稱、所以只要按一下「 * 執行 * 」即可。
+. 在「詳細資料和憑證」頁面中，叢集名稱被新增為工作環境名稱，因此只需選擇「*Go*」。
 
 
 .結果
-BlueXP會使用叢集名稱做為工作環境名稱、探索叢集並將其新增至Canvas中的工作環境。
+在 Canvas 中建立一個工作環境，使用叢集名稱作為工作環境名稱。
 
 您可以在右側面板中啟用此叢集的分層服務或其他服務。
 
@@ -261,16 +261,13 @@ BlueXP會使用叢集名稱做為工作環境名稱、探索叢集並將其新�
 
 == 在所有 BlueXP Connector 上搜尋叢集
 
-如果您使用多個 Connectors 來管理環境中的所有儲存設備、則您要實作分層的某些叢集可能位於另一個 Connector 中。如果您不確定哪個 Connector 正在管理特定叢集、您可以使用 BlueXP 分層功能在所有 Connector 之間搜尋。
+如果您使用多個連接器管理環境中的所有存儲，則某些要實施分層的叢集可能與其他連接器關聯。如果您不確定哪個連接器正在管理某個集群，您可以在所有連接器中進行搜尋。
 
 .步驟
-. 在 BlueXP 分層功能表列中、按一下動作功能表、然後選取 * 在所有 Connectors * 中搜尋叢集。
+. 在BlueXP tiering功能表列中，選擇操作選單並選擇*在所有連接器中搜尋叢集*。
 +
 image:screenshot_tiering_search for_cluster.png["螢幕擷取畫面顯示如何搜尋可能位於任何 BlueXP Connector 中的叢集。"]
 
-. 在顯示的搜尋對話方塊中、輸入叢集名稱、然後按一下 * 搜尋 * 。
-+
-BlueXP 分層會顯示 Connector 的名稱（如果它能找到叢集）。
-
+. 在顯示的搜尋對話方塊中，輸入群集名稱並選擇*搜尋*。
 . https://docs.netapp.com/us-en/bluexp-setup-admin/task-manage-multiple-connectors.html#switch-between-connectors["切換至 Connector 並設定叢集的分層"^]。
 

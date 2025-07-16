@@ -2,7 +2,7 @@
 sidebar: sidebar 
 permalink: task-tiering-onprem-s3-compat.html 
 keywords: data tiering, fabricpool, cloud tiering, tiering cold data, tiering inactive data, tiering aff, tiering fas, tiering ontap, tiering volumes, tier data, tier cold data, tier fas, tier aff, tier ontap, s3, tier to s3, minio 
-summary: 將非作用中的資料分層至任何使用簡易儲存服務（S3）傳輸協定的物件儲存服務、以釋放內部ONTAP 物件叢集上的空間。 
+summary: '透過將非活動資料分層到使用簡單儲存服務 (S3) 協定的任何物件儲存服務，釋放本機ONTAP叢集上的空間。' 
 ---
 = 將內部部署ONTAP 的資料叢集分層、以儲存S3物件
 :hardbreaks:
@@ -14,7 +14,7 @@ summary: 將非作用中的資料分層至任何使用簡易儲存服務（S3）
 
 
 [role="lead"]
-將非作用中的資料分層至任何使用簡易儲存服務（S3）傳輸協定的物件儲存服務、以釋放內部ONTAP 物件叢集上的空間。
+透過將非活動資料分層到使用簡單儲存服務 (S3) 協定的任何物件儲存服務，釋放本機ONTAP叢集上的空間。
 
 目前、MinIO物件儲存設備已符合資格。
 
@@ -36,7 +36,7 @@ summary: 將非作用中的資料分層至任何使用簡易儲存服務（S3）
 您需要下列項目：
 
 [role="quick-margin-list"]
-* 執行不支援更新版本的來源內部ONTAP 資源叢集ONTAP 、以及透過使用者指定連接埠連線至目的地S3相容物件儲存設備。 https://docs.netapp.com/us-en/bluexp-ontap-onprem/task-discovering-ontap.html["瞭解如何探索叢集"^]。
+* 運行ONTAP 9.8 或更高版本的來源本地ONTAP集群，以及透過使用者指定連接埠到目標 S3 相容物件儲存的連接。  https://docs.netapp.com/us-en/bluexp-ontap-onprem/task-discovering-ontap.html["瞭解如何探索叢集"^] 。
 * 物件儲存伺服器的FQDN、存取金鑰和秘密金鑰、讓ONTAP 整個叢集能夠存取儲存區。
 * 安裝在內部部署上的 Connector 。
 * 用於連接器的網路、可讓輸出 HTTPS 連線至來源 ONTAP 叢集、 S3 相容物件儲存設備、以及 BlueXP 分層服務。
@@ -44,15 +44,15 @@ summary: 將非作用中的資料分層至任何使用簡易儲存服務（S3）
 
 .image:https://raw.githubusercontent.com/NetAppDocs/common/main/media/number-2.png["二"] 設定分層
 [role="quick-margin-para"]
-在BlueXP中、選取內部工作環境、按一下「*啟用*」以使用分層服務、然後依照提示將資料分層至S3相容的物件儲存設備。
+在BlueXP中，選擇一個本機工作環境，為分層服務選擇 *啟用*，然後依照指示將資料分層到與 S3 相容的物件儲存。
 
 .image:https://raw.githubusercontent.com/NetAppDocs/common/main/media/number-3.png["三"] 設定授權
 [role="quick-margin-para"]
-透過雲端供應商的隨用隨付訂閱、 NetApp BlueXP 分層自訂授權、或兩者的組合、支付 BlueXP 分層的費用：
+透過雲端供應商的即用即付訂閱、 NetApp分層自帶授權或兩者結合來支付分層費用：
 
 [role="quick-margin-list"]
-* 訂閱的BlueXP PAYGO產品 https://aws.amazon.com/marketplace/pp/prodview-oorxakq6lq7m4?sr=0-8&ref_=beagle&applicationId=AWSMPContessa["AWS Marketplace"^]、 https://azuremarketplace.microsoft.com/en-us/marketplace/apps/netapp.cloud-manager?tab=Overview["Azure Marketplace"^]或 https://console.cloud.google.com/marketplace/details/netapp-cloudmanager/cloud-manager?supportedpurview=project&rif_reserved["GCP 市場"^]，單擊*訂購*並按照提示進行操作。
-* 若要使用 BlueXP  分層 BYOL 授權付款，請寄送 mailto ： ng-cloud-tiering@netapp.com ？ subject=Licensing[ 如果您需要購買授權link:https://docs.netapp.com/us-en/bluexp-digital-wallet/task-manage-data-services-licenses.html["將其從 BlueXP 數位錢包新增至您的帳戶"^]，請聯絡我們 ] ，然後按。。
+* 訂閱BlueXP PAYGO 優惠，請 https://aws.amazon.com/marketplace/pp/prodview-oorxakq6lq7m4?sr=0-8&ref_=beagle&applicationId=AWSMPContessa["AWS Marketplace"^] ，  https://azuremarketplace.microsoft.com/en-us/marketplace/apps/netapp.cloud-manager?tab=Overview["Azure Marketplace"^] ， 或者 https://console.cloud.google.com/marketplace/details/netapp-cloudmanager/cloud-manager?supportedpurview=project&rif_reserved["GCP 市場"^] ，選擇*訂閱*並依照指示操作。
+* 若要使用分層 BYOL 授權付款，請發送電子郵件至：ng-cloud-tiering@netapp.com?subject=Licensing[如果您需要購買，請聯絡我們]，然後link:https://docs.netapp.com/us-en/bluexp-digital-wallet/task-manage-data-services-licenses.html["從數位錢包將其添加到您的帳戶"^] 。。
 
 
 
@@ -104,7 +104,7 @@ TIP: BlueXP 分層支援 FlexVol 和 FlexGroup 磁碟區。
 
 === 探索ONTAP 一個叢集
 
-您必須先在ONTAP BlueXP畫版中建立內部的功能環境、才能開始分層處理冷資料。
+您需要先建立一個本機ONTAP工作環境，然後才能開始分層冷資料。
 
 https://docs.netapp.com/us-en/bluexp-ontap-onprem/task-discovering-ontap.html["瞭解如何探索叢集"^]。
 
@@ -171,18 +171,18 @@ S3 認證:: 當您設定與S3相容的物件儲存區分層時、系統會提示
 
 
 .步驟
-. 選擇內部ONTAP 環境的不正常運作環境。
-. 從右側面板按一下「*啟用*」以取得分層服務。
+. 選擇本地ONTAP工作環境。
+. 從右側面板中選擇分層服務的「啟用」。
 +
-image:screenshot_setup_tiering_onprem.png["螢幕快照顯示選取內部ONTAP 環境後、畫面右側會出現分層選項。"]
+image:screenshot_setup_tiering_onprem.png["螢幕截圖顯示了選擇本機ONTAP工作環境後螢幕右側出現的分層選項。"]
 
 . *定義物件儲存名稱*：輸入此物件儲存設備的名稱。它必須與此叢集上的Aggregate所使用的任何其他物件儲存設備都是獨一無二的。
-. *選擇供應商*：選擇* S3相容*、然後按一下*繼續*。
+. *選擇提供者*：選擇*S3 相容*並選擇*繼續*。
 . 完成「*建立物件儲存*」頁面上的步驟：
 +
 .. *伺服器*：輸入S3相容物件儲存伺服器的FQDN、ONTAP 用來與伺服器進行HTTPS通訊的連接埠、以及具有所需S3權限之帳戶的存取金鑰和秘密金鑰。
-.. * Bucket *：新增儲存庫或選取現有的儲存庫、然後按一下*繼續*。
-.. * 叢集網路 * ：選取 ONTAP 要用於連接物件儲存設備的 IPspace 、然後按一下 * 繼續 * 。
+.. *儲存桶*：新增一個新的儲存桶或選擇一個現有的儲存桶，然後選擇*繼續*。
+.. *叢集網路*：選擇ONTAP套用於連接物件儲存的 IP 空間，然後選擇*繼續*。
 +
 選擇正確的 IPspace 可確保 BlueXP 分層可設定從 ONTAP 到 S3 相容物件儲存設備的連線。
 
@@ -191,18 +191,18 @@ image:screenshot_setup_tiering_onprem.png["螢幕快照顯示選取內部ONTAP �
 
 
 
-. 在「_Success」頁面上、按一下「*繼續*」立即設定磁碟區。
-. 在「_層級磁碟區_」頁面上、選取您要設定分層的磁碟區、然後按一下*繼續*：
+. 在「成功」頁面上選擇「繼續」立即設定您的磁碟區。
+. 在「Tier Volumes」頁面上，選擇要配置分層的捲，然後選擇「繼續」：
 +
-** 若要選取所有Volume、請勾選標題列中的方塊（image:button_backup_all_volumes.png[""]），然後單擊* Configure Volume*（配置卷*）。
-** 若要選取多個磁碟區、請勾選每個磁碟區的方塊（image:button_backup_1_volume.png[""]），然後單擊* Configure Volume*（配置卷*）。
-** 若要選取單一Volume、請按一下該列（或 image:screenshot_edit_icon.gif["編輯鉛筆圖示"] 圖示）。
+** 若要選取所有捲，請選取標題行中的方塊 ( image:button_backup_all_volumes.png[""] ) 並選擇 *配置磁碟區*。
+** 若要選擇多個卷，請選取每個卷對應的複選框 ( image:button_backup_1_volume.png[""] ) 並選擇 *配置磁碟區*。
+** 若要選擇單一卷，請選擇行（或image:screenshot_edit_icon.gif["編輯鉛筆圖示"]圖示）來表示音量。
 +
 image:screenshot_tiering_initial_volumes.png["螢幕擷取畫面顯示如何選取單一Volume、多個Volume或所有Volume、以及「修改選取的Volume」按鈕。"]
 
 
 
-. 在_分層原則_對話方塊中、選取分層原則、選擇性地調整所選磁碟區的冷卻天數、然後按一下*套用*。
+. 在「分層策略」對話方塊中，選擇分層策略，可選擇調整所選卷的冷卻天數，然後選擇「應用」。
 +
 link:concept-cloud-tiering.html#volume-tiering-policies["深入瞭解磁碟區分層原則和冷卻天數"]。
 
@@ -210,9 +210,6 @@ link:concept-cloud-tiering.html#volume-tiering-policies["深入瞭解磁碟區�
 image:screenshot_tiering_initial_policy_settings.png["顯示可設定分層原則設定的快照。"]
 
 
-
-.結果
-您已成功設定資料分層、從叢集上的磁碟區到S3相容的物件儲存區。
 
 .接下來呢？
 link:task-licensing-cloud-tiering.html["請務必訂閱 BlueXP 分層服務"]。

@@ -2,7 +2,7 @@
 sidebar: sidebar 
 permalink: task-tiering-onprem-storagegrid.html 
 keywords: data tiering, fabricpool, cloud tiering, tiering cold data, tiering inactive data, tiering aff, tiering fas, tiering ontap, tiering volumes, tier data, tier cold data, tier fas, tier aff, tier ontap, storagegrid, tier to storagegrid, fabricpool storagegrid 
-summary: 將非作用中的資料分層到物件上、以釋放內部ONTAP 物件叢集上的空間StorageGRID 。 
+summary: 透過將非活動資料分層到StorageGRID來釋放本地ONTAP叢集上的空間。 
 ---
 = 將內部部署 ONTAP 的資料叢集分層至 StorageGRID 不再需要
 :hardbreaks:
@@ -14,7 +14,7 @@ summary: 將非作用中的資料分層到物件上、以釋放內部ONTAP 物�
 
 
 [role="lead"]
-將非作用中的資料分層到物件上、以釋放內部ONTAP 物件叢集上的空間StorageGRID 。
+透過將非活動資料分層到StorageGRID來釋放本地ONTAP叢集上的空間。
 
 
 
@@ -27,7 +27,7 @@ summary: 將非作用中的資料分層到物件上、以釋放內部ONTAP 物�
 您需要下列項目：
 
 [role="quick-margin-list"]
-* 內部ONTAP 執行ONTAP 的內部版本的叢集執行的是更新版本的版本、並透過使用者指定的連接埠連線StorageGRID 至更新版本。 https://docs.netapp.com/us-en/bluexp-ontap-onprem/task-discovering-ontap.html["瞭解如何探索叢集"^]。
+* 運行ONTAP 9.4 或更高版本的本地ONTAP集群，以及透過使用者指定連接埠到StorageGRID 的連線。  https://docs.netapp.com/us-en/bluexp-ontap-onprem/task-discovering-ontap.html["瞭解如何探索叢集"^] 。
 * 支援 AWS 存取金鑰的 S3 權限、可支援支援支援支援的版本。 StorageGRID
 * 安裝在內部部署上的 Connector 。
 * 用於連接器的網路、可讓 ONTAP 叢集的輸出 HTTPS 連線、 StorageGRID 連線、以及 BlueXP 分層服務。
@@ -35,7 +35,7 @@ summary: 將非作用中的資料分層到物件上、以釋放內部ONTAP 物�
 
 .image:https://raw.githubusercontent.com/NetAppDocs/common/main/media/number-2.png["二"] 設定分層
 [role="quick-margin-para"]
-在BluXP中、選取內部作業環境、按一下「*啟用*」以使用分層服務、然後依照提示將資料分層StorageGRID 至物件。
+選擇本機工作環境，為分層服務選擇“啟用”，然後依照指示將資料分層到StorageGRID。
 
 
 
@@ -65,7 +65,7 @@ NOTE: Connector 與 StorageGRID 物件之間的通訊僅供物件儲存設定之
 
 --
 支援 ONTAP 的支援版本:: 更新版本 ONTAP
-授權:: 您的 BlueXP  組織不需要 BlueXP  分層授權、也不需要在 ONTAP 叢集上將資料分層至 StorageGRID 時取得 FabricPool 授權。
+授權:: 如果您將資料分層到StorageGRID，則不需要分層授權或FabricPool授權。
 叢集網路連線需求::
 +
 --
@@ -79,7 +79,7 @@ NOTE: Connector 與 StorageGRID 物件之間的通訊僅供物件儲存設定之
 
 * 每個裝載您要分層的磁碟區的節點都需要叢集間LIF ONTAP 。LIF 必須與 _IPspac__ 建立關聯、 ONTAP 以便連接物件儲存設備。
 +
-設定資料分層時、 BlueXP 分層會提示您使用 IPspace 。您應該選擇每個 LIF 所關聯的 IPspace 。這可能是您建立的「預設」 IPspace 或自訂 IPspace 。深入瞭解 https://docs.netapp.com/us-en/ontap/networking/create_a_lif.html["生命"^] 和 https://docs.netapp.com/us-en/ontap/networking/standard_properties_of_ipspaces.html["IPspaces"^]。
+設定資料分層時，系統會提示您選擇要使用的 IP 空間。您應該選擇每個 LIF 所關聯的 IPspace 。這可能是您建立的「預設」 IPspace 或自訂 IPspace 。詳細了解 https://docs.netapp.com/us-en/ontap/networking/create_a_lif.html["生命"^]和 https://docs.netapp.com/us-en/ontap/networking/standard_properties_of_ipspaces.html["IPspaces"^] 。
 
 
 
@@ -94,7 +94,7 @@ NOTE: BlueXP 分層支援 FlexGroup 磁碟區、從 ONTAP 9.5 開始。安裝程
 
 === 探索ONTAP 一個叢集
 
-您必須先在ONTAP BlueXP畫版中建立內部的功能環境、才能開始分層處理冷資料。
+您需要先在 Canvas 中建立一個本機ONTAP工作環境，然後才能開始分層冷資料。
 
 https://docs.netapp.com/us-en/bluexp-ontap-onprem/task-discovering-ontap.html["瞭解如何探索叢集"^]。
 
@@ -163,24 +163,24 @@ S3 認證:: 當您設定 StorageGRID 分層時、您需要提供 BlueXP 分層�
 
 
 .步驟
-. 選擇內部ONTAP 環境的不正常運作環境。
+. 選擇本地ONTAP工作環境。
 . 從右側面板按一下「*啟用*」以取得分層服務。
 +
 如果StorageGRID 在畫版上存在可作為工作環境的資料點、您可以將叢集拖曳到StorageGRID 可運作的環境中、以啟動設定精靈。
 
 +
-image:screenshot_setup_tiering_onprem.png["螢幕擷取畫面顯示選取內部 ONTAP 環境後、畫面右側會出現「設定分層」選項。"]
+image:screenshot_setup_tiering_onprem.png["螢幕截圖顯示了選擇本機ONTAP工作環境後出現在螢幕右側的「設定分層」選項。"]
 
 . *定義物件儲存名稱*：輸入此物件儲存設備的名稱。它必須與此叢集上的Aggregate所使用的任何其他物件儲存設備都是獨一無二的。
-. *選擇供應商*：選擇* StorageGRID 《*》*、然後按一下*「Continue *（繼續*）」。
+. *選擇提供者*：選擇* StorageGRID*並選擇*繼續*。
 . 完成「*建立物件儲存*」頁面上的步驟：
 +
 .. *伺服器*：輸入StorageGRID 「支援不支援功能的閘道節點」的FQDN、ONTAP 該連接埠應用於與StorageGRID 效益管理系統進行HTTPS通訊、以及具備所需S3權限之帳戶的存取金鑰和秘密金鑰。
-.. * Bucket *：新增儲存區或選取以前置字元_Fabric集區_開頭的現有儲存區、然後按一下*繼續*。
+.. *Bucket*：新增一個新儲存桶或選擇一個以前綴 _fabric-pool_ 開頭的現有儲存桶，然後選擇 *Continue*。
 +
 因為連接器的 IAM 原則可讓執行個體在以該確切字首命名的儲存區上執行 S3 動作、所以需要使用 _Fabric 資源池 _ 字首。例如、您可以命名S3儲存區_Fabric集區-AFF1_、其中AFF1是叢集的名稱。
 
-.. * 叢集網路 * ：選取 ONTAP 要用於連接物件儲存設備的 IPspace 、然後按一下 * 繼續 * 。
+.. *叢集網路*：選擇ONTAP套用於連接物件儲存的 IP 空間，然後選擇*繼續*。
 +
 選擇正確的 IPspace 可確保 BlueXP 分層可設定從 ONTAP 到 StorageGRID 物件儲存設備的連線。
 
@@ -191,15 +191,15 @@ image:screenshot_setup_tiering_onprem.png["螢幕擷取畫面顯示選取內部 
 
 . 在「_層級磁碟區_」頁面上、選取您要設定分層的磁碟區、然後啟動「層級原則」頁面：
 +
-** 若要選取所有Volume、請勾選標題列中的方塊（image:button_backup_all_volumes.png[""]），然後單擊* Configure Volume*（配置卷*）。
-** 若要選取多個磁碟區、請勾選每個磁碟區的方塊（image:button_backup_1_volume.png[""]），然後單擊* Configure Volume*（配置卷*）。
-** 若要選取單一Volume、請按一下該列（或 image:screenshot_edit_icon.gif["編輯鉛筆圖示"] 圖示）。
+** 若要選取所有捲，請選取標題行中的方塊 ( image:button_backup_all_volumes.png[""] ) 並選擇 *配置磁碟區*。
+** 若要選擇多個卷，請選取每個卷對應的複選框 ( image:button_backup_1_volume.png[""] ) 並選擇 *配置磁碟區*。
+** 若要選擇單一卷，請選擇行（或image:screenshot_edit_icon.gif["編輯鉛筆圖示"]圖示）來表示音量。
 +
 image:screenshot_tiering_initial_volumes.png["螢幕擷取畫面顯示如何選取單一Volume、多個Volume或所有Volume、以及「修改選取的Volume」按鈕。"]
 
 
 
-. 在_分層原則_對話方塊中、選取分層原則、選擇性地調整所選磁碟區的冷卻天數、然後按一下*套用*。
+. 在「分層策略」對話方塊中，選擇分層策略，可選擇調整所選卷的冷卻天數，然後選擇「應用」。
 +
 link:concept-cloud-tiering.html#volume-tiering-policies["深入瞭解磁碟區分層原則和冷卻天數"]。
 
@@ -207,9 +207,6 @@ link:concept-cloud-tiering.html#volume-tiering-policies["深入瞭解磁碟區�
 image:screenshot_tiering_initial_policy_settings.png["顯示可設定分層原則設定的快照。"]
 
 
-
-.結果
-您已成功設定資料分層、從叢集上的磁碟區到 StorageGRID 物件。
 
 .接下來呢？
 您可以檢閱叢集上作用中和非作用中資料的相關資訊。 link:task-managing-tiering.html["深入瞭解如何管理分層設定"]。
